@@ -1,0 +1,12 @@
+title: Programando em Python no Vim
+date: 2011-09-08 14:45:20
+tags: vim
+category: Iniciante, Tutorial, Ferramentas
+slug: programando-python-vim
+summary: No Linux, um bom editor para código Python é o Vim. Costumo usar o Vim no Ubuntu e tem sido uma boa experiência. O Vim pode ser instalado também no Windows e é um bom substituto para o IDLE. Você pode fazer o download da versão para Windows no site do Vim. Versões recentes do Vim possuem suporte para Python nativo. Para ter certeza disso abra o Vim e digite :python print “hello world” (com dois pontos antes da palavra python). No Windows isso vai funcionar com o gVim.
+
+<p>No Linux, um bom editor para c&oacute;digo Python &eacute; o Vim. Costumo usar o Vim no Ubuntu e tem sido uma boa experi&ecirc;ncia. O Vim pode ser instalado tamb&eacute;m no Windows e &eacute; um bom substituto para o IDLE. Voc&ecirc; pode fazer o download da vers&atilde;o para Windows no <a href="http://www.vim.org/download.php#pc">site do Vim</a>. Vers&otilde;es recentes do Vim possuem suporte para Python nativo. <!--more-->Para ter certeza disso abra o Vim e digite <em>:python print &ldquo;hello world&rdquo;</em> (com dois pontos antes da palavra python). No Windows isso vai funcionar com o gVim.</p>
+<p>O gVim j&aacute; tem auto-identa&ccedil;&atilde;o e highlighting pra Python. Para ter o code completion no Vim &eacute; necess&aacute;rio ter um plugin instalado. Na vers&atilde;o 7.3 para Windows o omni completion j&aacute; veio dispon&iacute;vel, para testar bastar digitar ctrl+x e ctrl+o, que vai abrir uma janela dropdown com diversas op&ccedil;&otilde;es. No Linux, para habilitar o omni completion, adicione a seguinte linha no arquivo /etc/vim/vimrc:</p>
+<pre>autocmd FileType python set omnifunc=pythoncomplete#Complete</pre>
+<p>Outras fun&ccedil;&otilde;es interessantes que podem ser adicionadas ao Vim para codifica&ccedil;&atilde;o Python podem ser vistas em:&nbsp;<a href="http://blog.dispatched.ch/2009/05/24/vim-as-python-ide/">VIM as Python IDE</a>.</p>
+<p>Update (17/02/12): Escrevemos &nbsp;um post mais completo sobre como utilizar o <a href="http://www.pythonize.org/tornando-o-vim-uma-ide-amigavel-pra-python/" title="Vim como IDE pra Python">Vim como IDE pra Python</a>.</p>
