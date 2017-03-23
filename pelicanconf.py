@@ -50,6 +50,6 @@ THEME = "clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
 
 
-DISQUS_SITENAME = 'pythonize'
+DISQUS_SITENAME = 'pythonize.org'
 GOOGLE_ANALYTICS = 'UA-25538784-1'
 TWITTER_USERNAME = 'berg_pe'
