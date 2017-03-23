@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Pythonize</title>
+
+
+        <!-- Bootstrap Core CSS -->
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/theme/css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="/theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+        <meta name="tags" contents="ssh" />
+        <meta name="tags" contents="script" />
+
+
+			<meta property="og:locale" content="pt">
+		<meta property="og:site_name" content="Pythonize">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/criar-scripts-ssh-rapidamente-python.html">
+	<meta property="og:title" content="Como Criar Scripts SSH Rapidamente com Python">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/">
+	<meta property="article:published_time" content="2013-05-20 13:45:46-03:00">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Pythonize</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('/theme/images/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Como Criar Scripts SSH Rapidamente com Python</h1>
+                        <span class="meta">Posted by
+                                <a href="/author/anderson-berg.html">Anderson Berg</a>
+                             on seg 20 maio 2013
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>Às vezes é necessário trabalhar com <strong>vários</strong> dispositivos ligados em <strong>rede</strong>, quer sejam computadores, roteadores ou outros tipos de equipamentos.</p>
+<p>Em muitas ocasiões precisamos enviar <strong>comandos</strong> e <strong>instruções</strong> para estes equipamentos. Isso geralmente é feito através do envio de comandos ou dados&nbsp;via <strong>SSH</strong>.</p>
+<p>Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro.</p>
+<p>Mas e se forem <strong>milhares</strong> de dispositivos interconectados?</p>
+<p>Ou se são <strong>dezenas</strong> ou <strong>centenas</strong> de instruções em série?</p>
+<p>E se estas duas situações ocorrem <strong>juntas</strong>?</p>
+<p>Nesses casos é preciso criar scripts que façam tudo automatizado.</p>
+<p>Neste artigo vou compartilhar minha experiência com o Paramiko, um módulo Python que fornece uma interface ao protocolo SSH2.</p>
+<p>SSH é um protocolo de rede criptografado que realiza conexão segura entre computadores e permite executar comandos remotamente. Em diversas situações é necessário automatizar o processo de conexão e execução de comandos em um computador remoto.</p>
+<h2>Como instalar o Paramiko</h2>
+<p>Para instalar o Paramiko é necessário instalar antes o PyCrypto, que pode ser encontrado via easy_install ou no repositório da sua distribuição Linux. Encontrei algumas dificuldades para instalar o pycrypto no Windows, por sorte existem alguns binários compilados do pycrypto: <a href="http://www.voidspace.org.uk/python/modules.shtml#pycrypto" target="_blank" title="PyCrypto Windows">http://www.voidspace.org.uk/python/modules.shtml#pycrypto</a></p>
+<p>Depois é só instalar o paramiko via easy_install ou procurando no repositório da distro Linux.</p>
+<p>O paramiko tem uma classe base que fornece toda a interface para comunicação: <strong><em>paramiko.SSHClient</em></strong>. Para criar um objeto e criar uma conexão com um servidor é bem simples:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
+<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;anderson&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Neste exemplo, a função 'connect' está conectando ao servidor SSH local, passando nome de usuário e senha através dos par&acirc;metros 'username' e 'password', respectivamente.</p>
+<p>Quando você conecta em um servidor ssh pela primeira vez, uma chave é automaticamente armazenada em disco num arquivo chamado "<strong><em>.ssh/known_hosts</em></strong>" na sua pasta home. Para isto é preciso o usuário, manualmente, aceitar o armazenamento da chave do servidor, confirmando a confiabilidade deste. Para fazermos isso automaticamente através do Paramiko, utilizamos o objeto "set_missing_host_key_policy", passando "<strong><em>paramiko.AutoAddPolicy()</em></strong>" como parâmetro para aceitar automaticamente as chaves. Então, nosso código anterior pode ser modificado:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
+<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;anderson&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Tenha o cuidado de somente utilizar este artifício com servidores que você confia.</p>
+<h2>Enviando comandos via ssh</h2>
+<p>Já aprendemos como conectar em um computador remotamente via ssh. Agora vamos ver como enviar comandos e receber os resultados destes comandos. Isto é feito com o método "exec_command" do SSHClient(). Este método retorna uma tupla de objetos (stdin, stdout, stderr) que você pode ler (no caso do stdout e stderr) ou escrever (stdin). A sintaxe para executar um comando é a seguinte:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;ls</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Que vai enviar o comando 'ls' para listar os arquivos do diretório atual. Para exibir o retorno deste comando podemos ler o conte&uacute;do do objeto stdout e, em seguida, fechar a conexão ssh:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>Em alguns casos precisamos enviar outras informações para execução do comando, como por exemplo uma senha de administrador. Podemos fazer isto escrevendo no objeto stdin.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;sudo fdisk -l</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;1234</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">stdin</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>O retorno dos comando pode ser tratado com as poderosas ferramentas de manipulação de string de Python, ou ainda filtradas com expressões regulares, dando ainda mais opções ao programador na hora de criar um script completo. Em outro post darei mais detalhes sobre a utilização do Paramiko.</p>
+    </article>
+
+    <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/theme/js/clean-blog.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25538784-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'pythonize';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>

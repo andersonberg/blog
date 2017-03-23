@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Pythonize</title>
+
+
+        <!-- Bootstrap Core CSS -->
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/theme/css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="/theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+        <meta name="tags" contents="decorators" />
+
+
+			<meta property="og:locale" content="pt">
+		<meta property="og:site_name" content="Pythonize">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/entendendo-decorators-de-forma-simples.html">
+	<meta property="og:title" content="Entendendo Decorators de forma simples">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/">
+	<meta property="article:published_time" content="2011-10-24 00:58:57-03:00">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Pythonize</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('/theme/images/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Entendendo Decorators de forma simples</h1>
+                        <span class="meta">Posted by
+                                <a href="/author/romulo-jales.html">Rômulo Jales</a>
+                             on seg 24 outubro 2011
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>Sabe aquele trecho de código que vive se repetindo no seu código e você acha um saco ter repetir? Imagine que esse trecho repetido necessite uma refatoração e imagine que seu projeto é grande você já começa a vislumbrar um cenário caótico.</p>
+<p>Sabe aquele trecho de código que vive se repetindo no seu código e você acha um saco ter repetir? Imagine que esse trecho repetido necessite uma refatoração e imagine que seu projeto é grande você já começa a vislumbrar um cenário caótico.</p>
+<p>As boas práticas de programação tentam prevenir este tipo de problema. Mas tem horas que nem o seu mega modelo resolve. Um caso simples é quando o trecho de código que se repete necessita de parametrização ou muda de acordo com o contexto.</p>
+<p>Decorators são uma tentativa de "economizar" código, manter a sanidade e as boas práticas de programação. Ok, eu sei que a razão principal de um decorator não é essa. Dá uma passada na
+<a href="http://www.python.org/dev/peps/pep-0318/" title="PEP 318 - Decorators for Functions and Methods ">PEP</a> para descobrir mais. O lance é meio inception. Então eu curto a minha explicação... ;)</p>
+<p>Então, se você viu um @ em cima de um método no código. Parabéns, você já sabe o que é um decorator e provavelmente já utiliza.</p>
+<h1><strong>Criando um decorator:</strong></h1>
+<ul>
+<li>"mas eu quero criar um decorator"</li>
+</ul>
+<p>Ok. Para fazer isso é simples:</p>
+<p>Defina um método cujo o parametro será a assinatura de uma função decorada.</p>
+<p>Então brinque com a função e retorne a função ou outra função. Lindo não? (se lembra que eu disse que era meio inception?)</p>
+<p>Mas o decorator é isso mesmo. É um cara que vai pegar sua função bonitinha é modifica-la. Ou mesmo desfigura-la. Vou mostrar como cria um decorator brincando.</p>
+<p>Suponha que você criou uma função de somar:</p>
+<div class="highlight"><pre><span></span>def sum(a,b)
+ return a+b
+</pre></div>
+
+
+<p>Função linda! Bom agora vou bagunçar a vida do cidadão que usa essa função e fazer que a soma seja a - b. Mas eu não quero perder o código original. Isto é um trabalho para o decorador:</p>
+<div class="highlight"><pre><span></span>def bagunca(funcao):
+ def subtrai(a,b):
+ return a-b
+return subtrai
+
+@bagunca
+def sum(a,b):
+ return a+b
+</pre></div>
+
+
+<p>Bom, agora deixo com vocês executarem o código no terminal e compreende que aconteceu com a função sum. Acredito que desta forma você compreenderá o uso do decorator.</p>
+<p>Até a próxima</p>
+    </article>
+
+    <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/theme/js/clean-blog.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25538784-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'pythonize';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>

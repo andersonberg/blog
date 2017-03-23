@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Pythonize</title>
+
+
+        <!-- Bootstrap Core CSS -->
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/theme/css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="/theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+        <meta name="tags" contents="rest" />
+        <meta name="tags" contents="django" />
+        <meta name="tags" contents="api" />
+
+
+			<meta property="og:locale" content="pt">
+		<meta property="og:site_name" content="Pythonize">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/criar-api-rest-django.html">
+	<meta property="og:title" content="Como criar uma API REST com Django">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/">
+	<meta property="article:published_time" content="2014-10-05 19:37:02-03:00">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Pythonize</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('/theme/images/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Como criar uma API REST com Django</h1>
+                        <span class="meta">Posted by
+                                <a href="/author/anderson-berg.html">Anderson Berg</a>
+                             on dom 05 outubro 2014
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>Como tornar essa API pública, ao mesmo tempo que protege seus dados?
+E como fazer tudo isso usando Django?</p>
+<p>Como construir uma  <strong>API Restful</strong>  totalmente  <strong>configurável</strong> ,  <strong>funcional</strong>  e  <strong>simples</strong> ?</p>
+<p>Como tornar essa API <strong>pública</strong>, ao mesmo tempo que <strong>protege</strong> seus dados?</p>
+<p>E como fazer tudo isso usando <strong>Django</strong>?</p>
+<p>Você vai conhecerum pouco do <strong>Tastypie</strong>, um framework Python muito eficiente que provê uma <a href="http://pt.wikipedia.org/wiki/API">API</a> (Application Programming Interface, em português: Interface de Programação de Aplicativos) <a href="http://pt.wikipedia.org/wiki/REST">REST</a> totalmente configurável para trabalhar com Django.</p>
+<p>Para acompanharo que vamos apresentar aqui, <strong>não</strong> é necessário ser expert emDjango. Vamos seguir um <strong>passo-a-passo</strong> bem simples. Se você já sabe como configurar e usar o Django, pode pular para a parte de configuração do Tastypie, ou utilizar este tutorial como lembrete.</p>
+<p>Se você quer se aprofundar no estudo de Djangorecomendo os seguintes links: <a href="https://docs.djangoproject.com/en/1.6/intro/tutorial01/">Django Tutorial</a>, <a href="http://www.tangowithdjango.com/book/">Tango with Django</a>.</p>
+<p>E para aprender mais sobre RESTful webservices, tem um tutorial bem interessante <a href="http://www.restapitutorial.com/">aqui</a>.</p>
+<h2>Como Funciona o Tastypie</h2>
+<p>O Tastypie ajuda você a publicar os models criados no Django, ao mesmo tempo que permite total controle sobre que é exibido ou não. O Tastypie <strong>serializa</strong> a sa&iacute;da em diversos formatos, incluindo json. Através da criação de objetos 'Resource', o Tastypie implementa formas de obter dados (GET), criar (POST) e modificar (PUT/PATCH) dados e excluir dados (DELETE).</p>
+<p>Com estas dicas, você irá construir uma pequena API pra um exemplo de <strong>microblog</strong>, como o Twitter.</p>
+<h2>Configurando o ambiente de desenvolvimento</h2>
+<p>Antes de tudo e qualquer coisa, pra não bagunçar o seu ambiente, instale o <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>. O virtualenv é uma ferramenta que cria um ambiente Python <strong>separado</strong> do seu sistema, evitando maiores dores de cabeça com configurações.</p>
+<p>Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:</p>
+<div class="highlight"><pre><span></span>$ virtualenv venv
+</pre></div>
+
+
+<p>Pronto, seu ambiente virtual foi instalado na pasta 'venv'. Agora, pra começar a usar é preciso ativar o ambiente:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">source</span> venv/bin/activate
+</pre></div>
+
+
+<p>Você pode perceber que o contexto da sua linha de comando mudou, quer dizer que o ambiente está pronto pra ser usado.</p>
+<h2>Instalação do Tastypie</h2>
+<p>Com o ambiente ativado, agora é a hora de instalar o django, em seguida instale algumas dependências do tastypie e ele próprio:</p>
+<div class="highlight"><pre><span></span>$ pip install django
+$ pip install python-mimeparse lxml defusedxml
+$ pip install django-tastypie
+</pre></div>
+
+
+<p>Pra maiores detalhes de instalação e configuração, você pode olhar na <a href="http://django-tastypie.readthedocs.org/en/latest/tutorial.html">documentação</a> do Tastypie.</p>
+<h2>Criando um projeto Django</h2>
+<p>Com tudo instalado, criar um projeto django e uma aplicação dentro do projeto também é bem fácil:</p>
+<div class="highlight"><pre><span></span>$ django-admin.py startproject webserver
+$ <span class="nb">cd</span> webserver/webserver
+$ python ../manage.py startapp rest_app
+</pre></div>
+
+
+<h2>Configurando o banco de dados</h2>
+<p>Vamos utilizar como banco de dados o Sqlite, verifique se no seu arquivo settings.py já está habilitado:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Crie o banco de dados inicial para o Django:</p>
+<div class="highlight"><pre><span></span>$ python manage.py syncdb
+</pre></div>
+
+
+<h3>Testando tudo até aqui</h3>
+<p>Pra testar tudo até aqui, você pode iniciar o servidor:</p>
+<div class="highlight"><pre><span></span>$ python manage.py runserver
+</pre></div>
+
+
+<p>E acessar através da url: http://localhost:8000</p>
+<h3>pip freeze</h3>
+<p>O pip tem um comando que cria um registro dos pacotes que foram instalados no ambiente. Isso é útil se você quiser recriar o projeto e ter todos os pacotes nas versões necessárias.</p>
+<div class="highlight"><pre><span></span>$ pip freeze &gt; requirements.txt
+</pre></div>
+
+
+<h2>Criando a API</h2>
+<h3>Criando uma nova aplicação</h3>
+<p>Você cria um nova aplicação com o comando startapp:</p>
+<div class="highlight"><pre><span></span>$python manage.py startapp rest_app
+</pre></div>
+
+
+<p>Lembre-se de atualizar o INSTALLED_APPS no seu arquivo settings.py com a aplicação criada.</p>
+<h3>Configuração inicial do Tastypie</h3>
+<p>O primeiro passo é adicionar 'tastypie' em INSTALLED_APPS no arquivo settings.py do seu projeto Django. A documentação do Tastypie diz que essa é a única configuração obrigatória. Para nosso exemplo vai ser suficiente por enquanto.</p>
+<p>Eu tive que fazer uma modificação no settings.py por causa de um problema com autenticação. Não sei se será seu caso, só tive que remover uma linha do MIDDLEWARE_CLASSES:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">MIDDLEWARE_CLASSES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.common.CommonMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span><span class="p">,</span>
+    <span class="c1">#&#39;django.contrib.auth.middleware.SessionAuthenticationMiddleware&#39;,</span>
+    <span class="s1">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h3>Criando seus models</h3>
+<p>O <a href="https://docs.djangoproject.com/en/dev/topics/db/models/">model</a> é onde você armazena as informações básicas dos seus dados. Cada model é uma classe Python que herda de django.db.models.Model e que se torna uma tabela no seu banco de dados. Vamos criar alguns models para nossa aplicação.</p>
+<p>Você só precisa criar um model para a nossa aplicação que é a classe que vai conter um post no microblog. A classe de usuário podemos obter do próprio Django.</p>
+<p>Então, edite o seu arquivo models.py e adicione a seguinte classe:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+    <span class="n">date_created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">now</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>Este model tem um usuário associado, a data de publicação do post, o próprio texto e um campo chamado <strong><em>slug</em></strong>, que identifica um determinado post e vai ser útil pra poder fazer buscas.</p>
+<p>Pra personalizar o slug, você precisa sobrescrever o método save() do model. Neste caso, vamos pegar somente os 50 primeiros caracteres do post como slug:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">slug</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="n">slugify</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)[:</span><span class="mi">50</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Entry</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>A classe completa fica assim:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tastypie.utils.timezone</span> <span class="kn">import</span> <span class="n">now</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">django.utils.text</span> <span class="kn">import</span> <span class="n">slugify</span>
+
+
+<span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+    <span class="n">date_created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">now</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">slug</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="n">slugify</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)[:</span><span class="mi">50</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">Entry</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h3>Criando Resources</h3>
+<p>Tudo certo, mas como eu faço para expor meus dados através da API?</p>
+<p>Você precisa criar <strong>resources</strong>.</p>
+<p>No Tastypie, resources são os intermediários entre o usuário da sua API e os models de Django.</p>
+<p>Crie o arquivo api.py no diretório da aplicação que você gerou anteriormente:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tastypie.resources</span> <span class="kn">import</span> <span class="n">ModelResource</span>
+<span class="kn">from</span> <span class="nn">rest_app.models</span> <span class="kn">import</span> <span class="n">Post</span>
+
+<span class="k">class</span> <span class="nc">PostResource</span><span class="p">(</span><span class="n">ModelResource</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">resource_name</span> <span class="o">=</span> <span class="s1">&#39;post&#39;</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>Você também tem que criar um resource para a classe de usuário:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserResource</span><span class="p">(</span><span class="n">ModelResource</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">resource_name</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
+</pre></div>
+</td></tr></table>
+
+<p>E associar um usuário a um post. Logo, é precisoadicionar a seguinte linha na classe PostResource:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">UserResource</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>O arquivo api.py completo fica assim:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tastypie.resources</span> <span class="kn">import</span> <span class="n">ModelResource</span>
+<span class="kn">from</span> <span class="nn">webserver.rest_app.models</span> <span class="kn">import</span> <span class="n">Post</span>
+<span class="kn">from</span> <span class="nn">tastypie.authorization</span> <span class="kn">import</span> <span class="n">Authorization</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="kn">from</span> <span class="nn">tastypie</span> <span class="kn">import</span> <span class="n">fields</span>
+
+<span class="k">class</span> <span class="nc">UserResource</span><span class="p">(</span><span class="n">ModelResource</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">resource_name</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
+        <span class="n">authorization</span> <span class="o">=</span> <span class="n">Authorization</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">PostResource</span><span class="p">(</span><span class="n">ModelResource</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">UserResource</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">resource_name</span> <span class="o">=</span> <span class="s1">&#39;post&#39;</span>
+        <span class="n">queryset</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">authorization</span> <span class="o">=</span> <span class="n">Authorization</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>A linha <strong><em>authorization = Authorization()</em></strong> serve para que você possa criar e modificar elementos na sua API utilizando o cURL, como vai ser mostrado mais a frente.</p>
+<h3>Views e URLs</h3>
+<p>Agora você precisa exibir os resources de alguma forma para que seus usuário tenham acesso à API. Para isso, é necessário criar urls para acessar os seus dados. Edite o arquivo urls.py do seu projeto para que fique assim:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="kn">from</span> <span class="nn">webserver.rest_app.api</span> <span class="kn">import</span> <span class="n">PostResource</span>
+
+<span class="n">post_resource</span> <span class="o">=</span> <span class="n">PostResource</span><span class="p">()</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^api/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">post_resource</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Você já pode iniciar o <strong><em>runserver</em></strong> e acessar sua API via URLs, por exemplo:</p>
+<p><a href="http://127.0.0.1:8000/api/post/?format=json">http://127.0.0.1:8000/api/post/?format=json</a></p>
+<p><a href="http://127.0.0.1:8000/api/post/1/?format=json">http://127.0.0.1:8000/api/post/1/?format=json</a></p>
+<h3>Acessando a API</h3>
+<p>Você pode interagir com a API usando o <a href="http://curl.haxx.se/">cURL</a>. É possível usar uma ferramenta de gerenciamento de banco SQLite, mas você perde a função de criar o slug automaticamente.</p>
+<h4>Recuperando os Dados</h4>
+<p>Para visualizar os dados, ou seja, obter os dados com o curl, o procedimento é semelhante a acessar um URL via browser:</p>
+<div class="highlight"><pre><span></span>$ curl http://localhost:8000/api/post/1/?format<span class="o">=</span>json
+</pre></div>
+
+
+<h4>Enviando Dados</h4>
+<p>Para enviar e criar novos dados, você precisa usar a função POST, como estamos utilizando json, você pode enviar nesse formato da seguinte forma:</p>
+<div class="highlight"><pre><span></span>curl --dump-header - -H &quot;Content-Type: application/json&quot; -X POST --data &#39;{&quot;text&quot;: &quot;Um post bem rápido&quot;, &quot;user&quot;: &quot;/api/user/1/&quot;}&#39; http://localhost:8000/api/post/
+</pre></div>
+
+
+<h3>O estado atual do Tastypie</h3>
+<p>Recentemente, o criador do Tastypie escreveu <a href="http://toastdriven.com/blog/2014/may/23/state-tastypie/">este artigo</a> comentando sobre o atual status do Tastypie, não só em termos de desenvolvimento como em popularidade.</p>
+<p>O Tastypie ainda não possui uma versão 1.0, pois existem alguns pontos que precisam ser melhorados. Um deles é o desempenho quando muitos objetos precisam ser serializados.</p>
+<p>Outra questão importante é a incompatibilidade com o Django 1.7 e ele ainda comenta que possui um novo projeto para framework RESTFul, o <a href="https://github.com/toastdriven/restless">Restless</a>.</p>
+<p>Minha intenção com este artigo é apenas mostrar como é simples criar uma API com Python e Django usando o Tastypie, mas existem outras opções que podem ser exploradas e você pode deixar seu comentário se já teve experiência com alguma delas.</p>
+    </article>
+
+    <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/theme/js/clean-blog.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25538784-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'pythonize';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>
