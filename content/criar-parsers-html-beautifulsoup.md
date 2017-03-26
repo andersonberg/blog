@@ -15,7 +15,7 @@ html mal formatadas, facilitando o trabalho do programador.
 Instalando o BeautifulSoup
 --------------------------
 
-Você pode fazer a instalação via *pip* ou *easy\_install. *Também estão
+Você pode fazer a instalação via *pip* ou *easy\_install*. Também estão
 disponíveis pacotes em diferentes distribuições Linux.
 
 Inicie o interpretador Python para testar os códigos que vamos
@@ -66,7 +66,7 @@ objetos Tag:
 Para recuperar somente uma área da página, é possível usar o método find
 com o parâmetro id, por exemplo:
 
-    colunas = soup.find(id=&quot;glb-area-colunas&quot;)
+    colunas = soup.find(id="glb-area-colunas")
     linkscol = colunas.findAll('a')
     for link in linkscol:
         print link['href']
