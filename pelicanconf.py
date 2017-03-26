@@ -47,7 +47,7 @@ PLUGINS = [
     'summary',
 ]
 
-THEME = "clean-blog"
+THEME = "/home/andersonberg/Projetos/pelican-themes/clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
 
 
