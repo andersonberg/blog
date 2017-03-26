@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Tutorial</title><link href="http://pythonize.org/" rel="alternate"></link><link href="http://pythonize.org/feeds/tutorial.atom.xml" rel="self"></link><id>http://pythonize.org/</id><updated>2013-05-20T13:45:46-03:00</updated><entry><title>Como Criar Scripts SSH Rapidamente com Python</title><link href="http://pythonize.org/criar-scripts-ssh-rapidamente-python.html" rel="alternate"></link><published>2013-05-20T13:45:46-03:00</published><updated>2013-05-20T13:45:46-03:00</updated><author><name>Anderson Berg</name></author><id>tag:pythonize.org,2013-05-20:/criar-scripts-ssh-rapidamente-python.html</id><summary type="html">&lt;p&gt;Às vezes é necessário trabalhar com vários dispositivos ligados em rede, quer sejam computadores, roteadores ou outros tipos de equipamentos. Em muitas ocasiões precisamos enviar comandos e instruções para estes equipamentos. Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro. Mas e se forem milhares de dispositivos interconectados?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Às vezes é necessário trabalhar com &lt;strong&gt;vários&lt;/strong&gt; dispositivos ligados em &lt;strong&gt;rede&lt;/strong&gt;, quer sejam computadores, roteadores ou outros tipos de equipamentos.&lt;/p&gt;
+&lt;p&gt;Em muitas ocasiões precisamos enviar &lt;strong&gt;comandos&lt;/strong&gt; e &lt;strong&gt;instruções&lt;/strong&gt; para estes equipamentos. Isso geralmente é feito através do envio de comandos ou dados&amp;nbsp;via &lt;strong&gt;SSH&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro.&lt;/p&gt;
+&lt;p&gt;Mas e se forem &lt;strong&gt;milhares&lt;/strong&gt; de dispositivos interconectados?&lt;/p&gt;
+&lt;p&gt;Ou se são &lt;strong&gt;dezenas&lt;/strong&gt; ou &lt;strong&gt;centenas&lt;/strong&gt; de instruções em série?&lt;/p&gt;
+&lt;p&gt;E se estas duas situações ocorrem &lt;strong&gt;juntas&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Nesses casos é preciso criar scripts que façam tudo automatizado.&lt;/p&gt;
+&lt;p&gt;Neste artigo vou compartilhar minha experiência com o Paramiko, um módulo Python que fornece uma interface ao protocolo SSH2.&lt;/p&gt;
+&lt;p&gt;SSH é um protocolo de rede criptografado que realiza conexão segura entre computadores e permite executar comandos remotamente. Em diversas situações é necessário automatizar o processo de conexão e execução de comandos em um computador remoto.&lt;/p&gt;
+&lt;h2&gt;Como instalar o Paramiko&lt;/h2&gt;
+&lt;p&gt;Para instalar o Paramiko é necessário instalar antes o PyCrypto, que pode ser encontrado via easy_install ou no repositório da sua distribuição Linux. Encontrei algumas dificuldades para instalar o pycrypto no Windows, por sorte existem alguns binários compilados do pycrypto: &lt;a href="http://www.voidspace.org.uk/python/modules.shtml#pycrypto" target="_blank" title="PyCrypto Windows"&gt;http://www.voidspace.org.uk/python/modules.shtml#pycrypto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Depois é só instalar o paramiko via easy_install ou procurando no repositório da distro Linux.&lt;/p&gt;
+&lt;p&gt;O paramiko tem uma classe base que fornece toda a interface para comunicação: &lt;strong&gt;&lt;em&gt;paramiko.SSHClient&lt;/em&gt;&lt;/strong&gt;. Para criar um objeto e criar uma conexão com um servidor é bem simples:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;anderson&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Neste exemplo, a função 'connect' está conectando ao servidor SSH local, passando nome de usuário e senha através dos par&amp;acirc;metros 'username' e 'password', respectivamente.&lt;/p&gt;
+&lt;p&gt;Quando você conecta em um servidor ssh pela primeira vez, uma chave é automaticamente armazenada em disco num arquivo chamado "&lt;strong&gt;&lt;em&gt;.ssh/known_hosts&lt;/em&gt;&lt;/strong&gt;" na sua pasta home. Para isto é preciso o usuário, manualmente, aceitar o armazenamento da chave do servidor, confirmando a confiabilidade deste. Para fazermos isso automaticamente através do Paramiko, utilizamos o objeto "set_missing_host_key_policy", passando "&lt;strong&gt;&lt;em&gt;paramiko.AutoAddPolicy()&lt;/em&gt;&lt;/strong&gt;" como parâmetro para aceitar automaticamente as chaves. Então, nosso código anterior pode ser modificado:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_missing_host_key_policy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AutoAddPolicy&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;anderson&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Tenha o cuidado de somente utilizar este artifício com servidores que você confia.&lt;/p&gt;
+&lt;h2&gt;Enviando comandos via ssh&lt;/h2&gt;
+&lt;p&gt;Já aprendemos como conectar em um computador remotamente via ssh. Agora vamos ver como enviar comandos e receber os resultados destes comandos. Isto é feito com o método "exec_command" do SSHClient(). Este método retorna uma tupla de objetos (stdin, stdout, stderr) que você pode ler (no caso do stdout e stderr) ou escrever (stdin). A sintaxe para executar um comando é a seguinte:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ls&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Que vai enviar o comando 'ls' para listar os arquivos do diretório atual. Para exibir o retorno deste comando podemos ler o conte&amp;uacute;do do objeto stdout e, em seguida, fechar a conexão ssh:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Em alguns casos precisamos enviar outras informações para execução do comando, como por exemplo uma senha de administrador. Podemos fazer isto escrevendo no objeto stdin.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo fdisk -l&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1234&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;O retorno dos comando pode ser tratado com as poderosas ferramentas de manipulação de string de Python, ou ainda filtradas com expressões regulares, dando ainda mais opções ao programador na hora de criar um script completo. Em outro post darei mais detalhes sobre a utilização do Paramiko.&lt;/p&gt;</content><category term="ssh"></category><category term="script"></category></entry><entry><title>Introdução à programação em Cython</title><link href="http://pythonize.org/introducao-programacao-cython.html" rel="alternate"></link><published>2011-09-10T03:20:23-03:00</published><updated>2011-09-10T03:20:23-03:00</updated><author><name>Anderson Berg</name></author><id>tag:pythonize.org,2011-09-10:/introducao-programacao-cython.html</id><summary type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;
+&lt;h3&gt;INSTALAÇÃO&lt;/h3&gt;
+&lt;p&gt;O primeiro passo é a instalação. Você pode instalar o Cython através do setuptools, digitando, na linha de comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ easy_install cython
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Esse comando funciona tanto na linha de comando no Linux, quanto no prompt do Windows.&lt;/p&gt;
+&lt;p&gt;Se você não tem instalado o setuptools no Linux basta procurar pelo pacote homônimo e instalá-lo. No Windows, basta baixar o executável, na &lt;a href="http://pypi.python.org/pypi/setuptools#windows"&gt;página do pacote&lt;/a&gt; e instalar.&lt;/p&gt;
+&lt;p&gt;Uma alternativa é baixar o Cython no &lt;a href="http://www.cython.org"&gt;site&lt;/a&gt;, extrair os arquivos e fazer na linha de comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Dica do &lt;a href="http://frsoares.wordpress.com/"&gt;Francisco&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Em sistemas Debian e derivados, é possível instalar o cython pelo apt-get:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install cython
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;TUTORIAL&lt;/h3&gt;
+&lt;p&gt;Para utilizar Cython em seu código, é preciso primeiro criar um arquivo com extenção .pyx. Para um primeiro teste crie um arquivo chamado helloworld.pyx e escreva a seguinte linha:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;print &amp;quot;Hello World&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Em seguida, crie um arquivo chamado setup.py que tenha o seguinte conteúdo:&lt;/p&gt;
+&lt;p&gt;Então, basta compilar utilizando o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python setup.py build_ext --inplace
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Depois é só entrar no interpretador e importar o módulo criado:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;helloworld&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt; &lt;span class="n"&gt;World&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Vamos avançar e criar um código que realmente tenha tipos de dados de C. Vamos criar uma função que retorne todos os números primos de 1 até um limite passado como parâmetro e salvar num arquivo chamado primes.pyx:&lt;/p&gt;
+&lt;p&gt;Para declarar tipos C, você deve usar &lt;em&gt;cdef &lt;/em&gt;e informar o tipo de dado, como nas linhas 2 e 3. Na linha 3, como qualquer array em C, deve ser informado o tamanho do array.&lt;/p&gt;
+&lt;p&gt;Nas linha 9 e 11 é que aparece o ganho no desempenho, a iteração dos blocos &lt;em&gt;while&lt;/em&gt; é feita com tipos C, que torna a execução mais rápida.&lt;/p&gt;
+&lt;p&gt;Feito isso, basta criar o arquivo setup.py, como no exemplo anterior:&lt;/p&gt;
+&lt;p&gt;E compilar com o comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python setup.py build_ext --inplace
+&lt;/pre&gt;&lt;/div&gt;</content><category term="cython"></category></entry></feed>

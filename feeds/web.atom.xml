@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Web</title><link href="http://pythonize.org/" rel="alternate"></link><link href="http://pythonize.org/feeds/web.atom.xml" rel="self"></link><id>http://pythonize.org/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="http://pythonize.org/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:pythonize.org,2014-12-28:/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quer fazer isso em poucos passos usando Django?
+Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django!&lt;/p&gt;
+&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? &lt;/p&gt;
+&lt;p&gt;Quer fazer isso em &lt;strong&gt;poucos passos&lt;/strong&gt; usando &lt;strong&gt;Django&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em &lt;strong&gt;Django&lt;/strong&gt;! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.&lt;/p&gt;
+&lt;p&gt;Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Continue lendo este artigo&lt;/strong&gt; para aprender, com detalhes, como instalar o Mezzanine, criar um projeto, configurar e aplicar um tema. No final, ainda vou dar uma dica bônus.&lt;/p&gt;
+&lt;p&gt;Também fizemos a migração do servidor para o &lt;a href="https://www.digitalocean.com/?refcode=c831ddc18699"&gt;DigitalOcean&lt;/a&gt;. Se você ainda não tem um servidor, recomendo o DigitalOcean e clicando &lt;a href="https://www.digitalocean.com/?refcode=c831ddc18699"&gt;neste link&lt;/a&gt; para fazer o cadastro, você ajuda a pagar uma parte da conta do Pythonize :)&lt;/p&gt;
+&lt;h2&gt;Instalando o Mezzanine&lt;/h2&gt;
+&lt;p&gt;O Mezzanine vem com diversas features bem úteis como integração com &lt;strong&gt;Analytics&lt;/strong&gt;, &lt;strong&gt;Disqus&lt;/strong&gt; e &lt;strong&gt;Gravatar&lt;/strong&gt;. A lista completa você pode ver em: http://mezzanine.jupo.org/docs/overview.html#features&lt;/p&gt;
+&lt;p&gt;A instalação do Mezzanine é bem simples, vamos começar criando um ambiente virtual.&lt;/p&gt;
+&lt;h3&gt;Criando um ambiente virtual&lt;/h3&gt;
+&lt;p&gt;Antes de tudo é sempre recomendável instalar o virtualenv, pra não poluir o seu ambiente. O virtualenv é uma ferramenta que cria um ambiente Python separado do seu sistema, evitando maiores dores de cabeça com configurações.&lt;/p&gt;
+&lt;p&gt;Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ virtualenv venv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No Windows você precisa fazer:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; \path\to\env\Scripts\activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Instalando o Mezzanine e as dependências&lt;/h3&gt;
+&lt;p&gt;Com o ambiente virtual ativado, você pode usar o pip para instalar o Mezzanine e todas as dependências necessárias:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install mezzanine
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pronto, o pip se encarrega de instalar todas as dependências e o próprio Mezzanine. No final, você já estará pronto para criar seu primeiro projeto com o Mezzanine.&lt;/p&gt;
+&lt;h2&gt;Usando o Mezzanine&lt;/h2&gt;
+&lt;p&gt;O Mezzanine funciona de uma forma muito parecida do Django. Para criar um novo projeto Mezzanine, faça de forma semelhante a criar um projeto Django:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mezzanine-project meu_blog
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Simples né?
+Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Django faz:&lt;/p&gt;
+&lt;h3&gt;Criando um banco de dados&lt;/h3&gt;
+&lt;p&gt;O Mezzanine vem com algumas ferramentas além das que já conhecemos do Django. Para criar e iniciar um banco de dados basta você rodar o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python manage.py createdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Quando você rodar este comando vão aparecer algumas perguntas que você pode responder facilmente.&lt;/p&gt;
+&lt;h3&gt;Editando as configurações&lt;/h3&gt;
+&lt;p&gt;Agora, antes de começar a testar é hora de você mexer nas configurações da sua aplicação. Abra o arquivo settings.py na raiz do seu projeto e procure a seguinte linha:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ALLOWED_HOSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;E troque pelo seguinte:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ALLOWED_HOSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;.example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# Allow domain and subdomains&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;.example.com.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# Also allow FQDN and subdomains&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Esta é uma lista de strings que representam os hosts e domínios que seu site Django pode servir. Lembre-se de trocas 'example.com' pelo nome do seu domínio.&lt;/p&gt;
+&lt;p&gt;Busque também pela linha:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;E substitua pelo seu fuso horário, por exemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TIME_ZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;America/Recife&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h3&gt;Testando seu site&lt;/h3&gt;
+&lt;p&gt;Para ver como está o seu blog até agora, execute o seguinte na linha de comando (com o ambiente virtual ativado):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python manage.py runserver
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Você pode ver seu site acessando o endereço http://127.0.0.1:8000/ no seu browser. Para terminar o servidor, pressione CTRL+C.&lt;/p&gt;
+&lt;h3&gt;Escreva novos artigos&lt;/h3&gt;
+&lt;p&gt;Você tem acesso à tela de administração indo até: http://127.0.0.1:8000/admin/ e digitando usuário e senha que você criou quando executou o comando para criação do banco de dados.&lt;/p&gt;
+&lt;p&gt;Lá você terá acesso ao dashboard do Mezzanine, onde é possível escrever artigos, gerenciar arquivos de mídia, criar novas páginas pro site e outras coisas.&lt;/p&gt;
+&lt;h3&gt;Aplicando um tema&lt;/h3&gt;
+&lt;p&gt;Um site não é nada sem um bom layout. Até agora, só cuidamos do back-end do blog, precisamos então dar uma cara pra ele.&lt;/p&gt;
+&lt;p&gt;O Mezzanine já tem temas prontos para serem usados e que se integram à ferramenta, todos baseados no bootstrap. Você pode optar por &lt;a href="http://thecodinghouse.in/themes/"&gt;temas gratuitos&lt;/a&gt; ou &lt;a href="http://mezzathe.me/"&gt;temas premium pagos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Escolha um dos temas gratuitos e faça o download. O tema é um app Django, então basta copiar dentro do projeto Mezzanine e adicionar ao INSTALLED_APPS no arquivo settings.py. É recomendável que seja o primeiro app na lista.&lt;/p&gt;
+&lt;p&gt;Pronto, seu blog está totalmente configurado e com um belo template, agora é só criar conteúdo para seus leitores.&lt;/p&gt;
+&lt;h2&gt;Bônus: Como migrar seu site Wordpress para Mezzanine&lt;/h2&gt;
+&lt;p&gt;Com o Mezzanine é possível importar artigos de outras plataformas de blog como Wordpress e Blogger.&lt;/p&gt;
+&lt;p&gt;Para fazer a importação dos seus artigos do Wordpress, primeiro é preciso instalar o &lt;a href="https://code.google.com/p/feedparser/"&gt;feedparser&lt;/a&gt;, que pode ser instalar via pip.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install feedparser
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Faça login no seu blog Wordpress e vá em Ferramentas -&amp;gt; Exportar. Nesta tela você pode configurar alguns filtros e realizar a exportação do arquivo. Lembre-se de guardar o caminho onde o arquivo foi baixado.&lt;/p&gt;
+&lt;p&gt;O comando pra importar os artigos do Wordpress só funciona com o Python 2. Quando criar o ambiente virtual é importante informar ao virtualenv qual é a versão do Python que você deseja utilizar, por exemplo, no Linux:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;virtualenv -p /usr/bin/python2.7 venv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Por último, simplesmente execute o comando import_wordpress, passando o seu usuário no mezzanine e o caminho onde está o arquivo no argumento 'url':&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python manage.py import_wordpress --mezzanine-user=.. --url=[caminho_do_arquivo]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Concluindo&lt;/h3&gt;
+&lt;p&gt;Foi muito gratificante finalmente conseguir migrar o Pythonize pra Django. E o Mezzanine facilitou bastante esse trabalho. Agora é muito mais fácil pra mim gerenciar o site e fazer modificações, pois está tudo em Python e não em PHP como no Wordpress.&lt;/p&gt;
+&lt;p&gt;Consegui integrar com todas as ferramentas que utilizava antes no Wordpress, principalmente Analytics e Disqus, tudo foi muito simples.&lt;/p&gt;
+&lt;p&gt;Agora tenho uma pergunta para você&lt;/p&gt;
+&lt;p&gt;O que você achou de trabalhar com Django e Mezzanine para criar um blog? &lt;/p&gt;
+&lt;p&gt;Deixe seu comentário logo abaixo!&lt;/p&gt;
+&lt;p&gt;Imagem por: &lt;a href="http://www.flickr.com/photos/futureshape/4977096245/"&gt;futureshape&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category><category term="blog"></category><category term="mezzanine"></category></entry><entry><title>Como criar uma API REST com Django</title><link href="http://pythonize.org/criar-api-rest-django.html" rel="alternate"></link><published>2014-10-05T19:37:02-03:00</published><updated>2014-10-05T19:37:02-03:00</updated><author><name>Anderson Berg</name></author><id>tag:pythonize.org,2014-10-05:/criar-api-rest-django.html</id><summary type="html">&lt;p&gt;Como construir uma API Restful totalmente configurável , funcional e simples ?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Como tornar essa API pública, ao mesmo tempo que protege seus dados?
+E como fazer tudo isso usando Django?&lt;/p&gt;
+&lt;p&gt;Como construir uma  &lt;strong&gt;API Restful&lt;/strong&gt;  totalmente  &lt;strong&gt;configurável&lt;/strong&gt; ,  &lt;strong&gt;funcional&lt;/strong&gt;  e  &lt;strong&gt;simples&lt;/strong&gt; ?&lt;/p&gt;
+&lt;p&gt;Como tornar essa API &lt;strong&gt;pública&lt;/strong&gt;, ao mesmo tempo que &lt;strong&gt;protege&lt;/strong&gt; seus dados?&lt;/p&gt;
+&lt;p&gt;E como fazer tudo isso usando &lt;strong&gt;Django&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Você vai conhecerum pouco do &lt;strong&gt;Tastypie&lt;/strong&gt;, um framework Python muito eficiente que provê uma &lt;a href="http://pt.wikipedia.org/wiki/API"&gt;API&lt;/a&gt; (Application Programming Interface, em português: Interface de Programação de Aplicativos) &lt;a href="http://pt.wikipedia.org/wiki/REST"&gt;REST&lt;/a&gt; totalmente configurável para trabalhar com Django.&lt;/p&gt;
+&lt;p&gt;Para acompanharo que vamos apresentar aqui, &lt;strong&gt;não&lt;/strong&gt; é necessário ser expert emDjango. Vamos seguir um &lt;strong&gt;passo-a-passo&lt;/strong&gt; bem simples. Se você já sabe como configurar e usar o Django, pode pular para a parte de configuração do Tastypie, ou utilizar este tutorial como lembrete.&lt;/p&gt;
+&lt;p&gt;Se você quer se aprofundar no estudo de Djangorecomendo os seguintes links: &lt;a href="https://docs.djangoproject.com/en/1.6/intro/tutorial01/"&gt;Django Tutorial&lt;/a&gt;, &lt;a href="http://www.tangowithdjango.com/book/"&gt;Tango with Django&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;E para aprender mais sobre RESTful webservices, tem um tutorial bem interessante &lt;a href="http://www.restapitutorial.com/"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Como Funciona o Tastypie&lt;/h2&gt;
+&lt;p&gt;O Tastypie ajuda você a publicar os models criados no Django, ao mesmo tempo que permite total controle sobre que é exibido ou não. O Tastypie &lt;strong&gt;serializa&lt;/strong&gt; a sa&amp;iacute;da em diversos formatos, incluindo json. Através da criação de objetos 'Resource', o Tastypie implementa formas de obter dados (GET), criar (POST) e modificar (PUT/PATCH) dados e excluir dados (DELETE).&lt;/p&gt;
+&lt;p&gt;Com estas dicas, você irá construir uma pequena API pra um exemplo de &lt;strong&gt;microblog&lt;/strong&gt;, como o Twitter.&lt;/p&gt;
+&lt;h2&gt;Configurando o ambiente de desenvolvimento&lt;/h2&gt;
+&lt;p&gt;Antes de tudo e qualquer coisa, pra não bagunçar o seu ambiente, instale o &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt;. O virtualenv é uma ferramenta que cria um ambiente Python &lt;strong&gt;separado&lt;/strong&gt; do seu sistema, evitando maiores dores de cabeça com configurações.&lt;/p&gt;
+&lt;p&gt;Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ virtualenv venv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pronto, seu ambiente virtual foi instalado na pasta 'venv'. Agora, pra começar a usar é preciso ativar o ambiente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;source&lt;/span&gt; venv/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Você pode perceber que o contexto da sua linha de comando mudou, quer dizer que o ambiente está pronto pra ser usado.&lt;/p&gt;
+&lt;h2&gt;Instalação do Tastypie&lt;/h2&gt;
+&lt;p&gt;Com o ambiente ativado, agora é a hora de instalar o django, em seguida instale algumas dependências do tastypie e ele próprio:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install django
+$ pip install python-mimeparse lxml defusedxml
+$ pip install django-tastypie
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pra maiores detalhes de instalação e configuração, você pode olhar na &lt;a href="http://django-tastypie.readthedocs.org/en/latest/tutorial.html"&gt;documentação&lt;/a&gt; do Tastypie.&lt;/p&gt;
+&lt;h2&gt;Criando um projeto Django&lt;/h2&gt;
+&lt;p&gt;Com tudo instalado, criar um projeto django e uma aplicação dentro do projeto também é bem fácil:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ django-admin.py startproject webserver
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; webserver/webserver
+$ python ../manage.py startapp rest_app
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Configurando o banco de dados&lt;/h2&gt;
+&lt;p&gt;Vamos utilizar como banco de dados o Sqlite, verifique se no seu arquivo settings.py já está habilitado:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DATABASES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.db.backends.sqlite3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BASE_DIR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;db.sqlite3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Crie o banco de dados inicial para o Django:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py syncdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Testando tudo até aqui&lt;/h3&gt;
+&lt;p&gt;Pra testar tudo até aqui, você pode iniciar o servidor:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py runserver
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;E acessar através da url: http://localhost:8000&lt;/p&gt;
+&lt;h3&gt;pip freeze&lt;/h3&gt;
+&lt;p&gt;O pip tem um comando que cria um registro dos pacotes que foram instalados no ambiente. Isso é útil se você quiser recriar o projeto e ter todos os pacotes nas versões necessárias.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip freeze &amp;gt; requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Criando a API&lt;/h2&gt;
+&lt;h3&gt;Criando uma nova aplicação&lt;/h3&gt;
+&lt;p&gt;Você cria um nova aplicação com o comando startapp:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$python manage.py startapp rest_app
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Lembre-se de atualizar o INSTALLED_APPS no seu arquivo settings.py com a aplicação criada.&lt;/p&gt;
+&lt;h3&gt;Configuração inicial do Tastypie&lt;/h3&gt;
+&lt;p&gt;O primeiro passo é adicionar 'tastypie' em INSTALLED_APPS no arquivo settings.py do seu projeto Django. A documentação do Tastypie diz que essa é a única configuração obrigatória. Para nosso exemplo vai ser suficiente por enquanto.&lt;/p&gt;
+&lt;p&gt;Eu tive que fazer uma modificação no settings.py por causa de um problema com autenticação. Não sei se será seu caso, só tive que remover uma linha do MIDDLEWARE_CLASSES:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;MIDDLEWARE_CLASSES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.contrib.sessions.middleware.SessionMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.middleware.common.CommonMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.middleware.csrf.CsrfViewMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.contrib.auth.middleware.AuthenticationMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="c1"&gt;#&amp;#39;django.contrib.auth.middleware.SessionAuthenticationMiddleware&amp;#39;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.contrib.messages.middleware.MessageMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;django.middleware.clickjacking.XFrameOptionsMiddleware&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h3&gt;Criando seus models&lt;/h3&gt;
+&lt;p&gt;O &lt;a href="https://docs.djangoproject.com/en/dev/topics/db/models/"&gt;model&lt;/a&gt; é onde você armazena as informações básicas dos seus dados. Cada model é uma classe Python que herda de django.db.models.Model e que se torna uma tabela no seu banco de dados. Vamos criar alguns models para nossa aplicação.&lt;/p&gt;
+&lt;p&gt;Você só precisa criar um model para a nossa aplicação que é a classe que vai conter um post no microblog. A classe de usuário podemos obter do próprio Django.&lt;/p&gt;
+&lt;p&gt;Então, edite o seu arquivo models.py e adicione a seguinte classe:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;date_created&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;slug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SlugField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Este model tem um usuário associado, a data de publicação do post, o próprio texto e um campo chamado &lt;strong&gt;&lt;em&gt;slug&lt;/em&gt;&lt;/strong&gt;, que identifica um determinado post e vai ser útil pra poder fazer buscas.&lt;/p&gt;
+&lt;p&gt;Pra personalizar o slug, você precisa sobrescrever o método save() do model. Neste caso, vamos pegar somente os 50 primeiros caracteres do post como slug:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;slugify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)[:&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;A classe completa fica assim:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tastypie.utils.timezone&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;now&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.contrib.auth.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.db&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.utils.text&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;slugify&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;date_created&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;slug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SlugField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__unicode__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;slugify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)[:&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h3&gt;Criando Resources&lt;/h3&gt;
+&lt;p&gt;Tudo certo, mas como eu faço para expor meus dados através da API?&lt;/p&gt;
+&lt;p&gt;Você precisa criar &lt;strong&gt;resources&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;No Tastypie, resources são os intermediários entre o usuário da sua API e os models de Django.&lt;/p&gt;
+&lt;p&gt;Crie o arquivo api.py no diretório da aplicação que você gerou anteriormente:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tastypie.resources&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ModelResource&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;rest_app.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Post&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;PostResource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ModelResource&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;resource_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;post&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;queryset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Post&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Você também tem que criar um resource para a classe de usuário:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UserResource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ModelResource&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;queryset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;resource_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;E associar um usuário a um post. Logo, é precisoadicionar a seguinte linha na classe PostResource:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UserResource&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;O arquivo api.py completo fica assim:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tastypie.resources&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ModelResource&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;webserver.rest_app.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Post&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tastypie.authorization&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Authorization&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.contrib.auth.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tastypie&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UserResource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ModelResource&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;queryset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;resource_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;authorization&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Authorization&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;PostResource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ModelResource&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UserResource&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Meta&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;resource_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;post&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;queryset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Post&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;authorization&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Authorization&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;A linha &lt;strong&gt;&lt;em&gt;authorization = Authorization()&lt;/em&gt;&lt;/strong&gt; serve para que você possa criar e modificar elementos na sua API utilizando o cURL, como vai ser mostrado mais a frente.&lt;/p&gt;
+&lt;h3&gt;Views e URLs&lt;/h3&gt;
+&lt;p&gt;Agora você precisa exibir os resources de alguma forma para que seus usuário tenham acesso à API. Para isso, é necessário criar urls para acessar os seus dados. Edite o arquivo urls.py do seu projeto para que fique assim:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf.urls&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;webserver.rest_app.api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PostResource&lt;/span&gt;
+
+&lt;span class="n"&gt;post_resource&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PostResource&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^api/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post_resource&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Você já pode iniciar o &lt;strong&gt;&lt;em&gt;runserver&lt;/em&gt;&lt;/strong&gt; e acessar sua API via URLs, por exemplo:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://127.0.0.1:8000/api/post/?format=json"&gt;http://127.0.0.1:8000/api/post/?format=json&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://127.0.0.1:8000/api/post/1/?format=json"&gt;http://127.0.0.1:8000/api/post/1/?format=json&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Acessando a API&lt;/h3&gt;
+&lt;p&gt;Você pode interagir com a API usando o &lt;a href="http://curl.haxx.se/"&gt;cURL&lt;/a&gt;. É possível usar uma ferramenta de gerenciamento de banco SQLite, mas você perde a função de criar o slug automaticamente.&lt;/p&gt;
+&lt;h4&gt;Recuperando os Dados&lt;/h4&gt;
+&lt;p&gt;Para visualizar os dados, ou seja, obter os dados com o curl, o procedimento é semelhante a acessar um URL via browser:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ curl http://localhost:8000/api/post/1/?format&lt;span class="o"&gt;=&lt;/span&gt;json
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Enviando Dados&lt;/h4&gt;
+&lt;p&gt;Para enviar e criar novos dados, você precisa usar a função POST, como estamos utilizando json, você pode enviar nesse formato da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl --dump-header - -H &amp;quot;Content-Type: application/json&amp;quot; -X POST --data &amp;#39;{&amp;quot;text&amp;quot;: &amp;quot;Um post bem rápido&amp;quot;, &amp;quot;user&amp;quot;: &amp;quot;/api/user/1/&amp;quot;}&amp;#39; http://localhost:8000/api/post/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;O estado atual do Tastypie&lt;/h3&gt;
+&lt;p&gt;Recentemente, o criador do Tastypie escreveu &lt;a href="http://toastdriven.com/blog/2014/may/23/state-tastypie/"&gt;este artigo&lt;/a&gt; comentando sobre o atual status do Tastypie, não só em termos de desenvolvimento como em popularidade.&lt;/p&gt;
+&lt;p&gt;O Tastypie ainda não possui uma versão 1.0, pois existem alguns pontos que precisam ser melhorados. Um deles é o desempenho quando muitos objetos precisam ser serializados.&lt;/p&gt;
+&lt;p&gt;Outra questão importante é a incompatibilidade com o Django 1.7 e ele ainda comenta que possui um novo projeto para framework RESTFul, o &lt;a href="https://github.com/toastdriven/restless"&gt;Restless&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Minha intenção com este artigo é apenas mostrar como é simples criar uma API com Python e Django usando o Tastypie, mas existem outras opções que podem ser exploradas e você pode deixar seu comentário se já teve experiência com alguma delas.&lt;/p&gt;</content><category term="rest"></category><category term="django"></category><category term="api"></category></entry><entry><title>Como criar parsers HTML poderosos com BeautifulSoup</title><link href="http://pythonize.org/criar-parsers-html-beautifulsoup.html" rel="alternate"></link><published>2011-12-31T15:45:19-03:00</published><updated>2011-12-31T15:45:19-03:00</updated><author><name>Anderson Berg</name></author><id>tag:pythonize.org,2011-12-31:/criar-parsers-html-beautifulsoup.html</id><summary type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup pode ser usado para arquivos HTML ou XML, com ele fica muito simples navegar e buscar textos em páginas HTML. Uma grande vantagem da BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar
+informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup
+pode ser usado para arquivos HTML ou XML, com ele fica muito simples
+navegar e buscar textos em páginas HTML. Uma grande vantagem da
+BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
+html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;
+&lt;h2&gt;Instalando o BeautifulSoup&lt;/h2&gt;
+&lt;p&gt;Você pode fazer a instalação via &lt;em&gt;pip&lt;/em&gt; ou &lt;em&gt;easy_install. &lt;/em&gt;Também estão
+disponíveis pacotes em diferentes distribuições Linux.&lt;/p&gt;
+&lt;p&gt;Inicie o interpretador Python para testar os códigos que vamos
+apresentar a seguir.&lt;/p&gt;
+&lt;p&gt;Para processar páginas HTML, importe o BeautifulSoup da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;BeautifulSoup&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Se você for processar arquivos XML:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;BeautifulSoup&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulStoneSoup&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Você pode também consultar a documentação do BeautifulSoup
+&lt;a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" title="BeautifulSoup"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Criando o parser&lt;/h2&gt;
+&lt;p&gt;Por enquanto vamos processar apenas páginas html. Vamos usar a biblioteca urllib2 para recuperar uma página html.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="n"&gt;pagina&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://www.globo.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Isso vai criar uma string com todo o código html da página. Então, para criar o parser basta:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;soup = BeautifulSoup(pagina)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;É possível transformar esse objeto BeautifulSoup em string com o método
+prettify, que manipula o código bruto adicionando quebra de linha e
+espaçamento recriando a estrutura do código html.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;soup.prettify()
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Para listar todos os links da página recuperada, usamos o método
+findAll:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;links = soup.findAll(&amp;#39;a&amp;#39;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Neste código, '&lt;em&gt;links&lt;/em&gt;' é uma lista contendo objetos do tipo Tag da
+biblioteca BeautifulSoup (class BeautifulSoup.Tag). Vamos agora, listar
+somente os links (tirando qualquer texto ou marcação) que estão nesses
+objetos Tag:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;for link in links:
+    print link[&amp;#39;href&amp;#39;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Para recuperar somente uma área da página, é possível usar o método find
+com o parâmetro id, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;colunas = soup.find(id=&amp;amp;quot;glb-area-colunas&amp;amp;quot;)
+linkscol = colunas.findAll(&amp;#39;a&amp;#39;)
+for link in linkscol:
+    print link[&amp;#39;href&amp;#39;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A biblioteca BeautifulSoup facilita muito na hora de criar parsers e
+crawlers para páginas html ou xml. Usada junto com o urllib2 são
+poderosos aliados na recuperação de informação na web.&lt;/p&gt;</content><category term="parser"></category><category term="html"></category></entry></feed>
