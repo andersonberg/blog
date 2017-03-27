@@ -34,8 +34,6 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = ['images']
-PLUGIN_PATH = ['/home/andersonberg/Projetos/pelican-plugins']
-PLUGINS = ["representative_image"]
 
 
 DISPLAY_CATEGORIES_ON_MENU = False
@@ -44,10 +42,7 @@ DELETE_OUTPUT_DIRECTORY = False
 PLUGIN_PATHS = ['/home/andersonberg/Projetos/pelican-plugins']
 PLUGINS = [
     'assets',
-    'global_license',
-    'i18n_subsites',
-    'liquid_tags.img',
-    'summary',
+    'representative_image'
 ]
 
 THEME = "/home/andersonberg/Projetos/pelican-themes/clean-blog"
