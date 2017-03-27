@@ -34,6 +34,9 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = ['images']
+PLUGIN_PATH = ['/home/andersonberg/Projetos/pelican-plugins']
+PLUGINS = ["representative_image"]
+
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DELETE_OUTPUT_DIRECTORY = False
