@@ -11,7 +11,7 @@
         <title>Pythonize</title>
 
             <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/web.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
+            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante-tutorial-ferramentas.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -37,8 +37,6 @@
 
 
 
-        <meta name="tags" contents="parser" />
-        <meta name="tags" contents="html" />
 
 
 			<meta property="og:locale" content="pt">
@@ -46,11 +44,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html">
-	<meta property="og:title" content="Como criar parsers HTML poderosos com BeautifulSoup">
+	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html">
+	<meta property="og:title" content="Programando em Python no IDLE">
 	<meta property="og:description" content="">
 	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
-	<meta property="article:published_time" content="2011-12-31 15:45:19-03:00">
+	<meta property="article:published_time" content="2011-09-08 00:46:47-03:00">
 </head>
 
 <body>
@@ -86,10 +84,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Como criar parsers HTML poderosos com BeautifulSoup</h1>
+                        <h1>Programando em Python no IDLE</h1>
                         <span class="meta">Posted by
                                 <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on Sat 31 December 2011
+                             on Thu 08 September 2011
                         </span>
                         
                     </div>
@@ -104,75 +102,52 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>Neste post você vai aprender como criar um parser pra recuperar
-informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup
-pode ser usado para arquivos HTML ou XML, com ele fica muito simples
-navegar e buscar textos em páginas HTML. Uma grande vantagem da
-BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
-html mal formatadas, facilitando o trabalho do programador.</p>
-<h2>Instalando o BeautifulSoup</h2>
-<p>Você pode fazer a instalação via <em>pip</em> ou <em>easy_install</em>. Também estão
-disponíveis pacotes em diferentes distribuições Linux.</p>
-<p>Inicie o interpretador Python para testar os códigos que vamos
-apresentar a seguir.</p>
-<p>Para processar páginas HTML, importe o BeautifulSoup da seguinte forma:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-</pre></div>
+        <p>Depois da instala&ccedil;&atilde;o do Python e alguns testes vamos p&ocirc;r a m&atilde;o na massa e trabalhar de verdade com arquivos de c&oacute;digo. Todo c&oacute;digo que voc&ecirc; faz no interpretador &eacute; perdido quando voc&ecirc; fecha o interpretador. Mas eu fiz muito c&oacute;digo legal e vou simplesmente perder tudo? Python tamb&eacute;m trabalha com arquivos de c&oacute;digo que voc&ecirc; pode salvar em sua m&aacute;quina para rodar depois.</p>
 
+<p></p>
 
-<p>Se você for processar arquivos XML:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulStoneSoup</span>
-</pre></div>
+<p>Os arquivos Python t&ecirc;m extens&atilde;o .py. &Eacute; poss&iacute;vel rodar um arquivo Python a partir da linha de comando da seguinte forma:</p>
 
+<pre>$ python nome_do_arquivo.py</pre>
 
-<p>Você pode também consultar a documentação do BeautifulSoup
-<a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" title="BeautifulSoup">aqui</a>.</p>
-<h2>Criando o parser</h2>
-<p>Por enquanto vamos processar apenas páginas html. Vamos usar a biblioteca urllib2 para recuperar uma página html.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="n">pagina</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;http://www.globo.com&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+<p>Com isso todo o c&oacute;digo que est&aacute; salvo no arquivo &eacute; transformado em bytecode, que &eacute; um arquivo bin&aacute;rio usado pelo interpretador. O bytecode &eacute; multiplataforma, ou seja, voc&ecirc; pode levar seu c&oacute;digo pra rodar em qualquer m&aacute;quina e qualquer sistema. O bytecode &eacute; armazenado em sua m&aacute;quina geralmente com a extens&atilde;o .pyc, quando voc&ecirc; executar seu c&oacute;digo novamente sem altera&ccedil;&otilde;es o programa n&atilde;o precisa ser compilado de novo, sendo executado mais r&aacute;pido. Sempre que o seu c&oacute;digo fonte &eacute; alterado, o interpretador gera um novo bytecode.</p>
 
+<p>Voc&ecirc; pode escrever seu c&oacute;digo no tradicional bloco de notas, mas existem diversas alternativas para escrever c&oacute;digo Python e eu recomendo fortemente que n&atilde;o seja escrito no bloco de notas. Existem v&aacute;rios editores de texto e IDEs pr&oacute;prias pra se escrever c&oacute;digo em Python. No Windows temos o Notepad++ que tem highlighting (destaca palavras especiais e seu c&oacute;digo em cores) ou o pr&oacute;prio IDLE que tamb&eacute;m vem com highlighting, auto-identa&ccedil;&atilde;o e outros recursos que facilitam a cria&ccedil;&atilde;o do c&oacute;digo. No Linux tem o Vim, que possui todos esses recursos citados anteriormente ou o Kate. Voc&ecirc; pode ver outros editores na <a href="http://wiki.python.org/moin/PythonEditors">lista de editores Python</a>&nbsp;e tamb&eacute;m <a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IDEs que suportam Python</a>.</p>
 
-<p>Isso vai criar uma string com todo o código html da página. Então, para criar o parser basta:</p>
-<div class="highlight"><pre><span></span>soup = BeautifulSoup(pagina)
-</pre></div>
+<p>Neste post vamos tratar do IDLE para Windows em outro post vou falar do Vim no Linux, se algu&eacute;m tiver experi&ecirc;ncia com outros editores ou IDEs, por favor compartilhe conosco nos coment&aacute;rios.</p>
 
+<p><strong>IDLE</strong></p>
 
-<p>É possível transformar esse objeto BeautifulSoup em string com o método
-prettify, que manipula o código bruto adicionando quebra de linha e
-espaçamento recriando a estrutura do código html.</p>
-<div class="highlight"><pre><span></span>soup.prettify()
-</pre></div>
+<p>O IDLE, al&eacute;m de ter uma linha de comando Python, tamb&eacute;m &eacute; usado como editor de arquivo fonte. Com a janela principal do IDLE aberta v&aacute; ao menu File-&gt;New Window e ser&aacute; aberta uma janela em branco onde &eacute; poss&iacute;vel escrever o c&oacute;digo.</p>
 
+<p>Vamos fazer um pequeno teste. Na nova janela aberta digite o c&oacute;digo que est&aacute; na imagem (print "Hello World"):</p>
 
-<p>Para listar todos os links da página recuperada, usamos o método
-findAll:</p>
-<div class="highlight"><pre><span></span>links = soup.findAll(&#39;a&#39;)
-</pre></div>
+<div class="wp-caption aligncenter" id="attachment_73"><a href="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png"><img src="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png" title="helloworldidle" height="89" width="500" alt="" class="size-full wp-image-73" /></a>Hello World no IDLE
+<p class="wp-caption-text"></p>
+</div>
 
+<p>Salve o arquivo com o nome: helloworld.py</p>
 
-<p>Neste código, '<em>links</em>' é uma lista contendo objetos do tipo Tag da
-biblioteca BeautifulSoup (class BeautifulSoup.Tag). Vamos agora, listar
-somente os links (tirando qualquer texto ou marcação) que estão nesses
-objetos Tag:</p>
-<div class="highlight"><pre><span></span>for link in links:
-    print link[&#39;href&#39;]
-</pre></div>
+<p>Voc&ecirc; j&aacute; pode perceber a fun&ccedil;&atilde;o highlighting nesse c&oacute;digo.</p>
 
+<p>Nesta mesma janela, v&aacute; ao menu Run-&gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.</p>
 
-<p>Para recuperar somente uma área da página, é possível usar o método find
-com o parâmetro id, por exemplo:</p>
-<div class="highlight"><pre><span></span>colunas = soup.find(id=&quot;glb-area-colunas&quot;)
-linkscol = colunas.findAll(&#39;a&#39;)
-for link in linkscol:
-    print link[&#39;href&#39;]
-</pre></div>
+<p>Vamos avan&ccedil;ar um pouco mais. Escreva o seguinte trecho de c&oacute;digo no IDLE:</p>
 
+<pre>#-- coding: latin1 --
+x = 7*3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #Isto &eacute; um coment&aacute;rio<br />y = "Hello"&nbsp;&nbsp;&nbsp; &nbsp;#Este &eacute; mais um coment&aacute;rio<br />if y == "Hello":<br />x = x + 1<br />y = y + "World"&nbsp;&nbsp;&nbsp; #Concatena&ccedil;&atilde;o de strings<br />print x<br />print y</pre>
 
-<p>A biblioteca BeautifulSoup facilita muito na hora de criar parsers e
-crawlers para páginas html ou xml. Usada junto com o urllib2 são
-poderosos aliados na recuperação de informação na web.</p>
+<p>Aqui, mais uma fun&ccedil;&atilde;o do IDLE: auto-identa&ccedil;&atilde;o, assim que voc&ecirc; digita linha 4 e d&aacute; Enter, o IDLE identifica um novo bloco de c&oacute;digo. O Python identifica blocos de c&oacute;digo atrav&eacute;s da identa&ccedil;&atilde;o, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).</p>
+
+<p>Outras fun&ccedil;&otilde;es interessante est&atilde;o no menu Format na janela de edi&ccedil;&atilde;o de c&oacute;digo.</p>
+
+<div class="wp-caption aligncenter" id="attachment_77"><a href="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png"><img src="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png" title="idle_format" height="248" width="500" alt="" class="size-full wp-image-77" /></a>Menu Format no IDLE
+<p class="wp-caption-text"></p>
+</div>
+
+<p>Neste menu voc&ecirc; pode identar ou tirar identa&ccedil;&atilde;o de um trecho selecionado, &eacute; poss&iacute;vel comentar ou descomentar o c&oacute;digo, transformar tab em espa&ccedil;os ou vice-versa.</p>
+
+<p>D&uacute;vidas, opini&otilde;es, sugest&otilde;es e experi&ecirc;ncias, postem nos coment&aacute;rios!</p>
     </article>
 
     <hr>
@@ -182,8 +157,8 @@ poderosos aliados na recuperação de informação na web.</p>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'pythonize';
-                var disqus_identifier = 'criar-parsers-html-beautifulsoup.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html';
+                var disqus_identifier = 'programando-python-idle.html';
+                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                     dsq.src = '//pythonize.disqus.com/embed.js';

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quer fazer isso em poucos passos usando Django?
-Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django!&lt;/p&gt;
-&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;
 &lt;p&gt;Quer fazer isso em &lt;strong&gt;poucos passos&lt;/strong&gt; usando &lt;strong&gt;Django&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em &lt;strong&gt;Django&lt;/strong&gt;! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.&lt;/p&gt;
 &lt;p&gt;Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;
@@ -109,9 +107,9 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 &lt;p&gt;Foi muito gratificante finalmente conseguir migrar o Pythonize pra Django. E o Mezzanine facilitou bastante esse trabalho. Agora é muito mais fácil pra mim gerenciar o site e fazer modificações, pois está tudo em Python e não em PHP como no Wordpress.&lt;/p&gt;
 &lt;p&gt;Consegui integrar com todas as ferramentas que utilizava antes no Wordpress, principalmente Analytics e Disqus, tudo foi muito simples.&lt;/p&gt;
 &lt;p&gt;Agora tenho uma pergunta para você&lt;/p&gt;
-&lt;p&gt;O que você achou de trabalhar com Django e Mezzanine para criar um blog? &lt;/p&gt;
+&lt;p&gt;O que você achou de trabalhar com Django e Mezzanine para criar um blog?&lt;/p&gt;
 &lt;p&gt;Deixe seu comentário logo abaixo!&lt;/p&gt;
-&lt;p&gt;Imagem por: &lt;a href="http://www.flickr.com/photos/futureshape/4977096245/"&gt;futureshape&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category><category term="blog"></category><category term="mezzanine"></category></entry><entry><title>20 artigos e sites essenciais para você aprender Python</title><link href="https://andersonberg.github.io/pythonize-pelican/20-artigos-e-sites-essenciais-para-voce-aprender-python.html" rel="alternate"></link><published>2014-12-15T19:29:33-03:00</published><updated>2014-12-15T19:29:33-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-15:/pythonize-pelican/20-artigos-e-sites-essenciais-para-voce-aprender-python.html</id><summary type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. &lt;/p&gt;
+&lt;p&gt;Imagem por: &lt;a href="http://www.flickr.com/photos/futureshape/4977096245/"&gt;futureshape&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category><category term="blog"></category><category term="mezzanine"></category></entry><entry><title>20 artigos e sites essenciais para você aprender Python</title><link href="https://andersonberg.github.io/pythonize-pelican/20-artigos-e-sites-essenciais-para-voce-aprender-python.html" rel="alternate"></link><published>2014-12-15T19:29:33-03:00</published><updated>2014-12-15T19:29:33-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-15:/pythonize-pelican/20-artigos-e-sites-essenciais-para-voce-aprender-python.html</id><summary type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python e mais alguns de bônus para quem quer se aprofundar.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência.&lt;/p&gt;
 &lt;p&gt;Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python.&lt;/p&gt;
 &lt;p&gt;Muitos deles eu li na íntegra, outros os principais tópicos, mas todos tiveram contribuição na construção do meu conhecimento em Python.&lt;/p&gt;
 &lt;h3&gt;1. &lt;a href="http://www.pythonforbeginners.com/"&gt;Python For Begginers&lt;/a&gt;&lt;/h3&gt;
@@ -179,7 +177,7 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 &lt;h3&gt;18. &lt;a href="http://pycursos.com"&gt;PyCursos&lt;/a&gt;&lt;/h3&gt;
 &lt;hr&gt;
 &lt;p&gt;Site com diversos cursos de Python, todos de altíssima qualidade. Existem cursos para todas as áreas utilizando Python: web, computação científica, jogos, etc. O site também tem vários webinários realizados pelos professores e convidados.&lt;/p&gt;
-&lt;p&gt;Alguns cursos: &lt;/p&gt;
+&lt;p&gt;Alguns cursos:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pycursos.com/desenvolvimento-agil-para-web-com-web2py/"&gt;Desenvolvimento Ágil para Web com web2py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pycursos.com/django/"&gt;Python na Web com Django (Python 3)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://pycursos.com/python-para-zumbis/"&gt;Python para zumbis&lt;/a&gt;&lt;/p&gt;
@@ -188,11 +186,11 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 &lt;p&gt;O famoso site de cursos interativos também tem um curso de Python. O curso de Python é bastante completo mostrando tópicos básicos e avançados.&lt;/p&gt;
 &lt;h3&gt;20. &lt;a href="http://pythonhelp.wordpress.com/"&gt;Python Help&lt;/a&gt;&lt;/h3&gt;
 &lt;hr&gt;
-&lt;p&gt;Blog com muito conteúdo bom de Python. Um dos autores, &lt;a href="https://twitter.com/eliasdorneles"&gt;Elias Dorneles&lt;/a&gt; foi palestrante na &lt;a href="http://2014.pythonbrasil.org.br/schedule/"&gt;PythonBrasil[10]&lt;/a&gt; e tive o prazer de conhecer e trocar umas ideias sobre extração de conteúdo na web. &lt;/p&gt;
+&lt;p&gt;Blog com muito conteúdo bom de Python. Um dos autores, &lt;a href="https://twitter.com/eliasdorneles"&gt;Elias Dorneles&lt;/a&gt; foi palestrante na &lt;a href="http://2014.pythonbrasil.org.br/schedule/"&gt;PythonBrasil[10]&lt;/a&gt; e tive o prazer de conhecer e trocar umas ideias sobre extração de conteúdo na web.&lt;/p&gt;
 &lt;p&gt;Tem artigos para todos os gostos, tem pra iniciantes ou experientes programadores em Python. Vale a pena dar uma conferida em alguns deles.&lt;/p&gt;
 &lt;p&gt;Artigo sobre web scraping: &lt;a href="http://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/"&gt;WEB SCRAPING COM SCRAPY – PRIMEIROS PASSOS&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;UPDATE: 21. &lt;a href="https://ericstk.wordpress.com/"&gt;Aprendendo Python&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprendendo Python. Não é só um blog para ensino da linguagem, mas mostra tudo sobre a comunidade Python, principalmente no Brasil. &lt;/p&gt;
+&lt;p&gt;São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprendendo Python. Não é só um blog para ensino da linguagem, mas mostra tudo sobre a comunidade Python, principalmente no Brasil.&lt;/p&gt;
 &lt;p&gt;Quem tem curiosidade de saber como as pessoas usam Python, quais os projetos que existem em Python por aí, este é um ótimo lugar pra conhecer.&lt;/p&gt;
 &lt;h3&gt;Conclusão&lt;/h3&gt;
 &lt;p&gt;Esta lista está longe de ser definitiva e posso ter sido injusto com alguns sites, inclusive com os que eu não conheço. Estes são apenas sugestões para quem está começando ou quer aprimorar os conhecimentos em Python.&lt;/p&gt;
@@ -861,7 +859,7 @@ navegar e buscar textos em páginas HTML. Uma grande vantagem da
 BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
 html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;
 &lt;h2&gt;Instalando o BeautifulSoup&lt;/h2&gt;
-&lt;p&gt;Você pode fazer a instalação via &lt;em&gt;pip&lt;/em&gt; ou &lt;em&gt;easy_install. &lt;/em&gt;Também estão
+&lt;p&gt;Você pode fazer a instalação via &lt;em&gt;pip&lt;/em&gt; ou &lt;em&gt;easy_install&lt;/em&gt;. Também estão
 disponíveis pacotes em diferentes distribuições Linux.&lt;/p&gt;
 &lt;p&gt;Inicie o interpretador Python para testar os códigos que vamos
 apresentar a seguir.&lt;/p&gt;
@@ -913,7 +911,7 @@ objetos Tag:&lt;/p&gt;
 
 &lt;p&gt;Para recuperar somente uma área da página, é possível usar o método find
 com o parâmetro id, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;colunas = soup.find(id=&amp;amp;quot;glb-area-colunas&amp;amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;colunas = soup.find(id=&amp;quot;glb-area-colunas&amp;quot;)
 linkscol = colunas.findAll(&amp;#39;a&amp;#39;)
 for link in linkscol:
     print link[&amp;#39;href&amp;#39;]
@@ -1302,7 +1300,52 @@ Entre com um número: 4
 
 &lt;p&gt;Outras fun&amp;ccedil;&amp;otilde;es interessantes que podem ser adicionadas ao Vim para codifica&amp;ccedil;&amp;atilde;o Python podem ser vistas em:&amp;nbsp;&lt;a href="http://blog.dispatched.ch/2009/05/24/vim-as-python-ide/"&gt;VIM as Python IDE&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Update (17/02/12): Escrevemos &amp;nbsp;um post mais completo sobre como utilizar o &lt;a href="http://www.pythonize.org/tornando-o-vim-uma-ide-amigavel-pra-python/" title="Vim como IDE pra Python"&gt;Vim como IDE pra Python&lt;/a&gt;.&lt;/p&gt;</content><category term="vim"></category></entry><entry><title>Iniciando a programação em Python</title><link href="https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html" rel="alternate"></link><published>2011-09-04T15:06:10-03:00</published><updated>2011-09-04T15:06:10-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-04:/pythonize-pelican/iniciando-programacao-python.html</id><summary type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;
+&lt;p&gt;Update (17/02/12): Escrevemos &amp;nbsp;um post mais completo sobre como utilizar o &lt;a href="http://www.pythonize.org/tornando-o-vim-uma-ide-amigavel-pra-python/" title="Vim como IDE pra Python"&gt;Vim como IDE pra Python&lt;/a&gt;.&lt;/p&gt;</content><category term="vim"></category></entry><entry><title>Programando em Python no IDLE</title><link href="https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html" rel="alternate"></link><published>2011-09-08T00:46:47-03:00</published><updated>2011-09-08T00:46:47-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-08:/pythonize-pelican/programando-python-idle.html</id><summary type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depois da instala&amp;ccedil;&amp;atilde;o do Python e alguns testes vamos p&amp;ocirc;r a m&amp;atilde;o na massa e trabalhar de verdade com arquivos de c&amp;oacute;digo. Todo c&amp;oacute;digo que voc&amp;ecirc; faz no interpretador &amp;eacute; perdido quando voc&amp;ecirc; fecha o interpretador. Mas eu fiz muito c&amp;oacute;digo legal e vou simplesmente perder tudo? Python tamb&amp;eacute;m trabalha com arquivos de c&amp;oacute;digo que voc&amp;ecirc; pode salvar em sua m&amp;aacute;quina para rodar depois.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Os arquivos Python t&amp;ecirc;m extens&amp;atilde;o .py. &amp;Eacute; poss&amp;iacute;vel rodar um arquivo Python a partir da linha de comando da seguinte forma:&lt;/p&gt;
+
+&lt;pre&gt;$ python nome_do_arquivo.py&lt;/pre&gt;
+
+&lt;p&gt;Com isso todo o c&amp;oacute;digo que est&amp;aacute; salvo no arquivo &amp;eacute; transformado em bytecode, que &amp;eacute; um arquivo bin&amp;aacute;rio usado pelo interpretador. O bytecode &amp;eacute; multiplataforma, ou seja, voc&amp;ecirc; pode levar seu c&amp;oacute;digo pra rodar em qualquer m&amp;aacute;quina e qualquer sistema. O bytecode &amp;eacute; armazenado em sua m&amp;aacute;quina geralmente com a extens&amp;atilde;o .pyc, quando voc&amp;ecirc; executar seu c&amp;oacute;digo novamente sem altera&amp;ccedil;&amp;otilde;es o programa n&amp;atilde;o precisa ser compilado de novo, sendo executado mais r&amp;aacute;pido. Sempre que o seu c&amp;oacute;digo fonte &amp;eacute; alterado, o interpretador gera um novo bytecode.&lt;/p&gt;
+
+&lt;p&gt;Voc&amp;ecirc; pode escrever seu c&amp;oacute;digo no tradicional bloco de notas, mas existem diversas alternativas para escrever c&amp;oacute;digo Python e eu recomendo fortemente que n&amp;atilde;o seja escrito no bloco de notas. Existem v&amp;aacute;rios editores de texto e IDEs pr&amp;oacute;prias pra se escrever c&amp;oacute;digo em Python. No Windows temos o Notepad++ que tem highlighting (destaca palavras especiais e seu c&amp;oacute;digo em cores) ou o pr&amp;oacute;prio IDLE que tamb&amp;eacute;m vem com highlighting, auto-identa&amp;ccedil;&amp;atilde;o e outros recursos que facilitam a cria&amp;ccedil;&amp;atilde;o do c&amp;oacute;digo. No Linux tem o Vim, que possui todos esses recursos citados anteriormente ou o Kate. Voc&amp;ecirc; pode ver outros editores na &lt;a href="http://wiki.python.org/moin/PythonEditors"&gt;lista de editores Python&lt;/a&gt;&amp;nbsp;e tamb&amp;eacute;m &lt;a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"&gt;IDEs que suportam Python&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Neste post vamos tratar do IDLE para Windows em outro post vou falar do Vim no Linux, se algu&amp;eacute;m tiver experi&amp;ecirc;ncia com outros editores ou IDEs, por favor compartilhe conosco nos coment&amp;aacute;rios.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;O IDLE, al&amp;eacute;m de ter uma linha de comando Python, tamb&amp;eacute;m &amp;eacute; usado como editor de arquivo fonte. Com a janela principal do IDLE aberta v&amp;aacute; ao menu File-&amp;gt;New Window e ser&amp;aacute; aberta uma janela em branco onde &amp;eacute; poss&amp;iacute;vel escrever o c&amp;oacute;digo.&lt;/p&gt;
+
+&lt;p&gt;Vamos fazer um pequeno teste. Na nova janela aberta digite o c&amp;oacute;digo que est&amp;aacute; na imagem (print "Hello World"):&lt;/p&gt;
+
+&lt;div class="wp-caption aligncenter" id="attachment_73"&gt;&lt;a href="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png"&gt;&lt;img src="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png" title="helloworldidle" height="89" width="500" alt="" class="size-full wp-image-73" /&gt;&lt;/a&gt;Hello World no IDLE
+&lt;p class="wp-caption-text"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Salve o arquivo com o nome: helloworld.py&lt;/p&gt;
+
+&lt;p&gt;Voc&amp;ecirc; j&amp;aacute; pode perceber a fun&amp;ccedil;&amp;atilde;o highlighting nesse c&amp;oacute;digo.&lt;/p&gt;
+
+&lt;p&gt;Nesta mesma janela, v&amp;aacute; ao menu Run-&amp;gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.&lt;/p&gt;
+
+&lt;p&gt;Vamos avan&amp;ccedil;ar um pouco mais. Escreva o seguinte trecho de c&amp;oacute;digo no IDLE:&lt;/p&gt;
+
+&lt;pre&gt;#-- coding: latin1 --
+x = 7*3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; #Isto &amp;eacute; um coment&amp;aacute;rio&lt;br /&gt;y = "Hello"&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;#Este &amp;eacute; mais um coment&amp;aacute;rio&lt;br /&gt;if y == "Hello":&lt;br /&gt;x = x + 1&lt;br /&gt;y = y + "World"&amp;nbsp;&amp;nbsp;&amp;nbsp; #Concatena&amp;ccedil;&amp;atilde;o de strings&lt;br /&gt;print x&lt;br /&gt;print y&lt;/pre&gt;
+
+&lt;p&gt;Aqui, mais uma fun&amp;ccedil;&amp;atilde;o do IDLE: auto-identa&amp;ccedil;&amp;atilde;o, assim que voc&amp;ecirc; digita linha 4 e d&amp;aacute; Enter, o IDLE identifica um novo bloco de c&amp;oacute;digo. O Python identifica blocos de c&amp;oacute;digo atrav&amp;eacute;s da identa&amp;ccedil;&amp;atilde;o, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).&lt;/p&gt;
+
+&lt;p&gt;Outras fun&amp;ccedil;&amp;otilde;es interessante est&amp;atilde;o no menu Format na janela de edi&amp;ccedil;&amp;atilde;o de c&amp;oacute;digo.&lt;/p&gt;
+
+&lt;div class="wp-caption aligncenter" id="attachment_77"&gt;&lt;a href="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png"&gt;&lt;img src="http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png" title="idle_format" height="248" width="500" alt="" class="size-full wp-image-77" /&gt;&lt;/a&gt;Menu Format no IDLE
+&lt;p class="wp-caption-text"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Neste menu voc&amp;ecirc; pode identar ou tirar identa&amp;ccedil;&amp;atilde;o de um trecho selecionado, &amp;eacute; poss&amp;iacute;vel comentar ou descomentar o c&amp;oacute;digo, transformar tab em espa&amp;ccedil;os ou vice-versa.&lt;/p&gt;
+
+&lt;p&gt;D&amp;uacute;vidas, opini&amp;otilde;es, sugest&amp;otilde;es e experi&amp;ecirc;ncias, postem nos coment&amp;aacute;rios!&lt;/p&gt;</content></entry><entry><title>Iniciando a programação em Python</title><link href="https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html" rel="alternate"></link><published>2011-09-04T15:06:10-03:00</published><updated>2011-09-04T15:06:10-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-04:/pythonize-pelican/iniciando-programacao-python.html</id><summary type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;
 &lt;p&gt;Não vou dizer por que você deve programar em Python. Eu a escolhi porque acho uma linguagem simples e poderosa, com poucas linhas de código você consegue criar uma aplicação completa rapidamente. Gosto de Python também porque possui muitas ferramentas que facilitam o dia-a-dia do desenvolvimento de software tanto comercial quanto científico.
 Então vamos ao que interessa, pra programar em Python você precisa fazer o download e instalar em sua máquina.
 Instalação para os usuários Linux/Mac OS X

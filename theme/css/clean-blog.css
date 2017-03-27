@@ -215,6 +215,9 @@ hr.small {
     font-size: 30px;
   }
 }
+.post-preview p{
+    padding-bottom: 1.5em
+}
 .post-preview > a {
   color: #404040;
 }
@@ -397,4 +400,8 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+img.align-left{
+    float: left;
+    margin: 0 1em 0.5em 0;
 }

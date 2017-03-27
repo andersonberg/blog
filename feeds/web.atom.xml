@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Web</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/web.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quer fazer isso em poucos passos usando Django?
-Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django!&lt;/p&gt;
-&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Web</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/web.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;
 &lt;p&gt;Quer fazer isso em &lt;strong&gt;poucos passos&lt;/strong&gt; usando &lt;strong&gt;Django&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em &lt;strong&gt;Django&lt;/strong&gt;! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.&lt;/p&gt;
 &lt;p&gt;Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;
@@ -109,7 +107,7 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 &lt;p&gt;Foi muito gratificante finalmente conseguir migrar o Pythonize pra Django. E o Mezzanine facilitou bastante esse trabalho. Agora é muito mais fácil pra mim gerenciar o site e fazer modificações, pois está tudo em Python e não em PHP como no Wordpress.&lt;/p&gt;
 &lt;p&gt;Consegui integrar com todas as ferramentas que utilizava antes no Wordpress, principalmente Analytics e Disqus, tudo foi muito simples.&lt;/p&gt;
 &lt;p&gt;Agora tenho uma pergunta para você&lt;/p&gt;
-&lt;p&gt;O que você achou de trabalhar com Django e Mezzanine para criar um blog? &lt;/p&gt;
+&lt;p&gt;O que você achou de trabalhar com Django e Mezzanine para criar um blog?&lt;/p&gt;
 &lt;p&gt;Deixe seu comentário logo abaixo!&lt;/p&gt;
 &lt;p&gt;Imagem por: &lt;a href="http://www.flickr.com/photos/futureshape/4977096245/"&gt;futureshape&lt;/a&gt;&lt;/p&gt;</content><category term="django"></category><category term="blog"></category><category term="mezzanine"></category></entry><entry><title>Como criar uma API REST com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/criar-api-rest-django.html" rel="alternate"></link><published>2014-10-05T19:37:02-03:00</published><updated>2014-10-05T19:37:02-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-10-05:/pythonize-pelican/criar-api-rest-django.html</id><summary type="html">&lt;p&gt;Como construir uma API Restful totalmente configurável , funcional e simples ?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Como tornar essa API pública, ao mesmo tempo que protege seus dados?
 E como fazer tudo isso usando Django?&lt;/p&gt;
@@ -416,7 +414,7 @@ navegar e buscar textos em páginas HTML. Uma grande vantagem da
 BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
 html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;
 &lt;h2&gt;Instalando o BeautifulSoup&lt;/h2&gt;
-&lt;p&gt;Você pode fazer a instalação via &lt;em&gt;pip&lt;/em&gt; ou &lt;em&gt;easy_install. &lt;/em&gt;Também estão
+&lt;p&gt;Você pode fazer a instalação via &lt;em&gt;pip&lt;/em&gt; ou &lt;em&gt;easy_install&lt;/em&gt;. Também estão
 disponíveis pacotes em diferentes distribuições Linux.&lt;/p&gt;
 &lt;p&gt;Inicie o interpretador Python para testar os códigos que vamos
 apresentar a seguir.&lt;/p&gt;
@@ -468,7 +466,7 @@ objetos Tag:&lt;/p&gt;
 
 &lt;p&gt;Para recuperar somente uma área da página, é possível usar o método find
 com o parâmetro id, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;colunas = soup.find(id=&amp;amp;quot;glb-area-colunas&amp;amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;colunas = soup.find(id=&amp;quot;glb-area-colunas&amp;quot;)
 linkscol = colunas.findAll(&amp;#39;a&amp;#39;)
 for link in linkscol:
     print link[&amp;#39;href&amp;#39;]
