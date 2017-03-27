@@ -821,11 +821,11 @@ endif
 
 
 &lt;p&gt;O resultado é este:&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/vimpython.jpg 372 118 Vim com highlighting e número de linhas %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/vimpython.jpg" width="372" height="118" title="Vim com highlighting e número de linhas" alt="Vim com highlighting e número de linhas"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Navegação pelo código&lt;/h3&gt;
 &lt;p&gt;Uma funcionalidade muito útil é a navegação pelo código. Com esta ferramenta habilitada é possível ver todas as classes e funções presentes no seu código e poder pular automaticamente pra qualquer uma delas.&lt;/p&gt;
 &lt;p&gt;Primeiro, é preciso instalar o pacote &lt;a href="http://ctags.sourceforge.net/"&gt;exuberant-ctags&lt;/a&gt;, disponível no repositório com este mesmo nome. Depois, baixe o &lt;a href="http://www.vim.org/scripts/script.php?script_id=273"&gt;taglist&lt;/a&gt;, que é um plugin do vim. Coloque o arquivo taglist.vim na pasta \~/.vim/plugin e o taglist.txt na pasta \~/.vim/doc, vá até esta última pasta, inicie o vim e rode :helptags. (com '.' no final) e já estará instalado.&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/vim-explorer.jpg 858 100 Vim Explorer %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/vim-explorer.jpg" width="858" height="100" title="Vim Explorer" alt="Vim Explorer"&gt;&lt;/p&gt;
 &lt;p&gt;Agora é preciso fazer algumas alterações no vimrc:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot; Exibe nome da função
 let g:ctags_statusline=1
@@ -849,7 +849,7 @@ let Tlist_File_Fold_Auto_Close = 1
 &lt;h3&gt;5. Ocultar Código&lt;/h3&gt;
 &lt;p&gt;Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.&lt;/p&gt;
 &lt;p&gt;No Vim isso é possível através de um &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;plugin&lt;/a&gt;. Para instalá-lo baixe o arquivo &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;neste link&lt;/a&gt;, crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (&amp;lt;Shift&amp;gt; + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/vim-code-folding.jpg 843 146 Vim Code Folding %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/vim-code-folding.jpg" width="843" height="146" title="Vim Code Folding" alt="Vim Code Folding"&gt;&lt;/p&gt;
 &lt;h3&gt;6. Project Explorer&lt;/h3&gt;
 &lt;p&gt;Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;NerdTree&lt;/a&gt;, que pode ser baixado &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;aqui&lt;/a&gt;. Para instalar basta extrair o conteúdo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.&lt;/p&gt;
 &lt;p&gt;Na &lt;a href="http://www.vim.org/scripts/index.php"&gt;página de scripts&lt;/a&gt; do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.&lt;/p&gt;</content><category term="vim"></category><category term="ide"></category></entry><entry><title>Como criar parsers HTML poderosos com BeautifulSoup</title><link href="https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html" rel="alternate"></link><published>2011-12-31T15:45:19-03:00</published><updated>2011-12-31T15:45:19-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-31:/pythonize-pelican/criar-parsers-html-beautifulsoup.html</id><summary type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup pode ser usado para arquivos HTML ou XML, com ele fica muito simples navegar e buscar textos em páginas HTML. Uma grande vantagem da BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar
@@ -1350,19 +1350,19 @@ x = 7*3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; #I
 Então vamos ao que interessa, pra programar em Python você precisa fazer o download e instalar em sua máquina.
 Instalação para os usuários Linux/Mac OS X
 Se você usa uma distribuição Linux, seja Ubuntu, Fedora, OpenSUSE, CentOS, etc... ou se você usa o Mac OS X é bem provável que o Python já esteja instalado, basta abrir um terminal (konsole, para KDE ou gnome-terminal para Gnome) e digitar “python” (sem aspas) que o interpretador Python irá iniciar.&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/python-linux.png Interpretador Python no Shell do Linux %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/python-linux.png" title="Interpretador Python no Shell do Linux" alt="Interpretador Python no Shell do Linux"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Interpretador Python no Shell do Linux&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Instalação para os usuários Windows
 Para os usuários de Windows é necessário instalar o interpretador. Visite o site &lt;a href="http://www.python.org/download/"&gt;http://www.python.org/download/&lt;/a&gt; e baixe a última versão. Python mantém duas versões: 2.7.x e 3.2.x. Se você não sabe qual escolher, vá de 2.7, pois muitas ferramentas e frameworks são compatíveis somente com a versão 2.7. Instale normalmente, como qualquer outro instalador Windows. Depois da instalação é preciso configurar a variável PATH do sistema. No Windows 7, abra o Painel de Controle, na pesquisa (no canto superior direito)  digite “variáveis de ambiente” (sem aspas) e clique em “Editar variáveis de ambiente para sua conta”. Na seção: “Variáveis de usuário” clique na variável PATH ou crie uma com este nome e no campo “Valor da variável” digite: “;C:\Python27” (sem aspas) no final do texto que já estiver lá (isso se você instalou o Python na pasta raiz C:)
 Pronto, agora abra o prompt de comando e digite python, você terá o interpretador pronto pra trabalhar.&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/python-cmd1.png Chamando o interpretador Python na linha de comando %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/python-cmd1.png" title="Chamando o interpretador Python na linha de comando" alt="Chamando o interpretador Python na linha de comando"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Chamando o interpretador Python na linha de comando&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Como alternativa, junto com o Python é instalado um ambiente Shell de desenvolvimento, o IDLE, que você pode usar como interpretador (da mesma forma que no cmd) ou como editor de arquivos Python.&lt;/p&gt;
-&lt;p&gt;{% img align-center /images/blog/idle-python.png IDLE Python %}&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/idle-python.png" title="IDLE Python" alt="IDLE Python"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;IDLE Python&lt;/p&gt;
 &lt;/blockquote&gt;
