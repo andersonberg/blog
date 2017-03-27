@@ -42,7 +42,8 @@ DELETE_OUTPUT_DIRECTORY = False
 PLUGIN_PATHS = ['/home/andersonberg/Projetos/pelican-plugins']
 PLUGINS = [
     'assets',
-    'representative_image'
+    'representative_image',
+    'liquid_tags.img'
 ]
 
 THEME = "/home/andersonberg/Projetos/pelican-themes/clean-blog"
