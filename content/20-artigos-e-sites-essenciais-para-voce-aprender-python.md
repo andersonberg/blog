@@ -3,9 +3,10 @@ date: 2014-12-15 19:29:33
 tags: python, sites, artigos
 category: Iniciante
 slug: 20-artigos-e-sites-essenciais-para-voce-aprender-python
-summary: Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python.
+summary: Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python e mais alguns de bônus para quem quer se aprofundar.
+image: /images/programar-python.jpg
 
-Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. 
+Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência.
 
 Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python.
 
@@ -91,7 +92,7 @@ Blog do autor do livro: [Music For Geeks and Nerds](http://musicforgeeksandnerds
 Artigo com dicas para configurar e usar o PyCharm: [How to Get Started with PyCharm and Have a Productive Python IDE](http://pedrokroger.net/getting-started-pycharm-python-ide/)
 
 Arquivo (PDF) com um guia de referência rápida do Python: [Python 3 Quick Reference](https://cloud.github.com/downloads/kroger/python-quick-ref/python-quick-ref.pdf)
- 
+
 
 ###10. [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
 
@@ -178,7 +179,7 @@ Artigo sobre str.format(): http://blog.lerner.co.il/teaching-old-dog-new-tricks-
 
 Site com diversos cursos de Python, todos de altíssima qualidade. Existem cursos para todas as áreas utilizando Python: web, computação científica, jogos, etc. O site também tem vários webinários realizados pelos professores e convidados.
 
-Alguns cursos: 
+Alguns cursos:
 
 [Desenvolvimento Ágil para Web com web2py](http://pycursos.com/desenvolvimento-agil-para-web-com-web2py/)
 
@@ -199,7 +200,7 @@ O famoso site de cursos interativos também tem um curso de Python. O curso de P
 ----------
 
 
-Blog com muito conteúdo bom de Python. Um dos autores, [Elias Dorneles](https://twitter.com/eliasdorneles) foi palestrante na [PythonBrasil\[10\]](http://2014.pythonbrasil.org.br/schedule/) e tive o prazer de conhecer e trocar umas ideias sobre extração de conteúdo na web. 
+Blog com muito conteúdo bom de Python. Um dos autores, [Elias Dorneles](https://twitter.com/eliasdorneles) foi palestrante na [PythonBrasil\[10\]](http://2014.pythonbrasil.org.br/schedule/) e tive o prazer de conhecer e trocar umas ideias sobre extração de conteúdo na web.
 
 Tem artigos para todos os gostos, tem pra iniciantes ou experientes programadores em Python. Vale a pena dar uma conferida em alguns deles.
 
@@ -208,7 +209,7 @@ Artigo sobre web scraping: [WEB SCRAPING COM SCRAPY – PRIMEIROS PASSOS](http:/
 
 ###UPDATE: 21. [Aprendendo Python](https://ericstk.wordpress.com/)
 
-São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprendendo Python. Não é só um blog para ensino da linguagem, mas mostra tudo sobre a comunidade Python, principalmente no Brasil. 
+São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprendendo Python. Não é só um blog para ensino da linguagem, mas mostra tudo sobre a comunidade Python, principalmente no Brasil.
 
 Quem tem curiosidade de saber como as pessoas usam Python, quais os projetos que existem em Python por aí, este é um ótimo lugar pra conhecer.
 

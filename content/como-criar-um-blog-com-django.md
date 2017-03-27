@@ -3,11 +3,12 @@ date: 2014-12-28 01:11:22
 tags: django, blog, mezzanine
 category: Web
 slug: como-criar-um-blog-com-django
-summary: Você quer criar um blog pra espalhar suas ideias na rede? 
-Quer fazer isso em poucos passos usando Django?
-Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django!
+summary: Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o **Mezzanine**, um CMS muito poderoso que já vem com um admin pronto para blogs.
+image: /images/blog_on.jpg
 
-Você quer criar um blog pra espalhar suas ideias na rede? 
+
+
+Você quer criar um blog pra espalhar suas ideias na rede?
 
 Quer fazer isso em **poucos passos** usando **Django**?
 
@@ -33,17 +34,17 @@ Antes de tudo é sempre recomendável instalar o virtualenv, pra não poluir o s
 Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:
 
     $ virtualenv venv
-   
+
 No Windows você precisa fazer:
 
     > \path\to\env\Scripts\activate
-   
+
 ###Instalando o Mezzanine e as dependências
 
 Com o ambiente virtual ativado, você pode usar o pip para instalar o Mezzanine e todas as dependências necessárias:
 
     $ pip install mezzanine
-  
+
 Pronto, o pip se encarrega de instalar todas as dependências e o próprio Mezzanine. No final, você já estará pronto para criar seu primeiro projeto com o Mezzanine.
 
 ##Usando o Mezzanine
@@ -142,7 +143,7 @@ Consegui integrar com todas as ferramentas que utilizava antes no Wordpress, pri
 
 Agora tenho uma pergunta para você
 
-O que você achou de trabalhar com Django e Mezzanine para criar um blog? 
+O que você achou de trabalhar com Django e Mezzanine para criar um blog?
 
 Deixe seu comentário logo abaixo!
 
