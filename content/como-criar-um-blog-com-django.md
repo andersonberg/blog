@@ -4,7 +4,7 @@ tags: django, blog, mezzanine
 category: Web
 slug: como-criar-um-blog-com-django
 summary: Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o **Mezzanine**, um CMS muito poderoso que já vem com um admin pronto para blogs.
-image: /images/blog_on.jpg
+image: images/blog_on.jpg
 
 
 

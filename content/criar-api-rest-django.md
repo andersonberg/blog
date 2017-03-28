@@ -3,9 +3,8 @@ date: 2014-10-05 19:37:02
 tags: rest, django, api
 category: Web
 slug: criar-api-rest-django
-summary: Como construir uma API Restful totalmente configurável , funcional e simples ?
-Como tornar essa API pública, ao mesmo tempo que protege seus dados?
-E como fazer tudo isso usando Django?
+summary: Como construir uma API Restful totalmente configurável , funcional e simples ? Como tornar essa API pública, ao mesmo tempo que protege seus dados? E como fazer tudo isso usando Django?
+image: images/cloud-1.png
 
 Como construir uma  **API Restful**  totalmente  **configurável** ,  **funcional**  e  **simples** ?
 
@@ -143,17 +142,17 @@ A classe completa fica assim:
     from django.contrib.auth.models import User
     from django.db import models
     from django.utils.text import slugify
-     
-     
+
+
     class Post(models.Model):
         user = models.ForeignKey(User)
         date_created = models.DateTimeField(default=now)
         text = models.CharField(max_length=200)
         slug = models.SlugField()
-     
+
         def __unicode__(self):
             return self.title
-     
+
         def save(self, *args, **kwargs):
             if not self.slug:
                 self.slug = slugify(self.text)[:50]
@@ -172,7 +171,7 @@ Crie o arquivo api.py no diretório da aplicação que você gerou anteriormente
     #!python
     from tastypie.resources import ModelResource
     from rest_app.models import Post
-    
+
     class PostResource(ModelResource):
         class Meta:
             resource_name = 'post'
@@ -199,17 +198,17 @@ O arquivo api.py completo fica assim:
     from tastypie.authorization import Authorization
     from django.contrib.auth.models import User
     from tastypie import fields
-    
+
     class UserResource(ModelResource):
         class Meta:
             queryset = User.objects.all()
             resource_name = 'user'
             authorization = Authorization()
-     
-     
+
+
     class PostResource(ModelResource):
         user = fields.ForeignKey(UserResource, 'user')
-     
+
         class Meta:
             resource_name = 'post'
             queryset = Post.objects.all()
@@ -224,9 +223,9 @@ Agora você precisa exibir os resources de alguma forma para que seus usuário t
     #!python
     from django.conf.urls import patterns, include, url
     from webserver.rest_app.api import PostResource
-     
+
     post_resource = PostResource()
-     
+
     urlpatterns = patterns('',
         url(r'^api/', include(post_resource.urls)),
     )
@@ -259,5 +258,3 @@ O Tastypie ainda não possui uma versão 1.0, pois existem alguns pontos que pre
 Outra questão importante é a incompatibilidade com o Django 1.7 e ele ainda comenta que possui um novo projeto para framework RESTFul, o [Restless](https://github.com/toastdriven/restless).
 
 Minha intenção com este artigo é apenas mostrar como é simples criar uma API com Python e Django usando o Tastypie, mas existem outras opções que podem ser exploradas e você pode deixar seu comentário se já teve experiência com alguma delas.
-
-
