@@ -4,6 +4,7 @@ tags: parser, html
 category: Web
 slug: criar-parsers-html-beautifulsoup
 summary: Neste post você vai aprender como criar um parser pra recuperar informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup pode ser usado para arquivos HTML ou XML, com ele fica muito simples navegar e buscar textos em páginas HTML. Uma grande vantagem da BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas html mal formatadas, facilitando o trabalho do programador.
+image: images/beautifulsoup.jpg
 
 Neste post você vai aprender como criar um parser pra recuperar
 informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup

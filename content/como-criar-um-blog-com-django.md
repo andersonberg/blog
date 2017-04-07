@@ -7,7 +7,6 @@ summary: Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer i
 image: images/blog_on.jpg
 
 
-
 Você quer criar um blog pra espalhar suas ideias na rede?
 
 Quer fazer isso em **poucos passos** usando **Django**?

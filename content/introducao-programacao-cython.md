@@ -44,9 +44,9 @@ Depois é só entrar no interpretador e importar o módulo criado:
     >>> import helloworld
     Hello World
 
-Vamos avançar e criar um código que realmente tenha tipos de dados de C. Vamos criar uma função que retorne todos os números primos de 1 até um limite passado como parâmetro e salvar num arquivo chamado primes.pyx:
+Vamos avançar e criar um código que realmente tenha tipos de dados de C. Vamos criar uma função que retorne todos os números primos de 1 até um limite passado como parâmetro e salvar num arquivo chamado primes.pyx.
 
-Para declarar tipos C, você deve usar *cdef *e informar o tipo de dado, como nas linhas 2 e 3. Na linha 3, como qualquer array em C, deve ser informado o tamanho do array.
+Para declarar tipos C, você deve usar *cdef* e informar o tipo de dado, como nas linhas 2 e 3. Na linha 3, como qualquer array em C, deve ser informado o tamanho do array.
 
 Nas linha 9 e 11 é que aparece o ganho no desempenho, a iteração dos blocos *while* é feita com tipos C, que torna a execução mais rápida.
 

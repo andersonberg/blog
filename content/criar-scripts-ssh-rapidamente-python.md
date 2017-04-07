@@ -4,6 +4,7 @@ tags: ssh, script
 category: Tutorial
 slug: criar-scripts-ssh-rapidamente-python
 summary: Às vezes é necessário trabalhar com vários dispositivos ligados em rede, quer sejam computadores, roteadores ou outros tipos de equipamentos. Em muitas ocasiões precisamos enviar comandos e instruções para estes equipamentos. Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro. Mas e se forem milhares de dispositivos interconectados?
+image: images/acesso-remoto-a-servidores.jpg
 
 Às vezes é necessário trabalhar com **vários** dispositivos ligados em **rede**, quer sejam computadores, roteadores ou outros tipos de equipamentos.
 
@@ -24,7 +25,7 @@ Neste artigo vou compartilhar minha experiência com o Paramiko, um módulo Pyth
 SSH é um protocolo de rede criptografado que realiza conexão segura entre computadores e permite executar comandos remotamente. Em diversas situações é necessário automatizar o processo de conexão e execução de comandos em um computador remoto.
 
 ## Como instalar o Paramiko
-Para instalar o Paramiko é necessário instalar antes o PyCrypto, que pode ser encontrado via easy_install ou no repositório da sua distribuição Linux. Encontrei algumas dificuldades para instalar o pycrypto no Windows, por sorte existem alguns binários compilados do pycrypto: <a href="http://www.voidspace.org.uk/python/modules.shtml#pycrypto" target="_blank" title="PyCrypto Windows">http://www.voidspace.org.uk/python/modules.shtml#pycrypto</a>
+Para instalar o Paramiko é necessário instalar antes o PyCrypto, que pode ser encontrado via easy_install ou no repositório da sua distribuição Linux. Encontrei algumas dificuldades para instalar o pycrypto no Windows, por sorte existem alguns binários compilados do pycrypto: [http://www.voidspace.org.uk/python/modules.shtml#pycrypto](http://www.voidspace.org.uk/python/modules.shtml#pycrypto)
 
 Depois é só instalar o paramiko via easy_install ou procurando no repositório da distro Linux.
 

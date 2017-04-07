@@ -4,6 +4,7 @@ tags: vim, ide
 category: Tutorial, Ferramentas
 slug: dicas-simples-vim-ide-python
 summary: Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?
+image: images/unixstickers.jpg
 
 Qual programador não procura um ambiente de desenvolvimento que seja **simples**, **amigável** e **funcional**?
 

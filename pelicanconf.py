@@ -10,7 +10,9 @@ PATH = 'content'
 
 TIMEZONE = 'America/Recife'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'pt-br'
+
+DEFAULT_DATE_FORMAT = '%d %b, %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
