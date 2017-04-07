@@ -23,20 +23,14 @@ O IDLE, além de ter uma linha de comando Python, também é usado como editor d
 
 Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):
 
-<div id="attachment_73" class="wp-caption aligncenter">
-
-[![](http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png "helloworldidle"){.size-full
-.wp-image-73 width="500"
-height="89"}](http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/helloworldidle2.png)Hello
-World no IDLE
-
-</div>
+{% img align-center /images/blog/helloworldidle.png Hello World no IDLE %}
+> Hello World no IDLE
 
 Salve o arquivo com o nome: helloworld.py
 
 Você já pode perceber a função highlighting nesse código.
 
-Nesta mesma janela, vá ao menu Run-&gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.
+Nesta mesma janela, vá ao menu Run->Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.
 
 Vamos avançar um pouco mais. Escreva o seguinte trecho de código no IDLE:
 
@@ -53,14 +47,8 @@ Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 
 
 Outras funções interessante estão no menu Format na janela de edição de código.
 
-<div id="attachment_77" class="wp-caption aligncenter">
-
-[![](http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png "idle_format"){.size-full
-.wp-image-77 width="500"
-height="248"}](http://www.pythonize.org/wordpress/wp-content/uploads/2011/09/idle_format.png)Menu
-Format no IDLE
-
-</div>
+{% img align-center /images/blog/idle_format.png Menu Format no IDLE %}
+> Menu Format no IDLE
 
 Neste menu você pode identar ou tirar identação de um trecho selecionado, é possível comentar ou descomentar o código, transformar tab em espaços ou vice-versa.
 
