@@ -33,18 +33,18 @@ Mas o decorator é isso mesmo. É um cara que vai pegar sua função bonitinha �
 Suponha que você criou uma função de somar:
 
     def sum(a,b)
-     return a+b
+        return a+b
 
 Função linda! Bom agora vou bagunçar a vida do cidadão que usa essa função e fazer que a soma seja a - b. Mas eu não quero perder o código original. Isto é um trabalho para o decorador:
 
     def bagunca(funcao):
-     def subtrai(a,b):
-     return a-b
-    return subtrai
+        def subtrai(a,b):
+             return a-b
+        return subtrai
 
     @bagunca
     def sum(a,b):
-     return a+b
+        return a+b
 
 Bom, agora deixo com vocês executarem o código no terminal e compreende que aconteceu com a função sum. Acredito que desta forma você compreenderá o uso do decorator.
 
