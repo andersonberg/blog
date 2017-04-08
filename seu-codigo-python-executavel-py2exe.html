@@ -104,17 +104,15 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>Em diversas situa&ccedil;&otilde;es &eacute; necess&aacute;rio criar um arquivo execut&aacute;vel a partir do seu c&oacute;digo. </p>
-<p>&Agrave;s vezes &eacute; preciso entregar um programa a um cliente que n&atilde;o tem Python instalado ou n&atilde;o tem as diversas bibliotecas que voc&ecirc; usou pra criar sua aplica&ccedil;&atilde;o. Ou at&eacute; mesmo no caso de voc&ecirc; querer usar o seu programa em qualquer outra m&aacute;quina Windows sem precisar da instala&ccedil;&atilde;o do Python.<span></p>
-<p>Neste post vamos fazer um tutorial sobre como fazer isso utilizando o </span><a href="http://www.py2exe.org">py2exe</a><span>.</span></p></p>
-<h3>INSTALA&Ccedil;&Atilde;O DO PY2EXE</h3>
-
-<p>O primeiro passo &eacute; instalar o py2exe. Pra isso basta ir ao <a href="http://sourceforge.net/projects/py2exe/files/">site</a>&nbsp;e baixar a &uacute;ltima vers&atilde;o. Baixe a vers&atilde;o para o seu Windows (32 ou 64 bits) e de acordo com a vers&atilde;o do python (2.5, 2.6, 2.7...). &nbsp;</p>
-<p>A instala&ccedil;&atilde;o &eacute; simples e padr&atilde;o. Ap&oacute;s a instala&ccedil;&atilde;o adicione a pasta de scripts ao PATH do sistema, geralmente C:\Python27\Scripts.</p>
+        <p>Em diversas situações é necessário criar um arquivo executável a partir do seu código.</p>
+<p>Às vezes é preciso entregar um programa a um cliente que não tem Python instalado ou não tem as diversas bibliotecas que você usou pra criar sua aplicação. Ou até mesmo no caso de você querer usar o seu programa em qualquer outra máquina Windows sem precisar da instalação do Python.<span></p>
+<p>Neste post vamos fazer um tutorial sobre como fazer isso utilizando o <a href="http://www.py2exe.org">py2exe</a>.</p>
+<h3>INSTALAÇÃO DO PY2EXE</h3>
+<p>O primeiro passo é instalar o py2exe. Pra isso basta ir ao <a href="http://sourceforge.net/projects/py2exe/files/">site</a> e baixar a última versão. Baixe a versão para o seu Windows (32 ou 64 bits) e de acordo com a versão do python (2.5, 2.6, 2.7...).  </p>
+<p>A instalação é simples e padrão. Após a instalação adicione a pasta de scripts ao PATH do sistema, geralmente C:\Python27\Scripts.</p>
 <h3>TUTORIAL</h3>
-
-<p>Primeiro vamos escrever um c&oacute;digo qualquer em Python. Voc&ecirc; pode escrever um c&oacute;digo importando qualquer pacote, desde que este esteja instalado no seu sistema. </p>
-<p>Para este exemplo voc&ecirc; pode escrever seu pr&oacute;prio c&oacute;digo, eu vou dar um simples exemplo utilizando a biblioteca matem&aacute;tica do Python, crie um arquivo em qualquer pasta chamado calc.py e escreva o seguinte c&oacute;digo:</p></p>
+<p>Primeiro vamos escrever um código qualquer em Python. Você pode escrever um código importando qualquer pacote, desde que este esteja instalado no seu sistema.</p>
+<p>Para este exemplo você pode escrever seu próprio código, eu vou dar um simples exemplo utilizando a biblioteca matemática do Python, crie um arquivo em qualquer pasta chamado calc.py e escreva o seguinte código:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -131,8 +129,8 @@
 14
 15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">modelo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">Digite</span> <span class="mi">1</span> <span class="n">para</span> <span class="n">seno</span> <span class="n">e</span> <span class="mi">2</span> <span class="n">para</span> <span class="n">cosseno</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;)</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">Entre</span> <span class="n">com</span> <span class="n">um</span> <span class="n">número</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;)</span>
+    <span class="n">modelo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Digite 1 para seno e 2 para cosseno: &#39;</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Entre com um número: &#39;</span><span class="p">)</span>
     <span class="n">choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">modelo</span><span class="p">)</span>
     <span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
@@ -147,13 +145,12 @@
 </pre></div>
 </td></tr></table>
 
-<p>Teste o seu c&oacute;digo:</p>
-
+<p>Teste o seu código:</p>
 <div class="highlight"><pre><span></span>C:\Pythonize&gt; python calc.py
 </pre></div>
 
 
-<p>O segundo passo &eacute; criar um script de setup. Crie um arquivo chamado setup_calc.py na mesma pasta que voc&ecirc; salvou o c&oacute;digo anterior e escreva este c&oacute;digo:</p>
+<p>O segundo passo é criar um script de setup. Crie um arquivo chamado setup_calc.py na mesma pasta que você salvou o código anterior e escreva este código:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
@@ -162,14 +159,14 @@
 </pre></div>
 </td></tr></table>
 
-<p>Pronto, para criar seu arquivo execut&aacute;vel, rode seu script:</p>
+<p>Pronto, para criar seu arquivo executável, rode seu script:</p>
 <div class="highlight"><pre><span></span>C:\Pythonize&gt;python setup_calc.py py2exe
 </pre></div>
 
 
-<p>Ser&atilde;o criadas duas pastas: build e dist. </p>
-<p>A pasta build &eacute; usada somente para compilar o c&oacute;digo e criar o execut&aacute;vel e pode ser exclu&iacute;da ap&oacute;s o t&eacute;rmino do processo. A pasta dist cont&eacute;m os arquivos necess&aacute;rios para rodar sua aplica&ccedil;&atilde;o. </p>
-<p>Agora voc&ecirc; pode testar seu execut&aacute;vel:</p>
+<p>Serão criadas duas pastas: build e dist.</p>
+<p>A pasta build é usada somente para compilar o código e criar o executável e pode ser excluída após o término do processo. A pasta dist contém os arquivos necessários para rodar sua aplicação.</p>
+<p>Agora você pode testar seu executável:</p>
 <div class="highlight"><pre><span></span>C:\Pythonize&gt;cd dist
 C:\Pythonize\dist&gt;calc.exe
 Digite 1 para seno e 2 para cosseno: 1
@@ -181,8 +178,8 @@ Entre com um número: 4
 
 
 <p>Funcionando muito bem!</p>
-<p>Se voc&ecirc; quer distribuir seu programa e levar para outro computador Windows, &eacute; preciso levar toda a pasta dist para que sua aplica&ccedil;&atilde;o funcione corretamente. Para outras informa&ccedil;&otilde;es, veja o <a href="http://www.py2exe.org/index.cgi/Tutorial">tutorial do py2exe</a>.</p>
-<p>Para utilizar o py2exe com outros pacotes e m&oacute;dulos, veja o link:&nbsp;<a href="http://www.py2exe.org/index.cgi/WorkingWithVariousPackagesAndModules">Working with Various Packages and Modules</a>.</p></p>
+<p>Se você quer distribuir seu programa e levar para outro computador Windows, é preciso levar toda a pasta dist para que sua aplicação funcione corretamente. Para outras informações, veja o <a href="http://www.py2exe.org/index.cgi/Tutorial">tutorial do py2exe</a>.
+Para utilizar o py2exe com outros pacotes e módulos, veja o link: <a href="http://www.py2exe.org/index.cgi/WorkingWithVariousPackagesAndModules">Working with Various Packages and Modules</a>.</p>
     </article>
 
     <hr>

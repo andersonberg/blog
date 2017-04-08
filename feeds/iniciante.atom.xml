@@ -87,56 +87,122 @@
 &lt;p&gt;Agora tenho duas perguntas pra você:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Você gostou das sugestões de sites e artigos?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Você tem outras sugestões de sites e artigos?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Então deixe seu comentário logo abaixo.&lt;/p&gt;</content><category term="python"></category><category term="sites"></category><category term="artigos"></category></entry><entry><title>Por que você deve ir a uma PythonBrasil</title><link href="https://andersonberg.github.io/pythonize-pelican/porque-voce-deve-ir-a-uma-pythonbrasil.html" rel="alternate"></link><published>2014-11-29T12:42:30-03:00</published><updated>2014-11-29T12:42:30-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-11-29:/pythonize-pelican/porque-voce-deve-ir-a-uma-pythonbrasil.html</id><summary type="html">&lt;p&gt;Você quer um lugar pra aprender coisas novas, ficar antenado com novas tecnologias, trocar ideias com um monte de gente legal e interessante? Então você precisa ir a uma PythonBrasil!&lt;/p&gt;</summary><content type="html">&lt;p dir="ltr"&gt;Voc&amp;ecirc; quer um lugar pra &lt;strong&gt;aprender&lt;/strong&gt; coisas novas, ficar &lt;strong&gt;antenado&lt;/strong&gt; com novas tecnologias, &lt;strong&gt;trocar ideias&lt;/strong&gt; com um monte de gente legal e interessante? Ent&amp;atilde;o voc&amp;ecirc; precisa ir a uma &lt;strong&gt;PythonBrasil&lt;/strong&gt;!&lt;/p&gt;
-
-&lt;p dir="ltr"&gt;&lt;/p&gt;
-
-&lt;p dir="ltr"&gt;No primeiro final de semana de novembro (6 a 9) ocorreu a &lt;a href="http://2014.pythonbrasil.org.br/" target="_blank" class="external"&gt;&lt;strong&gt;PythonBrasil [10]&lt;/strong&gt;&lt;/a&gt; em Porto de Galinhas, Pernambuco. H&amp;aacute; muitos anos que tenho pensado em ir a uma Python Brasil, mas sempre esbarrei no problema de comprar passagens, al&amp;eacute;m de arcar com os custos de ficar hospedado em uma cidade longe de onde se mora.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p dir="ltr"&gt;Este ano foi diferente, eu poderia finalmente participar de um grande evento da comunidade Python. Depois de tantas palavras de incentivo de amigos e de ler &lt;a href="http://henriquebastos.net/porque-voce-precisa-ir-na-pythonbrasil-2014/#more-1352" target="_blank"&gt;este artigo&lt;/a&gt; do Henrique Bastos, eu n&amp;atilde;o poderia deixar de ir.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p dir="ltr"&gt;N&amp;atilde;o sei se toda Python Brasil &amp;eacute; assim, mas comparando com outros eventos que j&amp;aacute; participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterr&amp;acirc;neos).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p dir="ltr"&gt;Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simp&amp;aacute;ticos. N&amp;atilde;o falo s&amp;oacute; da equipe de organiza&amp;ccedil;&amp;atilde;o, mas dos pr&amp;oacute;prios conferencistas e palestrantes.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2&gt;Nem s&amp;oacute; de palestras vive uma PythonBrasil&lt;/h2&gt;
-
-&lt;p&gt;&lt;img alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" src="/static/media/uploads/blog/images/pybr_600.jpg"&gt;
-&lt;p dir="ltr"&gt;Claro, o melhor deste tipo de evento n&amp;atilde;o s&amp;atilde;o as palestras, por mais qualidade que tenham. O principal &amp;eacute; o &lt;strong&gt;networking&lt;/strong&gt;.&lt;/p&gt;
-&lt;p dir="ltr"&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Conversar com pessoas de diversas partes do pa&amp;iacute;s e do mundo, ouvir suas hist&amp;oacute;rias, suas experi&amp;ecirc;ncias. Ouvir o que elas t&amp;ecirc;m constru&amp;iacute;do com Python. Ouvir o que elas t&amp;ecirc;m feito para mudar o mundo, para revolucionar a tecnologia. E ver que todos, todos mesmo, estavam dispon&amp;iacute;veis e acess&amp;iacute;veis para bater um papo, fosse durante os coffee-breaks (&amp;oacute;timos por sinal), fosse no final do ciclo de palestras, durante o almo&amp;ccedil;o ou at&amp;eacute; enquanto as palestras aconteciam nas salas.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Confesso que at&amp;eacute; perdi algumas palestras interessant&amp;iacute;ssimas porque a conversa estava muito interessante. Mas n&amp;atilde;o me arrependo, extra&amp;iacute; muito conhecimento dessas longas conversas.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Então deixe seu comentário logo abaixo.&lt;/p&gt;</content><category term="python"></category><category term="sites"></category><category term="artigos"></category></entry><entry><title>Por que você deve ir a uma PythonBrasil</title><link href="https://andersonberg.github.io/pythonize-pelican/porque-voce-deve-ir-a-uma-pythonbrasil.html" rel="alternate"></link><published>2014-11-29T12:42:30-03:00</published><updated>2014-11-29T12:42:30-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-11-29:/pythonize-pelican/porque-voce-deve-ir-a-uma-pythonbrasil.html</id><summary type="html">&lt;p&gt;Você quer um lugar pra aprender coisas novas, ficar antenado com novas tecnologias, trocar ideias com um monte de gente legal e interessante? Então você precisa ir a uma PythonBrasil!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer um lugar pra &lt;strong&gt;aprender&lt;/strong&gt; coisas novas, ficar &lt;strong&gt;antenado&lt;/strong&gt; com novas tecnologias, &lt;strong&gt;trocar ideias&lt;/strong&gt; com um monte de gente legal e interessante? Então você precisa ir a uma &lt;strong&gt;PythonBrasil&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;No primeiro final de semana de novembro (6 a 9) ocorreu a &lt;a href="http://2014.pythonbrasil.org.br/"&gt;&lt;strong&gt;PythonBrasil [10]&lt;/strong&gt;&lt;/a&gt; em Porto de Galinhas, Pernambuco. Há muitos anos que tenho pensado em ir a uma Python Brasil, mas sempre esbarrei no problema de comprar passagens, além de arcar com os custos de ficar hospedado em uma cidade longe de onde se mora.&lt;/p&gt;
+&lt;p&gt;Este ano foi diferente, eu poderia finalmente participar de um grande evento da comunidade Python. Depois de tantas palavras de incentivo de amigos e de ler &lt;a href="http://henriquebastos.net/porque-voce-precisa-ir-na-pythonbrasil-2014/#more-1352"&gt;este artigo&lt;/a&gt; do Henrique Bastos, eu não poderia deixar de ir.&lt;/p&gt;
+&lt;p&gt;Não sei se toda Python Brasil é assim, mas comparando com outros eventos que já participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterrâneos).&lt;/p&gt;
+&lt;p&gt;Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simpáticos. Não falo só da equipe de organização, mas dos próprios conferencistas e palestrantes.&lt;/p&gt;
+&lt;h2&gt;Nem só de palestras vive uma PythonBrasil&lt;/h2&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/pybr_600.jpg" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas"&gt;&lt;/p&gt;
+&lt;p&gt;Claro, o melhor deste tipo de evento não são as palestras, por mais qualidade que tenham. O principal é o &lt;strong&gt;networking&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Conversar com pessoas de diversas partes do país e do mundo, ouvir suas histórias, suas experiências. Ouvir o que elas têm construído com Python. Ouvir o que elas têm feito para mudar o mundo, para revolucionar a tecnologia. E ver que todos, todos mesmo, estavam disponíveis e acessíveis para bater um papo, fosse durante os coffee-breaks (ótimos por sinal), fosse no final do ciclo de palestras, durante o almoço ou até enquanto as palestras aconteciam nas salas.&lt;/p&gt;
+&lt;p&gt;Confesso que até perdi algumas palestras interessantíssimas porque a conversa estava muito interessante. Mas não me arrependo, extraí muito conhecimento dessas longas conversas.&lt;/p&gt;
 &lt;h2&gt;E como foram as palestras?&lt;/h2&gt;
-&lt;p&gt;&lt;img src="/static/media/uploads/blog/images/pybr10_pydanny.jpg" width="600" height="450" alt="PyDanny na PythonBrasil 10" title="PyDanny na PythonBrasil 10" /&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Sobre as palestras, como eu disse, qualidade alt&amp;iacute;ssima. A grade foi muito bem montada e as mudan&amp;ccedil;as estavam sempre em tel&amp;otilde;es espalhados pelo hall do local do evento, tudo para voc&amp;ecirc; n&amp;atilde;o perder nada da Python Brasil.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Pra abrir a Python Brasil deste ano, ningu&amp;eacute;m melhor que o &lt;a href="https://twitter.com/fperez_org" target="_blank"&gt;Fernando Perez&lt;/a&gt;, o criador do &lt;a href="http://ipython.org/" target="_blank"&gt;IPython&lt;/a&gt;. Foi uma das melhores apresenta&amp;ccedil;&amp;otilde;es do congresso, na minha opini&amp;atilde;o.&lt;/p&gt;
-&lt;p dir="ltr"&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Entre os outros keynotes estavam &lt;a href="https://twitter.com/alex_gaynor" target="_blank"&gt;Alex Gaynor&lt;/a&gt;, engenheiro de software de diversos projetos Python e membro da diretoria da Python Software Foundation; &lt;a href="https://twitter.com/roguelynn" target="_blank"&gt;Lynn Root&lt;/a&gt;, engenheira do Spotify, que mostrou como eles usam Python no desenvolvimento do player de m&amp;uacute;sica; e o &lt;a href="https://github.com/pydanny" target="_blank"&gt;PyDanny&lt;/a&gt;, co-autor do Two Scoops of Django, al&amp;eacute;m de capoeirista (deu um show &amp;agrave; parte na palestra) e engenheiro na Eventbrite.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Se quiser ver quais foram as outras palestras que rolaram no final de semana acesse a p&amp;aacute;gina da &lt;a href="http://2014.pythonbrasil.org.br/schedule/" target="_blank"&gt;programa&amp;ccedil;&amp;atilde;o&lt;/a&gt;. Um dos palestrantes, Gileno Filho, escreveu um &lt;a href="http://gilenofilho.com.br/minha-pythonbrasil10/" target="_blank"&gt;artigo&lt;/a&gt; muito legal sobre a PythonBrasil e ainda deixou dispon&amp;iacute;vel a apresenta&amp;ccedil;&amp;atilde;o e os links que ele usou de refer&amp;ecirc;ncia.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center 600 450" src="/images/blog/pybr10_pydanny.jpg" title=""PyDanny na PythonBrasil 10"){width="600".jpg PyDanny na PythonBrasil" alt=""PyDanny na PythonBrasil 10"){width="600".jpg PyDanny na PythonBrasil"&gt;&lt;/p&gt;
+&lt;p&gt;Sobre as palestras, como eu disse, qualidade altíssima. A grade foi muito bem montada e as mudanças estavam sempre em telões espalhados pelo hall do local do evento, tudo para você não perder nada da Python Brasil.&lt;/p&gt;
+&lt;p&gt;Pra abrir a Python Brasil deste ano, ninguém melhor que o &lt;a href="https://twitter.com/fperez_org"&gt;Fernando Perez&lt;/a&gt;, o criador do &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt;. Foi uma das melhores apresentações do congresso, na minha opinião.&lt;/p&gt;
+&lt;p&gt;Entre os outros keynotes estavam &lt;a href="https://twitter.com/alex_gaynor"&gt;Alex Gaynor&lt;/a&gt;, engenheiro de software de diversos projetos Python e membro da diretoria da Python Software Foundation; &lt;a href="https://twitter.com/roguelynn"&gt;Lynn Root&lt;/a&gt;, engenheira do Spotify, que mostrou como eles usam Python no desenvolvimento do player de música; e o &lt;a href="https://github.com/pydanny"&gt;PyDanny&lt;/a&gt;, co-autor do Two Scoops of Django, além de capoeirista (deu um show à parte na palestra) e engenheiro na Eventbrite.&lt;/p&gt;
+&lt;p&gt;Se quiser ver quais foram as outras palestras que rolaram no final de semana acesse a página da &lt;a href="http://2014.pythonbrasil.org.br/schedule/"&gt;programação&lt;/a&gt;. Um dos palestrantes, Gileno Filho, escreveu um &lt;a href="http://gilenofilho.com.br/minha-pythonbrasil10/"&gt;artigo&lt;/a&gt; muito legal sobre a PythonBrasil e ainda deixou disponível a apresentação e os links que ele usou de referência.&lt;/p&gt;
 &lt;h2&gt;Concluindo&lt;/h2&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Foi um encontro muito interessante, pude ver o que est&amp;aacute; acontecendo no ecossistema Python pelo pa&amp;iacute;s e fora dele. Al&amp;eacute;m de trocar figurinhas e conhecer novas pessoas que usam Python no dia-a-dia pra criar solu&amp;ccedil;&amp;otilde;es que entregam valor a seus cliente e usu&amp;aacute;rios.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;&amp;Eacute; um evento que recomendo a qualquer um da &amp;aacute;rea de tecnologia, n&amp;atilde;o s&amp;oacute; quem programa em Python ou admira a linguagem, mas pra quem procura uma comunidade ativa e quer estar antenado com as novidades que surgem no meio.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Sem sombra de d&amp;uacute;vida, ir a uma confer&amp;ecirc;ncia &amp;eacute; um investimento pessoal que traz grandes retornos. Al&amp;eacute;m de conhecer as novidades, trocar ideias ou viajar, te traz novo &amp;acirc;nimo pra buscar coisas novas, continuar inovando e trabalhando pela comunidade.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Com certeza estarei na PythonBrasil[11] e voc&amp;ecirc;? Deixe seu coment&amp;aacute;rio!&lt;/p&gt;
-&lt;p dir="ltr"&gt;&lt;/p&gt;
-&lt;p dir="ltr"&gt;Voc&amp;ecirc; participou da PythonBrasil[10]? Conte sua experi&amp;ecirc;ncia nos coment&amp;aacute;rios tamb&amp;eacute;m!&lt;/p&gt;&lt;/p&gt;</content><category term="pythonbrasil"></category></entry><entry><title>Palestra sobre canivete suíço de Python</title><link href="https://andersonberg.github.io/pythonize-pelican/palestra-canivete-suico-python.html" rel="alternate"></link><published>2011-12-04T03:32:34-03:00</published><updated>2011-12-04T03:32:34-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-04:/pythonize-pelican/palestra-canivete-suico-python.html</id><summary type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;!--more--&gt;&lt;/p&gt;
-&lt;iframe width="425" height="355" style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;" src="//www.slideshare.net/slideshow/embed_code/10451349" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;p&gt;Foi um encontro muito interessante, pude ver o que está acontecendo no ecossistema Python pelo país e fora dele. Além de trocar figurinhas e conhecer novas pessoas que usam Python no dia-a-dia pra criar soluções que entregam valor a seus cliente e usuários.&lt;/p&gt;
+&lt;p&gt;É um evento que recomendo a qualquer um da área de tecnologia, não só quem programa em Python ou admira a linguagem, mas pra quem procura uma comunidade ativa e quer estar antenado com as novidades que surgem no meio.&lt;/p&gt;
+&lt;p&gt;Sem sombra de dúvida, ir a uma conferência é um investimento pessoal que traz grandes retornos. Além de conhecer as novidades, trocar ideias ou viajar, te traz novo ânimo pra buscar coisas novas, continuar inovando e trabalhando pela comunidade.&lt;/p&gt;
+&lt;p&gt;Com certeza estarei na PythonBrasil[11] e você? Deixe seu comentário!&lt;/p&gt;
+&lt;p&gt;Você participou da PythonBrasil[10]? Conte sua experiência nos comentários também!&lt;/p&gt;</content><category term="pythonbrasil"></category></entry><entry><title>Python e lambda</title><link href="https://andersonberg.github.io/pythonize-pelican/python-lambda.html" rel="alternate"></link><published>2012-01-16T02:12:27-03:00</published><updated>2012-01-16T02:12:27-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-16:/pythonize-pelican/python-lambda.html</id><summary type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;
+&lt;p&gt;Vejamos algo bonito com lambda. Suponha a função fatorial.&lt;/p&gt;
+&lt;p&gt;A função fatorial é definida tal que dado um número x o fatorial deste número é:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;x\*(x-n) com n variando de (x-1) até 1.
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div style="margin-bottom: 5px;"&gt;&lt;strong&gt; &lt;a href="//pt.slideshare.net/berg_pe/canivete-python" title="Canivete python" target="_blank"&gt;Canivete python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="//www.slideshare.net/berg_pe" target="_blank"&gt;Anderson Dantas&lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;</content><category term="canivete"></category><category term="suíço"></category></entry></feed>
+
+&lt;p&gt;Logo podemos traduzir num código python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def fatorial(x):
+    if x&amp;lt;=1:
+        return 1
+    else:
+        return x*fatorial(x-1)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Esse código usa recursão, espero que você saiba o que é recursão... ;)&lt;/p&gt;
+&lt;p&gt;Bom, com lambda esse mesmo código pode ter apenas uma linha, duvida?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fatorial = lambda x: 1 if x &amp;lt;=1 else x*fatorial(x-1)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Definimos em fatorial uma função que executa o calculo de um fatorial de um dado número x.&lt;/p&gt;
+&lt;p&gt;Agora abra o seu interpratador python copie e cole o código para testar. Né lindo?&lt;/p&gt;
+&lt;p&gt;Python tanto na versão 2 quanto na versão 3 define lambda com um atalho para criação de funções. A sintaxe é definida assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lambda_form  ::= &amp;quot;lambda&amp;quot; [parameter_list]: expression
+
+old_lambda_form ::=  &amp;quot;lambda&amp;quot; [parameter_list]: old_expression
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Vou ler para você: uma expressão lambda é formada pela palavra reservada lambda seguida por uma lista (não o objeto lista) de parametros seperada por ":" e a expressão.&lt;/p&gt;
+&lt;p&gt;No nosso código a cima, fatorial é o nome da expressão lambda. O python sabe que a função é um lambda porque você disse isso usando a string lambda logo no inicio da expressão.&lt;/p&gt;
+&lt;p&gt;O x é o parametro. Se você quisesse passar mais parametros, bastava separa-lo por virgulas. Assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;funcao = lambda x,y,z: x+y+z
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pergunta, qual o retorno de funcao(1,2,3) ?&lt;/p&gt;
+&lt;p&gt;Agora a parte mais difícil, a expressão.&lt;/p&gt;
+&lt;p&gt;A expressão é como você vai manipular os parametros para ter um retorno. Com lambda não é necessário por a palavra reservada return.&lt;/p&gt;
+&lt;p&gt;Essa expressão só pode ser de três formas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uma comando de uma linha (x+1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;outra expressão lambda.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ou uma expressão condicional. (incluem testes de lógica [or, and, not])&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No fatorial eu usei uma expressão condicional. Na funcao eu usei uma expressão de uma linha. E poderia usar outra expressão lambda.&lt;/p&gt;
+&lt;p&gt;Mas para memorizar, você deve escrever a sua expressão sempre com uma linha.&lt;/p&gt;
+&lt;p&gt;Você pode fazer uso de recursão e uso avançados de exepressão.&lt;/p&gt;
+&lt;p&gt;original : &lt;a href="http://romulojales.com/python-e-lambda/"&gt;http://romulojales.com/python-e-lambda/&lt;/a&gt;&lt;/p&gt;</content><category term="lambda"></category><category term="iniciante"></category></entry><entry><title>Palestra sobre canivete suíço de Python</title><link href="https://andersonberg.github.io/pythonize-pelican/palestra-canivete-suico-python.html" rel="alternate"></link><published>2011-12-04T03:32:34-03:00</published><updated>2011-12-04T03:32:34-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-04:/pythonize-pelican/palestra-canivete-suico-python.html</id><summary type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;/p&gt;
+&lt;iframe width="425" height="355" style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;margin-left:20%;" src="//www.slideshare.net/slideshow/embed_code/10451349" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;div style="margin-bottom: 5px;"&gt;&lt;strong&gt; &lt;a href="//pt.slideshare.net/berg_pe/canivete-python" title="Canivete python" target="_blank"&gt;Canivete python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="//www.slideshare.net/berg_pe" target="_blank"&gt;Anderson Dantas&lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;</content><category term="canivete"></category><category term="suíço"></category></entry><entry><title>Programando em Python no IDLE</title><link href="https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html" rel="alternate"></link><published>2011-09-08T00:46:47-03:00</published><updated>2011-09-08T00:46:47-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-08:/pythonize-pelican/programando-python-idle.html</id><summary type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;
+&lt;p&gt;Os arquivos Python têm extensão .py. É possível rodar um arquivo Python a partir da linha de comando da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python nome_do_arquivo.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Com isso todo o código que está salvo no arquivo é transformado em bytecode, que é um arquivo binário usado pelo interpretador. O bytecode é multiplataforma, ou seja, você pode levar seu código pra rodar em qualquer máquina e qualquer sistema. O bytecode é armazenado em sua máquina geralmente com a extensão .pyc, quando você executar seu código novamente sem alterações o programa não precisa ser compilado de novo, sendo executado mais rápido. Sempre que o seu código fonte é alterado, o interpretador gera um novo bytecode.&lt;/p&gt;
+&lt;p&gt;Você pode escrever seu código no tradicional bloco de notas, mas existem diversas alternativas para escrever código Python e eu recomendo fortemente que não seja escrito no bloco de notas. Existem vários editores de texto e IDEs próprias pra se escrever código em Python. No Windows temos o Notepad++ que tem highlighting (destaca palavras especiais e seu código em cores) ou o próprio IDLE que também vem com highlighting, auto-identação e outros recursos que facilitam a criação do código. No Linux tem o Vim, que possui todos esses recursos citados anteriormente ou o Kate. Você pode ver outros editores na &lt;a href="http://wiki.python.org/moin/PythonEditors"&gt;lista de editores Python&lt;/a&gt; e também &lt;a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"&gt;IDEs que suportam Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Neste post vamos tratar do IDLE para Windows em outro post vou falar do Vim no Linux, se alguém tiver experiência com outros editores ou IDEs, por favor compartilhe conosco nos comentários.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&amp;gt;New Window e será aberta uma janela em branco onde é possível escrever o código.&lt;/p&gt;
+&lt;p&gt;Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/helloworldidle.png" title="Hello World no IDLE" alt="Hello World no IDLE"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello World no IDLE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Salve o arquivo com o nome: helloworld.py&lt;/p&gt;
+&lt;p&gt;Você já pode perceber a função highlighting nesse código.&lt;/p&gt;
+&lt;p&gt;Nesta mesma janela, vá ao menu Run-&amp;gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.&lt;/p&gt;
+&lt;p&gt;Vamos avançar um pouco mais. Escreva o seguinte trecho de código no IDLE:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#-- coding: latin1 --
+x = 7*3        #Isto é um comentário
+y = &amp;quot;Hello&amp;quot;     #Este é mais um comentário
+if y == &amp;quot;Hello&amp;quot;:
+x = x + 1
+y = y + &amp;quot;World&amp;quot;    #Concatenação de strings
+print x
+print y
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).&lt;/p&gt;
+&lt;p&gt;Outras funções interessante estão no menu Format na janela de edição de código.&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/idle_format.png" title="Menu Format no IDLE" alt="Menu Format no IDLE"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Menu Format no IDLE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Neste menu você pode identar ou tirar identação de um trecho selecionado, é possível comentar ou descomentar o código, transformar tab em espaços ou vice-versa.&lt;/p&gt;
+&lt;p&gt;Dúvidas, opiniões, sugestões e experiências, postem nos comentários!&lt;/p&gt;</content></entry></feed>

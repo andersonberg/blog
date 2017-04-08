@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Iniciante, Programação</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante-programacao.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2012-01-18T01:52:26-03:00</updated><entry><title>Python - Dividindo uma Lista em N Partes</title><link href="https://andersonberg.github.io/pythonize-pelican/python-dividindo-lista-n-partes.html" rel="alternate"></link><published>2012-01-18T01:52:26-03:00</published><updated>2012-01-18T01:52:26-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-18:/pythonize-pelican/python-dividindo-lista-n-partes.html</id><summary type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;</summary><content type="html">&lt;p&gt;frequentemente eu uso esse c&amp;oacute;digo, ent&amp;atilde;o ao inv&amp;eacute;s de ir no c&amp;oacute;digo antigo vou neste post.&lt;br /&gt;Basicamente o que eu quero &amp;eacute; o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Suponha a lista [1,2,3,4,5,6,7,8,9,10] quero dividir a lista em 5 partes.&lt;/p&gt;
-
-&lt;p&gt;A divis&amp;atilde;o da lista resultaria em [1,2], [3,4], [5,6], [7,8], [9,10]&lt;/p&gt;
-
-&lt;p&gt;Ok, isso &amp;eacute; chato de fazer...&lt;/p&gt;
-
-&lt;p&gt;Mas vamos ao c&amp;oacute;digo.&lt;/p&gt;
-
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Iniciante, Programação</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante-programacao.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2012-01-18T01:52:26-03:00</updated><entry><title>Python - Dividindo uma Lista em N Partes</title><link href="https://andersonberg.github.io/pythonize-pelican/python-dividindo-lista-n-partes.html" rel="alternate"></link><published>2012-01-18T01:52:26-03:00</published><updated>2012-01-18T01:52:26-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-18:/pythonize-pelican/python-dividindo-lista-n-partes.html</id><summary type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;</summary><content type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.&lt;/p&gt;
+&lt;p&gt;Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;
+&lt;p&gt;Suponha a lista [1,2,3,4,5,6,7,8,9,10] quero dividir a lista em 5 partes.
+A divisão da lista resultaria em [1,2], [3,4], [5,6], [7,8], [9,10]
+Ok, isso é chato de fazer...
+Mas vamos ao código.&lt;/p&gt;
 &lt;h2&gt;A lista&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lista = [1,2,3,4,5,6,7,8,9,10]
 &lt;/pre&gt;&lt;/div&gt;
@@ -31,6 +25,5 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&amp;Eacute; poss&amp;iacute;vel que ocorrram varia&amp;ccedil;&amp;otilde;es para o tipo de lista.&lt;/p&gt;
-
-&lt;p&gt;original: &lt;a href="http://romulojales.com/python-dividindo-uma-lista-em-n-partes" title="http://romulojales.com/python-dividindo-uma-lista-em-n-partes"&gt;http://romulojales.com/python-dividindo-uma-lista-em-n-partes&lt;/a&gt;&lt;/p&gt;</content><category term="listas"></category></entry></feed>
+&lt;p&gt;É possível que ocorrram variações para o tipo de lista.
+original: &lt;a href="http://romulojales.com/python-dividindo-uma-lista-em-n-partes"&gt;http://romulojales.com/python-dividindo-uma-lista-em-n-partes&lt;/a&gt;&lt;/p&gt;</content><category term="listas"></category></entry></feed>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize - Tutorial, Programação, Web</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/tutorial-programacao-web.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2012-02-07T18:00:00-03:00</updated><entry><title>Como Recuperar Posts do Twitter Rapidamente com Python</title><link href="https://andersonberg.github.io/pythonize-pelican/recuperar-posts-twitter-rapidamente-python.html" rel="alternate"></link><published>2012-02-07T18:00:00-03:00</published><updated>2012-02-07T18:00:00-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-02-07:/pythonize-pelican/recuperar-posts-twitter-rapidamente-python.html</id><summary type="html">&lt;p&gt;Neste post vamos criar um crawler para recuperar tweets públicos. Tweets públicos são aqueles que não necessitam de autenticação, ou seja, não é necessário ter uma conta no Twitter para ler esses tweets.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste post vamos criar um &lt;strong&gt;crawler&lt;/strong&gt; para recuperar &lt;strong&gt;tweets&lt;/strong&gt; públicos. Tweets públicos são aqueles que não necessitam de autenticação, ou seja, não é necessário ter uma conta no Twitter para ler esses tweets.&lt;/p&gt;
-&lt;p&gt;Com Python, é bem simples recuperar qualquer status do Twitter, para isso, vamos utilizar o pacote &lt;a href="http://code.google.com/p/python-twitter/" target="_blank" title="python-twitter"&gt;python-twitter&lt;/a&gt;, que pode ser instalado via setuptools:&lt;/p&gt;
+&lt;p&gt;Com Python, é bem simples recuperar qualquer status do Twitter, para isso, vamos utilizar o pacote &lt;a href="http://code.google.com/p/python-twitter/"&gt;python-twitter&lt;/a&gt;, que pode ser instalado via setuptools:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ easy_install python-twitter
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -35,7 +35,7 @@ $ pydoc twitter.DirectMessage
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Agora, para recuperar os 20 últimos tweets de um usuário específico, existe a função &lt;em&gt;GetUserTimeline&lt;/em&gt;. Trocando '&lt;em&gt;user&lt;/em&gt;' por um usuário real do twitter no código abaixo, você obtém uma lista semelhante a que foi retornada pela função&amp;nbsp;&lt;em&gt;GetPublicTimeline:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Agora, para recuperar os 20 últimos tweets de um usuário específico, existe a função &lt;em&gt;GetUserTimeline&lt;/em&gt;. Trocando '&lt;em&gt;user&lt;/em&gt;' por um usuário real do twitter no código abaixo, você obtém uma lista semelhante a que foi retornada pela função &lt;em&gt;GetPublicTimeline:&lt;/em&gt;&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user_tweets&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetUserTimeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -44,7 +44,7 @@ $ pydoc twitter.DirectMessage
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;A função &lt;em&gt;GetUserTimeline &lt;/em&gt;permite configurar a quantidade de tweets a serem recuperados através do parâmetro &lt;em&gt;count:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A função &lt;em&gt;GetUserTimeline&lt;/em&gt; permite configurar a quantidade de tweets a serem recuperados através do parâmetro &lt;em&gt;count:&lt;/em&gt;&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3

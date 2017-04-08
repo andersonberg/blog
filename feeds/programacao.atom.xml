@@ -15,19 +15,19 @@
 &lt;p&gt;Mas o decorator é isso mesmo. É um cara que vai pegar sua função bonitinha é modifica-la. Ou mesmo desfigura-la. Vou mostrar como cria um decorator brincando.&lt;/p&gt;
 &lt;p&gt;Suponha que você criou uma função de somar:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def sum(a,b)
- return a+b
+    return a+b
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Função linda! Bom agora vou bagunçar a vida do cidadão que usa essa função e fazer que a soma seja a - b. Mas eu não quero perder o código original. Isto é um trabalho para o decorador:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;def bagunca(funcao):
- def subtrai(a,b):
- return a-b
-return subtrai
+    def subtrai(a,b):
+         return a-b
+    return subtrai
 
 @bagunca
 def sum(a,b):
- return a+b
+    return a+b
 &lt;/pre&gt;&lt;/div&gt;
 
 

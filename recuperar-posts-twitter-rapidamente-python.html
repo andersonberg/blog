@@ -103,7 +103,7 @@
     <!-- Post Content -->
     <article>
         <p>Neste post vamos criar um <strong>crawler</strong> para recuperar <strong>tweets</strong> públicos. Tweets públicos são aqueles que não necessitam de autenticação, ou seja, não é necessário ter uma conta no Twitter para ler esses tweets.</p>
-<p>Com Python, é bem simples recuperar qualquer status do Twitter, para isso, vamos utilizar o pacote <a href="http://code.google.com/p/python-twitter/" target="_blank" title="python-twitter">python-twitter</a>, que pode ser instalado via setuptools:</p>
+<p>Com Python, é bem simples recuperar qualquer status do Twitter, para isso, vamos utilizar o pacote <a href="http://code.google.com/p/python-twitter/">python-twitter</a>, que pode ser instalado via setuptools:</p>
 <div class="highlight"><pre><span></span>$ easy_install python-twitter
 </pre></div>
 
@@ -138,7 +138,7 @@ $ pydoc twitter.DirectMessage
 </pre></div>
 </td></tr></table>
 
-<p>Agora, para recuperar os 20 últimos tweets de um usuário específico, existe a função <em>GetUserTimeline</em>. Trocando '<em>user</em>' por um usuário real do twitter no código abaixo, você obtém uma lista semelhante a que foi retornada pela função&nbsp;<em>GetPublicTimeline:</em></p>
+<p>Agora, para recuperar os 20 últimos tweets de um usuário específico, existe a função <em>GetUserTimeline</em>. Trocando '<em>user</em>' por um usuário real do twitter no código abaixo, você obtém uma lista semelhante a que foi retornada pela função <em>GetPublicTimeline:</em></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">user_tweets</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">GetUserTimeline</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
@@ -147,7 +147,7 @@ $ pydoc twitter.DirectMessage
 </pre></div>
 </td></tr></table>
 
-<p>A função <em>GetUserTimeline </em>permite configurar a quantidade de tweets a serem recuperados através do parâmetro <em>count:</em></p>
+<p>A função <em>GetUserTimeline</em> permite configurar a quantidade de tweets a serem recuperados através do parâmetro <em>count:</em></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3

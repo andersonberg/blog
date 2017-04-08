@@ -141,8 +141,8 @@
 </pre></div>
 
 
-<p>Vamos avançar e criar um código que realmente tenha tipos de dados de C. Vamos criar uma função que retorne todos os números primos de 1 até um limite passado como parâmetro e salvar num arquivo chamado primes.pyx:</p>
-<p>Para declarar tipos C, você deve usar <em>cdef </em>e informar o tipo de dado, como nas linhas 2 e 3. Na linha 3, como qualquer array em C, deve ser informado o tamanho do array.</p>
+<p>Vamos avançar e criar um código que realmente tenha tipos de dados de C. Vamos criar uma função que retorne todos os números primos de 1 até um limite passado como parâmetro e salvar num arquivo chamado primes.pyx.</p>
+<p>Para declarar tipos C, você deve usar <em>cdef</em> e informar o tipo de dado, como nas linhas 2 e 3. Na linha 3, como qualquer array em C, deve ser informado o tamanho do array.</p>
 <p>Nas linha 9 e 11 é que aparece o ganho no desempenho, a iteração dos blocos <em>while</em> é feita com tipos C, que torna a execução mais rápida.</p>
 <p>Feito isso, basta criar o arquivo setup.py, como no exemplo anterior:</p>
 <p>E compilar com o comando:</p>

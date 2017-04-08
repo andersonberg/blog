@@ -11,7 +11,7 @@
         <title>Pythonize</title>
 
             <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/tutorial-computacao-cientifica.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
+            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/computacao-cientifica.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -105,22 +105,20 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>NumPy é um pacote de Python que suporta operações com vetores e matrizes e é essencial para a computação científica com Python. O NumPy é baseado em C, portanto tem um desempenho superior se comparado &agrave;s opera&ccedil;&otilde;es com vetores originais do Python. Neste post eu quero mostrar uma introdu&ccedil;&atilde;o b&aacute;sica ao NumPy para os iniciantes.</p>
-<h3>INSTALA&Ccedil;&Atilde;O DO NUMPY</h3>
-<p>Primeiro vamos instalar o NumPy. No Windows, basta baixar a &uacute;ltima vers&atilde;o do numpy no site do <a href="http://sourceforge.net/projects/numpy/files/NumPy/">SourceForge</a> e instalar facilmente com o arquivo .exe. No Linux, instale o pacote "python-numpy" disponível nos repositórios da sua distribuição ou use o pip: </p>
+        <p>NumPy é um pacote de Python que suporta operações com vetores e matrizes e é essencial para a computação científica com Python. O NumPy é baseado em C, portanto tem um desempenho superior se comparado às operações com vetores originais do Python. Neste post eu quero mostrar uma introdução básica ao NumPy para os iniciantes.</p>
+<h3>INSTALAÇÂO DO NUMPY</h3>
+<p>Primeiro vamos instalar o NumPy. No Windows, basta baixar a última versão do numpy no site do <a href="http://sourceforge.net/projects/numpy/files/NumPy/">SourceForge</a> e instalar facilmente com o arquivo .exe. No Linux, instale o pacote "python-numpy" disponível nos repositórios da sua distribuição ou use o pip:</p>
 <div class="highlight"><pre><span></span>pip install numpy
 </pre></div>
 
 
-<p>Pronto, agora &eacute; s&oacute; abrir o console Python e importar o pacote:</p>
+<p>Pronto, agora é só abrir o console Python e importar o pacote:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 </pre></div>
 </td></tr></table>
 
-<h3>CRIA&Ccedil;&Atilde;O DE UM ARRAY NUMPY</h3>
-
-<p>Para criar um array, &eacute; bem simples:</p>
-
+<h3>CRIAÇÃO DE UM ARRAY NUMPY</h3>
+<p>Para criar um array, é bem simples:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
@@ -129,34 +127,29 @@
 </pre></div>
 </td></tr></table>
 
-<p>A fun&ccedil;&atilde;o <em>array</em> do NumPy, recebe uma lista de Python e transforma em um array NumPy. Voc&ecirc; pode checar o tipo:</p>
-
+<p>A função <em>array</em> do NumPy, recebe uma lista de Python e transforma em um array NumPy. Você pode checar o tipo:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>E o tipo dos elementos:</p>
-
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 </td></tr></table>
 
-<p>Para criar matrizes multidimensionais &eacute; bem simples tamb&eacute;m:</p>
-
+<p>Para criar matrizes multidimensionais é bem simples também:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]])</span>
 </pre></div>
 </td></tr></table>
 
-<p>A fun&ccedil;&atilde;o <em>arange</em> &eacute; bem parecida com a fun&ccedil;&atilde;o <em>range</em>, s&oacute; que retorna um array ao inv&eacute;s de uma lista:</p>
-
+<p>A função <em>arange</em> é bem parecida com a função <em>range</em>, só que retorna um array ao invés de uma lista:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">11.</span><span class="p">)</span>
 <span class="n">array</span><span class="p">([</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="mf">7.</span><span class="p">,</span> <span class="mf">8.</span><span class="p">,</span> <span class="mf">9.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">])</span>
 </pre></div>
 </td></tr></table>
 
-<p>&Eacute; poss&iacute;vel definir mais par&acirc;metros pra fun&ccedil;&atilde;o <em>arange</em>:</p>
-
+<p>é possível definir mais parâmetros pra função <em>arange</em>:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">#(limite inferior, limite superior, passo)</span>
 <span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
@@ -164,17 +157,14 @@
 </td></tr></table>
 
 <h3>TAMANHO DO ARRAY</h3>
-
-<p>A propriedade <em>shape</em> mostra o tamanho de cada dimens&atilde;o da matriz:</p>
-
+<p>A propriedade <em>shape</em> mostra o tamanho de cada dimensão da matriz:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span>
 <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<p>&Eacute; poss&iacute;vel, tamb&eacute;m, modificar essa propriedade:</p>
-
+<p>é possível, também, modificar essa propriedade:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -186,17 +176,14 @@
 </td></tr></table>
 
 <h3>ACESSANDO ELEMENTOS</h3>
-
 <p>Para acessar elementos:</p>
-
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
-<p>&Eacute; poss&iacute;vel acessar v&aacute;rios elementos ao mesmo tempo:</p>
-
+<p>é possível acessar vários elementos ao mesmo tempo:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -219,20 +206,12 @@
 </pre></div>
 </td></tr></table>
 
-<div class="wp-caption alignright" id="attachment_175"></div>
-
-<div class="wp-caption alignright"><img src="/static/media/uploads/blog/images/matriz.jpg" width="353" height="346" alt="Matriz numpy" title="Matriz numpy" /></div>
-
-<div class="wp-caption alignright">Fonte: SciPy 2011 - Jonathan Rocher</div>
-
-<div class="wp-caption alignright" id="attachment_175">
-<p class="wp-caption-text"></p>
-</div>
-
+<p><img class="align-center" src="/images/blog/matriz.jpg" title="Matriz numpy" alt="Matriz numpy"></p>
+<blockquote>
+<p>Matriz numpy Fonte: SciPy 2011 - Jonathan Rocher</p>
+</blockquote>
 <h3>MATRIZ TRANSPOSTA</h3>
-
 <p>Para obter a matriz transposta existem duas formas:</p>
-
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -247,18 +226,15 @@
 </pre></div>
 </td></tr></table>
 
-<h3>OUTRAS FUN&Ccedil;&Otilde;ES IMPORTANTES DO NUMPY</h3>
-
-<p>A fun&ccedil;&atilde;o <em>sum</em> soma todos os elementos do array:</p>
-
+<h3>OUTRAS FUNçõES IMPORTANTES DO NUMPY</h3>
+<p>A função <em>sum</em> soma todos os elementos do array:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">66</span>
 </pre></div>
 </td></tr></table>
 
-<p>Podemos usar o par&acirc;metro axis e determinar em qual eixo queremos a soma:</p>
-
+<p>Podemos usar o parâmetro axis e determinar em qual eixo queremos a soma:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -269,8 +245,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Alternativamente, podemos usar o m&eacute;todo <em>sum</em>:</p>
-
+<p>Alternativamente, podemos usar o método <em>sum</em>:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -281,8 +256,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>As fun&ccedil;&otilde;es amin e amax retornam o valor m&iacute;nimo e o valor m&aacute;ximo do array, respectivamente:</p>
-
+<p>As funções amin e amax retornam o valor mínimo e o valor máximo do array, respectivamente:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -295,8 +269,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><em>argmin</em> e <em>argmax</em> retornam o &iacute;ndice do menor valor e do maior valor do array, respectivamente:</p>
-
+<p><em>argmin</em> e <em>argmax</em> retornam o índice do menor valor e do maior valor do array, respectivamente:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -307,8 +280,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>O atributo&nbsp;<em>flat</em>&nbsp;retorna um iterator que permite acessar elementos de um array multidimensional como se ele fosse uma lista:</p>
-
+<p>O atributo <em>flat</em> retorna um iterator que permite acessar elementos de um array multidimensional como se ele fosse uma lista:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -319,7 +291,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Existem ainda outras diversas fun&ccedil;&otilde;es que podemos explorar em outro post.</p>
+<p>Existem ainda outras diversas funções que podemos explorar em outro post.</p>
     </article>
 
     <hr>
