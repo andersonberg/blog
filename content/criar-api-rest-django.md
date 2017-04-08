@@ -23,7 +23,7 @@ Se você quer se aprofundar no estudo de Djangorecomendo os seguintes links: [Dj
 E para aprender mais sobre RESTful webservices, tem um tutorial bem interessante [aqui](http://www.restapitutorial.com/).
 
 ##Como Funciona o Tastypie
-O Tastypie ajuda você a publicar os models criados no Django, ao mesmo tempo que permite total controle sobre que é exibido ou não. O Tastypie **serializa** a sa&iacute;da em diversos formatos, incluindo json. Através da criação de objetos 'Resource', o Tastypie implementa formas de obter dados (GET), criar (POST) e modificar (PUT/PATCH) dados e excluir dados (DELETE).
+O Tastypie ajuda você a publicar os models criados no Django, ao mesmo tempo que permite total controle sobre que é exibido ou não. O Tastypie **serializa** a saída em diversos formatos, incluindo json. Através da criação de objetos 'Resource', o Tastypie implementa formas de obter dados (GET), criar (POST) e modificar (PUT/PATCH) dados e excluir dados (DELETE).
 
 Com estas dicas, você irá construir uma pequena API pra um exemplo de **microblog**, como o Twitter.
 

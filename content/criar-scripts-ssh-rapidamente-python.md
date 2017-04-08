@@ -8,7 +8,7 @@ image: images/acesso-remoto-a-servidores.jpg
 
 Às vezes é necessário trabalhar com **vários** dispositivos ligados em **rede**, quer sejam computadores, roteadores ou outros tipos de equipamentos.
 
-Em muitas ocasiões precisamos enviar **comandos** e **instruções** para estes equipamentos. Isso geralmente é feito através do envio de comandos ou dados&nbsp;via **SSH**.
+Em muitas ocasiões precisamos enviar **comandos** e **instruções** para estes equipamentos. Isso geralmente é feito através do envio de comandos ou dados via **SSH**.
 
 Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro.
 
@@ -54,7 +54,7 @@ Já aprendemos como conectar em um computador remotamente via ssh. Agora vamos v
     #!python
     stdin, stdout, stderr = ssh.exec_command('ls\n')
 
-Que vai enviar o comando 'ls' para listar os arquivos do diretório atual. Para exibir o retorno deste comando podemos ler o conte&uacute;do do objeto stdout e, em seguida, fechar a conexão ssh:
+Que vai enviar o comando 'ls' para listar os arquivos do diretório atual. Para exibir o retorno deste comando podemos ler o conteúdo do objeto stdout e, em seguida, fechar a conexão ssh:
 
     #!python
     print stdout.readlines()
