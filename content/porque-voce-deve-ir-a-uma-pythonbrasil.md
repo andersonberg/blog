@@ -30,7 +30,7 @@ Confesso que até perdi algumas palestras interessantíssimas porque a conversa 
 E como foram as palestras?
 --------------------------
 
-{% img align-center 600 450 /images/blog/pybr10_pydanny.jpg "PyDanny na PythonBrasil 10"){width="600".jpg PyDanny na PythonBrasil %}
+{% img align-center 600 450 /images/blog/pybr10_pydanny.jpg PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil %}
 
 Sobre as palestras, como eu disse, qualidade altíssima. A grade foi muito bem montada e as mudanças estavam sempre em telões espalhados pelo hall do local do evento, tudo para você não perder nada da Python Brasil.
 

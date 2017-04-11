@@ -1,7 +1,7 @@
 title: 6 dicas simples para o Vim ser uma IDE perfeita pra Python
 date: 2012-01-10 13:43:24
 tags: vim, ide
-category: Tutorial, Ferramentas
+category: Tutorial
 slug: dicas-simples-vim-ide-python
 summary: Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?
 image: images/unixstickers.jpg
@@ -49,15 +49,15 @@ Como a indentação em Python é fundamental, sem ela podem ocorrer erros no có
 
 Para exibir o número das linhas no vim adicione o seguinte no vimrc:
 
-    " Habilitar número de linhas
+    " Habilitar numero de linhas
     set number
 
-    " Alternar exibição de número de linhas (facilita na hora de copiar)
+    " Alternar exibição de numero de linhas (facilita na hora de copiar)
     nnoremap  :set nonumber!: set foldcolumn=0
 
 O resultado é este:
 
-{% img align-center /images/blog/vimpython.jpg 372 118 Vim com highlighting e número de linhas %}
+{% img align-center /images/blog/vimpython.jpg 372 118 Vim com highlighting e numero de linhas %}
 
 ### 4. Navegação pelo código
 
@@ -86,18 +86,18 @@ Agora é preciso fazer algumas alterações no vimrc:
     let Tlist_File_Fold_Auto_Close = 1
 
 
-A Taglist estará disponível através do atalho F4 ou digitando "TT" (dois 't' maiúsculos) As últimas configurações servem para exibir uma janela vertical à direita mostrando a taglist e ganhar foco quando é chamada.
+A Taglist estará disponível através do atalho F4 ou digitando "TT" (dois 't' maiusculos) As últimas configurações servem para exibir uma janela vertical à direita mostrando a taglist e ganhar foco quando é chamada.
 
 ### 5. Ocultar Código
 
 Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.
 
-No Vim isso é possível através de um [plugin](http://www.vim.org/scripts/script.php?script_id=1494). Para instalá-lo baixe o arquivo [neste link](http://www.vim.org/scripts/script.php?script_id=1494), crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (&lt;Shift&gt; + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.
+No Vim isso é possível através de um [plugin](http://www.vim.org/scripts/script.php?script_id=1494). Para instalá-lo baixe o arquivo [neste link](http://www.vim.org/scripts/script.php?script_id=1494), crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (<Shift> + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.
 
 {% img align-center /images/blog/vim-code-folding.jpg 843 146 Vim Code Folding %}
 
 ### 6. Project Explorer
 
-Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin [NerdTree](http://www.vim.org/scripts/script.php?script_id=1658), que pode ser baixado [aqui](http://www.vim.org/scripts/script.php?script_id=1658). Para instalar basta extrair o conteúdo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD\_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.
+Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin [NerdTree](http://www.vim.org/scripts/script.php?script_id=1658), que pode ser baixado [aqui](http://www.vim.org/scripts/script.php?script_id=1658). Para instalar basta extrair o conteudo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD\_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.
 
 Na [página de scripts](http://www.vim.org/scripts/index.php) do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.
