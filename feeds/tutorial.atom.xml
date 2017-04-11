@@ -57,7 +57,79 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;O retorno dos comando pode ser tratado com as poderosas ferramentas de manipulação de string de Python, ou ainda filtradas com expressões regulares, dando ainda mais opções ao programador na hora de criar um script completo. Em outro post darei mais detalhes sobre a utilização do Paramiko.&lt;/p&gt;</content><category term="ssh"></category><category term="script"></category></entry><entry><title>Introdução à programação em Cython</title><link href="https://andersonberg.github.io/pythonize-pelican/introducao-programacao-cython.html" rel="alternate"></link><published>2011-09-10T03:20:23-03:00</published><updated>2011-09-10T03:20:23-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-10:/pythonize-pelican/introducao-programacao-cython.html</id><summary type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;
+&lt;p&gt;O retorno dos comando pode ser tratado com as poderosas ferramentas de manipulação de string de Python, ou ainda filtradas com expressões regulares, dando ainda mais opções ao programador na hora de criar um script completo. Em outro post darei mais detalhes sobre a utilização do Paramiko.&lt;/p&gt;</content><category term="ssh"></category><category term="script"></category></entry><entry><title>6 dicas simples para o Vim ser uma IDE perfeita pra Python</title><link href="https://andersonberg.github.io/pythonize-pelican/dicas-simples-vim-ide-python.html" rel="alternate"></link><published>2012-01-10T13:43:24-03:00</published><updated>2012-01-10T13:43:24-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-10:/pythonize-pelican/dicas-simples-vim-ide-python.html</id><summary type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja &lt;strong&gt;simples&lt;/strong&gt;, &lt;strong&gt;amigável&lt;/strong&gt; e &lt;strong&gt;funcional&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;Muitos acabam voltando ao bloco de notas por sua &lt;strong&gt;simplicidade&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Neste post você vai explorar o Vim, um editor de texto que roda na linha de comando e é a paixão de muitos desenvolvedores.&lt;/p&gt;
+&lt;p&gt;Em um &lt;a href="http://www.pythonize.org/programando-em-python-no-vim/" title="Programando em Python no Vim"&gt;post anterior&lt;/a&gt; eu falei sobre como habilitar o auto-complete no vim pra código em python. Neste post vamos um pouco mais além nessas configurações&lt;/p&gt;
+&lt;p&gt;Recentemente encontrei um &lt;a href="http://dancingpenguinsoflight.com/2009/02/python-and-vim-make-your-own-ide/"&gt;post num blog&lt;/a&gt; com dicas mostrando como tornar o vim numa IDE completa pra Python.&lt;/p&gt;
+&lt;p&gt;Testei algumas funcionalidades que tornaram o vim bem amigável pra programar e gerenciar código. Fiz todos os testes no Ubuntu, em outros sistemas Linux deve ser similar. Neste post vou passar essa experiência que tive configurando e usando o vim para criar código python.&lt;/p&gt;
+&lt;p&gt;Antes de tudo, instale os pacotes vim-full e vim-python se estiverem disponíveis nos repositórios do seu sistema. As configuração no vim são feitas num arquivo chamado vimrc, nas últimas versões do Ubuntu ele fica localizado na pasta /etc/vim e precisa ser root para modificá-lo.&lt;/p&gt;
+&lt;h3&gt;1. Destaque de código no Vim&lt;/h3&gt;
+&lt;p&gt;Para habilitar highlighting (destaque do código) no vim adicione a seguinte linha no arquivo vimrc:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;syntax on
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No seu arquivo vimrc pode ser que esta linha venha comentada e acompanhada das seguintes linhas:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if has(&amp;quot;syntax&amp;quot;)
+    syntax on
+endif
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Basta descomentar estas linhas que o highlighting ficará disponível.&lt;/p&gt;
+&lt;h3&gt;2. Indentação de código&lt;/h3&gt;
+&lt;p&gt;Como a indentação em Python é fundamental, sem ela podem ocorrer erros no código, uma ide que  tenha auto-indentação é ideal.  No arquivo vimrc procure as seguintes linhas e descomente ou adicione se elas já não estiverem no arquivo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot; Habilita auto-indentação
+if has(&amp;quot;autocmd&amp;quot;)
+  filetype plugin indent on
+endif
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;3. Número de linhas&lt;/h3&gt;
+&lt;p&gt;Para exibir o número das linhas no vim adicione o seguinte no vimrc:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; Habilitar numero de linhas&lt;/span&gt;
+&lt;span class="s"&gt;set number&lt;/span&gt;
+
+&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;Alternar&lt;/span&gt; &lt;span class="n"&gt;exibição&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;numero&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;linhas&lt;/span&gt; (&lt;span class="n"&gt;facilita&lt;/span&gt; &lt;span class="n"&gt;na&lt;/span&gt; &lt;span class="n"&gt;hora&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;copiar&lt;/span&gt;)
+&lt;span class="n"&gt;nnoremap&lt;/span&gt;  :&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;nonumber&lt;/span&gt;!: &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;foldcolumn&lt;/span&gt;=&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;O resultado é este:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vimpython.jpg" title="Vim com highlighting e numero de linhas" height="118" width="372" alt="Vim com highlighting e numero de linhas" class="align-center"&gt;&lt;/p&gt;
+&lt;h3&gt;4. Navegação pelo código&lt;/h3&gt;
+&lt;p&gt;Uma funcionalidade muito útil é a navegação pelo código. Com esta ferramenta habilitada é possível ver todas as classes e funções presentes no seu código e poder pular automaticamente pra qualquer uma delas.&lt;/p&gt;
+&lt;p&gt;Primeiro, é preciso instalar o pacote &lt;a href="http://ctags.sourceforge.net/"&gt;exuberant-ctags&lt;/a&gt;, disponível no repositório com este mesmo nome. Depois, baixe o &lt;a href="http://www.vim.org/scripts/script.php?script_id=273"&gt;taglist&lt;/a&gt;, que é um plugin do vim. Coloque o arquivo taglist.vim na pasta \~/.vim/plugin e o taglist.txt na pasta \~/.vim/doc, vá até esta última pasta, inicie o vim e rode :helptags. (com '.' no final) e já estará instalado.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vim-explorer.jpg" title="Vim Explorer" height="100" width="858" alt="Vim Explorer" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;Agora é preciso fazer algumas alterações no vimrc:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot; Exibe nome da função
+let g:ctags_statusline=1
+&amp;quot; Inicializar script automaticamente
+let generate_tags=1
+&amp;quot; Exibe os resultados em uma janela vertical
+let Tlist_Use_Horiz_Window=0
+&amp;quot; Atalho para exibição da Taglist
+nnoremap TT :TlistToggle
+map  :TlistToggle
+&amp;quot; Configurações para exibição da Taglist
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_File_Fold_Auto_Close = 1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A Taglist estará disponível através do atalho F4 ou digitando "TT" (dois 't' maiusculos) As últimas configurações servem para exibir uma janela vertical à direita mostrando a taglist e ganhar foco quando é chamada.&lt;/p&gt;
+&lt;h3&gt;5. Ocultar Código&lt;/h3&gt;
+&lt;p&gt;Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.&lt;/p&gt;
+&lt;p&gt;No Vim isso é possível através de um &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;plugin&lt;/a&gt;. Para instalá-lo baixe o arquivo &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;neste link&lt;/a&gt;, crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (&lt;Shift&gt; + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vim-code-folding.jpg" title="Vim Code Folding" height="146" width="843" alt="Vim Code Folding" class="align-center"&gt;&lt;/p&gt;
+&lt;h3&gt;6. Project Explorer&lt;/h3&gt;
+&lt;p&gt;Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;NerdTree&lt;/a&gt;, que pode ser baixado &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;aqui&lt;/a&gt;. Para instalar basta extrair o conteudo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.&lt;/p&gt;
+&lt;p&gt;Na &lt;a href="http://www.vim.org/scripts/index.php"&gt;página de scripts&lt;/a&gt; do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.&lt;/p&gt;</content><category term="vim"></category><category term="ide"></category></entry><entry><title>Introdução à programação em Cython</title><link href="https://andersonberg.github.io/pythonize-pelican/introducao-programacao-cython.html" rel="alternate"></link><published>2011-09-10T03:20:23-03:00</published><updated>2011-09-10T03:20:23-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-10:/pythonize-pelican/introducao-programacao-cython.html</id><summary type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.&lt;/p&gt;
 &lt;h3&gt;INSTALAÇÃO&lt;/h3&gt;
 &lt;p&gt;O primeiro passo é a instalação. Você pode instalar o Cython através do setuptools, digitando, na linha de comando:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ easy_install cython

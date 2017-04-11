@@ -11,7 +11,7 @@
         <title>Pythonize</title>
 
             <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante-tutorial-ferramentas.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
+            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/tutorial.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +38,7 @@
 
 
         <meta name="tags" contents="vim" />
+        <meta name="tags" contents="ide" />
 
 
 			<meta property="og:locale" content="pt-br">
@@ -45,11 +46,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/programando-python-vim.html">
-	<meta property="og:title" content="Programando em Python no Vim">
+	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/dicas-simples-vim-ide-python.html">
+	<meta property="og:title" content="6 dicas simples para o Vim ser uma IDE perfeita pra Python">
 	<meta property="og:description" content="">
 	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
-	<meta property="article:published_time" content="2011-09-08 14:45:20-03:00">
+	<meta property="article:published_time" content="2012-01-10 13:43:24-03:00">
 </head>
 
 <body>
@@ -86,10 +87,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Programando em Python no Vim</h1>
+                        <h1>6 dicas simples para o Vim ser uma IDE perfeita pra Python</h1>
                         <span class="meta">Posted by
                                 <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 08 Set, 2011
+                             on 10 Jan, 2012
                         </span>
                         
                     </div>
@@ -104,14 +105,79 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>No Linux, um bom editor para código Python é o Vim. Costumo usar o Vim no Ubuntu e tem sido uma boa experiência. O Vim pode ser instalado também no Windows e é um bom substituto para o IDLE. Você pode fazer o download da versão para Windows no <a href="http://www.vim.org/download.php#pc">site do Vim</a>. Versões recentes do Vim possuem suporte para Python nativo. Para ter certeza disso abra o Vim e digite <em>:python print 'hello world'</em> (com dois pontos antes da palavra python). No Windows isso vai funcionar com o gVim.</p>
-<p>O gVim já tem auto-identação e highlighting pra Python. Para ter o code completion no Vim é necessário ter um plugin instalado. Na versão 7.3 para Windows o omni completion já veio disponível, para testar bastar digitar ctrl+x e ctrl+o, que vai abrir uma janela dropdown com diversas opções. No Linux, para habilitar o omni completion, adicione a seguinte linha no arquivo /etc/vim/vimrc:</p>
-<div class="highlight"><pre><span></span>autocmd FileType python set omnifunc=pythoncomplete#Complete
+        <p>Qual programador não procura um ambiente de desenvolvimento que seja <strong>simples</strong>, <strong>amigável</strong> e <strong>funcional</strong>?</p>
+<p>Muitos acabam voltando ao bloco de notas por sua <strong>simplicidade</strong>.</p>
+<p>Neste post você vai explorar o Vim, um editor de texto que roda na linha de comando e é a paixão de muitos desenvolvedores.</p>
+<p>Em um <a href="http://www.pythonize.org/programando-em-python-no-vim/" title="Programando em Python no Vim">post anterior</a> eu falei sobre como habilitar o auto-complete no vim pra código em python. Neste post vamos um pouco mais além nessas configurações</p>
+<p>Recentemente encontrei um <a href="http://dancingpenguinsoflight.com/2009/02/python-and-vim-make-your-own-ide/">post num blog</a> com dicas mostrando como tornar o vim numa IDE completa pra Python.</p>
+<p>Testei algumas funcionalidades que tornaram o vim bem amigável pra programar e gerenciar código. Fiz todos os testes no Ubuntu, em outros sistemas Linux deve ser similar. Neste post vou passar essa experiência que tive configurando e usando o vim para criar código python.</p>
+<p>Antes de tudo, instale os pacotes vim-full e vim-python se estiverem disponíveis nos repositórios do seu sistema. As configuração no vim são feitas num arquivo chamado vimrc, nas últimas versões do Ubuntu ele fica localizado na pasta /etc/vim e precisa ser root para modificá-lo.</p>
+<h3>1. Destaque de código no Vim</h3>
+<p>Para habilitar highlighting (destaque do código) no vim adicione a seguinte linha no arquivo vimrc:</p>
+<div class="highlight"><pre><span></span>syntax on
 </pre></div>
 
 
-<p>Outras funções interessantes que podem ser adicionadas ao Vim para codificação Python podem ser vistas em: <a href="http://blog.dispatched.ch/2009/05/24/vim-as-python-ide/">VIM as Python IDE</a>.</p>
-<p>Update (17/02/12): Escrevemos  um post mais completo sobre como utilizar o <a href="http://www.pythonize.org/tornando-o-vim-uma-ide-amigavel-pra-python/">Vim como IDE pra Python</a>.</p>
+<p>No seu arquivo vimrc pode ser que esta linha venha comentada e acompanhada das seguintes linhas:</p>
+<div class="highlight"><pre><span></span>if has(&quot;syntax&quot;)
+    syntax on
+endif
+</pre></div>
+
+
+<p>Basta descomentar estas linhas que o highlighting ficará disponível.</p>
+<h3>2. Indentação de código</h3>
+<p>Como a indentação em Python é fundamental, sem ela podem ocorrer erros no código, uma ide que  tenha auto-indentação é ideal.  No arquivo vimrc procure as seguintes linhas e descomente ou adicione se elas já não estiverem no arquivo:</p>
+<div class="highlight"><pre><span></span>&quot; Habilita auto-indentação
+if has(&quot;autocmd&quot;)
+  filetype plugin indent on
+endif
+</pre></div>
+
+
+<h3>3. Número de linhas</h3>
+<p>Para exibir o número das linhas no vim adicione o seguinte no vimrc:</p>
+<div class="highlight"><pre><span></span><span class="s">&quot; Habilitar numero de linhas</span>
+<span class="s">set number</span>
+
+<span class="s">&quot;</span> <span class="n">Alternar</span> <span class="n">exibição</span> <span class="n">de</span> <span class="n">numero</span> <span class="n">de</span> <span class="n">linhas</span> (<span class="n">facilita</span> <span class="n">na</span> <span class="n">hora</span> <span class="n">de</span> <span class="n">copiar</span>)
+<span class="n">nnoremap</span>  :<span class="n">set</span> <span class="n">nonumber</span>!: <span class="n">set</span> <span class="n">foldcolumn</span>=<span class="mi">0</span>
+</pre></div>
+
+
+<p>O resultado é este:</p>
+<p><img src="/images/blog/vimpython.jpg" title="Vim com highlighting e numero de linhas" height="118" width="372" alt="Vim com highlighting e numero de linhas" class="align-center"></p>
+<h3>4. Navegação pelo código</h3>
+<p>Uma funcionalidade muito útil é a navegação pelo código. Com esta ferramenta habilitada é possível ver todas as classes e funções presentes no seu código e poder pular automaticamente pra qualquer uma delas.</p>
+<p>Primeiro, é preciso instalar o pacote <a href="http://ctags.sourceforge.net/">exuberant-ctags</a>, disponível no repositório com este mesmo nome. Depois, baixe o <a href="http://www.vim.org/scripts/script.php?script_id=273">taglist</a>, que é um plugin do vim. Coloque o arquivo taglist.vim na pasta \~/.vim/plugin e o taglist.txt na pasta \~/.vim/doc, vá até esta última pasta, inicie o vim e rode :helptags. (com '.' no final) e já estará instalado.</p>
+<p><img src="/images/blog/vim-explorer.jpg" title="Vim Explorer" height="100" width="858" alt="Vim Explorer" class="align-center"></p>
+<p>Agora é preciso fazer algumas alterações no vimrc:</p>
+<div class="highlight"><pre><span></span>&quot; Exibe nome da função
+let g:ctags_statusline=1
+&quot; Inicializar script automaticamente
+let generate_tags=1
+&quot; Exibe os resultados em uma janela vertical
+let Tlist_Use_Horiz_Window=0
+&quot; Atalho para exibição da Taglist
+nnoremap TT :TlistToggle
+map  :TlistToggle
+&quot; Configurações para exibição da Taglist
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_File_Fold_Auto_Close = 1
+</pre></div>
+
+
+<p>A Taglist estará disponível através do atalho F4 ou digitando "TT" (dois 't' maiusculos) As últimas configurações servem para exibir uma janela vertical à direita mostrando a taglist e ganhar foco quando é chamada.</p>
+<h3>5. Ocultar Código</h3>
+<p>Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.</p>
+<p>No Vim isso é possível através de um <a href="http://www.vim.org/scripts/script.php?script_id=1494">plugin</a>. Para instalá-lo baixe o arquivo <a href="http://www.vim.org/scripts/script.php?script_id=1494">neste link</a>, crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (<Shift> + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.</p>
+<p><img src="/images/blog/vim-code-folding.jpg" title="Vim Code Folding" height="146" width="843" alt="Vim Code Folding" class="align-center"></p>
+<h3>6. Project Explorer</h3>
+<p>Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin <a href="http://www.vim.org/scripts/script.php?script_id=1658">NerdTree</a>, que pode ser baixado <a href="http://www.vim.org/scripts/script.php?script_id=1658">aqui</a>. Para instalar basta extrair o conteudo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.</p>
+<p>Na <a href="http://www.vim.org/scripts/index.php">página de scripts</a> do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.</p>
     </article>
 
     <hr>
@@ -121,8 +187,8 @@
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'pythonize';
-                var disqus_identifier = 'programando-python-vim.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/programando-python-vim.html';
+                var disqus_identifier = 'dicas-simples-vim-ide-python.html';
+                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/dicas-simples-vim-ide-python.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                     dsq.src = '//pythonize.disqus.com/embed.js';
