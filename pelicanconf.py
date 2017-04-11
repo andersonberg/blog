@@ -32,23 +32,21 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
-
+RELATIVE_URLS = True
 
 STATIC_PATHS = ['images']
-
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DELETE_OUTPUT_DIRECTORY = False
 
-PLUGIN_PATHS = ['/home/andersonberg/Projetos/pelican-plugins']
+PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins']
 PLUGINS = [
     'assets',
     'representative_image',
     'liquid_tags.img'
 ]
 
-THEME = "/home/andersonberg/Projetos/pelican-themes/clean-blog"
+THEME = "/home/anderson/Projetos/pelican-themes/clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
 
 DISQUS_SITENAME = 'pythonize.org'
