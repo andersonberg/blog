@@ -49,6 +49,8 @@ PLUGINS = [
 THEME = "/home/anderson/Projetos/pelican-themes/clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
 
+HEADER_COVER = 'images/code-python.jpg'
+
 DISQUS_SITENAME = 'pythonize.org'
 GOOGLE_ANALYTICS = 'UA-25538784-1'
 TWITTER_USERNAME = 'berg_pe'
