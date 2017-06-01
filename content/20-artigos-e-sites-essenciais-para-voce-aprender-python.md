@@ -213,6 +213,10 @@ São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprend
 
 Quem tem curiosidade de saber como as pessoas usam Python, quais os projetos que existem em Python por aí, este é um ótimo lugar pra conhecer.
 
+###UPDATE-2: 22. [Python Tutorial](http://www.guru99.com/python-tutorials.html)
+
+Este é um bom curso para iniciantes. O tutorial é todo em inglês, mas as imagens foram muito bem editadas e possuem notas que facilitam muito a compreensão.
+
 ###Conclusão
 
 Esta lista está longe de ser definitiva e posso ter sido injusto com alguns sites, inclusive com os que eu não conheço. Estes são apenas sugestões para quem está começando ou quer aprimorar os conhecimentos em Python.
