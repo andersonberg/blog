@@ -2,15 +2,16 @@
 <html lang="pt-br">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize - Authors</title>
+        <title>Pythonize</title>
 
             <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
+            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/intermediario.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,23 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="pt-br">
+
+
+
+        <meta name="tags" contents="python" />
+        <meta name="tags" contents="pandas" />
+
+
+			<meta property="og:locale" content="pt-br">
 		<meta property="og:site_name" content="Pythonize">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/analise-dados-pandas.html">
+	<meta property="og:title" content="Análise de Dados com o Pandas">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="article:published_time" content="2017-05-03 22:05:00-03:00">
 </head>
 
 <body>
@@ -66,12 +82,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('images/code-python.jpg')">
+        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Articles by </h1>
+                        <h1>Análise de Dados com o Pandas</h1>
+                        <span class="meta">Posted by
+                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
+                             on 03 Mai, 2017
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -82,22 +103,107 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-preview">
-            <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html" rel="bookmark">
-                <h2 class="post-title">
-                    Anderson Berg (18)
-                </h2>
-            </a>
+    <!-- Post Content -->
+    <article>
+        <p>Pandas (Python Data Analysis) é uma biblioteca de alto desempenho para análise de dados. O pandas tem diversas ferramentas para tratamento e preparação de dados. Combinando com o IPython também tem funcionalidades para análise e modelagem de dados. Neste artigo vamos mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para analisar grande volumes de dados.</p>
+<p>Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Vamos importar os dados:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="n">df_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;total_populacao_pernambuco.xls&quot;</span><span class="p">)</span>
+<span class="n">df_pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Código do município</th>
+<th>Nome do município</th>
+<th>Total da população 2000</th>
+<th>Total de homens</th>
+<th>Total de mulheres</th>
+<th>Total da população urbana</th>
+<th>Total da população rural</th>
+<th>Total da população 2010</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2600054</td>
+<td>Abreu e Lima</td>
+<td>89039.0</td>
+<td>45165.0</td>
+<td>49263.0</td>
+<td>86589.0</td>
+<td>7839.0</td>
+<td>94428.0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2600104</td>
+<td>Afogados da Ingazeira</td>
+<td>32922.0</td>
+<td>16790.0</td>
+<td>18301.0</td>
+<td>27406.0</td>
+<td>7685.0</td>
+<td>35091.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2600203</td>
+<td>Afrânio</td>
+<td>15014.0</td>
+<td>8751.0</td>
+<td>8837.0</td>
+<td>5859.0</td>
+<td>11729.0</td>
+<td>17588.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2600302</td>
+<td>Agrestina</td>
+<td>20036.0</td>
+<td>10938.0</td>
+<td>11742.0</td>
+<td>16955.0</td>
+<td>5725.0</td>
+<td>22680.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2600401</td>
+<td>Água Preta</td>
+<td>28531.0</td>
+<td>16581.0</td>
+<td>16465.0</td>
+<td>18708.0</td>
+<td>14338.0</td>
+<td>33046.0</td>
+</tr>
+</tbody>
+</table>
+    </article>
+
+    <hr>
+
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'pythonize';
+                var disqus_identifier = 'analise-dados-pandas.html';
+                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/analise-dados-pandas.html';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
-        <hr>
-        <div class="post-preview">
-            <a href="https://andersonberg.github.io/pythonize-pelican/author/romulo-jales.html" rel="bookmark">
-                <h2 class="post-title">
-                    Rômulo Jales (1)
-                </h2>
-            </a>
-        </div>
-        <hr>
             </div>
         </div>
     </div>
