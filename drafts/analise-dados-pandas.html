@@ -106,7 +106,8 @@
     <!-- Post Content -->
     <article>
         <p>Pandas (Python Data Analysis) é uma biblioteca de alto desempenho para análise de dados. O pandas tem diversas ferramentas para tratamento e preparação de dados. Combinando com o IPython também tem funcionalidades para análise e modelagem de dados. Neste artigo vamos mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para analisar grande volumes de dados.</p>
-<p>Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Vamos importar os dados:</p>
+<p>Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Você pode baixar o arquivo excel no site do IBGE.</p>
+<p>Após realizar o download, vamos importar os dados:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="n">df_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;total_populacao_pernambuco.xls&quot;</span><span class="p">)</span>
 <span class="n">df_pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
