@@ -9,12 +9,13 @@ Status: draft
 
 Pandas (Python Data Analysis) é uma biblioteca de alto desempenho para análise de dados. O pandas tem diversas ferramentas para tratamento e preparação de dados. Combinando com o IPython também tem funcionalidades para análise e modelagem de dados. Neste artigo vamos mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para analisar grande volumes de dados.
 
-Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Vamos importar os dados:
+Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Você pode baixar os arquivos excel no site do [IBGE](http://www.ibge.gov.br/home/estatistica/populacao/censo2010/resultados_gerais_amostra/resultados_gerais_amostra_tab_xls.shtm).
+
+Carregar dados de um arquivo excel é bem simples com a função "read_excel". Você pode exibir parte da tabela com o ".head()", que vai mostrar as 5 primeiras linhas:
 
     import pandas as pd
     df_pop = pd.read_excel("total_populacao_pernambuco.xls")
     df_pop.head()
-
 
 |   | Código do município | Nome do município     | Total da população 2000 | Total de homens | Total de mulheres | Total da população urbana | Total da população rural | Total da população 2010 |
 |---|---------------------|-----------------------|-------------------------|-----------------|-------------------|---------------------------|--------------------------|-------------------------|
@@ -23,3 +24,13 @@ Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo
 | 2 | 2600203             | Afrânio               | 15014.0                 | 8751.0          | 8837.0            | 5859.0                    | 11729.0                  | 17588.0                 |
 | 3 | 2600302             | Agrestina             | 20036.0                 | 10938.0         | 11742.0           | 16955.0                   | 5725.0                   | 22680.0                 |
 | 4 | 2600401             | Água Preta            | 28531.0                 | 16581.0         | 16465.0           | 18708.0                   | 14338.0                  | 33046.0                 |
+
+No exemplo, "df_pop" é uma estrutura de dados chamada DataFrame. O DataFrame tem duas dimensões e transforma os dados em uma tabela. Cada linha ou coluna de um DataFrame possui outra estrutura do pandas chamado de Series, que nada mais é do que um array unidimensional.
+
+Suponha agora que você quer remover algumas colunas desnecessárias para melhorar a visualização e facilitar a manipulação dos dados. Trabalho simples de ser feito no pandas:
+
+    df_pop = df_pop.drop('Código do município', axis=1)
+
+Para remover várias colunas ao mesmo tempo, é um pouco diferente:
+
+    df_pop = df_pop.drop(df_pop.columns[[3, 4, 5, 6]], axis=1)
