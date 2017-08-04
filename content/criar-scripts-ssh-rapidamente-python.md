@@ -6,6 +6,7 @@ slug: criar-scripts-ssh-rapidamente-python
 summary: Às vezes é necessário trabalhar com vários dispositivos ligados em rede, quer sejam computadores, roteadores ou outros tipos de equipamentos. Em muitas ocasiões precisamos enviar comandos e instruções para estes equipamentos. Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro. Mas e se forem milhares de dispositivos interconectados?
 image: images/acesso-remoto-a-servidores.jpg
 alias: /blog/criar-scripts-ssh-rapidamente-python/
+       /ssh-com-paramiko/
 
 Às vezes é necessário trabalhar com **vários** dispositivos ligados em **rede**, quer sejam computadores, roteadores ou outros tipos de equipamentos.
 
