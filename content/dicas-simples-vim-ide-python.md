@@ -5,6 +5,7 @@ category: Tutorial
 slug: dicas-simples-vim-ide-python
 summary: Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?
 image: images/unixstickers.jpg
+alias: /vim-uma-ide-amigavel-pra-python/
 
 Qual programador não procura um ambiente de desenvolvimento que seja **simples**, **amigável** e **funcional**?
 

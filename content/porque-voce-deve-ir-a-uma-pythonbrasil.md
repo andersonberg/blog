@@ -5,6 +5,7 @@ category: Iniciante
 slug: porque-voce-deve-ir-a-uma-pythonbrasil
 summary: Você quer um lugar pra aprender coisas novas, ficar antenado com novas tecnologias, trocar ideias com um monte de gente legal e interessante? Então você precisa ir a uma PythonBrasil!
 image: images/badge-pybr10.png
+alias: /blog/porque-voce-deve-ir-a-uma-pythonbrasil/
 
 Você quer um lugar pra **aprender** coisas novas, ficar **antenado** com novas tecnologias, **trocar ideias** com um monte de gente legal e interessante? Então você precisa ir a uma **PythonBrasil**!
 
