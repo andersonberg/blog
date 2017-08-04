@@ -5,7 +5,7 @@ category: Intermediário
 slug: analise-dados-pandas
 summary:
 image:
-<!-- Status: draft -->
+Status: draft
 
 Pandas (Python Data Analysis) é uma biblioteca de alto desempenho para análise de dados. O pandas tem diversas ferramentas para tratamento e preparação de dados. Combinando com o IPython também tem funcionalidades para análise e modelagem de dados. Neste artigo vamos mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para analisar grande volumes de dados.
 

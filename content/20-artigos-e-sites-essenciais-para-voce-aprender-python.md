@@ -4,7 +4,7 @@ tags: python, sites, artigos
 category: Iniciante
 slug: 20-artigos-e-sites-essenciais-para-voce-aprender-python
 summary: Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python e mais alguns de bônus para quem quer se aprofundar.
-alias: /blog/como-criar-um-blog-com-django
+alias: /blog/como-criar-um-blog-com-django/
 image: images/programar-python.jpg
 
 Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência.
