@@ -348,11 +348,11 @@ endif
 
 
 <p>O resultado é este:</p>
-<p><img width="372" alt="Vim com highlighting e numero de linhas" src="/images/blog/vimpython.jpg" class="align-center" height="118" title="Vim com highlighting e numero de linhas"></p>
+<p><img title="Vim com highlighting e numero de linhas" class="align-center" width="372" src="/images/blog/vimpython.jpg" height="118" alt="Vim com highlighting e numero de linhas"></p>
 <h3>4. Navegação pelo código</h3>
 <p>Uma funcionalidade muito útil é a navegação pelo código. Com esta ferramenta habilitada é possível ver todas as classes e funções presentes no seu código e poder pular automaticamente pra qualquer uma delas.</p>
 <p>Primeiro, é preciso instalar o pacote <a href="http://ctags.sourceforge.net/">exuberant-ctags</a>, disponível no repositório com este mesmo nome. Depois, baixe o <a href="http://www.vim.org/scripts/script.php?script_id=273">taglist</a>, que é um plugin do vim. Coloque o arquivo taglist.vim na pasta \~/.vim/plugin e o taglist.txt na pasta \~/.vim/doc, vá até esta última pasta, inicie o vim e rode :helptags. (com '.' no final) e já estará instalado.</p>
-<p><img width="858" alt="Vim Explorer" src="/images/blog/vim-explorer.jpg" class="align-center" height="100" title="Vim Explorer"></p>
+<p><img title="Vim Explorer" class="align-center" width="858" src="/images/blog/vim-explorer.jpg" height="100" alt="Vim Explorer"></p>
 <p>Agora é preciso fazer algumas alterações no vimrc:</p>
 <div class="highlight"><pre><span></span>&quot; Exibe nome da função
 let g:ctags_statusline=1
@@ -376,7 +376,7 @@ let Tlist_File_Fold_Auto_Close = 1
 <h3>5. Ocultar Código</h3>
 <p>Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.</p>
 <p>No Vim isso é possível através de um <a href="http://www.vim.org/scripts/script.php?script_id=1494">plugin</a>. Para instalá-lo baixe o arquivo <a href="http://www.vim.org/scripts/script.php?script_id=1494">neste link</a>, crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (<Shift> + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.</p>
-<p><img width="843" alt="Vim Code Folding" src="/images/blog/vim-code-folding.jpg" class="align-center" height="146" title="Vim Code Folding"></p>
+<p><img title="Vim Code Folding" class="align-center" width="843" src="/images/blog/vim-code-folding.jpg" height="146" alt="Vim Code Folding"></p>
 <h3>6. Project Explorer</h3>
 <p>Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin <a href="http://www.vim.org/scripts/script.php?script_id=1658">NerdTree</a>, que pode ser baixado <a href="http://www.vim.org/scripts/script.php?script_id=1658">aqui</a>. Para instalar basta extrair o conteudo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.</p>
 <p>Na <a href="http://www.vim.org/scripts/index.php">página de scripts</a> do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.</p>
