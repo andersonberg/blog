@@ -6,6 +6,7 @@ slug: criar-api-rest-django
 summary: Como construir uma API Restful totalmente configurável , funcional e simples ? Como tornar essa API pública, ao mesmo tempo que protege seus dados? E como fazer tudo isso usando Django?
 image: images/cloud-1.png
 alias: /criar-api-rest-python/
+       /como-criar-uma-api-rest-em-python/
 
 Como construir uma  **API Restful**  totalmente  **configurável** ,  **funcional**  e  **simples** ?
 
