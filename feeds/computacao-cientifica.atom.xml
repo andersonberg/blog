@@ -100,7 +100,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;img title="Matriz numpy" src="/images/blog/matriz.jpg" class="align-center" alt="Matriz numpy"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/matriz.jpg" title="Matriz numpy" class="align-center" alt="Matriz numpy"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Matriz numpy Fonte: SciPy 2011 - Jonathan Rocher&lt;/p&gt;
 &lt;/blockquote&gt;
