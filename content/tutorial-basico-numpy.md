@@ -5,6 +5,7 @@ category: Computação Científica
 slug: tutorial-basico-numpy
 summary: NumPy é um pacote de Python que suporta operações com vetores e matrizes e é essencial para a computação científica com Python. O NumPy é baseado em C, portanto tem um desempenho superior se comparado às operações com vetores originais do Python. Neste post eu quero mostrar uma introdução básica ao NumPy para os iniciantes.
 image: images/blog/matriz.jpg
+alias: /blog/tutorial-basico-numpy/
 
 NumPy é um pacote de Python que suporta operações com vetores e matrizes e é essencial para a computação científica com Python. O NumPy é baseado em C, portanto tem um desempenho superior se comparado às operações com vetores originais do Python. Neste post eu quero mostrar uma introdução básica ao NumPy para os iniciantes.
 
