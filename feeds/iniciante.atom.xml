@@ -95,12 +95,12 @@
 &lt;p&gt;Não sei se toda Python Brasil é assim, mas comparando com outros eventos que já participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterrâneos).&lt;/p&gt;
 &lt;p&gt;Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simpáticos. Não falo só da equipe de organização, mas dos próprios conferencistas e palestrantes.&lt;/p&gt;
 &lt;h2&gt;Nem só de palestras vive uma PythonBrasil&lt;/h2&gt;
-&lt;p&gt;&lt;img src="/images/blog/pybr_600.jpg" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" class="align-center" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/pybr_600.jpg" class="align-center" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas"&gt;&lt;/p&gt;
 &lt;p&gt;Claro, o melhor deste tipo de evento não são as palestras, por mais qualidade que tenham. O principal é o &lt;strong&gt;networking&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Conversar com pessoas de diversas partes do país e do mundo, ouvir suas histórias, suas experiências. Ouvir o que elas têm construído com Python. Ouvir o que elas têm feito para mudar o mundo, para revolucionar a tecnologia. E ver que todos, todos mesmo, estavam disponíveis e acessíveis para bater um papo, fosse durante os coffee-breaks (ótimos por sinal), fosse no final do ciclo de palestras, durante o almoço ou até enquanto as palestras aconteciam nas salas.&lt;/p&gt;
 &lt;p&gt;Confesso que até perdi algumas palestras interessantíssimas porque a conversa estava muito interessante. Mas não me arrependo, extraí muito conhecimento dessas longas conversas.&lt;/p&gt;
 &lt;h2&gt;E como foram as palestras?&lt;/h2&gt;
-&lt;p&gt;&lt;img src="/images/blog/pybr10_pydanny.jpg" title="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" class="align-center 600 450" alt="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/pybr10_pydanny.jpg" class="align-center 600 450" alt="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" title="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil"&gt;&lt;/p&gt;
 &lt;p&gt;Sobre as palestras, como eu disse, qualidade altíssima. A grade foi muito bem montada e as mudanças estavam sempre em telões espalhados pelo hall do local do evento, tudo para você não perder nada da Python Brasil.&lt;/p&gt;
 &lt;p&gt;Pra abrir a Python Brasil deste ano, ninguém melhor que o &lt;a href="https://twitter.com/fperez_org"&gt;Fernando Perez&lt;/a&gt;, o criador do &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt;. Foi uma das melhores apresentações do congresso, na minha opinião.&lt;/p&gt;
 &lt;p&gt;Entre os outros keynotes estavam &lt;a href="https://twitter.com/alex_gaynor"&gt;Alex Gaynor&lt;/a&gt;, engenheiro de software de diversos projetos Python e membro da diretoria da Python Software Foundation; &lt;a href="https://twitter.com/roguelynn"&gt;Lynn Root&lt;/a&gt;, engenheira do Spotify, que mostrou como eles usam Python no desenvolvimento do player de música; e o &lt;a href="https://github.com/pydanny"&gt;PyDanny&lt;/a&gt;, co-autor do Two Scoops of Django, além de capoeirista (deu um show à parte na palestra) e engenheiro na Eventbrite.&lt;/p&gt;
@@ -181,7 +181,7 @@ old_lambda_form ::=  &amp;quot;lambda&amp;quot; [parameter_list]: old_expression
 &lt;p&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&amp;gt;New Window e será aberta uma janela em branco onde é possível escrever o código.&lt;/p&gt;
 &lt;p&gt;Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/helloworldidle.png" title="Hello World no IDLE" class="align-center" alt="Hello World no IDLE"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/helloworldidle.png" class="align-center" alt="Hello World no IDLE" title="Hello World no IDLE"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hello World no IDLE&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -202,7 +202,7 @@ print y
 
 &lt;p&gt;Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).&lt;/p&gt;
 &lt;p&gt;Outras funções interessante estão no menu Format na janela de edição de código.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/idle_format.png" title="Menu Format no IDLE" class="align-center" alt="Menu Format no IDLE"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/idle_format.png" class="align-center" alt="Menu Format no IDLE" title="Menu Format no IDLE"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Menu Format no IDLE&lt;/p&gt;
 &lt;/blockquote&gt;
