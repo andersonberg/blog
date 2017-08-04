@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 AUTHOR = 'Anderson Berg'
 SITENAME = 'Pythonize'
@@ -43,8 +44,14 @@ PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins']
 PLUGINS = [
     'assets',
     'representative_image',
-    'liquid_tags.img'
+    'liquid_tags.img',
+    'liquid_tags.notebook',
+    'pelican_alias'
 ]
+
+NOTEBOOK_DIR = 'notebooks'
+
+EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
 
 THEME = "/home/anderson/Projetos/pelican-themes/clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
