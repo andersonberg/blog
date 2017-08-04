@@ -5,6 +5,7 @@ category: Tutorial, Programação
 slug: seu-codigo-python-executavel-py2exe
 summary: Em diversas situações é necessário criar um arquivo executável a partir do seu código.
 alias: /pt-br/transformando-seu-codigo-python-em-executavel-com-o-py2exe/
+       /transformando-seu-codigo-python-em-executavel-com-o-py2exe/
 
 Em diversas situações é necessário criar um arquivo executável a partir do seu código.
 
