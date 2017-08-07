@@ -5,15 +5,19 @@ import os
 
 AUTHOR = 'Anderson Berg'
 SITENAME = 'Pythonize'
-SITEURL = ''
+SITESUBTITLE = u'Python, Django e desenvolvimento Web'
+SITEURL = os.environ.get('SITEURL', 'http://localhost:8000')
+SITEDESCRIPTION = u'Artigos sobre desenvolvimento Web, Python e Django.'
 
 PATH = 'content'
 
 TIMEZONE = 'America/Recife'
 
-DEFAULT_LANG = 'pt-br'
+DEFAULT_LANG = u'pt_BR.utf8'
 
 DEFAULT_DATE_FORMAT = '%d %b, %Y'
+I18N_TEMPLATES_LANG = u'EN'
+LOCALE = ['pt_BR.utf8']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -21,6 +25,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -39,24 +44,30 @@ STATIC_PATHS = ['images']
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DELETE_OUTPUT_DIRECTORY = False
+WEBASSETS = True
 
 PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins']
 PLUGINS = [
     'assets',
+    'extended_meta',
     'representative_image',
+    'i18n_subsites',
     'liquid_tags.img',
     'liquid_tags.notebook',
     'pelican_alias'
 ]
 
 NOTEBOOK_DIR = 'notebooks'
+JINJA_ENVIRONMENT = {'extensions': 'jinja2.ext.i18n'}
+I18N_GETTEXT_NEWSTYLE = True
 
-EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
+# EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
 
-THEME = "/home/anderson/Projetos/pelican-themes/clean-blog"
-COLOR_SCHEME_CSS = 'monokai.css'
+THEME = "/home/anderson/Projetos/pelican-themes/yapeme"
+# COLOR_SCHEME_CSS = 'monokai.css'
 
-HEADER_COVER = 'images/code-python.jpg'
+# HEADER_COVER = 'images/code-python.jpg'
+TAG_URL = "tag/{slug}.html"
 
 DISQUS_SITENAME = 'pythonize.org'
 GOOGLE_ANALYTICS = 'UA-25538784-1'
