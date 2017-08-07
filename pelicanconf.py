@@ -58,15 +58,17 @@ PLUGINS = [
 ]
 
 NOTEBOOK_DIR = 'notebooks'
-JINJA_ENVIRONMENT = {'extensions': 'jinja2.ext.i18n'}
+JINJA_EXTENSIONS = ['jinja2.ext.i18n',]
 I18N_GETTEXT_NEWSTYLE = True
+I18N_UNTRANSLATED_PAGES = 'keep'
+I18N_SUBSITES = {}
 
-# EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
 
 THEME = "/home/anderson/Projetos/pelican-themes/yapeme"
-# COLOR_SCHEME_CSS = 'monokai.css'
+COLOR_SCHEME_CSS = 'monokai.css'
 
-# HEADER_COVER = 'images/code-python.jpg'
+HEADER_COVER = 'images/code-python.jpg'
 TAG_URL = "tag/{slug}.html"
 
 DISQUS_SITENAME = 'pythonize.org'
