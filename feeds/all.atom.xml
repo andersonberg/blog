@@ -1,5 +1,798 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2014-12-28T01:11:22-03:00</updated><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pythonize</title><link href="https://andersonberg.github.io/pythonize-pelican/" rel="alternate"></link><link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" rel="self"></link><id>https://andersonberg.github.io/pythonize-pelican/</id><updated>2017-08-08T14:00:00-03:00</updated><entry><title>Introdução à Análise de Dados com o Pandas</title><link href="https://andersonberg.github.io/pythonize-pelican/analise-dados-pandas.html" rel="alternate"></link><published>2017-08-08T14:00:00-03:00</published><updated>2017-08-08T14:00:00-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2017-08-08:/pythonize-pelican/analise-dados-pandas.html</id><summary type="html">&lt;p&gt;Neste artigo vou mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para fazer tratamento e análise de dados.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pandas (Python Data Analysis) é uma biblioteca de alto desempenho para análise de dados. O pandas tem diversas ferramentas para tratamento e preparação de dados. Combinando com o IPython também tem funcionalidades para análise e modelagem de dados. Neste artigo vou mostrar através de exemplos bem práticos como utilizar o pandas e Ipython para fazer tratamento e análise de um grande volume de dados.&lt;/p&gt;
+&lt;p&gt;Pra iniciar, vou mostrar como fazer o tratamento de dados a partir de um arquivo excel. O exemplo que vou utilizar é do resultado do senso no estado de Pernambuco. Você pode baixar os arquivos excel no site do &lt;a href="http://www.ibge.gov.br/home/estatistica/populacao/censo2010/resultados_gerais_amostra/resultados_gerais_amostra_tab_xls.shtm"&gt;IBGE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Carregar dados de um arquivo excel é bem simples com a função "read_excel". Você pode exibir parte da tabela com o ".head()", que vai mostrar as 5 primeiras linhas:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_excel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;total_populacao_pernambuco.xls&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[1]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Código do município&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total da população 2000&lt;/th&gt;
+      &lt;th&gt;Total de homens&lt;/th&gt;
+      &lt;th&gt;Total de mulheres&lt;/th&gt;
+      &lt;th&gt;Total da população urbana&lt;/th&gt;
+      &lt;th&gt;Total da população rural&lt;/th&gt;
+      &lt;th&gt;Total da população 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;2600054&lt;/td&gt;
+      &lt;td&gt;Abreu e Lima&lt;/td&gt;
+      &lt;td&gt;89039.0&lt;/td&gt;
+      &lt;td&gt;45165.0&lt;/td&gt;
+      &lt;td&gt;49263.0&lt;/td&gt;
+      &lt;td&gt;86589.0&lt;/td&gt;
+      &lt;td&gt;7839.0&lt;/td&gt;
+      &lt;td&gt;94428.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;2600104&lt;/td&gt;
+      &lt;td&gt;Afogados da Ingazeira&lt;/td&gt;
+      &lt;td&gt;32922.0&lt;/td&gt;
+      &lt;td&gt;16790.0&lt;/td&gt;
+      &lt;td&gt;18301.0&lt;/td&gt;
+      &lt;td&gt;27406.0&lt;/td&gt;
+      &lt;td&gt;7685.0&lt;/td&gt;
+      &lt;td&gt;35091.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;2600203&lt;/td&gt;
+      &lt;td&gt;Afrânio&lt;/td&gt;
+      &lt;td&gt;15014.0&lt;/td&gt;
+      &lt;td&gt;8751.0&lt;/td&gt;
+      &lt;td&gt;8837.0&lt;/td&gt;
+      &lt;td&gt;5859.0&lt;/td&gt;
+      &lt;td&gt;11729.0&lt;/td&gt;
+      &lt;td&gt;17588.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;2600302&lt;/td&gt;
+      &lt;td&gt;Agrestina&lt;/td&gt;
+      &lt;td&gt;20036.0&lt;/td&gt;
+      &lt;td&gt;10938.0&lt;/td&gt;
+      &lt;td&gt;11742.0&lt;/td&gt;
+      &lt;td&gt;16955.0&lt;/td&gt;
+      &lt;td&gt;5725.0&lt;/td&gt;
+      &lt;td&gt;22680.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;2600401&lt;/td&gt;
+      &lt;td&gt;Água Preta&lt;/td&gt;
+      &lt;td&gt;28531.0&lt;/td&gt;
+      &lt;td&gt;16581.0&lt;/td&gt;
+      &lt;td&gt;16465.0&lt;/td&gt;
+      &lt;td&gt;18708.0&lt;/td&gt;
+      &lt;td&gt;14338.0&lt;/td&gt;
+      &lt;td&gt;33046.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;No exemplo, "df_pop" é uma estrutura de dados chamada DataFrame. O DataFrame tem duas dimensões e transforma os dados em uma tabela. Cada linha ou coluna de um DataFrame possui outra estrutura do pandas chamado de Series, que nada mais é do que um array unidimensional.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Suponha agora que você quer remover algumas colunas desnecessárias para melhorar a visualização e facilitar a manipulação dos dados. Trabalho simples de ser feito no pandas:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;drop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Código do município&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Para remover várias colunas ao mesmo tempo, é um pouco diferente:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;drop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total da população 2000&lt;/th&gt;
+      &lt;th&gt;Total da população 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Abreu e Lima&lt;/td&gt;
+      &lt;td&gt;89039.0&lt;/td&gt;
+      &lt;td&gt;94428.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Afogados da Ingazeira&lt;/td&gt;
+      &lt;td&gt;32922.0&lt;/td&gt;
+      &lt;td&gt;35091.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Afrânio&lt;/td&gt;
+      &lt;td&gt;15014.0&lt;/td&gt;
+      &lt;td&gt;17588.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Agrestina&lt;/td&gt;
+      &lt;td&gt;20036.0&lt;/td&gt;
+      &lt;td&gt;22680.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Água Preta&lt;/td&gt;
+      &lt;td&gt;28531.0&lt;/td&gt;
+      &lt;td&gt;33046.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;A função "drop" retorna um novo DataFrame sem as colunar especificadas, por isso temos que atribuir novamente ao DataFrame original. Para evitar isso, você pode utilizar o atributo "inplace".&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Vamos renomear algumas colunas e utilizar o inplace para modificar diretamente o DataFrame original:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Total da população 2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Total 2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Total da população 2010&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Total 2010&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total 2000&lt;/th&gt;
+      &lt;th&gt;Total 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Abreu e Lima&lt;/td&gt;
+      &lt;td&gt;89039.0&lt;/td&gt;
+      &lt;td&gt;94428.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Afogados da Ingazeira&lt;/td&gt;
+      &lt;td&gt;32922.0&lt;/td&gt;
+      &lt;td&gt;35091.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Afrânio&lt;/td&gt;
+      &lt;td&gt;15014.0&lt;/td&gt;
+      &lt;td&gt;17588.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Agrestina&lt;/td&gt;
+      &lt;td&gt;20036.0&lt;/td&gt;
+      &lt;td&gt;22680.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Água Preta&lt;/td&gt;
+      &lt;td&gt;28531.0&lt;/td&gt;
+      &lt;td&gt;33046.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Dá uma olhada agora no final da tabela, tem alguns valores vazios ali&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total 2000&lt;/th&gt;
+      &lt;th&gt;Total 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;182&lt;/th&gt;
+      &lt;td&gt;Vicência&lt;/td&gt;
+      &lt;td&gt;28820.0&lt;/td&gt;
+      &lt;td&gt;30731.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;183&lt;/th&gt;
+      &lt;td&gt;Vitória de Santo Antão&lt;/td&gt;
+      &lt;td&gt;117609.0&lt;/td&gt;
+      &lt;td&gt;130540.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;184&lt;/th&gt;
+      &lt;td&gt;Xexéu&lt;/td&gt;
+      &lt;td&gt;13597.0&lt;/td&gt;
+      &lt;td&gt;14092.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;185&lt;/th&gt;
+      &lt;td&gt;Pernambuco&lt;/td&gt;
+      &lt;td&gt;7918344.0&lt;/td&gt;
+      &lt;td&gt;8796032.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;186&lt;/th&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Problema simples de resolver com o pandas. Você tem duas opções aqui:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Preencher com um valor padrão&lt;/li&gt;
+&lt;li&gt;Remover as células vazias&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Se tudo que você precisa é preencher as lacunas, use a função "fillna":&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;filled_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fillna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;filled_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total 2000&lt;/th&gt;
+      &lt;th&gt;Total 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;182&lt;/th&gt;
+      &lt;td&gt;Vicência&lt;/td&gt;
+      &lt;td&gt;28820.0&lt;/td&gt;
+      &lt;td&gt;30731.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;183&lt;/th&gt;
+      &lt;td&gt;Vitória de Santo Antão&lt;/td&gt;
+      &lt;td&gt;117609.0&lt;/td&gt;
+      &lt;td&gt;130540.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;184&lt;/th&gt;
+      &lt;td&gt;Xexéu&lt;/td&gt;
+      &lt;td&gt;13597.0&lt;/td&gt;
+      &lt;td&gt;14092.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;185&lt;/th&gt;
+      &lt;td&gt;Pernambuco&lt;/td&gt;
+      &lt;td&gt;7918344.0&lt;/td&gt;
+      &lt;td&gt;8796032.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;186&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Por outro lado, se a melhor decisão é remover essa linha:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;all&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total 2000&lt;/th&gt;
+      &lt;th&gt;Total 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;181&lt;/th&gt;
+      &lt;td&gt;Vertentes&lt;/td&gt;
+      &lt;td&gt;14957.0&lt;/td&gt;
+      &lt;td&gt;18267.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;182&lt;/th&gt;
+      &lt;td&gt;Vicência&lt;/td&gt;
+      &lt;td&gt;28820.0&lt;/td&gt;
+      &lt;td&gt;30731.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;183&lt;/th&gt;
+      &lt;td&gt;Vitória de Santo Antão&lt;/td&gt;
+      &lt;td&gt;117609.0&lt;/td&gt;
+      &lt;td&gt;130540.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;184&lt;/th&gt;
+      &lt;td&gt;Xexéu&lt;/td&gt;
+      &lt;td&gt;13597.0&lt;/td&gt;
+      &lt;td&gt;14092.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;185&lt;/th&gt;
+      &lt;td&gt;Pernambuco&lt;/td&gt;
+      &lt;td&gt;7918344.0&lt;/td&gt;
+      &lt;td&gt;8796032.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Uma última função que eu queria comentar neste post é a função map. Ela é bem útil se você precisa modificar todos os elementos de uma linha ou coluna. No nosso exemplo podemos converter todos os números de float para int:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Total 2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Total 2000&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Total 2010&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Total 2010&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;df_pop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border="1" class="dataframe"&gt;
+  &lt;thead&gt;
+    &lt;tr style="text-align: right;"&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Nome do município&lt;/th&gt;
+      &lt;th&gt;Total 2000&lt;/th&gt;
+      &lt;th&gt;Total 2010&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Abreu e Lima&lt;/td&gt;
+      &lt;td&gt;89039&lt;/td&gt;
+      &lt;td&gt;94428&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Afogados da Ingazeira&lt;/td&gt;
+      &lt;td&gt;32922&lt;/td&gt;
+      &lt;td&gt;35091&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Afrânio&lt;/td&gt;
+      &lt;td&gt;15014&lt;/td&gt;
+      &lt;td&gt;17588&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Agrestina&lt;/td&gt;
+      &lt;td&gt;20036&lt;/td&gt;
+      &lt;td&gt;22680&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Água Preta&lt;/td&gt;
+      &lt;td&gt;28531&lt;/td&gt;
+      &lt;td&gt;33046&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Basicamente, a função map recebe como parâmetro outra função que será mapeada para os elementos de uma coluna ou linha.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Queria ser breve neste post, mostrando algumas operações básicas que podem ser feitas com o pandas. Em um próximo post vou trazer mais alguns detalhes sobre o pandas e como fazer operações mais avançadas com análise de dados.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+&lt;/p&gt;</content><category term="python"></category><category term="pandas"></category></entry><entry><title>Como Criar um Blog de Forma Simples e Rápida com Django</title><link href="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html" rel="alternate"></link><published>2014-12-28T01:11:22-03:00</published><updated>2014-12-28T01:11:22-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-28:/pythonize-pelican/como-criar-um-blog-com-django.html</id><summary type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em Django! Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer criar um blog pra espalhar suas ideias na rede?&lt;/p&gt;
 &lt;p&gt;Quer fazer isso em &lt;strong&gt;poucos passos&lt;/strong&gt; usando &lt;strong&gt;Django&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em &lt;strong&gt;Django&lt;/strong&gt;! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.&lt;/p&gt;
 &lt;p&gt;Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o &lt;strong&gt;Mezzanine&lt;/strong&gt;, um CMS muito poderoso que já vem com um admin pronto para blogs.&lt;/p&gt;
@@ -205,12 +998,12 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 &lt;p&gt;Não sei se toda Python Brasil é assim, mas comparando com outros eventos que já participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterrâneos).&lt;/p&gt;
 &lt;p&gt;Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simpáticos. Não falo só da equipe de organização, mas dos próprios conferencistas e palestrantes.&lt;/p&gt;
 &lt;h2&gt;Nem só de palestras vive uma PythonBrasil&lt;/h2&gt;
-&lt;p&gt;&lt;img src="/images/blog/pybr_600.jpg" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/pybr_600.jpg" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas"&gt;&lt;/p&gt;
 &lt;p&gt;Claro, o melhor deste tipo de evento não são as palestras, por mais qualidade que tenham. O principal é o &lt;strong&gt;networking&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Conversar com pessoas de diversas partes do país e do mundo, ouvir suas histórias, suas experiências. Ouvir o que elas têm construído com Python. Ouvir o que elas têm feito para mudar o mundo, para revolucionar a tecnologia. E ver que todos, todos mesmo, estavam disponíveis e acessíveis para bater um papo, fosse durante os coffee-breaks (ótimos por sinal), fosse no final do ciclo de palestras, durante o almoço ou até enquanto as palestras aconteciam nas salas.&lt;/p&gt;
 &lt;p&gt;Confesso que até perdi algumas palestras interessantíssimas porque a conversa estava muito interessante. Mas não me arrependo, extraí muito conhecimento dessas longas conversas.&lt;/p&gt;
 &lt;h2&gt;E como foram as palestras?&lt;/h2&gt;
-&lt;p&gt;&lt;img src="/images/blog/pybr10_pydanny.jpg" alt="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" title="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" class="align-center 600 450"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center 600 450" src="/images/blog/pybr10_pydanny.jpg" alt="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" title="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil"&gt;&lt;/p&gt;
 &lt;p&gt;Sobre as palestras, como eu disse, qualidade altíssima. A grade foi muito bem montada e as mudanças estavam sempre em telões espalhados pelo hall do local do evento, tudo para você não perder nada da Python Brasil.&lt;/p&gt;
 &lt;p&gt;Pra abrir a Python Brasil deste ano, ninguém melhor que o &lt;a href="https://twitter.com/fperez_org"&gt;Fernando Perez&lt;/a&gt;, o criador do &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt;. Foi uma das melhores apresentações do congresso, na minha opinião.&lt;/p&gt;
 &lt;p&gt;Entre os outros keynotes estavam &lt;a href="https://twitter.com/alex_gaynor"&gt;Alex Gaynor&lt;/a&gt;, engenheiro de software de diversos projetos Python e membro da diretoria da Python Software Foundation; &lt;a href="https://twitter.com/roguelynn"&gt;Lynn Root&lt;/a&gt;, engenheira do Spotify, que mostrou como eles usam Python no desenvolvimento do player de música; e o &lt;a href="https://github.com/pydanny"&gt;PyDanny&lt;/a&gt;, co-autor do Two Scoops of Django, além de capoeirista (deu um show à parte na palestra) e engenheiro na Eventbrite.&lt;/p&gt;
@@ -640,7 +1433,7 @@ $ pydoc twitter.DirectMessage
 
 &lt;p&gt;O que você achou de usar a API do Twitter com Python?
 Já tentou outras formas de acessar a API?
-Deixe seu comentário logo abaixo!&lt;/p&gt;</content></entry><entry><title>Python - Dividindo uma Lista em N Partes</title><link href="https://andersonberg.github.io/pythonize-pelican/python-dividindo-lista-n-partes.html" rel="alternate"></link><published>2012-01-18T01:52:26-03:00</published><updated>2012-01-18T01:52:26-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-18:/pythonize-pelican/python-dividindo-lista-n-partes.html</id><summary type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;</summary><content type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.&lt;/p&gt;
+Deixe seu comentário logo abaixo!&lt;/p&gt;</content><category term="python"></category><category term="twitter"></category></entry><entry><title>Python - Dividindo uma Lista em N Partes</title><link href="https://andersonberg.github.io/pythonize-pelican/python-dividindo-lista-n-partes.html" rel="alternate"></link><published>2012-01-18T01:52:26-03:00</published><updated>2012-01-18T01:52:26-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-18:/pythonize-pelican/python-dividindo-lista-n-partes.html</id><summary type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;</summary><content type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.&lt;/p&gt;
 &lt;p&gt;Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;
 &lt;p&gt;Suponha a lista [1,2,3,4,5,6,7,8,9,10] quero dividir a lista em 5 partes.
 A divisão da lista resultaria em [1,2], [3,4], [5,6], [7,8], [9,10]
@@ -764,11 +1557,11 @@ endif
 
 
 &lt;p&gt;O resultado é este:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vim com highlighting e numero de linhas" height="118" width="372" title="Vim com highlighting e numero de linhas" src="/images/blog/vimpython.jpg" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vimpython.jpg" alt="Vim com highlighting e numero de linhas" width="372" class="align-center" title="Vim com highlighting e numero de linhas" height="118"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Navegação pelo código&lt;/h3&gt;
 &lt;p&gt;Uma funcionalidade muito útil é a navegação pelo código. Com esta ferramenta habilitada é possível ver todas as classes e funções presentes no seu código e poder pular automaticamente pra qualquer uma delas.&lt;/p&gt;
 &lt;p&gt;Primeiro, é preciso instalar o pacote &lt;a href="http://ctags.sourceforge.net/"&gt;exuberant-ctags&lt;/a&gt;, disponível no repositório com este mesmo nome. Depois, baixe o &lt;a href="http://www.vim.org/scripts/script.php?script_id=273"&gt;taglist&lt;/a&gt;, que é um plugin do vim. Coloque o arquivo taglist.vim na pasta \~/.vim/plugin e o taglist.txt na pasta \~/.vim/doc, vá até esta última pasta, inicie o vim e rode :helptags. (com '.' no final) e já estará instalado.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vim Explorer" height="100" width="858" title="Vim Explorer" src="/images/blog/vim-explorer.jpg" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vim-explorer.jpg" alt="Vim Explorer" width="858" class="align-center" title="Vim Explorer" height="100"&gt;&lt;/p&gt;
 &lt;p&gt;Agora é preciso fazer algumas alterações no vimrc:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot; Exibe nome da função
 let g:ctags_statusline=1
@@ -792,7 +1585,7 @@ let Tlist_File_Fold_Auto_Close = 1
 &lt;h3&gt;5. Ocultar Código&lt;/h3&gt;
 &lt;p&gt;Quando o seu código começa a ter muitas funções e classes fica difícil ter uma visão geral do que está disponível no código. A maioria das IDE's possuem uma funcionalidade para ocultar parte do código e mostrar somente a assinatura ou definição de classes e funções.&lt;/p&gt;
 &lt;p&gt;No Vim isso é possível através de um &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;plugin&lt;/a&gt;. Para instalá-lo baixe o arquivo &lt;a href="http://www.vim.org/scripts/script.php?script_id=1494"&gt;neste link&lt;/a&gt;, crie uma pasta chamada ftplugin dentro da pasta \~/.vim e copie o plugin para a pasta ftplugin. A tecla 'F' (&lt;Shift&gt; + f) oculta ou exibe todo o código dentro de funções e classes, enquanto que a tecla 'f'' exibe ou oculta o código onde está o cursor.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vim Code Folding" height="146" width="843" title="Vim Code Folding" src="/images/blog/vim-code-folding.jpg" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/blog/vim-code-folding.jpg" alt="Vim Code Folding" width="843" class="align-center" title="Vim Code Folding" height="146"&gt;&lt;/p&gt;
 &lt;h3&gt;6. Project Explorer&lt;/h3&gt;
 &lt;p&gt;Essa é uma das principais funções de uma IDE: organizar seu projeto. No Vim é preciso instalar o plugin &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;NerdTree&lt;/a&gt;, que pode ser baixado &lt;a href="http://www.vim.org/scripts/script.php?script_id=1658"&gt;aqui&lt;/a&gt;. Para instalar basta extrair o conteudo do arquivo .zip na pasta \~/.vim. Rode  :helptags. (com '.' no final) e rode :help NERD_tree.txt para ver o arquivo de ajuda. Pra utilizar o plugin digite :NERDTree e será aberta uma janela com o conteúdo da pasta atual.&lt;/p&gt;
 &lt;p&gt;Na &lt;a href="http://www.vim.org/scripts/index.php"&gt;página de scripts&lt;/a&gt; do vim, você pode encontrar outros plugins de Python para o vim. Se você testar algum outro plugin ou tiver uma funcionalidade interessante que eu não comentei no post, deixe sua experiência nos comentários.&lt;/p&gt;</content><category term="vim"></category><category term="ide"></category></entry><entry><title>Como criar parsers HTML poderosos com BeautifulSoup</title><link href="https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html" rel="alternate"></link><published>2011-12-31T15:45:19-03:00</published><updated>2011-12-31T15:45:19-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-31:/pythonize-pelican/criar-parsers-html-beautifulsoup.html</id><summary type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup pode ser usado para arquivos HTML ou XML, com ele fica muito simples navegar e buscar textos em páginas HTML. Uma grande vantagem da BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas html mal formatadas, facilitando o trabalho do programador.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste post você vai aprender como criar um parser pra recuperar
@@ -967,7 +1760,7 @@ poderosos aliados na recuperação de informação na web.&lt;/p&gt;</content><c
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;img src="/images/blog/matriz.jpg" alt="Matriz numpy" title="Matriz numpy" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/matriz.jpg" alt="Matriz numpy" title="Matriz numpy"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Matriz numpy Fonte: SciPy 2011 - Jonathan Rocher&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1223,7 +2016,7 @@ Para utilizar o py2exe com outros pacotes e módulos, veja o link: &lt;a href="h
 &lt;p&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&amp;gt;New Window e será aberta uma janela em branco onde é possível escrever o código.&lt;/p&gt;
 &lt;p&gt;Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/helloworldidle.png" alt="Hello World no IDLE" title="Hello World no IDLE" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/helloworldidle.png" alt="Hello World no IDLE" title="Hello World no IDLE"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hello World no IDLE&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1244,29 +2037,29 @@ print y
 
 &lt;p&gt;Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).&lt;/p&gt;
 &lt;p&gt;Outras funções interessante estão no menu Format na janela de edição de código.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/idle_format.png" alt="Menu Format no IDLE" title="Menu Format no IDLE" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/idle_format.png" alt="Menu Format no IDLE" title="Menu Format no IDLE"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Menu Format no IDLE&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Neste menu você pode identar ou tirar identação de um trecho selecionado, é possível comentar ou descomentar o código, transformar tab em espaços ou vice-versa.&lt;/p&gt;
-&lt;p&gt;Dúvidas, opiniões, sugestões e experiências, postem nos comentários!&lt;/p&gt;</content></entry><entry><title>Iniciando a programação em Python</title><link href="https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html" rel="alternate"></link><published>2011-09-04T15:06:10-03:00</published><updated>2011-09-04T15:06:10-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-04:/pythonize-pelican/iniciando-programacao-python.html</id><summary type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;
+&lt;p&gt;Dúvidas, opiniões, sugestões e experiências, postem nos comentários!&lt;/p&gt;</content><category term="python"></category><category term="idle"></category></entry><entry><title>Iniciando a programação em Python</title><link href="https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html" rel="alternate"></link><published>2011-09-04T15:06:10-03:00</published><updated>2011-09-04T15:06:10-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-04:/pythonize-pelican/iniciando-programacao-python.html</id><summary type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.&lt;/p&gt;
 &lt;p&gt;Não vou dizer por que você deve programar em Python. Eu a escolhi porque acho uma linguagem simples e poderosa, com poucas linhas de código você consegue criar uma aplicação completa rapidamente. Gosto de Python também porque possui muitas ferramentas que facilitam o dia-a-dia do desenvolvimento de software tanto comercial quanto científico.
 Então vamos ao que interessa, pra programar em Python você precisa fazer o download e instalar em sua máquina.
 Instalação para os usuários Linux/Mac OS X
 Se você usa uma distribuição Linux, seja Ubuntu, Fedora, OpenSUSE, CentOS, etc... ou se você usa o Mac OS X é bem provável que o Python já esteja instalado, basta abrir um terminal (konsole, para KDE ou gnome-terminal para Gnome) e digitar “python” (sem aspas) que o interpretador Python irá iniciar.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/python-linux.png" alt="Interpretador Python no Shell do Linux" title="Interpretador Python no Shell do Linux" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/python-linux.png" alt="Interpretador Python no Shell do Linux" title="Interpretador Python no Shell do Linux"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Interpretador Python no Shell do Linux&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Instalação para os usuários Windows
 Para os usuários de Windows é necessário instalar o interpretador. Visite o site &lt;a href="http://www.python.org/download/"&gt;http://www.python.org/download/&lt;/a&gt; e baixe a última versão. Python mantém duas versões: 2.7.x e 3.2.x. Se você não sabe qual escolher, vá de 2.7, pois muitas ferramentas e frameworks são compatíveis somente com a versão 2.7. Instale normalmente, como qualquer outro instalador Windows. Depois da instalação é preciso configurar a variável PATH do sistema. No Windows 7, abra o Painel de Controle, na pesquisa (no canto superior direito)  digite “variáveis de ambiente” (sem aspas) e clique em “Editar variáveis de ambiente para sua conta”. Na seção: “Variáveis de usuário” clique na variável PATH ou crie uma com este nome e no campo “Valor da variável” digite: “;C:\Python27” (sem aspas) no final do texto que já estiver lá (isso se você instalou o Python na pasta raiz C:)
 Pronto, agora abra o prompt de comando e digite python, você terá o interpretador pronto pra trabalhar.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/python-cmd1.png" alt="Chamando o interpretador Python na linha de comando" title="Chamando o interpretador Python na linha de comando" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/python-cmd1.png" alt="Chamando o interpretador Python na linha de comando" title="Chamando o interpretador Python na linha de comando"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Chamando o interpretador Python na linha de comando&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Como alternativa, junto com o Python é instalado um ambiente Shell de desenvolvimento, o IDLE, que você pode usar como interpretador (da mesma forma que no cmd) ou como editor de arquivos Python.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/blog/idle-python.png" alt="IDLE Python" title="IDLE Python" class="align-center"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/idle-python.png" alt="IDLE Python" title="IDLE Python"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;IDLE Python&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1301,4 +2094,4 @@ O interpretador Python pode ser usado como calculadora:&lt;/p&gt;
 125
 math.exp(4)
 54.598150033144236
-&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category></entry></feed>
