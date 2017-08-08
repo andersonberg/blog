@@ -1,5 +1,5 @@
 title: Introdução à Análise de Dados com o Pandas
-date: 2017-05-03 22:05:00
+date: 2017-08-08 14:00:00
 tags: python, pandas
 category: Intermediário
 slug: analise-dados-pandas
