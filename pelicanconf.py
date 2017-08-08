@@ -46,7 +46,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DELETE_OUTPUT_DIRECTORY = False
 WEBASSETS = True
 
-PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins']
+PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins', './plugins']
 PLUGINS = [
     'assets',
     'extended_meta',
@@ -54,7 +54,8 @@ PLUGINS = [
     'i18n_subsites',
     'liquid_tags.img',
     'liquid_tags.notebook',
-    'pelican_alias'
+    'pelican_alias',
+    'ipynb.liquid'
 ]
 
 NOTEBOOK_DIR = 'notebooks'
