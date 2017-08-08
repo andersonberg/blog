@@ -1,6 +1,6 @@
 title: Como Recuperar Posts do Twitter Rapidamente com Python
 date: 2012-02-07 18:00:00
-tags:
+tags: python, twitter
 category: Tutorial, Programação, Web
 slug: recuperar-posts-twitter-rapidamente-python
 summary: Neste post vamos criar um crawler para recuperar tweets públicos. Tweets públicos são aqueles que não necessitam de autenticação, ou seja, não é necessário ter uma conta no Twitter para ler esses tweets.

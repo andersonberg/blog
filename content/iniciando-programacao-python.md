@@ -1,6 +1,6 @@
 title: Iniciando a programação em Python
 date: 2011-09-04 15:06:10
-tags:
+tags: python
 category: Iniciante, Tutorial
 slug: iniciando-programacao-python
 summary: Neste blog vou apresentar o que eu aprendi de Python durante mais de três anos e minhas experiências diárias com a linguagem. Vou começar do início, mostrando para aqueles que estão iniciando a como programar nesta poderosa linguagem.

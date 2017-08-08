@@ -1,6 +1,6 @@
 title: Programando em Python no IDLE
 date: 2011-09-08 00:46:47
-tags:
+tags: python, idle
 category: Iniciante
 slug: programando-python-idle
 summary: Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.
