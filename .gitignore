@@ -4,3 +4,7 @@
 blog/cache
 output/
 __pycache__
+.ipynb_checkpoints/
+themes/
+plugins/
+=
