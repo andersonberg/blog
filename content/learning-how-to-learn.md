@@ -36,6 +36,6 @@ Habits have 4 components:
 
 The tip to change a habit is to change your reaction to the trigger.
 1. Find what makes you procrastinate. The suggestions are normally in 4 categories: location, time, how do you feel and reactions.
-2. You need to create a plan to avoid your brain to distract with something more pleasure. For example, create a new routine. If the plan doesn't work, adapt it.
-3. Reward! Give yourself a reward when tackle the procrastination.
+2. You need to create a plan to avoid your brain to distract with something more pleasure. For example, create a new routine. If the plan doesn't work at first, adjust it.
+3. Reward! Give yourself a reward when win the battle against procrastination.
 4. You have to believe you can do it. When things get stressed, you may want to go back to old bad habits.
