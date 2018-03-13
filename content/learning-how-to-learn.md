@@ -26,6 +26,22 @@ You set a timer (traditionally 25 minutes) to turn off any interruptions, accept
 After your break, go back to another time of focus. After 4 pomodoros you can have a longer break (15 - 30 minutes)
 
 
+## Chunking
+
+Chunking is a process that our brain uses to organize memories in modules. For example, when you have to memorize a phone number, you organize the algarisms in small groups.
+
+Chunks can help you to understand new concepts, because when your brain builds a chunk you can find out that a chunk may be related to other similar chunk, even from completely different fields.
+
+
+### How do I build a chunk?
+
+First step is to FOCUS in the information you want to process.
+
+
+### Exercises
+Exercises can improve our memory and ability to learn
+
+
 ### Changing habits
 
 Habits have 4 components:
