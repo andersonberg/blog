@@ -51,24 +51,25 @@ A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. Yo
 First step is to **FOCUS** in the information you want to process.
 Second, is to **UNDERSTAND the basic idea** of what you are learning. You can do that by doing a **rapid picture walk through** a chapter. **Glancing** at pictures and section headings.
 Third step of the process of create a chunk is to know the CONTEXT. That way you can learn both **how and when** use the chunk.
-At last, PRACTICE helps you to expand the neural network, allowing you to consolidate the chunk and make it more accessible.
+At last, PRACTICE helps you to expand the neural network, allowing you to **consolidate** the chunk and make it more accessible.
+
+
+## Learn by spaced repetition
+Plan your schedule to study a **little** about a subject **every day**, rather than hurry to learn everything in one day. 
+Our brain needs rest. At night it cleans toxins that can prevent you to think clearly.
+In spaced learning, your brain will be able to **retain the information** in your long-term memory.
 
 
 ## General tips
 
-If you are reading a book, try to REMEMBER what you just learn. Not just read and highlight the important parts of a chapter. Explain yourself or a friend what you read and learn.
+If you are reading a book, try to **REMEMBER what you just learn**. Not just read and **highlight** the important parts of a chapter. **Explain yourself or a friend** what you read and learn.
 
-Make a test to improve your knowledge. It's good to remember and review some points.
+Make a **test to improve your knowledge**. It's good to remember and review some points.
 
-Learn how to use metaphors and analogies to give more meaning to what you learning. It's even better if you can involve more than one sense (e.g.: hearing and vision).
+Learn how to use metaphors and analogies to give more meaning to what you learning. It's even better if you can **involve more than one sense** (e.g.: hearing and vision).
 
-Exercises can improve our memory and ability to learn. That are better than any drugs.
+Exercises can improve our memory and ability to learn. **They are better than any drugs.**
 
-
-## Learn by spaced repetition
-Plan your schedule to study a little about a subject every day, rather than hurry to learn everything in one day. 
-Our brain needs rest. At night it cleans toxins that can prevent you to think clearly.
-In spaced learning, your brain will be able to retain the information in your long-term memory.
 
 
 ### Changing habits
