@@ -37,6 +37,12 @@ Chunking is a process that our brain uses to organize memories in modules. For e
 
 Chunks can help you to understand new concepts, because when your brain builds a chunk you can find out that a chunk may be related to other similar chunk, even from completely different fields.
 
+Chunking involves creating something more meaningful and it will be more memorable.
+
+For example, if you are trying to memorize a number:
+351962752183 becomes 351 96 275 2183
+A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. You can create a word out of the first letters (e.g., "FLOAT")
+
 
 ### How can I build a chunk?
 
@@ -48,13 +54,13 @@ At last, PRACTICE helps you to expand the neural network, allowing you to consol
 
 ## General tips
 
-Try to remember what you just learn from a book. Not just read and highlight the important parts of a chapter. Explain yourself or a friend what you read and learn.
+If you are reading a book, try to REMEMBER what you just learn. Not just read and highlight the important parts of a chapter. Explain yourself or a friend what you read and learn.
 
 Make a test to improve your knowledge. It's good to remember and review some points.
 
-Exercises can improve our memory and ability to learn. That are better than any drugs.
-
 Learn how to use metaphors and analogies to give more meaning to what you learning. It's even better if you can involve more than one sense (e.g.: hearing and vision).
+
+Exercises can improve our memory and ability to learn. That are better than any drugs.
 
 
 ## Learn by spaced repetition
