@@ -6,11 +6,11 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some theories and techiques to understand how our brain and memory works. Their tips are good not only for learning, but also for creativity and our daily tasks. In this post, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
+A few months ago I attended a course at Coursera called "Learning how to learn". They show some **mental tools** to help you study and memorize stuff. Also, they show **theories** and **techiques** to understand how our brain and memory works. Their tips are good not only for learning, but I also found useful for **creativity** and **daily tasks**. In this presentation, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
 
 ## Tackle procrastination
 
-The most important tip is to avoid procrastination.
+The most important tip is to **avoid procrastination**.
 
 We often procrastinate about things that make us feel a little **uncomfortable** or **unhappy**. When you have to do something you rather not to, your brain looks for a way to stop that feeling by switching your attention to a more **pleasant** activity. 
 
