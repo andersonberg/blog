@@ -6,7 +6,9 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some **mental tools** to help you study and memorize stuff. Also, they show **theories** and **techiques** to understand how our brain and memory works. Their tips are good not only for learning, but I also found useful for **creativity** and **daily tasks**. In this presentation, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
+A few months ago I attended a course at Coursera called "Learning how to learn". They show some **mental tools** to help you study and memorize stuff. Also, they show **theories** and **techiques** to understand how our brain and memory works. Their tips are good not only for learning, but I also found useful for **creativity** and **daily tasks**. 
+It's a **4 week course**. So, I don't think it's too long.
+In this presentation, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
 
 ## Tackle procrastination
 
@@ -24,20 +26,20 @@ Instead you say: "I need to learn XYZ", you say: "I'll study XYZ for an hour sta
 
 ### Pomodoro
 
-A tool that can help you to focus in the process is the Pomodoro Technique. You may have already heard about that. For those who don't, it was developed by Francesco Cirillo in the early 1980's.
+A tool that can help you to focus in the process is the **Pomodoro Technique**. You may have already heard about that. For those who don't, it was developed by **Francesco Cirillo** in the early 1980's.
 
-You set a timer (traditionally 25 minutes) to turn off any interruptions, accept the challenge and focus on your task. When the time is off you can take a 5 minutes break. This is your time, give yourself a reward: get a cup of coffee or surf the web. 
+You set a **timer** (traditionally 25 minutes) to turn off any interruptions, accept the challenge and **focus on your task**. When the time is off you can take a 5 minutes break. This is your time, give yourself a reward: get a cup of coffee or surf the web. 
 
-After your break, go back to another time of focus. After 4 pomodoros you can have a longer break (15 - 30 minutes)
+After your break, go back to another time of focus. After 4 pomodoros you can have a **longer break** (15 - 30 minutes)
 
 
 ## Chunking
 
-Chunking is a process that our brain uses to organize memories in modules. For example, when you have to memorize a phone number, you organize the algarisms in small groups.
+Chunking is a process that our brain uses to **organize memories in modules**. For example, when you have to memorize a phone number, you organize the algarisms in small groups.
 
-Chunks can help you to understand new concepts, because when your brain builds a chunk you can find out that a chunk may be related to other similar chunk, even from completely different fields.
+Chunks can help you to **understand new concepts**, because when your brain builds a chunk you can find out that a chunk may be related to other similar chunk, even from completely different fields.
 
-Chunking involves creating something more meaningful and it will be more memorable.
+Chunking involves creating something **more meaningful** and it will be more **memorable**.
 
 For example, if you are trying to memorize a number:
 351962752183 becomes 351 96 275 2183
@@ -46,9 +48,9 @@ A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. Yo
 
 ### How can I build a chunk?
 
-First step is to FOCUS in the information you want to process.
-Second, is to UNDERSTAND the basic idea of what you are learning.
-Third step of the process of create a chunk is to know the CONTEXT. That way you can learn both how and when use the chunk.
+First step is to **FOCUS** in the information you want to process.
+Second, is to **UNDERSTAND the basic idea** of what you are learning. You can do that by doing a **rapid picture walk through** a chapter. **Glancing** at pictures and section headings.
+Third step of the process of create a chunk is to know the CONTEXT. That way you can learn both **how and when** use the chunk.
 At last, PRACTICE helps you to expand the neural network, allowing you to consolidate the chunk and make it more accessible.
 
 
@@ -67,10 +69,6 @@ Exercises can improve our memory and ability to learn. That are better than any 
 Plan your schedule to study a little about a subject every day, rather than hurry to learn everything in one day. 
 Our brain needs rest. At night it cleans toxins that can prevent you to think clearly.
 In spaced learning, your brain will be able to retain the information in your long-term memory.
-
-
-## Difuse mode
-
 
 
 ### Changing habits
