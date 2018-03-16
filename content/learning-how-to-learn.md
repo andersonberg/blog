@@ -50,8 +50,11 @@ A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. Yo
 ### How can I build a chunk?
 
 First step is to **FOCUS** in the information you want to process.
+
 Second, is to **UNDERSTAND the basic idea** of what you are learning. You can do that by doing a **rapid picture walk through** a chapter. **Glancing** at pictures and section headings.
+
 Third step of the process of create a chunk is to know the CONTEXT. That way you can learn both **how and when** use the chunk.
+
 At last, PRACTICE helps you to expand the neural network, allowing you to **consolidate** the chunk and make it more accessible.
 
 
