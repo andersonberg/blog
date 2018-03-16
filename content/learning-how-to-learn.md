@@ -6,8 +6,10 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some **mental tools** to help you study and memorize stuff. Also, they show **theories** and **techiques** to understand how our brain and memory works. Their tips are good not only for learning, but I also found useful for **creativity** and **daily tasks**. 
-It's a **4 week course**. So, I don't think it's too long.
+A few months ago I attended a course at Coursera called "Learning how to learn". They show some **mental tools** to help you study and memorize stuff. Also, they show **theories** and **techiques** to understand how our brain and memory works.
+
+I found their tips useful not only for learning, but I also for **creativity** and **daily tasks**. 
+
 In this presentation, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
 
 ## Tackle procrastination
@@ -16,12 +18,11 @@ The most important tip is to **avoid procrastination**.
 
 We often procrastinate about things that make us feel a little **uncomfortable** or **unhappy**. When you have to do something you rather not to, your brain looks for a way to stop that feeling by switching your attention to a more **pleasant** activity. 
 
-Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started. The problem is that we think about the **final result**, but sometimes it's not easy to accomplish. 
+Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started.
 
-The first tip is: **Focus in the process!** Process means the time, habits and actions you need to take to get something done. The product is the result of a task.
+The problem is that we think about the **final result**, but sometimes it's not easy to accomplish. 
 
-For example, you can say to yourself: "I'll just spend 20 minutes working on this task". Over: "I need this project done."
-Instead you say: "I need to learn XYZ", you say: "I'll study XYZ for an hour starting by Y"
+The first tip is: **Focus in the process!** Process means the time, habits and actions you need to take to get something done. 
 
 
 ### Pomodoro
@@ -35,9 +36,9 @@ After your break, go back to another time of focus. After 4 pomodoros you can ha
 
 ## Chunking
 
-Chunking is a process that our brain uses to **organize memories in modules**. For example, when you have to memorize a phone number, you organize the algarisms in small groups.
+Chunks are **packs of information** your brain can easily access.
 
-Chunks can help you to **understand new concepts**, because when your brain builds a chunk you can find out that a chunk may be related to other similar chunk, even from completely different fields.
+Chunking is a mental tool that helps you to **unite information** through **meaning**. Like puzzle pieces.
 
 Chunking involves creating something **more meaningful** and it will be more **memorable**.
 
@@ -56,8 +57,18 @@ At last, PRACTICE helps you to expand the neural network, allowing you to **cons
 
 ## Learn by spaced repetition
 Plan your schedule to study a **little** about a subject **every day**, rather than hurry to learn everything in one day. 
+
 Our brain needs rest. At night it cleans toxins that can prevent you to think clearly.
+
 In spaced learning, your brain will be able to **retain the information** in your long-term memory.
+
+Diffuse mode happens when your brain is in a more **relax state**. So you let your thoughts be a little vague, it creates new connections between the neurons and you learn or understand something new.
+
+It's really useful when you are **learning something new**, specially if it's a little **hard**.
+
+Salvador Dalí had an interesting technique. He relaxed in a chair and let his mind go free, vaguely thinking about what he was focusing on. He has keys in his hands, dangling a little. When he was almost falling asleep, the noise of the keys on the floor would wake him up and back to the focus mode.
+
+For me, (when I'm stucked in something I need to learn, or even in a code problem I have to solve) I go for a walk or take a shower and the time I'm back, I can figure out the problem.
 
 
 ## General tips
