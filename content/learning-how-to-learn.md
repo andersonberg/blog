@@ -20,7 +20,7 @@ We often procrastinate about things that make us feel a little **UNCOMFORTABLE**
 
 It's a matter of **HABITS**. You need to find the **TRIGGER** that makes you procrastinate and change the **ROUTINE**.
 
-The first tip is: **Focus in the process!** Process means the time, habits and actions you need to take to get something done. 
+The first tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
 
 Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started.
 
