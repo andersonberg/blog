@@ -6,7 +6,7 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some **MENTAL TOOLS** to help you study and memorize stuff. Also, they show **THEORIES** and **TECHIQUES** to understand how our brain and memory works.
+A few months ago I attended a course at Coursera called "Learning how to learn". They show some **MENTAL TOOLS** to help you study and memorize stuff. Also, they show **THEORIES** and **TECHNIQUES** to understand how our brain and memory works.
 
 I found their tips useful not only for learning, but I also for **CREATIVITY** and **DAILY TASKS**. 
 
