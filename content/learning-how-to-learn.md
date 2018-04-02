@@ -14,13 +14,13 @@ In this presentation, I want to show the topics I found more important and hope 
 
 ## Tackle procrastination
 
-The most important tip is to **AVOID PROCRASTINATION**.
+The first rule of thumb is: **AVOID PROCRASTINATION**.
 
 We often procrastinate about things that make us feel a little **UNCOMFORTABLE** or **unhappy**. When you have to do something you rather not to, your brain looks for a way to stop that feeling by switching your attention to a more **PLEASANT** activity. 
 
 It's a matter of **HABITS**. You need to find the **TRIGGER** that makes you procrastinate and change the **ROUTINE**.
 
-The first tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
+The next tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
 
 Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started.
 
