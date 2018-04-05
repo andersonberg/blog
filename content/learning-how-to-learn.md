@@ -6,42 +6,54 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some **MENTAL TOOLS** to help you study and memorize stuff. Also, they show **THEORIES** and **TECHNIQUES** to understand how our brain and memory works.
+Today, I want to talk about a course I attended a few months ago at Coursera called "Learning how to learn". It's a four week course where they show some **MENTAL TOOLS** to help you study and memorize stuff. To support that, they show **THEORIES** and to understand how our brain and our memory works. 
 
-I found their tips useful not only for learning, but I also for **CREATIVITY** and **DAILY TASKS**. 
+I choose some of the tips that I want to share with you today.
 
-In this presentation, I want to show the topics I found more important and hope you can also apply some of them in your daily life. 
 
 ## Tackle procrastination
 
-The first rule of thumb is: **AVOID PROCRASTINATION**.
+The first rule of thumb is: **AVOID PROCRASTINATION**. Seriously, run of it!
 
-We often procrastinate about things that make us feel a little **UNCOMFORTABLE** or **unhappy**. When you have to do something you rather not to, your brain looks for a way to stop that feeling by switching your attention to a more **PLEASANT** activity. 
+To do that, we need to understand why we procrastinate.
 
-It's a matter of **HABITS**. You need to find the **TRIGGER** that makes you procrastinate and change the **ROUTINE**.
+Sometimes you have to study or do something you rather not to. That make you feel  a little **UNCOMFORTABLE** or even **unhappy**. Our brain, as a smart one, tries to stop that feeling by switching your attention to a more **PLEASANT** activity. Then you go to youtube with automatic next video on and when you realize, the afternoon is gone and you... did nothing... that's sad.
+
+It's all a matter of **HABITS**. You need to find the **TRIGGER**, that little thing that makes you procrastinate. Once you find it change the **ROUTINE**.
+
+The book The Power of Habit is a good reading to understand that.
+
+
+## Focus in the process
+
+When we have to study or have a task done, we usually think about the **final result**. What's the **PRODUCT** of that task... but sometimes it's **NOT EASY** to accomplish and our brain starts to procrastinate again...
 
 The next tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
 
-Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started.
-
-The problem is that we think about the **final result**, but sometimes it's **NOT EASY** to accomplish. 
-
+Nonprocrastinators put negative thoughts aside, like: "Com'on! Just do it! You will feel better once you started."
+"That's not bad! I'll just spend some minutes doing that."
 
 
-### Pomodoro
+## Pomodoro
 
-A tool that can help you to focus in the process is the **Pomodoro Technique**. You may have already heard about that. For those who don't, it was developed by **Francesco Cirillo** in the early 1980's.
+A tool that can help you to focus in the process is the **Pomodoro Technique**. It was developed by **Francesco Cirillo** in the early 1980's.
 
-You set a **TIMER** (traditionally 25 minutes) to **TURN OFF ANY INTERRUPTIONS**, accept the challenge and focus on your task. When the time is off you can take a 5 minutes break. This is your time, give yourself a reward: get a cup of coffee or surf the web.
+To start using it, you set a **TIMER** (it can be 25 minutes or the time that works for you). Then you **TURN OFF ANY INTERRUPTIONS**, get rid of any notifications, **ACCEPT THE CHALLENGE** and focus on your task. 
 
-After your break, go back to another time of focus. After 4 pomodoros you can have a **longer break** (15 - 30 minutes)
+When the time is off you can take a 5 minutes break. This is your time, give yourself a reward: get a cup of coffee or surf the web.
+
+After your break, go back to another time of focus. 
+
+Once you’ve completed 4 pomodoros you can take a **longer break** (15 - 30 minutes). Your brain will use this time to assimilate the new information.
 
 
 ## Chunking
 
-Chunks are **PACKS OF INFORMATION** your brain can easily access.
+When you are trying to understand a new concept, it sometimes doesn't make sense to you and it's like a bunch of puzzle pieces you can't put together.
 
-Chunking is a mental tool that helps you to **MERGE INFORMATION** through **MEANING**. Like puzzle pieces.
+Chunking is a mental tool that helps you to **MERGE INFORMATION** through **MEANING**.
+
+Chunks are **PACKS OF INFORMATION** your brain can easily access.
 
 Chunking involves creating something **MORE MEANINGFUL** and it will be more **MEMORABLE**.
 
@@ -54,30 +66,34 @@ A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. Yo
 A good example of chunking is when you are **LEARNING TO PLAY A SONG**. You start **SPLITTING** the music in some parts (introduction, verse...). Then you **MEMORIZE** some chords and start playing. Then you put those chords **TOGETHER** (you are putting meaning in the intro) and finally you put **ALL THE SONG PARTS TOGETHER** and you have some **MEANING** on that music.
 
 
-### How can I build a chunk?
+## How can I build a chunk?
 
-First step is to **FOCUS** in the information you want to process.
+Now that I know what a chunk is, how can I help my brain to build a new one?
 
-Second, is to **UNDERSTAND the basic idea** of what you are learning. You can do that by doing a rapid picture **WALK THROUGH** a chapter. **GLANCING** at pictures and section headings.
+First step is to **FOCUS** in the information you want to process. The Pomodor Technique can be very helpful here.
 
-Third step of the process of create a chunk is to know the **CONTEXT**. That way you can learn both **HOW AND WHEN** use the chunk.
+Second, you have to **UNDERSTAND the basic idea** of what you are learning. You can do that by doing a quick **WALK THROUGH** a chapter or **GLANCING** at pictures and section headings.
 
-At last, **PRACTICE** helps you to expand the neural network, allowing you to **CONSOLIDATE** the chunk and make it more accessible.
+Third step is to know the **CONTEXT**. You understand **HOW AND WHEN** you can use the chunk.
+
+At last, **PRACTICE** and **REPETITION** help you to **CONSOLIDATE** the chunk in you mid and make it more accessible.
 
 
 ## Learn by spaced repetition
 
-Plan your schedule to study a **LITTLE** about a subject **EVERY DAY**, rather than hurry to learn everything in one day. 
+Don't let everything you have to learn for one day.
 
-Our brain needs rest. At night it cleans toxins that can prevent you to think **CLEARLY**.
+Plan your schedule to study a **LITTLE** about a subject **EVERY DAY**.
+
+Our brain needs rest. At night it cleans some **TOXINS** that can prevent you to think **CLEARLY**.
 
 In spaced learning, your brain will be able to **RETAIN THE INFORMATION** in your long-term memory.
 
-Diffuse mode happens when your brain is in a more **RELAX STATE**. So you let your thoughts be a little vague, it creates new connections between the neurons and you learn or understand something new.
+Also, you can use Diffuse mode. Diffuse mode happens when your brain is in a more **RELAX STATE**. So you let your thoughts be a little vague, it creates new connections between the neurons and you learn or understand something new.
 
 It's really useful when you are **LEARNING SOMETHING NEW**, specially if it's a little **HARD**.
 
-For example, they say Salvador Dalí had an interesting technique. He relaxed in a chair and let his mind go free, vaguely thinking about what he was focusing on. He has keys in his hands, dangling a little. When he was almost falling asleep, the noise of the keys on the floor would wake him up and back to the focus mode.
+For example, they say that this guy, Salvador Dalí, had an interesting technique to help creating his paintings. He relaxed in a chair and let his mind go free, vaguely thinking about what he was previously focusing on. He has keys in his hands, dangling a little. When he was almost falling asleep, the noise of the keys on the floor would wake him up and back to the focus mode.
 
 For me, (when I'm stucked in something I need to learn, or even in a **CODE PROBLEM** I have to solve) I go for a **WALK** or **TAKE A SHOWER** and the time I'm back, I can figure out the problem.
 
