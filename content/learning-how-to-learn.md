@@ -50,6 +50,10 @@ For example, if you are trying to memorize a number:
 A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. You can create a word out of the first letters (e.g., "FLOAT")
 
 
+## Example of chunking
+A good example of chunking is when you are **LEARNING TO PLAY A SONG**. You start **SPLITTING** the music in some parts (introduction, verse...). Then you **MEMORIZE** some chords and start playing. Then you put those chords **TOGHETHER** (you are putting meaning in the intro) and finally you put **ALL THE SONG PARTS TOGHETHER** and you have some **MEANING** on that music.
+
+
 ### How can I build a chunk?
 
 First step is to **FOCUS** in the information you want to process.
