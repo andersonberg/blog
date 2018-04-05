@@ -6,7 +6,7 @@ slug: learning-how-to-learn
 summary: Learning How to Learn presentation
 image: images/data_analysis.jpg
 
-A few months ago I attended a course at Coursera called "Learning how to learn". They show some **MENTAL TOOLS** to help you study and memorize stuff. Also, they show **THEORIES** and **TECHIQUES** to understand how our brain and memory works.
+A few months ago I attended a course at Coursera called "Learning how to learn". They show some **MENTAL TOOLS** to help you study and memorize stuff. Also, they show **THEORIES** and **TECHNIQUES** to understand how our brain and memory works.
 
 I found their tips useful not only for learning, but I also for **CREATIVITY** and **DAILY TASKS**. 
 
@@ -14,13 +14,13 @@ In this presentation, I want to show the topics I found more important and hope 
 
 ## Tackle procrastination
 
-The most important tip is to **AVOID PROCRASTINATION**.
+The first rule of thumb is: **AVOID PROCRASTINATION**.
 
 We often procrastinate about things that make us feel a little **UNCOMFORTABLE** or **unhappy**. When you have to do something you rather not to, your brain looks for a way to stop that feeling by switching your attention to a more **PLEASANT** activity. 
 
 It's a matter of **HABITS**. You need to find the **TRIGGER** that makes you procrastinate and change the **ROUTINE**.
 
-The first tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
+The next tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
 
 Nonprocrastinators put negative thoughts aside, like: Com'on! Just do it! You will feel better once you started.
 
