@@ -19,16 +19,16 @@ To do that, we need to understand why we procrastinate.
 
 Sometimes you have to study or do something you rather not to. That make you feel  a little **UNCOMFORTABLE** or even **unhappy**. Our brain, as a smart one, tries to stop that feeling by switching your attention to a more **PLEASANT** activity. Then you go to youtube with automatic next video on and when you realize, the afternoon is gone and you... did nothing... that's sad.
 
-It's all a matter of **HABITS**. You need to find the **TRIGGER**, that little thing that makes you procrastinate. Once you find it change the **ROUTINE**.
+It's all a matter of **HABITS**. You need to find the **TRIGGER**... that little thing that makes you procrastinate. Once you find it you have to change the **ROUTINE**.
 
-The book The Power of Habit is a good reading to understand that.
+A good reading to understand that is the book The Power of Habit.
 
 
 ## Focus in the process
 
 When we have to study or have a task done, we usually think about the **final result**. What's the **PRODUCT** of that task... but sometimes it's **NOT EASY** to accomplish and our brain starts to procrastinate again...
 
-The next tip is: Focus in the process! Process means the **TIME, EFFORT AND HABITS** you take to get something done. 
+The next tip is: Focus in the process! Process means the **TIME, EFFORT AND ACTIONS** you take to get something done. 
 
 Nonprocrastinators put negative thoughts aside, like: "Com'on! Just do it! You will feel better once you started."
 "That's not bad! I'll just spend some minutes doing that."
