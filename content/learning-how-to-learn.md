@@ -63,7 +63,7 @@ A list of things such as buying figs, lettuce, oranges, apples, and tomatoes. Yo
 
 
 ## Example of chunking
-A good example of chunking is when you are **LEARNING TO PLAY A SONG**. You start **SPLITTING** the music in some parts (introduction, verse...). Then you **MEMORIZE** some chords and start playing. Then you put those chords **TOGETHER** (you are putting meaning in the intro) and finally you put **ALL THE SONG PARTS TOGETHER** and you have some **MEANING** on that music.
+A good example of chunking is when you are **LEARNING TO PLAY A SONG**. You start **SPLITTING** the music in some parts (introduction, verse...). Then you **MEMORIZE** some chords and start playing. Then you put those chords **TOGETHER** (you are putting meaning in the intro) and finally you put **ALL THE SONG PARTS TOGETHER** and you have some **MEANING** on that song.
 
 
 ## How can I build a chunk?
@@ -76,7 +76,7 @@ Second, you have to **UNDERSTAND the basic idea** of what you are learning. You 
 
 Third step is to know the **CONTEXT**. You understand **HOW AND WHEN** you can use the chunk.
 
-At last, **PRACTICE** and **REPETITION** help you to **CONSOLIDATE** the chunk in you mid and make it more accessible.
+At last, **PRACTICE** and **REPETITION** help you to **CONSOLIDATE** the chunk in you mind and make it more accessible.
 
 
 ## Learn by spaced repetition
@@ -89,13 +89,13 @@ Our brain needs rest. At night it cleans some **TOXINS** that can prevent you to
 
 In spaced learning, your brain will be able to **RETAIN THE INFORMATION** in your long-term memory.
 
-Also, you can use Diffuse mode. Diffuse mode happens when your brain is in a more **RELAX STATE**. So you let your thoughts be a little vague, it creates new connections between the neurons and you learn or understand something new.
+Also, you can use Diffuse mode. Diffuse mode happens when your brain is in a more **RELAX STATE**. Your thoughts are a little vague. The brain will create new connections between the neurons and you learn or understand something new.
 
 It's really useful when you are **LEARNING SOMETHING NEW**, specially if it's a little **HARD**.
 
-For example, they say that this guy, Salvador Dalí, had an interesting technique to help creating his paintings. He relaxed in a chair and let his mind go free, vaguely thinking about what he was previously focusing on. He has keys in his hands, dangling a little. When he was almost falling asleep, the noise of the keys on the floor would wake him up and back to the focus mode.
+For example, they say that this guy, **Salvador Dalí**, had an interesting technique to help creating his paintings. He relaxed in a chair and let his **MIND GO FREE**, vaguely thinking about what he was previously focusing on. He has keys in his hands, dangling a little. When he was almost falling asleep, the noise of the keys on the floor would wake him up and back to the focus mode.
 
-For me, (when I'm stucked in something I need to learn, or even in a **CODE PROBLEM** I have to solve) I go for a **WALK** or **TAKE A SHOWER** and the time I'm back, I can figure out the problem.
+You can find a way that suits you to access your diffuse mode. For me, (when I'm stucked in something I need to learn, or even in a **CODE PROBLEM** I have to solve) I go for a **WALK** or **TAKE A SHOWER** and the time I'm back, I can figure out the problem.
 
 
 ## General tips
@@ -106,7 +106,7 @@ Make a **TEST TO IMPROVE YOUR KNOWLEDGE**. It's good to remember and review some
 
 Learn how to use metaphors and analogies to give more meaning to what you learning. It's even better if you can **INVOLVE MORE THAN ONE SENSE** (e.g.: hearing and vision).
 
-Exercises can **IMPROVE** our memory and ability to learn. **They are better than any drugs.**
+Exercises can **IMPROVE** our memory and ability to learn.
 
 
 
