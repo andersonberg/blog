@@ -27,3 +27,21 @@ A página do DRF lista algumas vantagens de usar o framework:
  - Totalmente customizável
  - Extensa documentação [http://www.django-rest-framework.org/](http://www.django-rest-framework.org/)
  - Usado por grandes companhias como Mozilla, Heroku e Eventbrite
+
+Vamos então para a instalação.
+
+##Configurando o ambiente de desenvolvimento
+
+Se você já sabe como configurar um ambiente virtual, pode pular para a próxima seção.
+
+Antes de tudo, pra não bagunçar o ambiente do seu sistema, instale o [virtualenv](https://virtualenv.pypa.io/en/latest/). O virtualenv é uma ferramenta que cria um ambiente Python **separado** do seu sistema, evitando maiores dores de cabeça com configurações.
+
+Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:
+
+    $ virtualenv venv
+
+Pronto, seu ambiente virtual foi instalado na pasta 'venv'. Agora, pra começar a usar é preciso ativar o ambiente:
+
+    $ source venv/bin/activate
+
+Você pode perceber que o contexto da sua linha de comando mudou, quer dizer que o ambiente está pronto pra ser usado.
