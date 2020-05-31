@@ -8,19 +8,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize</title>
+        <title>Blog</title>
 
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/tutorial-programacao.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/clean-blog.min.css" rel="stylesheet">
+        <link href="./theme/css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -42,14 +40,14 @@
 
 
 			<meta property="og:locale" content="pt-br">
-		<meta property="og:site_name" content="Pythonize">
+		<meta property="og:site_name" content="Blog">
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/seu-codigo-python-executavel-py2exe.html">
+	<meta property="og:url" content="./seu-codigo-python-executavel-py2exe.html">
 	<meta property="og:title" content="Transformando seu Código Python em Executável com o py2exe">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="og:image" content="./">
 	<meta property="article:published_time" content="2011-09-14 19:58:12-03:00">
 </head>
 
@@ -66,14 +64,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://andersonberg.github.io/pythonize-pelican/">Pythonize</a>
+                <a class="navbar-brand" href="./">Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="https://andersonberg.github.io/pythonize-pelican/pages/contato.html">Contato</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,15 +79,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('./theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Transformando seu Código Python em Executável com o py2exe</h1>
                         <span class="meta">Posted by
-                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 14 Set, 2011
+                                <a href="./author/anderson-berg.html">Anderson Berg</a>
+                             on 14 set, 2011
                         </span>
                         
                     </div>
@@ -128,54 +125,54 @@
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">modelo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Digite 1 para seno e 2 para cosseno: &#39;</span><span class="p">)</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Entre com um número: &#39;</span><span class="p">)</span>
+    <span class="n">modelo</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Digite 1 para seno e 2 para cosseno: &#39;</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;Entre com um número: &#39;</span><span class="p">)</span>
     <span class="n">choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">modelo</span><span class="p">)</span>
     <span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">print</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
     <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">print</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>Teste o seu código:</p>
-<div class="highlight"><pre><span></span>C:\Pythonize&gt; python calc.py
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="c">C:\Pythonize&gt; python calc.py</span>
+</code></pre></div>
 
 
 <p>O segundo passo é criar um script de setup. Crie um arquivo chamado setup_calc.py na mesma pasta que você salvou o código anterior e escreva este código:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
 <span class="kn">import</span> <span class="nn">py2exe</span>
 <span class="n">setup</span><span class="p">(</span><span class="n">console</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;calc.py&#39;</span><span class="p">])</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>Pronto, para criar seu arquivo executável, rode seu script:</p>
-<div class="highlight"><pre><span></span>C:\Pythonize&gt;python setup_calc.py py2exe
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="c">C:\Pythonize&gt;python setup_calc.py py2exe</span>
+</code></pre></div>
 
 
 <p>Serão criadas duas pastas: build e dist.</p>
 <p>A pasta build é usada somente para compilar o código e criar o executável e pode ser excluída após o término do processo. A pasta dist contém os arquivos necessários para rodar sua aplicação.</p>
 <p>Agora você pode testar seu executável:</p>
-<div class="highlight"><pre><span></span>C:\Pythonize&gt;cd dist
-C:\Pythonize\dist&gt;calc.exe
-Digite 1 para seno e 2 para cosseno: 1
+<div class="highlight"><pre><span></span><code><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Pythonize</span><span class="o">&gt;</span><span class="n">cd</span> <span class="n">dist</span>
+<span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">Pythonize</span><span class="err">\</span><span class="n">dist</span><span class="o">&gt;</span><span class="n">calc</span><span class="p">.</span><span class="n">exe</span>
+<span class="n">Digite</span> <span class="mi">1</span> <span class="n">para</span> <span class="n">seno</span> <span class="n">e</span> <span class="mi">2</span> <span class="n">para</span> <span class="n">cosseno</span><span class="p">:</span> <span class="mi">1</span>
 
-Entre com um número: 4
+<span class="n">Entre</span> <span class="n">com</span> <span class="n">um</span> <span class="n">número</span><span class="p">:</span> <span class="mi">4</span>
 
--0.756802495308
-</pre></div>
+<span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">756802495308</span>
+</code></pre></div>
 
 
 <p>Funcionando muito bem!</p>
@@ -189,12 +186,12 @@ Para utilizar o py2exe com outros pacotes e módulos, veja o link: <a href="http
             <h2>Comments !</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                var disqus_shortname = 'pythonize';
+                var disqus_shortname = 'pythonize.org';
                 var disqus_identifier = 'seu-codigo-python-executavel-py2exe.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/seu-codigo-python-executavel-py2exe.html';
+                var disqus_url = './seu-codigo-python-executavel-py2exe.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    dsq.src = '//pythonize.org.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
@@ -245,13 +242,13 @@ Para utilizar o py2exe com outros pacotes e módulos, veja o link: <a href="http
     </footer>
 
     <!-- jQuery -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/jquery.js"></script>
+    <script src="./theme/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/clean-blog.min.js"></script>
+    <script src="./theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -264,7 +261,7 @@ Para utilizar o py2exe com outros pacotes e módulos, veja o link: <a href="http
     })();
     </script>
 <script type="text/javascript">
-    var disqus_shortname = 'pythonize';
+    var disqus_shortname = 'pythonize.org';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';

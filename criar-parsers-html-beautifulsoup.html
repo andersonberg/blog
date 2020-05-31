@@ -8,19 +8,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize</title>
+        <title>Blog</title>
 
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/web.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/clean-blog.min.css" rel="stylesheet">
+        <link href="./theme/css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -42,14 +40,14 @@
 
 
 			<meta property="og:locale" content="pt-br">
-		<meta property="og:site_name" content="Pythonize">
+		<meta property="og:site_name" content="Blog">
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html">
+	<meta property="og:url" content="./criar-parsers-html-beautifulsoup.html">
 	<meta property="og:title" content="Como criar parsers HTML poderosos com BeautifulSoup">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="og:image" content="./">
 	<meta property="article:published_time" content="2011-12-31 15:45:19-03:00">
 </head>
 
@@ -66,14 +64,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://andersonberg.github.io/pythonize-pelican/">Pythonize</a>
+                <a class="navbar-brand" href="./">Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="https://andersonberg.github.io/pythonize-pelican/pages/contato.html">Contato</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,15 +79,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('./theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Como criar parsers HTML poderosos com BeautifulSoup</h1>
                         <span class="meta">Posted by
-                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 31 Dez, 2011
+                                <a href="./author/anderson-berg.html">Anderson Berg</a>
+                             on 31 dez, 2011
                         </span>
                         
                     </div>
@@ -117,58 +114,58 @@ disponíveis pacotes em diferentes distribuições Linux.</p>
 <p>Inicie o interpretador Python para testar os códigos que vamos
 apresentar a seguir.</p>
 <p>Para processar páginas HTML, importe o BeautifulSoup da seguinte forma:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</code></pre></div>
 
 
 <p>Se você for processar arquivos XML:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulStoneSoup</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulStoneSoup</span>
+</code></pre></div>
 
 
 <p>Você pode também consultar a documentação do BeautifulSoup
 <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" title="BeautifulSoup">aqui</a>.</p>
 <h2>Criando o parser</h2>
 <p>Por enquanto vamos processar apenas páginas html. Vamos usar a biblioteca urllib2 para recuperar uma página html.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib2</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">urllib2</span>
 <span class="n">pagina</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;http://www.globo.com&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Isso vai criar uma string com todo o código html da página. Então, para criar o parser basta:</p>
-<div class="highlight"><pre><span></span>soup = BeautifulSoup(pagina)
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">soup = BeautifulSoup(pagina)</span>
+</code></pre></div>
 
 
 <p>É possível transformar esse objeto BeautifulSoup em string com o método
 prettify, que manipula o código bruto adicionando quebra de linha e
 espaçamento recriando a estrutura do código html.</p>
-<div class="highlight"><pre><span></span>soup.prettify()
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">soup.prettify()</span>
+</code></pre></div>
 
 
 <p>Para listar todos os links da página recuperada, usamos o método
 findAll:</p>
-<div class="highlight"><pre><span></span>links = soup.findAll(&#39;a&#39;)
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">links = soup.findAll(&#39;a&#39;)</span>
+</code></pre></div>
 
 
 <p>Neste código, '<em>links</em>' é uma lista contendo objetos do tipo Tag da
 biblioteca BeautifulSoup (class BeautifulSoup.Tag). Vamos agora, listar
 somente os links (tirando qualquer texto ou marcação) que estão nesses
 objetos Tag:</p>
-<div class="highlight"><pre><span></span>for link in links:
-    print link[&#39;href&#39;]
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">for link in links:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
 
 
 <p>Para recuperar somente uma área da página, é possível usar o método find
 com o parâmetro id, por exemplo:</p>
-<div class="highlight"><pre><span></span>colunas = soup.find(id=&quot;glb-area-colunas&quot;)
-linkscol = colunas.findAll(&#39;a&#39;)
-for link in linkscol:
-    print link[&#39;href&#39;]
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">colunas = soup.find(id=&quot;glb-area-colunas&quot;)</span>
+<span class="err">linkscol = colunas.findAll(&#39;a&#39;)</span>
+<span class="err">for link in linkscol:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
 
 
 <p>A biblioteca BeautifulSoup facilita muito na hora de criar parsers e
@@ -182,12 +179,12 @@ poderosos aliados na recuperação de informação na web.</p>
             <h2>Comments !</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                var disqus_shortname = 'pythonize';
+                var disqus_shortname = 'pythonize.org';
                 var disqus_identifier = 'criar-parsers-html-beautifulsoup.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/criar-parsers-html-beautifulsoup.html';
+                var disqus_url = './criar-parsers-html-beautifulsoup.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    dsq.src = '//pythonize.org.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
@@ -238,13 +235,13 @@ poderosos aliados na recuperação de informação na web.</p>
     </footer>
 
     <!-- jQuery -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/jquery.js"></script>
+    <script src="./theme/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/clean-blog.min.js"></script>
+    <script src="./theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -257,7 +254,7 @@ poderosos aliados na recuperação de informação na web.</p>
     })();
     </script>
 <script type="text/javascript">
-    var disqus_shortname = 'pythonize';
+    var disqus_shortname = 'pythonize.org';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';

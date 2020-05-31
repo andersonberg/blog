@@ -8,19 +8,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize</title>
+        <title>Blog</title>
 
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/web.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/clean-blog.min.css" rel="stylesheet">
+        <link href="./theme/css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -43,14 +41,14 @@
 
 
 			<meta property="og:locale" content="pt-br">
-		<meta property="og:site_name" content="Pythonize">
+		<meta property="og:site_name" content="Blog">
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html">
+	<meta property="og:url" content="./como-criar-um-blog-com-django.html">
 	<meta property="og:title" content="Como Criar um Blog de Forma Simples e Rápida com Django">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="og:image" content="./">
 	<meta property="article:published_time" content="2014-12-28 01:11:22-03:00">
 </head>
 
@@ -67,14 +65,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://andersonberg.github.io/pythonize-pelican/">Pythonize</a>
+                <a class="navbar-brand" href="./">Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="https://andersonberg.github.io/pythonize-pelican/pages/contato.html">Contato</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -83,15 +80,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('./theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Como Criar um Blog de Forma Simples e Rápida com Django</h1>
                         <span class="meta">Posted by
-                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 28 Dez, 2014
+                                <a href="./author/anderson-berg.html">Anderson Berg</a>
+                             on 28 dez, 2014
                         </span>
                         
                     </div>
@@ -118,69 +115,69 @@
 <h3>Criando um ambiente virtual</h3>
 <p>Antes de tudo é sempre recomendável instalar o virtualenv, pra não poluir o seu ambiente. O virtualenv é uma ferramenta que cria um ambiente Python separado do seu sistema, evitando maiores dores de cabeça com configurações.</p>
 <p>Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:</p>
-<div class="highlight"><pre><span></span>$ virtualenv venv
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ virtualenv venv
+</code></pre></div>
 
 
 <p>No Windows você precisa fazer:</p>
-<div class="highlight"><pre><span></span>&gt; \path\to\env\Scripts\activate
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">&gt; \path\to\env\Scripts\activate</span>
+</code></pre></div>
 
 
 <h3>Instalando o Mezzanine e as dependências</h3>
 <p>Com o ambiente virtual ativado, você pode usar o pip para instalar o Mezzanine e todas as dependências necessárias:</p>
-<div class="highlight"><pre><span></span>$ pip install mezzanine
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ pip install mezzanine
+</code></pre></div>
 
 
 <p>Pronto, o pip se encarrega de instalar todas as dependências e o próprio Mezzanine. No final, você já estará pronto para criar seu primeiro projeto com o Mezzanine.</p>
 <h2>Usando o Mezzanine</h2>
 <p>O Mezzanine funciona de uma forma muito parecida do Django. Para criar um novo projeto Mezzanine, faça de forma semelhante a criar um projeto Django:</p>
-<div class="highlight"><pre><span></span>$ mezzanine-project meu_blog
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ mezzanine-project meu_blog
+</code></pre></div>
 
 
 <p>Simples né?
 Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Django faz:</p>
 <h3>Criando um banco de dados</h3>
 <p>O Mezzanine vem com algumas ferramentas além das que já conhecemos do Django. Para criar e iniciar um banco de dados basta você rodar o seguinte comando:</p>
-<div class="highlight"><pre><span></span>python manage.py createdb
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">python manage.py createdb</span>
+</code></pre></div>
 
 
 <p>Quando você rodar este comando vão aparecer algumas perguntas que você pode responder facilmente.</p>
 <h3>Editando as configurações</h3>
 <p>Agora, antes de começar a testar é hora de você mexer nas configurações da sua aplicação. Abra o arquivo settings.py na raiz do seu projeto e procure a seguinte linha:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[]</span>
-</pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>E troque pelo seguinte:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;.example.com&#39;</span><span class="p">,</span> <span class="c1"># Allow domain and subdomains</span>
     <span class="s1">&#39;.example.com.&#39;</span><span class="p">,</span> <span class="c1"># Also allow FQDN and subdomains</span>
 <span class="p">]</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>Esta é uma lista de strings que representam os hosts e domínios que seu site Django pode servir. Lembre-se de trocas 'example.com' pelo nome do seu domínio.</p>
 <p>Busque também pela linha:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">TIME_ZONE</span> <span class="o">=</span>
-</pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">TIME_ZONE</span> <span class="o">=</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>E substitua pelo seu fuso horário, por exemplo:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Recife&#39;</span>
-</pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Recife&#39;</span>
+</code></pre></div>
 </td></tr></table>
 
 <h3>Testando seu site</h3>
 <p>Para ver como está o seu blog até agora, execute o seguinte na linha de comando (com o ambiente virtual ativado):</p>
-<div class="highlight"><pre><span></span>python manage.py runserver
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">python manage.py runserver</span>
+</code></pre></div>
 
 
 <p>Você pode ver seu site acessando o endereço http://127.0.0.1:8000/ no seu browser. Para terminar o servidor, pressione CTRL+C.</p>
@@ -195,19 +192,19 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
 <h2>Bônus: Como migrar seu site Wordpress para Mezzanine</h2>
 <p>Com o Mezzanine é possível importar artigos de outras plataformas de blog como Wordpress e Blogger.</p>
 <p>Para fazer a importação dos seus artigos do Wordpress, primeiro é preciso instalar o <a href="https://code.google.com/p/feedparser/">feedparser</a>, que pode ser instalar via pip.</p>
-<div class="highlight"><pre><span></span>pip install feedparser
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">pip install feedparser</span>
+</code></pre></div>
 
 
 <p>Faça login no seu blog Wordpress e vá em Ferramentas -&gt; Exportar. Nesta tela você pode configurar alguns filtros e realizar a exportação do arquivo. Lembre-se de guardar o caminho onde o arquivo foi baixado.</p>
 <p>O comando pra importar os artigos do Wordpress só funciona com o Python 2. Quando criar o ambiente virtual é importante informar ao virtualenv qual é a versão do Python que você deseja utilizar, por exemplo, no Linux:</p>
-<div class="highlight"><pre><span></span>virtualenv -p /usr/bin/python2.7 venv
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">virtualenv -p /usr/bin/python2.7 venv</span>
+</code></pre></div>
 
 
 <p>Por último, simplesmente execute o comando import_wordpress, passando o seu usuário no mezzanine e o caminho onde está o arquivo no argumento 'url':</p>
-<div class="highlight"><pre><span></span>python manage.py import_wordpress --mezzanine-user=.. --url=[caminho_do_arquivo]
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">manage</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="n">import_wordpress</span><span class="w"> </span><span class="c1">--mezzanine-user=.. --url=[caminho_do_arquivo]</span>
+</code></pre></div>
 
 
 <h3>Concluindo</h3>
@@ -225,12 +222,12 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
             <h2>Comments !</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                var disqus_shortname = 'pythonize';
+                var disqus_shortname = 'pythonize.org';
                 var disqus_identifier = 'como-criar-um-blog-com-django.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/como-criar-um-blog-com-django.html';
+                var disqus_url = './como-criar-um-blog-com-django.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    dsq.src = '//pythonize.org.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
@@ -281,13 +278,13 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
     </footer>
 
     <!-- jQuery -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/jquery.js"></script>
+    <script src="./theme/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/clean-blog.min.js"></script>
+    <script src="./theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -300,7 +297,7 @@ Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Djang
     })();
     </script>
 <script type="text/javascript">
-    var disqus_shortname = 'pythonize';
+    var disqus_shortname = 'pythonize.org';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';

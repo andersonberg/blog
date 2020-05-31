@@ -8,19 +8,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize</title>
+        <title>Blog</title>
 
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/clean-blog.min.css" rel="stylesheet">
+        <link href="./theme/css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -42,14 +40,14 @@
 
 
 			<meta property="og:locale" content="pt-br">
-		<meta property="og:site_name" content="Pythonize">
+		<meta property="og:site_name" content="Blog">
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html">
+	<meta property="og:url" content="./programando-python-idle.html">
 	<meta property="og:title" content="Programando em Python no IDLE">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="og:image" content="./">
 	<meta property="article:published_time" content="2011-09-08 00:46:47-03:00">
 </head>
 
@@ -66,14 +64,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://andersonberg.github.io/pythonize-pelican/">Pythonize</a>
+                <a class="navbar-brand" href="./">Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="https://andersonberg.github.io/pythonize-pelican/pages/contato.html">Contato</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,15 +79,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('./theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Programando em Python no IDLE</h1>
                         <span class="meta">Posted by
-                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 08 Set, 2011
+                                <a href="./author/anderson-berg.html">Anderson Berg</a>
+                             on 08 set, 2011
                         </span>
                         
                     </div>
@@ -107,8 +104,8 @@
     <article>
         <p>Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.</p>
 <p>Os arquivos Python têm extensão .py. É possível rodar um arquivo Python a partir da linha de comando da seguinte forma:</p>
-<div class="highlight"><pre><span></span>$ python nome_do_arquivo.py
-</pre></div>
+<div class="highlight"><pre><span></span><code>$ python nome_do_arquivo.py
+</code></pre></div>
 
 
 <p>Com isso todo o código que está salvo no arquivo é transformado em bytecode, que é um arquivo binário usado pelo interpretador. O bytecode é multiplataforma, ou seja, você pode levar seu código pra rodar em qualquer máquina e qualquer sistema. O bytecode é armazenado em sua máquina geralmente com a extensão .pyc, quando você executar seu código novamente sem alterações o programa não precisa ser compilado de novo, sendo executado mais rápido. Sempre que o seu código fonte é alterado, o interpretador gera um novo bytecode.</p>
@@ -117,7 +114,7 @@
 <p><strong>IDLE</strong></p>
 <p>O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&gt;New Window e será aberta uma janela em branco onde é possível escrever o código.</p>
 <p>Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):</p>
-<p><img class="align-center" src="/images/blog/helloworldidle.png" alt="Hello World no IDLE" title="Hello World no IDLE"></p>
+<p><img class="align-center" src="/images/blog/helloworldidle.png" title="Hello World no IDLE" alt="Hello World no IDLE"></p>
 <blockquote>
 <p>Hello World no IDLE</p>
 </blockquote>
@@ -125,20 +122,20 @@
 <p>Você já pode perceber a função highlighting nesse código.</p>
 <p>Nesta mesma janela, vá ao menu Run-&gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.</p>
 <p>Vamos avançar um pouco mais. Escreva o seguinte trecho de código no IDLE:</p>
-<div class="highlight"><pre><span></span>#-- coding: latin1 --
-x = 7*3        #Isto é um comentário
-y = &quot;Hello&quot;     #Este é mais um comentário
-if y == &quot;Hello&quot;:
-x = x + 1
-y = y + &quot;World&quot;    #Concatenação de strings
-print x
-print y
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">#-- coding: latin1 --</span>
+<span class="err">x = 7*3        #Isto é um comentário</span>
+<span class="err">y = &quot;Hello&quot;     #Este é mais um comentário</span>
+<span class="err">if y == &quot;Hello&quot;:</span>
+<span class="err">x = x + 1</span>
+<span class="err">y = y + &quot;World&quot;    #Concatenação de strings</span>
+<span class="err">print x</span>
+<span class="err">print y</span>
+</code></pre></div>
 
 
 <p>Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).</p>
 <p>Outras funções interessante estão no menu Format na janela de edição de código.</p>
-<p><img class="align-center" src="/images/blog/idle_format.png" alt="Menu Format no IDLE" title="Menu Format no IDLE"></p>
+<p><img class="align-center" src="/images/blog/idle_format.png" title="Menu Format no IDLE" alt="Menu Format no IDLE"></p>
 <blockquote>
 <p>Menu Format no IDLE</p>
 </blockquote>
@@ -152,12 +149,12 @@ print y
             <h2>Comments !</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                var disqus_shortname = 'pythonize';
+                var disqus_shortname = 'pythonize.org';
                 var disqus_identifier = 'programando-python-idle.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/programando-python-idle.html';
+                var disqus_url = './programando-python-idle.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    dsq.src = '//pythonize.org.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
@@ -208,13 +205,13 @@ print y
     </footer>
 
     <!-- jQuery -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/jquery.js"></script>
+    <script src="./theme/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/clean-blog.min.js"></script>
+    <script src="./theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -227,7 +224,7 @@ print y
     })();
     </script>
 <script type="text/javascript">
-    var disqus_shortname = 'pythonize';
+    var disqus_shortname = 'pythonize.org';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';

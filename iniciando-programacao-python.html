@@ -8,19 +8,17 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pythonize</title>
+        <title>Blog</title>
 
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Full Atom Feed" />
-            <link href="https://andersonberg.github.io/pythonize-pelican/feeds/iniciante-tutorial.atom.xml" type="application/atom+xml" rel="alternate" title="Pythonize Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/clean-blog.min.css" rel="stylesheet">
+        <link href="./theme/css/clean-blog.min.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://andersonberg.github.io/pythonize-pelican/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,14 +39,14 @@
 
 
 			<meta property="og:locale" content="pt-br">
-		<meta property="og:site_name" content="Pythonize">
+		<meta property="og:site_name" content="Blog">
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html">
+	<meta property="og:url" content="./iniciando-programacao-python.html">
 	<meta property="og:title" content="Iniciando a programação em Python">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="https://andersonberg.github.io/pythonize-pelican/">
+	<meta property="og:image" content="./">
 	<meta property="article:published_time" content="2011-09-04 15:06:10-03:00">
 </head>
 
@@ -65,14 +63,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://andersonberg.github.io/pythonize-pelican/">Pythonize</a>
+                <a class="navbar-brand" href="./">Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                            <li><a href="https://andersonberg.github.io/pythonize-pelican/pages/contato.html">Contato</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -81,15 +78,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://andersonberg.github.io/pythonize-pelican/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('./theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Iniciando a programação em Python</h1>
                         <span class="meta">Posted by
-                                <a href="https://andersonberg.github.io/pythonize-pelican/author/anderson-berg.html">Anderson Berg</a>
-                             on 04 Set, 2011
+                                <a href="./author/anderson-berg.html">Anderson Berg</a>
+                             on 04 set, 2011
                         </span>
                         
                     </div>
@@ -109,54 +106,54 @@
 Então vamos ao que interessa, pra programar em Python você precisa fazer o download e instalar em sua máquina.
 Instalação para os usuários Linux/Mac OS X
 Se você usa uma distribuição Linux, seja Ubuntu, Fedora, OpenSUSE, CentOS, etc... ou se você usa o Mac OS X é bem provável que o Python já esteja instalado, basta abrir um terminal (konsole, para KDE ou gnome-terminal para Gnome) e digitar “python” (sem aspas) que o interpretador Python irá iniciar.</p>
-<p><img class="align-center" src="/images/blog/python-linux.png" alt="Interpretador Python no Shell do Linux" title="Interpretador Python no Shell do Linux"></p>
+<p><img class="align-center" src="/images/blog/python-linux.png" title="Interpretador Python no Shell do Linux" alt="Interpretador Python no Shell do Linux"></p>
 <blockquote>
 <p>Interpretador Python no Shell do Linux</p>
 </blockquote>
 <p>Instalação para os usuários Windows
 Para os usuários de Windows é necessário instalar o interpretador. Visite o site <a href="http://www.python.org/download/">http://www.python.org/download/</a> e baixe a última versão. Python mantém duas versões: 2.7.x e 3.2.x. Se você não sabe qual escolher, vá de 2.7, pois muitas ferramentas e frameworks são compatíveis somente com a versão 2.7. Instale normalmente, como qualquer outro instalador Windows. Depois da instalação é preciso configurar a variável PATH do sistema. No Windows 7, abra o Painel de Controle, na pesquisa (no canto superior direito)  digite “variáveis de ambiente” (sem aspas) e clique em “Editar variáveis de ambiente para sua conta”. Na seção: “Variáveis de usuário” clique na variável PATH ou crie uma com este nome e no campo “Valor da variável” digite: “;C:\Python27” (sem aspas) no final do texto que já estiver lá (isso se você instalou o Python na pasta raiz C:)
 Pronto, agora abra o prompt de comando e digite python, você terá o interpretador pronto pra trabalhar.</p>
-<p><img class="align-center" src="/images/blog/python-cmd1.png" alt="Chamando o interpretador Python na linha de comando" title="Chamando o interpretador Python na linha de comando"></p>
+<p><img class="align-center" src="/images/blog/python-cmd1.png" title="Chamando o interpretador Python na linha de comando" alt="Chamando o interpretador Python na linha de comando"></p>
 <blockquote>
 <p>Chamando o interpretador Python na linha de comando</p>
 </blockquote>
 <p>Como alternativa, junto com o Python é instalado um ambiente Shell de desenvolvimento, o IDLE, que você pode usar como interpretador (da mesma forma que no cmd) ou como editor de arquivos Python.</p>
-<p><img class="align-center" src="/images/blog/idle-python.png" alt="IDLE Python" title="IDLE Python"></p>
+<p><img class="align-center" src="/images/blog/idle-python.png" title="IDLE Python" alt="IDLE Python"></p>
 <blockquote>
 <p>IDLE Python</p>
 </blockquote>
 <p>Primeiros passos no interpretador
 Com o Python devidamente instalado no seu sistema, vamos fazer alguns testes para ter as primeiras impressões de como é a experiência de programação. Vamos então, usar o prompt do interpretador Python. Você pode usar o IDLE ou iniciar o interpretador na linha de comando. Para imprimir qualquer texto na linha de comando, basta digitar print seguido de um texto entre aspas. Por exemplo:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; print &quot;Hello World!&quot;
-Hello World!
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="ss">&quot;Hello World!&quot;</span>
+<span class="n">Hello</span> <span class="n">World</span><span class="o">!</span>
 
-&gt;&gt;&gt; print “Meu primeiro teste em Python.”
-Meu primeiro teste em Python.
-</pre></div>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print</span> <span class="err">“</span><span class="n">Meu</span> <span class="n">primeiro</span> <span class="n">teste</span> <span class="n">em</span> <span class="n">Python</span><span class="p">.</span><span class="err">”</span>
+<span class="n">Meu</span> <span class="n">primeiro</span> <span class="n">teste</span> <span class="n">em</span> <span class="n">Python</span><span class="p">.</span>
+</code></pre></div>
 
 
 <p>Bem simples, e você já fez o clássico “Hello World” em Python.
 O interpretador Python pode ser usado como calculadora:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; 2+8
-10
-&gt;&gt;&gt;9*7
-63
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">&gt;&gt;&gt; 2+8</span>
+<span class="err">10</span>
+<span class="err">&gt;&gt;&gt;9*7</span>
+<span class="err">63</span>
+</code></pre></div>
 
 
 <p>Digite o seguinte no interpretador:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+</code></pre></div>
 
 
 <p>Fazendo isso você estará carregando o módulo de funções matemáticas de Python. Com isso estarão disponíveis diversas funções matemáticas pra você testar:</p>
-<div class="highlight"><pre><span></span>&gt;&gt;&gt; math.sqrt(16)
-4.0
-&gt;&gt;&gt; math.pow(5,3)
-125
-math.exp(4)
-54.598150033144236
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">&gt;&gt;&gt; math.sqrt(16)</span>
+<span class="err">4.0</span>
+<span class="err">&gt;&gt;&gt; math.pow(5,3)</span>
+<span class="err">125</span>
+<span class="err">math.exp(4)</span>
+<span class="err">54.598150033144236</span>
+</code></pre></div>
     </article>
 
     <hr>
@@ -165,12 +162,12 @@ math.exp(4)
             <h2>Comments !</h2>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                var disqus_shortname = 'pythonize';
+                var disqus_shortname = 'pythonize.org';
                 var disqus_identifier = 'iniciando-programacao-python.html';
-                var disqus_url = 'https://andersonberg.github.io/pythonize-pelican/iniciando-programacao-python.html';
+                var disqus_url = './iniciando-programacao-python.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//pythonize.disqus.com/embed.js';
+                    dsq.src = '//pythonize.org.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
             </script>
@@ -221,13 +218,13 @@ math.exp(4)
     </footer>
 
     <!-- jQuery -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/jquery.js"></script>
+    <script src="./theme/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/bootstrap.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="https://andersonberg.github.io/pythonize-pelican/theme/js/clean-blog.min.js"></script>
+    <script src="./theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -240,7 +237,7 @@ math.exp(4)
     })();
     </script>
 <script type="text/javascript">
-    var disqus_shortname = 'pythonize';
+    var disqus_shortname = 'pythonize.org';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';
