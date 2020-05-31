@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os
 
 AUTHOR = 'Anderson Berg'
-SITENAME = 'Pythonize'
+SITENAME = 'Blog'
 SITEURL = ''
 
 PATH = 'content'
