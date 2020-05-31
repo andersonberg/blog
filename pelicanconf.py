@@ -40,7 +40,7 @@ STATIC_PATHS = ['images']
 DISPLAY_CATEGORIES_ON_MENU = False
 DELETE_OUTPUT_DIRECTORY = False
 
-PLUGIN_PATHS = ['/home/anderson/Projetos/pelican-plugins']
+PLUGIN_PATHS = ['/home/anderson/code/pelican-plugins']
 PLUGINS = [
     'assets',
     'representative_image',
@@ -53,7 +53,7 @@ NOTEBOOK_DIR = 'notebooks'
 
 EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
 
-THEME = "/home/anderson/Projetos/pelican-themes/clean-blog"
+THEME = "/home/anderson/code/pelican-themes/clean-blog"
 COLOR_SCHEME_CSS = 'monokai.css'
 
 HEADER_COVER = 'images/code-python.jpg'
