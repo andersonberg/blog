@@ -30,3 +30,16 @@ Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "V
 
 
 ### Técnica Pomodoro
+
+Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta técnica foi desenvolvida por Francesco Cirillo nos anos 80 ([Técnica Pomodoro na Wikipedia](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro)).
+
+A ideia central é focar em uma tarefa durante um determinado período de tempo.
+
+A primeira coisa a se fazer é definir as tarefas que você precisa fazer e escolher o tempo que você vai dedicar a elas. Você vai evitar qualquer tipo de interrupção (notificações do celular, por exemplo) e ligar um cronômetro ou alarme com o tempo que escolheu (geralmente são 25 minutos). Assim que o alarme tocar você vai fazer uma pausa curta de 5 minutos. Aproveite este tempo para acessar um site, ou ver um video curto (ou qualquer coisa que seja relaxante). Após a pausa, volte para o tempo de concentração. Após 4 pomodoros (períodos de foco), você ganha o direito de fazer uma pausa mais londa de 15 minutos.
+
+Se durante um pomodoro, você lembrar de algo que precisa fazer, faça uma anotação para voltar a ela depois.
+
+As pausas longas são importantes, pois é nesse momento que o seu cérebro vai assimilar novas informações.
+
+
+### Blocos de informação
