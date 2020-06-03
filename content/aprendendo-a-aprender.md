@@ -6,7 +6,7 @@ slug: aprendendo-a-aprender
 summary:
 alias: /blog/aprendendo-a-aprender/
 
-Há uns dois anos atrás, eu fiz um curso no Coursera chamado "Aprendendo a Aprender" (em inglês "Learning how to learn"). É um curso de aproximadamente quatro semanas onde os professores apresentam algumas ferramentas mentais para melhorar o seu processo de estudo e memorização. 
+Há uns dois anos atrás, eu fiz um curso no Coursera chamado [Aprendendo a Aprender](https://www.coursera.org/learn/aprender/home/welcome) (em inglês "Learning how to learn"). É um curso de aproximadamente quatro semanas onde os professores apresentam algumas ferramentas mentais para melhorar o seu processo de estudo e memorização. 
 
 
 Neste mesmo curso, durante as aulas, eles te incentivam a compartilhar o assunto aprendido de alguma forma. Esse compartilhamento te ajuda ainda mais a consolidar os conceitos que foram ensinados. Por essa razão resolvi escrever esse artigo. Além disso, por causa do período que estamos passando com o isolamento social, ouvi de muita gente próxima que está fazendo cursos online ou colocando os estudos em dia, aprendendo coisas novas, mas muitas vezes não consegue se concentrar por muitas horas ou tem dificuldades com a procrastinação.
@@ -43,3 +43,22 @@ As pausas longas são importantes, pois é nesse momento que o seu cérebro vai 
 
 
 ### Blocos de informação
+
+Às vezes, quando se está aprendendo novo conceito, há uma certa dificuldade em entender e absorver aquele conhecimento. Parece que é um quebra-cabeça com milhares de peças que você não consegue juntar. 
+
+Existe uma ferramenta mental que eles chamam de *chunking*. Chunks são blocos de informação que o seu cérebro pode acessar facilmente. A ideia central é tentar criar algo com mais significado que será mais fácil de memorizar.
+
+#### Como eu crio um bloco de informação na minha memória?
+
+1. O primeiro passo é *focar* na informação que você quer processar. A técnica Pomodoro pode ser bem útil aqui.
+2. Então você precisa entender a *ideia central* do que você está aprendendo. Uma folheada no restante do capítulo ou uma olhada nas figuras e títulos de seções.
+3. Agora é importante entender o *contexto*, saber como e quando usar o bloco.
+4. Por último: *prática* e *repetição* ajudam a consolidar o bloco na sua mente tornando-o mais acessível.
+
+Um bom exemplo é quando se está aprendendo a tocar uma música. Você começa dividindo a música em algumas partes (introdução, verso, estrofe...). Daí você decora alguns acordes um por um, então junta os acordes (criando significado para a introdução) e finalmente junta todas as partes da música e aquela música começa a fazer sentido.
+
+### Aprender com repetição espaçada
+
+Você tem uma prova pra fazer e precisa estudar muito pra ela. Acontece que você deixou pra estudar na última semana, ou pior, no dia anterior. E na hora da prova vem aquele branco, você não consegue lembrar de nada do que estudou.
+
+Nosso cérebro precisa de um tempo para descansar. À noite enquanto dormimos, ele limpa algumas toxinas que evitam que você pensa claramente. Você deve planejar seus estudos para estudar um pouco sobre um assunto todo dia. Com o aprendizado espaçado, seu cérebro vai poder reter a informação em sua memória de longo prazo.
