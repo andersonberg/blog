@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Posts com idle | Anderson Berg</title>
+
+  <meta name="author" content="Anderson Berg">
+  <meta name="description" content="Posts com idle">
+  <meta name="robots" content="noindex,follow">
+
+  <meta property="og:site_name" content="Anderson Berg">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="../opengraph.jpg">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="Anderson Berg &raquo; Feed" href="/">
+  <link rel="canonical" href="../tag/idle.html">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+      <link rel="stylesheet" href="../theme/css/styles.min.css?0830b1e2">
+</head>
+<body>
+  <div class="Page pure-g ">
+<div class="PageHeader pure-u-1">
+    <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+
+        <a
+			href="../index.html"
+            title="Home page"
+            class="PageHeader-link pure-menu-heading pure-menu-link">Anderson<span class="u-highlighted">Berg</a>
+
+			<ul class="PageHeader-menu pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="../pages/contato.html" class="PageHeader-menu-link pure-menu-link">Contato</a>
+                    </li>
+
+			</ul>
+    </nav>
+</div>
+    <div class="PageContent pure-u-1">
+<h1 class="Tag-title u-box">Posts com idle</h1>
+
+    
+
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                    <a
+                        class="Article-titleLink"
+                        href="../programando-python-idle.html"
+                        title="Leia mais">
+                Programando em Python no IDLE
+                    </a>
+            </h1>
+
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+<img
+        src="/images/blog/helloworldidle.png"
+        alt="None"
+        class="representative-image"
+        width="180"
+        height="180" />
+                <p>Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.</p>
+<p>Os arquivos Python têm extensão .py. É possível rodar um arquivo Python a partir da linha de comando da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code>$ python nome_do_arquivo.py
+</code></pre></div>
+
+
+<p>Com isso todo o código que está salvo no arquivo é transformado em bytecode, que é um arquivo binário usado pelo interpretador. O bytecode é multiplataforma, ou seja, você pode levar seu código pra rodar em qualquer máquina e qualquer sistema. O bytecode é armazenado em sua máquina geralmente com a extensão .pyc, quando você executar seu código novamente sem alterações o programa não precisa ser compilado de novo, sendo executado mais rápido. Sempre que o seu código fonte é alterado, o interpretador gera um novo bytecode.</p>
+<p>Você pode escrever seu código no tradicional bloco de notas, mas existem diversas alternativas para escrever código Python e eu recomendo fortemente que não seja escrito no bloco de notas. Existem vários editores de texto e IDEs próprias pra se escrever código em Python. No Windows temos o Notepad++ que tem highlighting (destaca palavras especiais e seu código em cores) ou o próprio IDLE que também vem com highlighting, auto-identação e outros recursos que facilitam a criação do código. No Linux tem o Vim, que possui todos esses recursos citados anteriormente ou o Kate. Você pode ver outros editores na <a href="http://wiki.python.org/moin/PythonEditors">lista de editores Python</a> e também <a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IDEs que suportam Python</a>.</p>
+<p>Neste post vamos tratar do IDLE para Windows em outro post vou falar do Vim no Linux, se alguém tiver experiência com outros editores ou IDEs, por favor compartilhe conosco nos comentários.</p>
+<p><strong>IDLE</strong></p>
+<p>O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&gt;New Window e será aberta uma janela em branco onde é possível escrever o código.</p>
+<p>Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):</p>
+<p><img class="align-center" src="/images/blog/helloworldidle.png" title="Hello World no IDLE" alt="Hello World no IDLE"></p>
+<blockquote>
+<p>Hello World no IDLE</p>
+</blockquote>
+<p>Salve o arquivo com o nome: helloworld.py</p>
+<p>Você já pode perceber a função highlighting nesse código.</p>
+<p>Nesta mesma janela, vá ao menu Run-&gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.</p>
+<p>Vamos avançar um pouco mais. Escreva o seguinte trecho de código no IDLE:</p>
+<div class="highlight"><pre><span></span><code><span class="err">#-- coding: latin1 --</span>
+<span class="err">x = 7*3        #Isto é um comentário</span>
+<span class="err">y = &quot;Hello&quot;     #Este é mais um comentário</span>
+<span class="err">if y == &quot;Hello&quot;:</span>
+<span class="err">x = x + 1</span>
+<span class="err">y = y + &quot;World&quot;    #Concatenação de strings</span>
+<span class="err">print x</span>
+<span class="err">print y</span>
+</code></pre></div>
+
+
+<p>Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).</p>
+<p>Outras funções interessante estão no menu Format na janela de edição de código.</p>
+<p><img class="align-center" src="/images/blog/idle_format.png" title="Menu Format no IDLE" alt="Menu Format no IDLE"></p>
+<blockquote>
+<p>Menu Format no IDLE</p>
+</blockquote>
+<p>Neste menu você pode identar ou tirar identação de um trecho selecionado, é possível comentar ou descomentar o código, transformar tab em espaços ou vice-versa.</p>
+<p>Dúvidas, opiniões, sugestões e experiências, postem nos comentários!</p>
+        </div>
+    </span>
+
+</article>
+
+
+    </div>
+
+<footer class="PageFooter pure-u-1">
+    <div class="u-box">
+        <p>O conteúdo deste blog está sob a licença
+          <a
+              class="PageFooter-link"
+              href=""
+              title=""
+              rel="nofollow"></a>.</p>
+
+        <p>O código está disponível em
+          <a
+              class="PageFooter-link"
+              href=""
+              title="Contribute!"
+              rel="nofollow"></a>.</p>
+    </div>
+</footer>  </div>
+
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-25538784-1');ga('send','pageview');
+    </script>
+</body>
+</html>

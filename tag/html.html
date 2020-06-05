@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Posts com html | Anderson Berg</title>
+
+  <meta name="author" content="Anderson Berg">
+  <meta name="description" content="Posts com html">
+  <meta name="robots" content="noindex,follow">
+
+  <meta property="og:site_name" content="Anderson Berg">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="../opengraph.jpg">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="Anderson Berg &raquo; Feed" href="/">
+  <link rel="canonical" href="../tag/html.html">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+      <link rel="stylesheet" href="../theme/css/styles.min.css?0830b1e2">
+</head>
+<body>
+  <div class="Page pure-g ">
+<div class="PageHeader pure-u-1">
+    <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+
+        <a
+			href="../index.html"
+            title="Home page"
+            class="PageHeader-link pure-menu-heading pure-menu-link">Anderson<span class="u-highlighted">Berg</a>
+
+			<ul class="PageHeader-menu pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="../pages/contato.html" class="PageHeader-menu-link pure-menu-link">Contato</a>
+                    </li>
+
+			</ul>
+    </nav>
+</div>
+    <div class="PageContent pure-u-1">
+<h1 class="Tag-title u-box">Posts com html</h1>
+
+    
+
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                    <a
+                        class="Article-titleLink"
+                        href="../criar-parsers-html-beautifulsoup.html"
+                        title="Leia mais">
+                Como criar parsers HTML poderosos com BeautifulSoup
+                    </a>
+            </h1>
+
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+<img
+        src="images/beautifulsoup.jpg"
+        alt="None"
+        class="representative-image"
+        width="180"
+        height="180" />
+                <p>Neste post você vai aprender como criar um parser pra recuperar
+informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup
+pode ser usado para arquivos HTML ou XML, com ele fica muito simples
+navegar e buscar textos em páginas HTML. Uma grande vantagem da
+BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
+html mal formatadas, facilitando o trabalho do programador.</p>
+<h2>Instalando o BeautifulSoup</h2>
+<p>Você pode fazer a instalação via <em>pip</em> ou <em>easy_install</em>. Também estão
+disponíveis pacotes em diferentes distribuições Linux.</p>
+<p>Inicie o interpretador Python para testar os códigos que vamos
+apresentar a seguir.</p>
+<p>Para processar páginas HTML, importe o BeautifulSoup da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</code></pre></div>
+
+
+<p>Se você for processar arquivos XML:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulStoneSoup</span>
+</code></pre></div>
+
+
+<p>Você pode também consultar a documentação do BeautifulSoup
+<a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" title="BeautifulSoup">aqui</a>.</p>
+<h2>Criando o parser</h2>
+<p>Por enquanto vamos processar apenas páginas html. Vamos usar a biblioteca urllib2 para recuperar uma página html.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="n">pagina</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;http://www.globo.com&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Isso vai criar uma string com todo o código html da página. Então, para criar o parser basta:</p>
+<div class="highlight"><pre><span></span><code><span class="err">soup = BeautifulSoup(pagina)</span>
+</code></pre></div>
+
+
+<p>É possível transformar esse objeto BeautifulSoup em string com o método
+prettify, que manipula o código bruto adicionando quebra de linha e
+espaçamento recriando a estrutura do código html.</p>
+<div class="highlight"><pre><span></span><code><span class="err">soup.prettify()</span>
+</code></pre></div>
+
+
+<p>Para listar todos os links da página recuperada, usamos o método
+findAll:</p>
+<div class="highlight"><pre><span></span><code><span class="err">links = soup.findAll(&#39;a&#39;)</span>
+</code></pre></div>
+
+
+<p>Neste código, '<em>links</em>' é uma lista contendo objetos do tipo Tag da
+biblioteca BeautifulSoup (class BeautifulSoup.Tag). Vamos agora, listar
+somente os links (tirando qualquer texto ou marcação) que estão nesses
+objetos Tag:</p>
+<div class="highlight"><pre><span></span><code><span class="err">for link in links:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
+
+
+<p>Para recuperar somente uma área da página, é possível usar o método find
+com o parâmetro id, por exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="err">colunas = soup.find(id=&quot;glb-area-colunas&quot;)</span>
+<span class="err">linkscol = colunas.findAll(&#39;a&#39;)</span>
+<span class="err">for link in linkscol:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
+
+
+<p>A biblioteca BeautifulSoup facilita muito na hora de criar parsers e
+crawlers para páginas html ou xml. Usada junto com o urllib2 são
+poderosos aliados na recuperação de informação na web.</p>
+        </div>
+    </span>
+
+</article>
+
+
+    </div>
+
+<footer class="PageFooter pure-u-1">
+    <div class="u-box">
+        <p>O conteúdo deste blog está sob a licença
+          <a
+              class="PageFooter-link"
+              href=""
+              title=""
+              rel="nofollow"></a>.</p>
+
+        <p>O código está disponível em
+          <a
+              class="PageFooter-link"
+              href=""
+              title="Contribute!"
+              rel="nofollow"></a>.</p>
+    </div>
+</footer>  </div>
+
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-25538784-1');ga('send','pageview');
+    </script>
+</body>
+</html>

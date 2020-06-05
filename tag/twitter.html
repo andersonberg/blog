@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Posts com twitter | Anderson Berg</title>
+
+  <meta name="author" content="Anderson Berg">
+  <meta name="description" content="Posts com twitter">
+  <meta name="robots" content="noindex,follow">
+
+  <meta property="og:site_name" content="Anderson Berg">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="../opengraph.jpg">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="Anderson Berg &raquo; Feed" href="/">
+  <link rel="canonical" href="../tag/twitter.html">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+      <link rel="stylesheet" href="../theme/css/styles.min.css?0830b1e2">
+</head>
+<body>
+  <div class="Page pure-g ">
+<div class="PageHeader pure-u-1">
+    <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+
+        <a
+			href="../index.html"
+            title="Home page"
+            class="PageHeader-link pure-menu-heading pure-menu-link">Anderson<span class="u-highlighted">Berg</a>
+
+			<ul class="PageHeader-menu pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="../pages/contato.html" class="PageHeader-menu-link pure-menu-link">Contato</a>
+                    </li>
+
+			</ul>
+    </nav>
+</div>
+    <div class="PageContent pure-u-1">
+<h1 class="Tag-title u-box">Posts com twitter</h1>
+
+    
+
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                    <a
+                        class="Article-titleLink"
+                        href="../recuperar-posts-twitter-rapidamente-python.html"
+                        title="Leia mais">
+                Como Recuperar Posts do Twitter Rapidamente com Python
+                    </a>
+            </h1>
+
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+<img
+        src="images/twitter-buttons-medio.jpg"
+        alt="None"
+        class="representative-image"
+        width="180"
+        height="180" />
+                <p>Neste post vamos criar um <strong>crawler</strong> para recuperar <strong>tweets</strong> públicos. Tweets públicos são aqueles que não necessitam de autenticação, ou seja, não é necessário ter uma conta no Twitter para ler esses tweets.</p>
+<p>Com Python, é bem simples recuperar qualquer status do Twitter, para isso, vamos utilizar o pacote <a href="http://code.google.com/p/python-twitter/">python-twitter</a>, que pode ser instalado via setuptools:</p>
+<div class="highlight"><pre><span></span><code>$ easy_install python-twitter
+</code></pre></div>
+
+
+<p>Ou, pode ser baixado neste <a href="http://code.google.com/p/python-twitter/downloads/list">link</a>. Para instalar, extraia o conteúdo, vá até a pasta onde foi extraído e faça:</p>
+<div class="highlight"><pre><span></span><code>$ python setup.py build
+$ python setup.py install
+</code></pre></div>
+
+
+<p>O python-twitter provê acesso a API do Twitter via código Python.</p>
+<p>Para ler a Api e buscar ajuda, faça:</p>
+<div class="highlight"><pre><span></span><code>$ pydoc twitter.Status
+$ pydoc twitter.User
+$ pydoc twitter.DirectMessage
+</code></pre></div>
+
+
+<p>Para começar a utilizar o python-twitter, basta importar o pacote e criar uma instância da classe twitter.Api():</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">twitter</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">twitter</span><span class="o">.</span><span class="n">Api</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Então, é possível obter os últimos tweets públicos facilmente com a função <em>GetPublicTimeline</em>, que retorna uma lista contendo em torno de 20 objetos do tipo <em>twitter.Status</em>, o texto do tweet em si está no atributo <em>text</em>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">tweets</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">GetPublicTimeline</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Agora, para recuperar os 20 últimos tweets de um usuário específico, existe a função <em>GetUserTimeline</em>. Trocando '<em>user</em>' por um usuário real do twitter no código abaixo, você obtém uma lista semelhante a que foi retornada pela função <em>GetPublicTimeline:</em></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">user_tweets</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">GetUserTimeline</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">user_tweets</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>A função <em>GetUserTimeline</em> permite configurar a quantidade de tweets a serem recuperados através do parâmetro <em>count:</em></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">user_tweets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">GetUserTimeline</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+    <span class="n">user_tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">user_tweets</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Neste código utilizei a função <em>encode</em> para imprimir caracteres especiais em português.</p>
+<p>Você pode encontrar mais detalhes das funções mostradas aqui na documentação da API, basta fazer no terminal:</p>
+<div class="highlight"><pre><span></span><code>$ pydoc twitter.Api
+</code></pre></div>
+
+
+<p>O que você achou de usar a API do Twitter com Python?
+Já tentou outras formas de acessar a API?
+Deixe seu comentário logo abaixo!</p>
+        </div>
+    </span>
+
+</article>
+
+
+    </div>
+
+<footer class="PageFooter pure-u-1">
+    <div class="u-box">
+        <p>O conteúdo deste blog está sob a licença
+          <a
+              class="PageFooter-link"
+              href=""
+              title=""
+              rel="nofollow"></a>.</p>
+
+        <p>O código está disponível em
+          <a
+              class="PageFooter-link"
+              href=""
+              title="Contribute!"
+              rel="nofollow"></a>.</p>
+    </div>
+</footer>  </div>
+
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-25538784-1');ga('send','pageview');
+    </script>
+</body>
+</html>
