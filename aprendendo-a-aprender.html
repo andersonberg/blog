@@ -11841,8 +11841,10 @@ jQuery(document).ready(function($) {
 
 
 
-        <meta name="tags" contents="ssh" />
-        <meta name="tags" contents="script" />
+        <meta name="tags" contents="mente" />
+        <meta name="tags" contents="aprendizado" />
+        <meta name="tags" contents="estudo" />
+        <meta name="tags" contents="tarefas" />
 
 
 			<meta property="og:locale" content="pt-br">
@@ -11850,11 +11852,11 @@ jQuery(document).ready(function($) {
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="./criar-scripts-ssh-rapidamente-python.html">
-	<meta property="og:title" content="Como Criar Scripts SSH Rapidamente com Python">
+	<meta property="og:url" content="./aprendendo-a-aprender.html">
+	<meta property="og:title" content="Aprendendo a Aprender">
 	<meta property="og:description" content="">
 	<meta property="og:image" content="./">
-	<meta property="article:published_time" content="2013-05-20 13:45:46-03:00">
+	<meta property="article:published_time" content="2020-06-01 00:00:00-03:00">
 </head>
 
 <body>
@@ -11890,10 +11892,10 @@ jQuery(document).ready(function($) {
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Como Criar Scripts SSH Rapidamente com Python</h1>
+                        <h1>Aprendendo a Aprender</h1>
                         <span class="meta">Posted by
                                 <a href="./author/anderson-berg.html">Anderson Berg</a>
-                             on 20 mai, 2013
+                             on 01 jun, 2020
                         </span>
                         
                     </div>
@@ -11908,65 +11910,66 @@ jQuery(document).ready(function($) {
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>Às vezes é necessário trabalhar com <strong>vários</strong> dispositivos ligados em <strong>rede</strong>, quer sejam computadores, roteadores ou outros tipos de equipamentos.</p>
-<p>Em muitas ocasiões precisamos enviar <strong>comandos</strong> e <strong>instruções</strong> para estes equipamentos. Isso geralmente é feito através do envio de comandos ou dados via <strong>SSH</strong>.</p>
-<p>Tudo bem entrar em um terminal e enviar um comando ou dois pra um equipamento ou outro.</p>
-<p>Mas e se forem <strong>milhares</strong> de dispositivos interconectados?</p>
-<p>Ou se são <strong>dezenas</strong> ou <strong>centenas</strong> de instruções em série?</p>
-<p>E se estas duas situações ocorrem <strong>juntas</strong>?</p>
-<p>Nesses casos é preciso criar scripts que façam tudo automatizado.</p>
-<p>Neste artigo vou compartilhar minha experiência com o Paramiko, um módulo Python que fornece uma interface ao protocolo SSH2.</p>
-<p>SSH é um protocolo de rede criptografado que realiza conexão segura entre computadores e permite executar comandos remotamente. Em diversas situações é necessário automatizar o processo de conexão e execução de comandos em um computador remoto.</p>
-<h2>Como instalar o Paramiko</h2>
-<p>Para instalar o Paramiko é necessário instalar antes o PyCrypto, que pode ser encontrado via easy_install ou no repositório da sua distribuição Linux. Encontrei algumas dificuldades para instalar o pycrypto no Windows, por sorte existem alguns binários compilados do pycrypto: <a href="http://www.voidspace.org.uk/python/modules.shtml#pycrypto">http://www.voidspace.org.uk/python/modules.shtml#pycrypto</a></p>
-<p>Depois é só instalar o paramiko via easy_install ou procurando no repositório da distro Linux.</p>
-<p>O paramiko tem uma classe base que fornece toda a interface para comunicação: <strong><em>paramiko.SSHClient</em></strong>. Para criar um objeto e criar uma conexão com um servidor é bem simples:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">paramiko</span>
-<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
-<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;anderson&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Neste exemplo, a função 'connect' está conectando ao servidor SSH local, passando nome de usuário e senha através dos par&acirc;metros 'username' e 'password', respectivamente.</p>
-<p>Quando você conecta em um servidor ssh pela primeira vez, uma chave é automaticamente armazenada em disco num arquivo chamado "<strong><em>.ssh/known_hosts</em></strong>" na sua pasta home. Para isto é preciso o usuário, manualmente, aceitar o armazenamento da chave do servidor, confirmando a confiabilidade deste. Para fazermos isso automaticamente através do Paramiko, utilizamos o objeto "set_missing_host_key_policy", passando "<strong><em>paramiko.AutoAddPolicy()</em></strong>" como parâmetro para aceitar automaticamente as chaves. Então, nosso código anterior pode ser modificado:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">paramiko</span>
-<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
-<span class="n">ssh</span><span class="o">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
-<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;anderson&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Tenha o cuidado de somente utilizar este artifício com servidores que você confia.</p>
-<h2>Enviando comandos via ssh</h2>
-<p>Já aprendemos como conectar em um computador remotamente via ssh. Agora vamos ver como enviar comandos e receber os resultados destes comandos. Isto é feito com o método "exec_command" do SSHClient(). Este método retorna uma tupla de objetos (stdin, stdout, stderr) que você pode ler (no caso do stdout e stderr) ou escrever (stdin). A sintaxe para executar um comando é a seguinte:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;ls</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Que vai enviar o comando 'ls' para listar os arquivos do diretório atual. Para exibir o retorno deste comando podemos ler o conteúdo do objeto stdout e, em seguida, fechar a conexão ssh:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="n">ssh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Em alguns casos precisamos enviar outras informações para execução do comando, como por exemplo uma senha de administrador. Podemos fazer isto escrevendo no objeto stdin.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;sudo fdisk -l</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;1234</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">stdin</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>O retorno dos comando pode ser tratado com as poderosas ferramentas de manipulação de string de Python, ou ainda filtradas com expressões regulares, dando ainda mais opções ao programador na hora de criar um script completo. Em outro post darei mais detalhes sobre a utilização do Paramiko.</p>
+        <p>Há uns dois anos atrás, eu fiz um curso no Coursera chamado <a href="https://www.coursera.org/learn/aprender/home/welcome">Aprendendo a Aprender</a> (em inglês "Learning how to learn"). É um curso de aproximadamente quatro semanas onde os professores apresentam algumas ferramentas mentais para melhorar o seu processo de estudo e memorização. </p>
+<p>Neste mesmo curso, durante as aulas, eles te incentivam a compartilhar o assunto aprendido de alguma forma. Esse compartilhamento te ajuda ainda mais a consolidar os conceitos que foram ensinados. Por essa razão resolvi escrever esse artigo. Além disso, por causa do período que estamos passando com o isolamento social, ouvi de muita gente próxima que está fazendo cursos online ou colocando os estudos em dia, aprendendo coisas novas, mas muitas vezes não consegue se concentrar por muitas horas ou tem dificuldades com a procrastinação.</p>
+<h3>Procrastinação</h3>
+<p>É justamente pela procrastinação que o curso inicia. Então a primeira recomendação é: <em>Evite procrastinar</em>.
+Mas para conseguir isso, é importante entender porque temos a tendência a procrastinar.
+Às vezes você tem que estudar um assunto não muito interessante ou fazer uma tarefa um pouco (ou extremamente) chata. Essas coisas começam a gerar um certo desconforto e pode até chegar a te deixar infeliz. Nosso cérebro, como é muito esperto, tenta parar aquele sentimento desviando sua atenção para algo mais agradável. Então você entra no YouTube com a opção de Próximo Vídeo ativada e quando menos percebe toda a tarde se passou e você não conseguiu fazer nada do que tinha planejado.</p>
+<p>É tudo uma questão de hábitos. E são esses maus hábitos que você precisa mudar. Você tem que encontrar o gatilho que te faz procrastinar. Quando fizer isso, é preciso encontrar uma maneira de mudar a rotina. Aqui eu recomendo um livro para entender melhor como os hábitos funcionam que é o "O Poder do Hábito".</p>
+<h3>Foco no processo</h3>
+<p>Geralmente, quando temos que estudar ou realizar uma tarefa nós pensamos no resultado final, na tarefa cumprida. Só que nem sempre é fácil chegar ao final do capítulo de um livro, se ele for muito denso, por exemplo. Às vezes não é simples terminar aquela projeto monótono. É aí que a mente começa a procrastinar de novo.</p>
+<p>A próxima dica é focar no processo. O processo é o conjunto de tempo, esforço e ações que você precisa para terminar alguma coisa. A ansiedade de chegar ao final e ver o resultado do esforço pode nos distrair e fazer procrastinar.</p>
+<p>Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "Vamos lá! Vamos fazer!", "Tudo bem, vou só demorar alguns minutos fazendo isto."</p>
+<h3>Técnica Pomodoro</h3>
+<p>Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta técnica foi desenvolvida por Francesco Cirillo nos anos 80 (<a href="https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro">Técnica Pomodoro na Wikipedia</a>).</p>
+<p>A ideia central é focar em uma tarefa durante um determinado período de tempo.</p>
+<p>A primeira coisa a se fazer é definir as tarefas que você precisa fazer e escolher o tempo que você vai dedicar a elas. Você vai evitar qualquer tipo de interrupção (notificações do celular, por exemplo) e ligar um cronômetro ou alarme com o tempo que escolheu (geralmente são 25 minutos). Assim que o alarme tocar você vai fazer uma pausa curta de 5 minutos. Aproveite este tempo para acessar um site, ou ver um video curto (ou qualquer coisa que seja relaxante). Após a pausa, volte para o tempo de concentração. Após 4 pomodoros (períodos de foco), você ganha o direito de fazer uma pausa mais londa de 15 minutos.</p>
+<p>Se durante um pomodoro, você lembrar de algo que precisa fazer, faça uma anotação para voltar a ela depois.</p>
+<p>As pausas longas são importantes, pois é nesse momento que o seu cérebro vai assimilar novas informações.</p>
+<h3>Blocos de informação</h3>
+<p>Às vezes, quando se está aprendendo novo conceito, há uma certa dificuldade em entender e absorver aquele conhecimento. Parece que é um quebra-cabeça com milhares de peças que você não consegue juntar. </p>
+<p>Existe uma ferramenta mental que eles chamam de <em>chunking</em>. Chunks são blocos de informação que o seu cérebro pode acessar facilmente. A ideia central é tentar criar algo com mais significado que será mais fácil de memorizar.</p>
+<h4>Como eu crio um bloco de informação na minha memória?</h4>
+<ol>
+<li>O primeiro passo é <em>focar</em> na informação que você quer processar. A técnica Pomodoro pode ser bem útil aqui.</li>
+<li>Então você precisa entender a <em>ideia central</em> do que você está aprendendo. Uma folheada no restante do capítulo ou uma olhada nas figuras e títulos de seções.</li>
+<li>Agora é importante entender o <em>contexto</em>, saber como e quando usar o bloco.</li>
+<li>Por último: <em>prática</em> e <em>repetição</em> ajudam a consolidar o bloco na sua mente tornando-o mais acessível.</li>
+</ol>
+<p>Um bom exemplo é quando se está aprendendo a tocar uma música. Você começa dividindo a música em algumas partes (introdução, verso, estrofe...). Daí você decora alguns acordes um por um, então junta os acordes (criando significado para a introdução) e finalmente junta todas as partes da música e aquela música começa a fazer sentido.</p>
+<h3>Aprender com repetição espaçada</h3>
+<p>Você tem uma prova pra fazer e precisa estudar muito pra ela. Acontece que você deixou pra estudar na última semana, ou pior, no dia anterior. E na hora da prova vem aquele branco, você não consegue lembrar de nada do que estudou.</p>
+<p>Nosso cérebro precisa de um tempo para descansar. À noite enquanto dormimos, ele limpa algumas toxinas que evitam que você pensa claramente. Você deve planejar seus estudos para estudar um pouco sobre um assunto todo dia. Com o aprendizado espaçado, seu cérebro vai poder reter a informação em sua memória de longo prazo.</p>
+<p>Outra maneira de consolidar o que você está tentando estudar é usando o modo difuso. Ele acontece quando seu cérebro está em um estado mais relaxado, quando por exemplo, você está fazendo uma caminhada agradável ou tomando um banho relaxante. Nesse momento seus pensamentos ficam um pouco vagos e o cérebro começa a criar conexões entre os neurônios que vão ajudar a aprender ou entender algum assunto novo.</p>
+<h3>Dicas gerais</h3>
+<ul>
+<li>
+<p>Se você está lendo um livro, tente relembrar o que acabou de ler. Não é apenas ler e fazer marcações com o marca-texto. Após terminar a leitura de uma seção ou capítulo, tente explicar a você mesmo ou a um amigo o que acabou de ler. </p>
+</li>
+<li>
+<p>Faça um mini-teste pra relembrar e revisar alguns pontos do assunto.</p>
+</li>
+<li>
+<p>Aprenda a usar metáforas e analogias que vão trazer mais sentido ao que está aprendendo. É ainda melhor se você conseguir envolver mais de um sentido (por exemplo, audição e visão).</p>
+</li>
+<li>
+<p>Faça exercícios físicos regularmente, eles podem melhorar nossa memória e a capacidade de aprendizado.</p>
+</li>
+</ul>
+<h3>Mudando Hábitos</h3>
+<p>Hábitos possuem quatro componentes (sejam eles bons ou maus):</p>
+<p>1 - Sugestão: Este é o gatilho para trazer o hábito à tona.
+2 - A Rotina: É a resposta automática do seu cérebro para o gatilho. É como se ligasse o modo zumbi na sua cabeça.
+3 - A Recompensa: É o componente que traz prazer ao cérebro. Um hábito surge porque a recompensa te faz se sentir melhor.
+4 - Convicção: Hábitos são poderosos porque você acredita neles.</p>
+<p>A dica para mudar um hábito é trocar a reação ao gatilho:</p>
+<p>1 - Identifique o que te faz procrastinar. Os gatilhos estão normalmente em 4 categorias: local, hora, como você se sente e reações.
+2 - Você precisa criar um plano para evitar que seu cérebro comece a se distrair com algo mais prazeroso. Crie uma nova rotina, se não funcionar de primeira, vá ajustando o plano.
+3 - Recompensas! Dê a si mesmo uma recompensa quando ganhar a batalha contra a procrastinação.
+4 - É preciso acreditar que consegue, pois quando as coisas ficarem muito estressantes, você vai querer voltar aos antigos maus hábitos.</p>
+<h3>Conclusão</h3>
+<p>Este foi um breve resumo do curso, que durou 4 semanas. Recomendo o curso para qualquer pessoa, seja estudante ou profissional, é sempre importante aprender coisas novas e combater a procrastinação.</p>
     </article>
 
     <hr>
@@ -11976,8 +11979,8 @@ jQuery(document).ready(function($) {
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 var disqus_shortname = 'pythonize.org';
-                var disqus_identifier = 'criar-scripts-ssh-rapidamente-python.html';
-                var disqus_url = './criar-scripts-ssh-rapidamente-python.html';
+                var disqus_identifier = 'aprendendo-a-aprender.html';
+                var disqus_url = './aprendendo-a-aprender.html';
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                     dsq.src = '//pythonize.org.disqus.com/embed.js';
