@@ -79,4 +79,20 @@ Outra maneira de consolidar o que você está tentando estudar é usando o modo 
 
 ### Mudando Hábitos
 
-Hábitos possuem quatro componentes:
+Hábitos possuem quatro componentes (sejam eles bons ou maus):
+
+1. Sugestão: Este é o gatilho para trazer o hábito à tona.
+2. A Rotina: É a resposta automática do seu cérebro para o gatilho. É como se ligasse o modo zumbi na sua cabeça.
+3. A Recompensa: É o componente que traz prazer ao cérebro. Um hábito surge porque a recompensa te faz se sentir melhor.
+4. Convicção: Hábitos são poderosos porque você acredita neles.
+
+A dica para mudar um hábito é trocar a reação ao gatilho:
+
+1. Identifique o que te faz procrastinar. Os gatilhos estão normalmente em 4 categorias: local, hora, como você se sente e reações.
+2. Você precisa criar um plano para evitar que seu cérebro comece a se distrair com algo mais prazeroso. Crie uma nova rotina, se não funcionar de primeira, vá ajustando o plano.
+3. Recompensas! Dê a si mesmo uma recompensa quando ganhar a batalha contra a procrastinação.
+4. É preciso acreditar que consegue, pois quando as coisas ficarem muito estressantes, você vai querer voltar aos antigos maus hábitos.
+
+### Conclusão
+
+Este foi um breve resumo do curso, que durou 4 semanas. Recomendo o curso para qualquer pessoa, seja estudante ou profissional, é sempre importante aprender coisas novas e combater a procrastinação.
