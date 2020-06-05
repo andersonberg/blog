@@ -1,5 +1,5 @@
 title: Aprendendo a Aprender
-date: 2020-06-01 00:00:00
+date: 2020-06-05 00:00:00
 tags: mente, aprendizado, estudo, tarefas
 category: geral
 slug: aprendendo-a-aprender
@@ -11,7 +11,7 @@ Há uns dois anos atrás, eu fiz um curso no Coursera chamado [Aprendendo a Apre
 
 Neste mesmo curso, durante as aulas, eles te incentivam a compartilhar o assunto aprendido de alguma forma. Esse compartilhamento te ajuda ainda mais a consolidar os conceitos que foram ensinados. Por essa razão resolvi escrever esse artigo. Além disso, por causa do período que estamos passando com o isolamento social, ouvi de muita gente próxima que está fazendo cursos online ou colocando os estudos em dia, aprendendo coisas novas, mas muitas vezes não consegue se concentrar por muitas horas ou tem dificuldades em combater a procrastinação.
 
-### Procrastinação
+## Procrastinação
 
 É justamente  falando sobre procrastinação que o curso inicia. Então a primeira recomendação é: **Evite procrastinar**.
 Mas para conseguir isso, é importante entender porque temos a tendência a procrastinar.
@@ -20,7 +20,7 @@ Mas para conseguir isso, é importante entender porque temos a tendência a proc
 
 É tudo uma questão de **hábitos**. E são esses maus hábitos que é preciso mudar. Você tem que encontrar o gatilho que te faz procrastinar. Quando fizer isso, é preciso encontrar uma maneira de mudar a rotina.
 
-### Foco no processo
+## Foco no processo
 
 Geralmente, quando temos que estudar ou realizar uma tarefa nós pensamos no resultado final, na tarefa cumprida. Só que nem sempre é fácil chegar ao final do capítulo de um livro, se ele for muito denso, por exemplo. Às vezes não é simples terminar aquela tarefa tão monótona. É aí que a mente começa a procrastinar de novo.
 
@@ -29,7 +29,7 @@ A próxima dica é focar no processo. O processo é o conjunto de tempo, esforç
 Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "Vamos lá! Vamos fazer!", "Tudo bem, vou só dedicar alguns minutos fazendo isto."
 
 
-### Técnica Pomodoro
+## Técnica Pomodoro
 
 Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta técnica foi desenvolvida por Francesco Cirillo nos anos 80 ([Técnica Pomodoro na Wikipedia](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro)).
 
@@ -45,7 +45,7 @@ Se durante um pomodoro, você lembrar de algo que precisa fazer, faça uma anota
 As pausas longas são importantes, pois é nesse momento que o seu cérebro vai **assimilar** novas informações.
 
 
-### Blocos de informação
+## Blocos de informação
 
 Às vezes, quando se está aprendendo novo conceito, há uma certa dificuldade em entender e absorver aquele conhecimento. Parece que é um quebra-cabeça com milhares de peças que você não consegue montar. 
 
@@ -62,7 +62,7 @@ A ideia central é tentar criar algo com mais significado que será mais fácil 
 
 Um bom exemplo é quando se está aprendendo a tocar uma música. Você começa dividindo a música em algumas partes (introdução, verso, estrofe...). Daí você decora alguns acordes um por um, então junta os acordes (criando significado para a introdução) e finalmente junta todas as partes da música e aquela música começa a fazer sentido.
 
-### Aprender com repetição espaçada
+## Aprender com repetição espaçada
 
 Você tem uma prova pra fazer e precisa estudar muito pra ela. Acontece que você deixou pra estudar na última semana, ou pior, no dia anterior. E na hora da prova vem aquele branco, você não consegue lembrar de nada do que estudou.
 
@@ -71,7 +71,7 @@ Nosso cérebro precisa de um tempo para **descansar**. À noite enquanto dormimo
 Outra maneira de consolidar o que você está tentando estudar é usando o modo **difuso**. Ele acontece quando seu cérebro está em um estado mais relaxado, quando por exemplo, você está fazendo uma caminhada agradável ou tomando um banho relaxante. Nesse momento seus pensamentos ficam um pouco vagos e o cérebro começa a criar conexões entre os neurônios que vão ajudar a aprender ou entender algum assunto novo.
 
 
-### Dicas gerais
+## Dicas gerais
 
  - Se você está lendo um livro, tente relembrar o que acabou de ler. Não é apenas ler e fazer marcações com o marca-texto. Após terminar a leitura de uma seção ou capítulo, tente **explicar a você mesmo** ou a um amigo o que acabou de ler. 
 
@@ -82,7 +82,7 @@ Outra maneira de consolidar o que você está tentando estudar é usando o modo 
  - Faça **exercícios físicos** regularmente, eles podem melhorar nossa memória e a capacidade de aprendizado.
 
 
-### Mudando Hábitos
+## Mudando Hábitos
 
 Hábitos possuem quatro componentes (sejam eles bons ou maus):
 
@@ -98,7 +98,7 @@ A chave para mudar um hábito é trocar a reação ao gatilho:
 3. Recompensas! Dê a si mesmo uma recompensa quando ganhar a batalha contra a procrastinação.
 4. É preciso acreditar que consegue, pois quando as coisas ficarem muito estressantes, você vai querer voltar aos antigos maus hábitos.
 
-### Conclusão
+## Conclusão
 
 Este foi um breve resumo do curso, que durou 4 semanas. Recomendo o curso para qualquer pessoa, seja estudante ou profissional, é sempre importante aprender coisas novas e combater a procrastinação. Para entender melhor como os hábitos funcionam, recomendo o livro "O Poder do Hábito", do Charles Duhigg.
 
