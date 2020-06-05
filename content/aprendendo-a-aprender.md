@@ -62,3 +62,21 @@ Um bom exemplo é quando se está aprendendo a tocar uma música. Você começa 
 Você tem uma prova pra fazer e precisa estudar muito pra ela. Acontece que você deixou pra estudar na última semana, ou pior, no dia anterior. E na hora da prova vem aquele branco, você não consegue lembrar de nada do que estudou.
 
 Nosso cérebro precisa de um tempo para descansar. À noite enquanto dormimos, ele limpa algumas toxinas que evitam que você pensa claramente. Você deve planejar seus estudos para estudar um pouco sobre um assunto todo dia. Com o aprendizado espaçado, seu cérebro vai poder reter a informação em sua memória de longo prazo.
+
+Outra maneira de consolidar o que você está tentando estudar é usando o modo difuso. Ele acontece quando seu cérebro está em um estado mais relaxado, quando por exemplo, você está fazendo uma caminhada agradável ou tomando um banho relaxante. Nesse momento seus pensamentos ficam um pouco vagos e o cérebro começa a criar conexões entre os neurônios que vão ajudar a aprender ou entender algum assunto novo.
+
+
+### Dicas gerais
+
+ - Se você está lendo um livro, tente relembrar o que acabou de ler. Não é apenas ler e fazer marcações com o marca-texto. Após terminar a leitura de uma seção ou capítulo, tente explicar a você mesmo ou a um amigo o que acabou de ler. 
+
+ - Faça um mini-teste pra relembrar e revisar alguns pontos do assunto.
+
+ - Aprenda a usar metáforas e analogias que vão trazer mais sentido ao que está aprendendo. É ainda melhor se você conseguir envolver mais de um sentido (por exemplo, audição e visão).
+
+ - Faça exercícios físicos regularmente, eles podem melhorar nossa memória e a capacidade de aprendizado.
+
+
+### Mudando Hábitos
+
+Hábitos possuem quatro componentes:
