@@ -48,6 +48,9 @@
     
 
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
     <span itemprop="mainEntityOfPage">
         <header>
             <h1 class="Article-title" itemprop="headline name">
@@ -62,123 +65,32 @@
         </header>
 
         <div class="Article-content" itemprop="articleBody">
+                    <a
+                            href="../como-criar-um-blog-com-django.html"
+                            title="Leia o artigo completo">
 <img
         src="images/blog_on.jpg"
         alt="None"
         class="representative-image"
         width="180"
-        height="180" />
-                <p>Você quer criar um blog pra espalhar suas ideias na rede?</p>
+        height="180" />                    </a>
+
+                
+    <p>Você quer criar um blog pra espalhar suas ideias na rede?</p>
 <p>Quer fazer isso em <strong>poucos passos</strong> usando <strong>Django</strong>?</p>
 <p>Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em <strong>Django</strong>! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.</p>
 <p>Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o <strong>Mezzanine</strong>, um CMS muito poderoso que já vem com um admin pronto para blogs.</p>
 <p><strong>Continue lendo este artigo</strong> para aprender, com detalhes, como instalar o Mezzanine, criar um projeto, configurar e aplicar um tema. No final, ainda vou dar uma dica bônus.</p>
-<p>Também fizemos a migração do servidor para o <a href="https://www.digitalocean.com/?refcode=c831ddc18699">DigitalOcean</a>. Se você ainda não tem um servidor, recomendo o DigitalOcean e clicando <a href="https://www.digitalocean.com/?refcode=c831ddc18699">neste link</a> para fazer o cadastro, você ajuda a pagar uma parte da conta do Pythonize :)</p>
-<h2>Instalando o Mezzanine</h2>
-<p>O Mezzanine vem com diversas features bem úteis como integração com <strong>Analytics</strong>, <strong>Disqus</strong> e <strong>Gravatar</strong>. A lista completa você pode ver em: http://mezzanine.jupo.org/docs/overview.html#features</p>
-<p>A instalação do Mezzanine é bem simples, vamos começar criando um ambiente virtual.</p>
-<h3>Criando um ambiente virtual</h3>
-<p>Antes de tudo é sempre recomendável instalar o virtualenv, pra não poluir o seu ambiente. O virtualenv é uma ferramenta que cria um ambiente Python separado do seu sistema, evitando maiores dores de cabeça com configurações.</p>
-<p>Para criar um ambiente virtual é bem simples, basta passar o comando virtualenv seguido do diretório onde vai ser armazenado o ambiente, por exemplo:</p>
-<div class="highlight"><pre><span></span><code>$ virtualenv venv
-</code></pre></div>
 
 
-<p>No Windows você precisa fazer:</p>
-<div class="highlight"><pre><span></span><code><span class="err">&gt; \path\to\env\Scripts\activate</span>
-</code></pre></div>
-
-
-<h3>Instalando o Mezzanine e as dependências</h3>
-<p>Com o ambiente virtual ativado, você pode usar o pip para instalar o Mezzanine e todas as dependências necessárias:</p>
-<div class="highlight"><pre><span></span><code>$ pip install mezzanine
-</code></pre></div>
-
-
-<p>Pronto, o pip se encarrega de instalar todas as dependências e o próprio Mezzanine. No final, você já estará pronto para criar seu primeiro projeto com o Mezzanine.</p>
-<h2>Usando o Mezzanine</h2>
-<p>O Mezzanine funciona de uma forma muito parecida do Django. Para criar um novo projeto Mezzanine, faça de forma semelhante a criar um projeto Django:</p>
-<div class="highlight"><pre><span></span><code>$ mezzanine-project meu_blog
-</code></pre></div>
-
-
-<p>Simples né?
-Agora o Mezzanine já criou toda a estrutura do projeto, igualzinho como o Django faz:</p>
-<h3>Criando um banco de dados</h3>
-<p>O Mezzanine vem com algumas ferramentas além das que já conhecemos do Django. Para criar e iniciar um banco de dados basta você rodar o seguinte comando:</p>
-<div class="highlight"><pre><span></span><code><span class="err">python manage.py createdb</span>
-</code></pre></div>
-
-
-<p>Quando você rodar este comando vão aparecer algumas perguntas que você pode responder facilmente.</p>
-<h3>Editando as configurações</h3>
-<p>Agora, antes de começar a testar é hora de você mexer nas configurações da sua aplicação. Abra o arquivo settings.py na raiz do seu projeto e procure a seguinte linha:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[]</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>E troque pelo seguinte:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;.example.com&#39;</span><span class="p">,</span> <span class="c1"># Allow domain and subdomains</span>
-    <span class="s1">&#39;.example.com.&#39;</span><span class="p">,</span> <span class="c1"># Also allow FQDN and subdomains</span>
-<span class="p">]</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>Esta é uma lista de strings que representam os hosts e domínios que seu site Django pode servir. Lembre-se de trocas 'example.com' pelo nome do seu domínio.</p>
-<p>Busque também pela linha:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">TIME_ZONE</span> <span class="o">=</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>E substitua pelo seu fuso horário, por exemplo:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Recife&#39;</span>
-</code></pre></div>
-</td></tr></table>
-
-<h3>Testando seu site</h3>
-<p>Para ver como está o seu blog até agora, execute o seguinte na linha de comando (com o ambiente virtual ativado):</p>
-<div class="highlight"><pre><span></span><code><span class="err">python manage.py runserver</span>
-</code></pre></div>
-
-
-<p>Você pode ver seu site acessando o endereço http://127.0.0.1:8000/ no seu browser. Para terminar o servidor, pressione CTRL+C.</p>
-<h3>Escreva novos artigos</h3>
-<p>Você tem acesso à tela de administração indo até: http://127.0.0.1:8000/admin/ e digitando usuário e senha que você criou quando executou o comando para criação do banco de dados.</p>
-<p>Lá você terá acesso ao dashboard do Mezzanine, onde é possível escrever artigos, gerenciar arquivos de mídia, criar novas páginas pro site e outras coisas.</p>
-<h3>Aplicando um tema</h3>
-<p>Um site não é nada sem um bom layout. Até agora, só cuidamos do back-end do blog, precisamos então dar uma cara pra ele.</p>
-<p>O Mezzanine já tem temas prontos para serem usados e que se integram à ferramenta, todos baseados no bootstrap. Você pode optar por <a href="http://thecodinghouse.in/themes/">temas gratuitos</a> ou <a href="http://mezzathe.me/">temas premium pagos</a>.</p>
-<p>Escolha um dos temas gratuitos e faça o download. O tema é um app Django, então basta copiar dentro do projeto Mezzanine e adicionar ao INSTALLED_APPS no arquivo settings.py. É recomendável que seja o primeiro app na lista.</p>
-<p>Pronto, seu blog está totalmente configurado e com um belo template, agora é só criar conteúdo para seus leitores.</p>
-<h2>Bônus: Como migrar seu site Wordpress para Mezzanine</h2>
-<p>Com o Mezzanine é possível importar artigos de outras plataformas de blog como Wordpress e Blogger.</p>
-<p>Para fazer a importação dos seus artigos do Wordpress, primeiro é preciso instalar o <a href="https://code.google.com/p/feedparser/">feedparser</a>, que pode ser instalar via pip.</p>
-<div class="highlight"><pre><span></span><code><span class="err">pip install feedparser</span>
-</code></pre></div>
-
-
-<p>Faça login no seu blog Wordpress e vá em Ferramentas -&gt; Exportar. Nesta tela você pode configurar alguns filtros e realizar a exportação do arquivo. Lembre-se de guardar o caminho onde o arquivo foi baixado.</p>
-<p>O comando pra importar os artigos do Wordpress só funciona com o Python 2. Quando criar o ambiente virtual é importante informar ao virtualenv qual é a versão do Python que você deseja utilizar, por exemplo, no Linux:</p>
-<div class="highlight"><pre><span></span><code><span class="err">virtualenv -p /usr/bin/python2.7 venv</span>
-</code></pre></div>
-
-
-<p>Por último, simplesmente execute o comando import_wordpress, passando o seu usuário no mezzanine e o caminho onde está o arquivo no argumento 'url':</p>
-<div class="highlight"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="n">manage</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="n">import_wordpress</span><span class="w"> </span><span class="c1">--mezzanine-user=.. --url=[caminho_do_arquivo]</span>
-</code></pre></div>
-
-
-<h3>Concluindo</h3>
-<p>Foi muito gratificante finalmente conseguir migrar o Pythonize pra Django. E o Mezzanine facilitou bastante esse trabalho. Agora é muito mais fácil pra mim gerenciar o site e fazer modificações, pois está tudo em Python e não em PHP como no Wordpress.</p>
-<p>Consegui integrar com todas as ferramentas que utilizava antes no Wordpress, principalmente Analytics e Disqus, tudo foi muito simples.</p>
-<p>Agora tenho uma pergunta para você</p>
-<p>O que você achou de trabalhar com Django e Mezzanine para criar um blog?</p>
-<p>Deixe seu comentário logo abaixo!</p>
-<p>Imagem por: <a href="http://www.flickr.com/photos/futureshape/4977096245/">futureshape</a></p>
+                <p class="Article-footer">
+                    Em <time datetime="2014-12-28T01:11:22-03:00" itemprop="datePublished">28 Dec, 2014</time>
+                    /
+                    <a
+                        class="Article-readmore"
+                        href="../como-criar-um-blog-com-django.html"
+                        title="Leia o artigo completo">Leia mais &gt</a>
+                </p>
         </div>
     </span>
 

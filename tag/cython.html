@@ -48,6 +48,9 @@
     
 
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
     <span itemprop="mainEntityOfPage">
         <header>
             <h1 class="Article-title" itemprop="headline name">
@@ -63,7 +66,8 @@
 
         <div class="Article-content" itemprop="articleBody">
 
-                <p>Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.</p>
+                
+    <p>Quando o seu programa exige muita velocidade, não tem jeito, o código tem que ser escrito em C. Mas todo programador sabe o quão penoso pode ser programar em C e os diversos problemas que podem surgir no seu código contribuindo com o atraso na entrega do programa final. E porque não juntar a facilidade de programar em Python com a rapidez de execução de C? Essa é a proposta do Cython, uma extensão Python que permite que sejam utilizados tipos de C dentro do código Python.</p>
 <h3>INSTALAÇÃO</h3>
 <p>O primeiro passo é a instalação. Você pode instalar o Cython através do setuptools, digitando, na linha de comando:</p>
 <div class="highlight"><pre><span></span><code>$ easy_install cython
@@ -107,7 +111,16 @@
 <p>Feito isso, basta criar o arquivo setup.py, como no exemplo anterior:</p>
 <p>E compilar com o comando:</p>
 <div class="highlight"><pre><span></span><code>$ python setup.py build_ext --inplace
-</code></pre></div>
+</code></pre></div
+
+                <p class="Article-footer">
+                    Em <time datetime="2011-09-10T03:20:23-03:00" itemprop="datePublished">10 Sep, 2011</time>
+                    /
+                    <a
+                        class="Article-readmore"
+                        href="../introducao-programacao-cython.html"
+                        title="Leia o artigo completo">Leia mais &gt</a>
+                </p>
         </div>
     </span>
 

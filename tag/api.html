@@ -48,6 +48,9 @@
     
 
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
     <span itemprop="mainEntityOfPage">
         <header>
             <h1 class="Article-title" itemprop="headline name">
@@ -62,13 +65,18 @@
         </header>
 
         <div class="Article-content" itemprop="articleBody">
+                    <a
+                            href="../criar-api-rest-django.html"
+                            title="Leia o artigo completo">
 <img
         src="images/cloud-1.png"
         alt="None"
         class="representative-image"
         width="180"
-        height="180" />
-                <p>Como construir uma  <strong>API Restful</strong>  totalmente  <strong>configurável</strong> ,  <strong>funcional</strong>  e  <strong>simples</strong> ?</p>
+        height="180" />                    </a>
+
+                
+    <p>Como construir uma  <strong>API Restful</strong>  totalmente  <strong>configurável</strong> ,  <strong>funcional</strong>  e  <strong>simples</strong> ?</p>
 <p>Como tornar essa API <strong>pública</strong>, ao mesmo tempo que <strong>protege</strong> seus dados?</p>
 <p>E como fazer tudo isso usando <strong>Django</strong>?</p>
 <p>Você vai conhecerum pouco do <strong>Tastypie</strong>, um framework Python muito eficiente que provê uma <a href="http://pt.wikipedia.org/wiki/API">API</a> (Application Programming Interface, em português: Interface de Programação de Aplicativos) <a href="http://pt.wikipedia.org/wiki/REST">REST</a> totalmente configurável para trabalhar com Django.</p>
@@ -364,7 +372,16 @@ $ python ../manage.py startapp rest_app
 <p>Recentemente, o criador do Tastypie escreveu <a href="http://toastdriven.com/blog/2014/may/23/state-tastypie/">este artigo</a> comentando sobre o atual status do Tastypie, não só em termos de desenvolvimento como em popularidade.</p>
 <p>O Tastypie ainda não possui uma versão 1.0, pois existem alguns pontos que precisam ser melhorados. Um deles é o desempenho quando muitos objetos precisam ser serializados.</p>
 <p>Outra questão importante é a incompatibilidade com o Django 1.7 e ele ainda comenta que possui um novo projeto para framework RESTFul, o <a href="https://github.com/toastdriven/restless">Restless</a>.</p>
-<p>Minha intenção com este artigo é apenas mostrar como é simples criar uma API com Python e Django usando o Tastypie, mas existem outras opções que podem ser exploradas e você pode deixar seu comentário se já teve experiência com alguma delas.</p>
+<p>Minha intenção com este artigo é apenas mostrar como é simples criar uma API com Python e Django usando o Tastypie, mas existem outras opções que podem ser exploradas e você pode deixar seu comentário se já teve experiência com alguma delas.</p
+
+                <p class="Article-footer">
+                    Em <time datetime="2014-10-05T19:37:02-03:00" itemprop="datePublished">05 Oct, 2014</time>
+                    /
+                    <a
+                        class="Article-readmore"
+                        href="../criar-api-rest-django.html"
+                        title="Leia o artigo completo">Leia mais &gt</a>
+                </p>
         </div>
     </span>
 

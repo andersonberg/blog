@@ -5,11 +5,16 @@
   <title>Como Criar um Blog de Forma Simples e Rápida com Django | Anderson Berg</title>
 
   <meta name="author" content="Anderson Berg">
-  <meta name="description" content="">
-  <meta name="robots" content="">
+  <meta name="description" content="Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no...">
+  <meta name="robots" content="index,follow">
 
   <meta property="og:site_name" content="Anderson Berg">
   <meta property="og:type" content="website">
+      <meta name="keywords" content="django, blog, mezzanine">
+      <meta property="og:title" content="Como Criar um Blog de Forma Simples e Rápida com Django">
+      <meta property="og:description" content="Você quer criar um blog pra espalhar suas ideias na rede? Quer fazer isso em poucos passos usando Django? Nas últimas semanas fizemos algumas mudanças no...">
+      <meta property="og:url" content="/como-criar-um-blog-com-django.html">
+      <meta property="og:image" content="The og:image url">
 
 
 
@@ -18,7 +23,7 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
   <link rel="alternate" type="application/rss+xml" title="Anderson Berg &raquo; Feed" href="/">
-  <link rel="canonical" href="">
+  <link rel="canonical" href="/como-criar-um-blog-com-django.html">
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
       <link rel="stylesheet" href="./theme/css/styles.min.css?0830b1e2">
@@ -45,6 +50,9 @@
 
 
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
     <span itemprop="mainEntityOfPage">
         <header>
             <h1 class="Article-title" itemprop="headline name">
@@ -73,6 +81,8 @@
 <p>Nas últimas semanas fizemos algumas mudanças no Pythonize e agora o blog está totalmente em <strong>Django</strong>! Já era uma coisa que eu planejava fazer, afinal um blog que fala sobre Python é bom que seja feito com Python.</p>
 <p>Neste post vou contar um pouco como foi a experiência de criar um blog em Django usando o <strong>Mezzanine</strong>, um CMS muito poderoso que já vem com um admin pronto para blogs.</p>
 <p><strong>Continue lendo este artigo</strong> para aprender, com detalhes, como instalar o Mezzanine, criar um projeto, configurar e aplicar um tema. No final, ainda vou dar uma dica bônus.</p>
+<!-- PELICAN_END_SUMMARY -->
+
 <p>Também fizemos a migração do servidor para o <a href="https://www.digitalocean.com/?refcode=c831ddc18699">DigitalOcean</a>. Se você ainda não tem um servidor, recomendo o DigitalOcean e clicando <a href="https://www.digitalocean.com/?refcode=c831ddc18699">neste link</a> para fazer o cadastro, você ajuda a pagar uma parte da conta do Pythonize :)</p>
 <h2>Instalando o Mezzanine</h2>
 <p>O Mezzanine vem com diversas features bem úteis como integração com <strong>Analytics</strong>, <strong>Disqus</strong> e <strong>Gravatar</strong>. A lista completa você pode ver em: http://mezzanine.jupo.org/docs/overview.html#features</p>
