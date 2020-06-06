@@ -15,16 +15,16 @@ Neste mesmo curso, durante as aulas, eles te incentivam a compartilhar o assunto
 
 É justamente  falando sobre procrastinação que o curso inicia. Então a primeira recomendação é: **Evite procrastinar**.
 Mas para conseguir isso, é importante entender porque temos a tendência a procrastinar.
-Às vezes você tem que estudar um assunto não muito interessante ou fazer uma tarefa um pouco (ou extremamente) chata. Essas coisas começam a gerar um certo desconforto e pode até fazer você se sentir triste. Nosso cérebro, como é muito esperto, tenta parar aquele sentimento **desviando sua atenção** para algo mais agradável. Então você entra no YouTube com a opção de Próximo Vídeo ativada e quando menos percebe toda a tarde se passou e você não conseguiu fazer nada do que tinha planejado.
+Às vezes você tem que estudar um assunto não muito interessante ou fazer uma tarefa um pouco (ou extremamente) chata. Essas coisas começam a gerar um certo desconforto e pode até fazer você se sentir triste. Nosso cérebro, como é muito esperto, tenta parar aquele sentimento **desviando sua atenção** para algo mais agradável. Então você entra no YouTube com a opção de "Próximo Vídeo" ativada e quando menos percebe toda a tarde se passou e você não conseguiu fazer nada do que tinha planejado.
 
 
-É tudo uma questão de **hábitos**. E são esses maus hábitos que é preciso mudar. Você tem que encontrar o gatilho que te faz procrastinar. Quando fizer isso, é preciso encontrar uma maneira de mudar a rotina.
+É tudo uma questão de **hábitos**. E são esses maus hábitos que é preciso mudar. Você tem que encontrar o gatilho que te faz procrastinar. Quando fizer isso, é preciso encontrar uma maneira de mudar a rotina. Vou falar mais sobre gatilhos e rotinas abaixo.
 
 ## Foco no processo
 
-Geralmente, quando temos que estudar ou realizar uma tarefa nós pensamos no resultado final, na tarefa cumprida. Só que nem sempre é fácil chegar ao final do capítulo de um livro, se ele for muito denso, por exemplo. Às vezes não é simples terminar aquela tarefa tão monótona. É aí que a mente começa a procrastinar de novo.
+Geralmente, quando temos que estudar ou realizar uma tarefa nós pensamos no resultado final, na tarefa cumprida. Só que nem sempre é fácil chegar ao final do capítulo de um livro, se ele for muito denso, por exemplo. Às vezes não é simples terminar aquela tarefa tão monótona, é aí que a mente começa a procrastinar de novo.
 
-A próxima dica é focar no processo. O processo é o conjunto de tempo, esforço e ações que você precisa para terminar alguma coisa. A ansiedade de chegar ao final e ver o resultado do esforço pode nos distrair e fazer procrastinar. Tente se **concentrar** no que você está fazendo/aprendendo no momento.
+A próxima dica é focar no processo. O processo é o conjunto de tempo, esforço e ações que você precisa para terminar alguma coisa. A ansiedade de chegar ao final e ver o resultado do esforço pode nos distrair e fazer procrastinar. Se **concentre** no que você está fazendo/aprendendo no momento.
 
 Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "Vamos lá! Vamos fazer!", "Tudo bem, vou só dedicar alguns minutos fazendo isto."
 
@@ -35,10 +35,10 @@ Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta
 
 A ideia central é **focar em uma tarefa** durante um determinado período de tempo. Estas são as regras do Pomodoro:
 
-1. A primeira coisa a se fazer é definir as tarefas que você precisa fazer e escolher o tempo que você vai dedicar a elas. Você vai evitar qualquer tipo de interrupção (notificações do celular, por exemplo) e ligar um cronômetro ou alarme com o tempo que escolheu (geralmente são 25 minutos).
-2. Assim que o alarme tocar você vai fazer uma pausa curta de 5 minutos. Aproveite este tempo para acessar um site, ou ver um video curto (ou qualquer coisa que seja relaxante).
+1. A primeira coisa a se fazer é definir a sua lista de tarefas e escolher o tempo que vai dedicar a elas.Evite qualquer tipo de interrupção (notificações do celular, por exemplo) e ligue um cronômetro ou alarme com o tempo que escolheu (geralmente são 25 minutos).
+2. Assim que o alarme tocar faça uma pausa curta de 5 minutos. Aproveite este tempo para acessar um site, ou ver um video curto (ou qualquer coisa que seja relaxante).
 3. Após a pausa, volte para o tempo de concentração.
-4. Após 4 pomodoros (períodos de foco), você ganha o direito de fazer uma pausa mais londa de 15 minutos.
+4. Após 4 pomodoros (períodos de foco), faça uma pausa mais longa de 15 minutos.
 
 Se durante um pomodoro, você lembrar de algo que precisa fazer, faça uma anotação para voltar a ela depois.
 
@@ -47,16 +47,16 @@ As pausas longas são importantes, pois é nesse momento que o seu cérebro vai 
 
 ## Blocos de informação
 
-Às vezes, quando se está aprendendo novo conceito, há uma certa dificuldade em entender e absorver aquele conhecimento. Parece que é um quebra-cabeça com milhares de peças que você não consegue montar. 
+Às vezes, quando se está aprendendo um novo conceito, há uma certa dificuldade em entender e absorver aquele conhecimento. Parece que é um quebra-cabeça com milhares de peças que você não consegue montar. 
 
 Existe uma ferramenta mental que eles chamam de *chunking*. Chunks são blocos de informação que o seu cérebro pode acessar facilmente. O objetivo do "*chunking*" é transformar a informação que está sendo absorvida em algo que faz mais sentido para você e seu cérebro poder acessar essa informação mais **facilmente**.
 
 A ideia central é tentar criar algo com mais significado que será mais fácil de memorizar.
 
-#### Como eu crio um bloco de informação na minha memória?
+#### Como criar um bloco de informação na memória?
 
 1. O primeiro passo é *focar* na informação que você quer processar. A técnica Pomodoro pode ser bem útil aqui.
-2. Então você precisa entender a *ideia central* do que você está aprendendo. Uma folheada no restante do capítulo ou uma olhada nas figuras e títulos de seções.
+2. Então é preciso entender a *ideia central* do que se está aprendendo. Uma folheada no restante do capítulo ou uma olhada nas figuras e títulos de seções.
 3. Agora é importante entender o *contexto*, saber como e quando usar a informação.
 4. Por último: *prática* e *repetição* ajudam a consolidar o bloco na sua mente tornando-o mais acessível.
 
@@ -86,8 +86,8 @@ Outra maneira de consolidar o que você está tentando estudar é usando o modo 
 
 Hábitos possuem quatro componentes (sejam eles bons ou maus):
 
-1. Sugestão: Este é o gatilho para trazer o hábito à tona.
-2. A Rotina: É a resposta automática do seu cérebro para o gatilho. É como se ligasse o modo zumbi na sua cabeça.
+1. Sugestão/deixa: Este é o gatilho para trazer o hábito à tona.
+2. A Rotina: É a resposta automática do seu cérebro para o gatilho. É como se ligasse o "modo zumbi" na sua cabeça.
 3. A Recompensa: É o componente que traz prazer ao cérebro. Um hábito surge porque a recompensa te faz se sentir melhor.
 4. Convicção: Hábitos são poderosos porque você acredita neles.
 
