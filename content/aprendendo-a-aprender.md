@@ -34,7 +34,7 @@ Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "V
 
 ## Técnica Pomodoro
 
-{% img align-center /images/pomodoro.jpg  Pomodoro timer %}
+{% img align-center-keep-size /images/pomodoro.jpg 640 360 Pomodoro timer %}
 
 Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta técnica foi desenvolvida por Francesco Cirillo nos anos 80 ([Técnica Pomodoro na Wikipedia](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro)).
 
@@ -89,7 +89,7 @@ Outra maneira de consolidar o que você está tentando estudar é usando o modo 
 
 ## Mudando Hábitos
 
-{% img align-center /images/loop-do-habito.jpg Loop do hábito %}
+{% img align-center-keep-size /images/loop-do-habito.jpg 640 360 Loop do hábito %}
 
 Hábitos possuem quatro componentes (sejam eles bons ou maus):
 

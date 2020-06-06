@@ -44,7 +44,7 @@ RELATIVE_URLS = True
 STATIC_PATHS = ['images']
 
 DISPLAY_CATEGORIES_ON_MENU = False
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 PLUGIN_PATHS = [
     os.path.join(PROJECT_PATH, "pelican-plugins"),
     os.path.join(PROJECT_PATH, "extended_meta"),   
