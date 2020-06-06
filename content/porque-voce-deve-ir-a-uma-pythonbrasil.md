@@ -13,6 +13,8 @@ No primeiro final de semana de novembro (6 a 9) ocorreu a [**PythonBrasil \[10\]
 
 Este ano foi diferente, eu poderia finalmente participar de um grande evento da comunidade Python. Depois de tantas palavras de incentivo de amigos e de ler [este artigo](http://henriquebastos.net/porque-voce-precisa-ir-na-pythonbrasil-2014/#more-1352) do Henrique Bastos, eu não poderia deixar de ir.
 
+<!-- PELICAN_END_SUMMARY -->
+
 Não sei se toda Python Brasil é assim, mas comparando com outros eventos que já participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterrâneos).
 
 Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simpáticos. Não falo só da equipe de organização, mas dos próprios conferencistas e palestrantes.

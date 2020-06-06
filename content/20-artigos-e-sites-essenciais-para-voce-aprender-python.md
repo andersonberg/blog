@@ -13,6 +13,8 @@ Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos p
 
 Muitos deles eu li na íntegra, outros os principais tópicos, mas todos tiveram contribuição na construção do meu conhecimento em Python.
 
+<!-- PELICAN_END_SUMMARY -->
+
 ###1. [Python For Begginers][1]###
 
 ----------

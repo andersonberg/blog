@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import os
+from io import open
 
 PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 AUTHOR = 'Anderson Berg'
 SITENAME = 'Anderson Berg'
 SITEURL = ''
+SITEDESCRIPTION = 'Blog sobre desenvolvimento Python'
 DEFAULT_OG_IMAGE = 'The og:image url'
 FAVICON_URL = "The favicon url"
 
@@ -42,7 +44,7 @@ RELATIVE_URLS = True
 STATIC_PATHS = ['images']
 
 DISPLAY_CATEGORIES_ON_MENU = False
-DELETE_OUTPUT_DIRECTORY = False
+DELETE_OUTPUT_DIRECTORY = True
 PLUGIN_PATHS = [
     os.path.join(PROJECT_PATH, "pelican-plugins"),
     os.path.join(PROJECT_PATH, "extended_meta"),   
@@ -53,16 +55,16 @@ PLUGINS = [
     'liquid_tags.img',
     'liquid_tags.notebook',
     'pelican_alias',
-    # 'extended_meta',
-    'i18n_subsites'
+    'extended_meta',
+    'i18n_subsites',
+    'summary'
 ]
 
 NOTEBOOK_DIR = 'notebooks'
 
-# EXTRA_HEADER = open('_nb_header.html').read().encode("utf-8").decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html', encoding='utf-8').read()
 
 THEME = "/home/anderson/code/yapeme"
-# COLOR_SCHEME_CSS = 'monokai.css'
 
 HEADER_COVER = 'images/code-python.jpg'
 

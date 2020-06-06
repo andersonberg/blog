@@ -18,6 +18,8 @@ Neste post vou contar um pouco como foi a experiência de criar um blog em Djang
 
 **Continue lendo este artigo** para aprender, com detalhes, como instalar o Mezzanine, criar um projeto, configurar e aplicar um tema. No final, ainda vou dar uma dica bônus.
 
+<!-- PELICAN_END_SUMMARY -->
+
 Também fizemos a migração do servidor para o [DigitalOcean](https://www.digitalocean.com/?refcode=c831ddc18699). Se você ainda não tem um servidor, recomendo o DigitalOcean e clicando [neste link](https://www.digitalocean.com/?refcode=c831ddc18699) para fazer o cadastro, você ajuda a pagar uma parte da conta do Pythonize :)
 
 

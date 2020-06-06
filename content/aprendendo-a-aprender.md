@@ -1,8 +1,9 @@
-title: Aprendendo a Aprender
-date: 2020-06-05 00:00:00
-tags: mente, aprendizado, estudo, tarefas
-category: geral
-slug: aprendendo-a-aprender
+Title: Aprendendo a Aprender
+Date: 2020-06-05 13:00
+Tags: mente, aprendizado, estudo, tarefas
+Category: geral
+Slug: aprendendo-a-aprender
+meta_description: Ferramentas para tornar o processo de aprendizado muito mais eficiente
 summary:
 alias: /blog/aprendendo-a-aprender/
 
@@ -10,6 +11,8 @@ Há uns dois anos atrás, eu fiz um curso no Coursera chamado [Aprendendo a Apre
 
 
 Neste mesmo curso, durante as aulas, eles te incentivam a compartilhar o assunto aprendido de alguma forma. Esse compartilhamento te ajuda ainda mais a consolidar os conceitos que foram ensinados. Por essa razão resolvi escrever esse artigo. Além disso, por causa do período que estamos passando com o isolamento social, ouvi de muita gente próxima que está fazendo cursos online ou colocando os estudos em dia, aprendendo coisas novas, mas muitas vezes não consegue se concentrar por muitas horas ou tem dificuldades em combater a procrastinação.
+
+<!-- PELICAN_END_SUMMARY -->
 
 ## Procrastinação
 
@@ -30,6 +33,8 @@ Aqueles que não procrastinam dizem para o seu próprio cérebro frases como: "V
 
 
 ## Técnica Pomodoro
+
+{% img align-center /images/pomodoro.jpg  Pomodoro timer %}
 
 Uma boa ferramenta que pode ajudar na dica anterior é a técnica Pomodoro. Esta técnica foi desenvolvida por Francesco Cirillo nos anos 80 ([Técnica Pomodoro na Wikipedia](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro)).
 
@@ -83,6 +88,8 @@ Outra maneira de consolidar o que você está tentando estudar é usando o modo 
 
 
 ## Mudando Hábitos
+
+{% img align-center /images/loop-do-habito.jpg Loop do hábito %}
 
 Hábitos possuem quatro componentes (sejam eles bons ou maus):
 
