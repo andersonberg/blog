@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anderson Berg - Iniciante</title><link href="https://andersonberg.github.io/blog/" rel="alternate"></link><link href="https://andersonberg.github.io/blog/feeds/iniciante.atom.xml" rel="self"></link><id>https://andersonberg.github.io/blog/</id><updated>2014-12-15T19:29:33-03:00</updated><entry><title>20 artigos e sites essenciais para você aprender Python</title><link href="https://andersonberg.github.io/blog/20-artigos-e-sites-essenciais-para-voce-aprender-python.html" rel="alternate"></link><published>2014-12-15T19:29:33-03:00</published><updated>2014-12-15T19:29:33-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-12-15:/blog/20-artigos-e-sites-essenciais-para-voce-aprender-python.html</id><summary type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência. Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python e mais alguns de bônus para quem quer se aprofundar.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Durante nossa caminhada profissional utilizamos diversos recursos para prosseguir, aprender e adquirir experiência.&lt;/p&gt;
+&lt;p&gt;Neste artigo eu quero compartilhar com você 20 dos principais sites e artigos para aprender Python.&lt;/p&gt;
+&lt;p&gt;Muitos deles eu li na íntegra, outros os principais tópicos, mas todos tiveram contribuição na construção do meu conhecimento em Python.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;h3&gt;1. &lt;a href="http://www.pythonforbeginners.com/"&gt;Python For Begginers&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Um dos melhores para iniciantes, bom também para os mais experientes, pois apresenta dicas que servem até como &lt;strong&gt;lembretes&lt;/strong&gt; na hora de desenvolver um projeto.&lt;/p&gt;
+&lt;p&gt;Artigo compilando dicas para usar Python na web: &lt;a href="http://www.pythonforbeginners.com/basics/python-quick-start-web"&gt;Python Quick Start Web&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Artigo sobre o básico de Python: &lt;a href="http://www.pythonforbeginners.com/basics/python-quick-guide"&gt;Python - Quick Guide&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;2. &lt;a href="https://developers.google.com/edu/python/"&gt;Google’s Python Class&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Uma das melhores referências para aprender Python. Material criado pelo &lt;a href="http://cs.stanford.edu/people/nick/"&gt;Nick Parlante&lt;/a&gt;, contém vídeos e exercícios para facilitar o aprendizado. O conteúdo abrange somente o básico de Python, pois as aulas foram ministradas em apenas dois dias. Pra quem está começando &lt;strong&gt;recomendo iniciar por aqui&lt;/strong&gt;, foi muito útil quando eu comecei a estudar Python.&lt;/p&gt;
+&lt;h3&gt;3. &lt;a href="https://ark4n.wordpress.com/python/"&gt;Python para desenvolvedores&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Livro muito bom em &lt;strong&gt;Português&lt;/strong&gt; para quem &lt;strong&gt;já desenvolve&lt;/strong&gt; em outra linguagem e quer aprender Python. Serve como livro de cabeceira para fazer consultas sempre que uma dúvida surgir.&lt;/p&gt;
+&lt;h3&gt;4. &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3 &lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Livro totalmente &lt;strong&gt;gratuito&lt;/strong&gt;, em inglês, um dos melhores para aprender a programar em Python.&lt;/p&gt;
+&lt;h3&gt;5. &lt;a href="http://www.stavros.io/tutorials/python/"&gt;Learn Python in 10 minutes&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Tutorial &lt;strong&gt;completo&lt;/strong&gt; com o básico para iniciantes em Python. É simplesmente um "resumão" com os tópicos básicos da linguagem. Para os mais experientes serve como uma boa referência de &lt;strong&gt;consulta&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;6. &lt;a href="http://www.afterhoursprogramming.com/tutorial/Python/Overview/"&gt;Python Overview Tutorial&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Mais um tutorial para começar a programar em Python. Ao longo do tutorial, você pode &lt;strong&gt;interagir&lt;/strong&gt; e testar o código diretamente em um console Python embutido no site.&lt;/p&gt;
+&lt;h3&gt;7. &lt;a href="http://interactivepython.org/courselib/static/thinkcspy/toc.html"&gt;How To Think Like a Computer Scientist&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Este é um livro que ensina como ser um cientista da computação e usa Python como linguagem de programação. Achei muito interessante a abordagem deste livro. Ele traz exercícios em cada capítulo que podem ser respondidos direto no site. Alguns capítulos também possuem vídeos (screencasts) comentando algumas partes do livro.&lt;/p&gt;
+&lt;h3&gt;8. &lt;a href="http://www.pythontutor.com/?utm_source=Python%20Weekly%20Newsletter&amp;amp;utm_campaign=8742268291-Python_Weekly_Issue_53_September_20_2012&amp;amp;utm_medium=email"&gt;Online Python Tutor&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;É uma ferramenta online para ensino da programação em Python. É possível embutir o Python Tutor em sua própria página web.&lt;/p&gt;
+&lt;h3&gt;9. &lt;a href="http://pedrokroger.net/"&gt;Pedro Kroger&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Blog do autor do livro: &lt;a href="http://musicforgeeksandnerds.com/"&gt;Music For Geeks and Nerds&lt;/a&gt;. Em seu blog, o Dr. Pedro Kroeger dá um monte de dicas para programar em Python.&lt;/p&gt;
+&lt;p&gt;Artigo com dicas para configurar e usar o PyCharm: &lt;a href="http://pedrokroger.net/getting-started-pycharm-python-ide/"&gt;How to Get Started with PyCharm and Have a Productive Python IDE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Arquivo (PDF) com um guia de referência rápida do Python: &lt;a href="https://cloud.github.com/downloads/kroger/python-quick-ref/python-quick-ref.pdf"&gt;Python 3 Quick Reference&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;10. &lt;a href="http://docs.python-guide.org/en/latest/"&gt;The Hitchhiker’s Guide to Python&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Um verdadeiro guia para desenvolvedores iniciantes e experientes. É um livro com boas práticas desde a instalação, configuração e uso diário de Python. Não é preciso ler o livro todo, mas alguns capítulos são bem interessantes para aprimorar seu conhecimento em programação.&lt;/p&gt;
+&lt;p&gt;Artigo sobre estrutura de um projeto em Python: &lt;a href="http://docs.python-guide.org/en/latest/writing/structure/"&gt;Structuring Your Project&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;11. &lt;a href="http://aimotion.blogspot.com.br"&gt;Artificial Intelligence in Motion&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Blog de um grande amigo que trabalha com computação inteligente em Python diariamente. Ele escreve vários artigos sobre aplicações de inteligência artificial com Python.&lt;/p&gt;
+&lt;p&gt;Artigo sobre árvores de decisão: &lt;a href="http://aimotion.blogspot.com.br/2009/04/artigo-introducao-arvores-de-decisao.html"&gt;Introdução a Árvores de decisão para classificação e mineração de dados&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;12. &lt;a href="https://realpython.com/blog/"&gt;Real Python&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Blog com muitos tutoriais e artigos sobre Python em todas as áreas, mas o forte desse blog mesmo é Python na web.&lt;/p&gt;
+&lt;p&gt;Artigo sobre Django e Ajax: &lt;a href="https://realpython.com/blog/python/django-and-ajax-form-submissions-more-practice/"&gt;Django and AJAX Form Submissions - More Practice&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;13. &lt;a href="http://jeffknupp.com/"&gt;Jeff Knupp&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Quer escrever códigos melhores e mais eficientes? Siga as dicas do Jeff Knupp, autor do livro &lt;a href="https://www.jeffknupp.com/writing-idiomatic-python-ebook/"&gt;Writing Idiomatic Python&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;14. &lt;a href="http://pymbook.readthedocs.org/en/latest/"&gt;Welcome to Python for you and me&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Livro tutorial bem simples para iniciantes em Python. Cobre tópicos como módulos, PEP8 e testes em Python.&lt;/p&gt;
+&lt;p&gt;Versão para Python3: http://pymbook.readthedocs.org/en/py3/&lt;/p&gt;
+&lt;h3&gt;15. &lt;a href="http://learnpythonthehardway.org/book/"&gt;Learn Python The Hard Way&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Apesar do nome, a abordagem para ensinar Python é bem simples, todos os exemplos e exercícios são bem detalhados. Perfeito pra quem quer começar a aprender Python.&lt;/p&gt;
+&lt;h3&gt;16. &lt;a href="http://lgiordani.com/"&gt;The Digital Cat&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Não é um blog só sobre Python, mas a maioria dos artigos trás dicas para programar na linguagem.&lt;/p&gt;
+&lt;p&gt;Série sobre POO em Python 3: &lt;a href="http://lgiordani.com/blog/2014/08/20/python-3-oop-part-1-objects-and-types/"&gt;Python 3 OOP Part 1 - Objects and types&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Artigo sobre decorators: &lt;a href="http://lgiordani.com/blog/2014/10/14/decorators-and-metaclasses/"&gt;Advanced use of Python decorators and metaclasses&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;17. &lt;a href="http://blog.lerner.co.il/"&gt;Lerner Consulting Blog&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Autor do ebook: Practice Makes Python&lt;/p&gt;
+&lt;p&gt;Artigo sobre str.format(): http://blog.lerner.co.il/teaching-old-dog-new-tricks-learned-love-str-format-gave/&lt;/p&gt;
+&lt;h3&gt;18. &lt;a href="http://pycursos.com"&gt;PyCursos&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Site com diversos cursos de Python, todos de altíssima qualidade. Existem cursos para todas as áreas utilizando Python: web, computação científica, jogos, etc. O site também tem vários webinários realizados pelos professores e convidados.&lt;/p&gt;
+&lt;p&gt;Alguns cursos:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pycursos.com/desenvolvimento-agil-para-web-com-web2py/"&gt;Desenvolvimento Ágil para Web com web2py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pycursos.com/django/"&gt;Python na Web com Django (Python 3)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pycursos.com/python-para-zumbis/"&gt;Python para zumbis&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;19. &lt;a href="http://www.codecademy.com/tracks/python"&gt;Codecademy&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;O famoso site de cursos interativos também tem um curso de Python. O curso de Python é bastante completo mostrando tópicos básicos e avançados.&lt;/p&gt;
+&lt;h3&gt;20. &lt;a href="http://pythonhelp.wordpress.com/"&gt;Python Help&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Blog com muito conteúdo bom de Python. Um dos autores, &lt;a href="https://twitter.com/eliasdorneles"&gt;Elias Dorneles&lt;/a&gt; foi palestrante na &lt;a href="http://2014.pythonbrasil.org.br/schedule/"&gt;PythonBrasil[10]&lt;/a&gt; e tive o prazer de conhecer e trocar umas ideias sobre extração de conteúdo na web.&lt;/p&gt;
+&lt;p&gt;Tem artigos para todos os gostos, tem pra iniciantes ou experientes programadores em Python. Vale a pena dar uma conferida em alguns deles.&lt;/p&gt;
+&lt;p&gt;Artigo sobre web scraping: &lt;a href="http://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/"&gt;WEB SCRAPING COM SCRAPY – PRIMEIROS PASSOS&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;UPDATE: 21. &lt;a href="https://ericstk.wordpress.com/"&gt;Aprendendo Python&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;São tantos sites bons que deixei passar um muito legal do Eric Hideki, o Aprendendo Python. Não é só um blog para ensino da linguagem, mas mostra tudo sobre a comunidade Python, principalmente no Brasil.&lt;/p&gt;
+&lt;p&gt;Quem tem curiosidade de saber como as pessoas usam Python, quais os projetos que existem em Python por aí, este é um ótimo lugar pra conhecer.&lt;/p&gt;
+&lt;h3&gt;UPDATE-2: 22. &lt;a href="http://www.guru99.com/python-tutorials.html"&gt;Python Tutorial&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Este é um bom curso para iniciantes. O tutorial é todo em inglês, mas as imagens foram muito bem editadas e possuem notas que facilitam muito a compreensão.&lt;/p&gt;
+&lt;h3&gt;Conclusão&lt;/h3&gt;
+&lt;p&gt;Esta lista está longe de ser definitiva e posso ter sido injusto com alguns sites, inclusive com os que eu não conheço. Estes são apenas sugestões para quem está começando ou quer aprimorar os conhecimentos em Python.&lt;/p&gt;
+&lt;p&gt;Agora tenho duas perguntas pra você:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Você gostou das sugestões de sites e artigos?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Você tem outras sugestões de sites e artigos?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Então deixe seu comentário logo abaixo.&lt;/p&gt;</content><category term="Iniciante"></category><category term="python"></category><category term="sites"></category><category term="artigos"></category></entry><entry><title>Por que você deve ir a uma PythonBrasil</title><link href="https://andersonberg.github.io/blog/porque-voce-deve-ir-a-uma-pythonbrasil.html" rel="alternate"></link><published>2014-11-29T12:42:30-03:00</published><updated>2014-11-29T12:42:30-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2014-11-29:/blog/porque-voce-deve-ir-a-uma-pythonbrasil.html</id><summary type="html">&lt;p&gt;Você quer um lugar pra aprender coisas novas, ficar antenado com novas tecnologias, trocar ideias com um monte de gente legal e interessante? Então você precisa ir a uma PythonBrasil!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Você quer um lugar pra &lt;strong&gt;aprender&lt;/strong&gt; coisas novas, ficar &lt;strong&gt;antenado&lt;/strong&gt; com novas tecnologias, &lt;strong&gt;trocar ideias&lt;/strong&gt; com um monte de gente legal e interessante? Então você precisa ir a uma &lt;strong&gt;PythonBrasil&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;No primeiro final de semana de novembro (6 a 9) ocorreu a &lt;a href="http://2014.pythonbrasil.org.br/"&gt;&lt;strong&gt;PythonBrasil [10]&lt;/strong&gt;&lt;/a&gt; em Porto de Galinhas, Pernambuco. Há muitos anos que tenho pensado em ir a uma Python Brasil, mas sempre esbarrei no problema de comprar passagens, além de arcar com os custos de ficar hospedado em uma cidade longe de onde se mora.&lt;/p&gt;
+&lt;p&gt;Este ano foi diferente, eu poderia finalmente participar de um grande evento da comunidade Python. Depois de tantas palavras de incentivo de amigos e de ler &lt;a href="http://henriquebastos.net/porque-voce-precisa-ir-na-pythonbrasil-2014/#more-1352"&gt;este artigo&lt;/a&gt; do Henrique Bastos, eu não poderia deixar de ir.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;p&gt;Não sei se toda Python Brasil é assim, mas comparando com outros eventos que já participei, o congresso foi muito bem organizado (sem querer puxar sardinha para os meus conterrâneos).&lt;/p&gt;
+&lt;p&gt;Sem contar a qualidade das palestras, muita gente disposta a te ajudar e orientar. Todos muito simpáticos. Não falo só da equipe de organização, mas dos próprios conferencistas e palestrantes.&lt;/p&gt;
+&lt;h2&gt;Nem só de palestras vive uma PythonBrasil&lt;/h2&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/pybr_600.jpg" title="Foto Oficial da PythonBrasil na praia de Porto de Galinhas" alt="Foto Oficial da PythonBrasil na praia de Porto de Galinhas"&gt;&lt;/p&gt;
+&lt;p&gt;Claro, o melhor deste tipo de evento não são as palestras, por mais qualidade que tenham. O principal é o &lt;strong&gt;networking&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Conversar com pessoas de diversas partes do país e do mundo, ouvir suas histórias, suas experiências. Ouvir o que elas têm construído com Python. Ouvir o que elas têm feito para mudar o mundo, para revolucionar a tecnologia. E ver que todos, todos mesmo, estavam disponíveis e acessíveis para bater um papo, fosse durante os coffee-breaks (ótimos por sinal), fosse no final do ciclo de palestras, durante o almoço ou até enquanto as palestras aconteciam nas salas.&lt;/p&gt;
+&lt;p&gt;Confesso que até perdi algumas palestras interessantíssimas porque a conversa estava muito interessante. Mas não me arrependo, extraí muito conhecimento dessas longas conversas.&lt;/p&gt;
+&lt;h2&gt;E como foram as palestras?&lt;/h2&gt;
+&lt;p&gt;&lt;img class="align-center 600 450" src="/images/blog/pybr10_pydanny.jpg" title="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil" alt="PyDanny na PythonBrasil 10){width="600".jpg PyDanny na PythonBrasil"&gt;&lt;/p&gt;
+&lt;p&gt;Sobre as palestras, como eu disse, qualidade altíssima. A grade foi muito bem montada e as mudanças estavam sempre em telões espalhados pelo hall do local do evento, tudo para você não perder nada da Python Brasil.&lt;/p&gt;
+&lt;p&gt;Pra abrir a Python Brasil deste ano, ninguém melhor que o &lt;a href="https://twitter.com/fperez_org"&gt;Fernando Perez&lt;/a&gt;, o criador do &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt;. Foi uma das melhores apresentações do congresso, na minha opinião.&lt;/p&gt;
+&lt;p&gt;Entre os outros keynotes estavam &lt;a href="https://twitter.com/alex_gaynor"&gt;Alex Gaynor&lt;/a&gt;, engenheiro de software de diversos projetos Python e membro da diretoria da Python Software Foundation; &lt;a href="https://twitter.com/roguelynn"&gt;Lynn Root&lt;/a&gt;, engenheira do Spotify, que mostrou como eles usam Python no desenvolvimento do player de música; e o &lt;a href="https://github.com/pydanny"&gt;PyDanny&lt;/a&gt;, co-autor do Two Scoops of Django, além de capoeirista (deu um show à parte na palestra) e engenheiro na Eventbrite.&lt;/p&gt;
+&lt;p&gt;Se quiser ver quais foram as outras palestras que rolaram no final de semana acesse a página da &lt;a href="http://2014.pythonbrasil.org.br/schedule/"&gt;programação&lt;/a&gt;. Um dos palestrantes, Gileno Filho, escreveu um &lt;a href="http://gilenofilho.com.br/minha-pythonbrasil10/"&gt;artigo&lt;/a&gt; muito legal sobre a PythonBrasil e ainda deixou disponível a apresentação e os links que ele usou de referência.&lt;/p&gt;
+&lt;h2&gt;Concluindo&lt;/h2&gt;
+&lt;p&gt;Foi um encontro muito interessante, pude ver o que está acontecendo no ecossistema Python pelo país e fora dele. Além de trocar figurinhas e conhecer novas pessoas que usam Python no dia-a-dia pra criar soluções que entregam valor a seus cliente e usuários.&lt;/p&gt;
+&lt;p&gt;É um evento que recomendo a qualquer um da área de tecnologia, não só quem programa em Python ou admira a linguagem, mas pra quem procura uma comunidade ativa e quer estar antenado com as novidades que surgem no meio.&lt;/p&gt;
+&lt;p&gt;Sem sombra de dúvida, ir a uma conferência é um investimento pessoal que traz grandes retornos. Além de conhecer as novidades, trocar ideias ou viajar, te traz novo ânimo pra buscar coisas novas, continuar inovando e trabalhando pela comunidade.&lt;/p&gt;
+&lt;p&gt;Com certeza estarei na PythonBrasil[11] e você? Deixe seu comentário!&lt;/p&gt;
+&lt;p&gt;Você participou da PythonBrasil[10]? Conte sua experiência nos comentários também!&lt;/p&gt;</content><category term="Iniciante"></category><category term="pythonbrasil"></category></entry><entry><title>Python e lambda</title><link href="https://andersonberg.github.io/blog/python-lambda.html" rel="alternate"></link><published>2012-01-16T02:12:27-03:00</published><updated>2012-01-16T02:12:27-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-16:/blog/python-lambda.html</id><summary type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;
+&lt;p&gt;Vejamos algo bonito com lambda. Suponha a função fatorial.&lt;/p&gt;
+&lt;p&gt;A função fatorial é definida tal que dado um número x o fatorial deste número é:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;x\*(x-n) com n variando de (x-1) até 1.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Logo podemos traduzir num código python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;def fatorial(x):&lt;/span&gt;
+&lt;span class="err"&gt;    if x&amp;lt;=1:&lt;/span&gt;
+&lt;span class="err"&gt;        return 1&lt;/span&gt;
+&lt;span class="err"&gt;    else:&lt;/span&gt;
+&lt;span class="err"&gt;        return x*fatorial(x-1)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Esse código usa recursão, espero que você saiba o que é recursão... ;)&lt;/p&gt;
+&lt;p&gt;Bom, com lambda esse mesmo código pode ter apenas uma linha, duvida?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;fatorial = lambda x: 1 if x &amp;lt;=1 else x*fatorial(x-1)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Definimos em fatorial uma função que executa o calculo de um fatorial de um dado número x.&lt;/p&gt;
+&lt;p&gt;Agora abra o seu interpratador python copie e cole o código para testar. Né lindo?&lt;/p&gt;
+&lt;p&gt;Python tanto na versão 2 quanto na versão 3 define lambda com um atalho para criação de funções. A sintaxe é definida assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;lambda_form&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;old_lambda_form&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;old_expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Vou ler para você: uma expressão lambda é formada pela palavra reservada lambda seguida por uma lista (não o objeto lista) de parametros seperada por ":" e a expressão.&lt;/p&gt;
+&lt;p&gt;No nosso código a cima, fatorial é o nome da expressão lambda. O python sabe que a função é um lambda porque você disse isso usando a string lambda logo no inicio da expressão.&lt;/p&gt;
+&lt;p&gt;O x é o parametro. Se você quisesse passar mais parametros, bastava separa-lo por virgulas. Assim:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;funcao = lambda x,y,z: x+y+z&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pergunta, qual o retorno de funcao(1,2,3) ?&lt;/p&gt;
+&lt;p&gt;Agora a parte mais difícil, a expressão.&lt;/p&gt;
+&lt;p&gt;A expressão é como você vai manipular os parametros para ter um retorno. Com lambda não é necessário por a palavra reservada return.&lt;/p&gt;
+&lt;p&gt;Essa expressão só pode ser de três formas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uma comando de uma linha (x+1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;outra expressão lambda.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ou uma expressão condicional. (incluem testes de lógica [or, and, not])&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No fatorial eu usei uma expressão condicional. Na funcao eu usei uma expressão de uma linha. E poderia usar outra expressão lambda.&lt;/p&gt;
+&lt;p&gt;Mas para memorizar, você deve escrever a sua expressão sempre com uma linha.&lt;/p&gt;
+&lt;p&gt;Você pode fazer uso de recursão e uso avançados de exepressão.&lt;/p&gt;
+&lt;p&gt;original : &lt;a href="http://romulojales.com/python-e-lambda/"&gt;http://romulojales.com/python-e-lambda/&lt;/a&gt;&lt;/p&gt;</content><category term="Iniciante"></category><category term="lambda"></category><category term="iniciante"></category></entry><entry><title>Palestra sobre canivete suíço de Python</title><link href="https://andersonberg.github.io/blog/palestra-canivete-suico-python.html" rel="alternate"></link><published>2011-12-04T03:32:34-03:00</published><updated>2011-12-04T03:32:34-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-04:/blog/palestra-canivete-suico-python.html</id><summary type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;/p&gt;
+&lt;iframe width="425" height="355" style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;margin-left:20%;" src="//www.slideshare.net/slideshow/embed_code/10451349" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;div style="margin-bottom: 5px;"&gt;&lt;strong&gt; &lt;a href="//pt.slideshare.net/berg_pe/canivete-python" title="Canivete python" target="_blank"&gt;Canivete python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="//www.slideshare.net/berg_pe" target="_blank"&gt;Anderson Dantas&lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;</content><category term="Iniciante"></category><category term="canivete"></category><category term="suíço"></category></entry><entry><title>Programando em Python no IDLE</title><link href="https://andersonberg.github.io/blog/programando-python-idle.html" rel="alternate"></link><published>2011-09-08T00:46:47-03:00</published><updated>2011-09-08T00:46:47-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-08:/blog/programando-python-idle.html</id><summary type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;
+&lt;p&gt;Os arquivos Python têm extensão .py. É possível rodar um arquivo Python a partir da linha de comando da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python nome_do_arquivo.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Com isso todo o código que está salvo no arquivo é transformado em bytecode, que é um arquivo binário usado pelo interpretador. O bytecode é multiplataforma, ou seja, você pode levar seu código pra rodar em qualquer máquina e qualquer sistema. O bytecode é armazenado em sua máquina geralmente com a extensão .pyc, quando você executar seu código novamente sem alterações o programa não precisa ser compilado de novo, sendo executado mais rápido. Sempre que o seu código fonte é alterado, o interpretador gera um novo bytecode.&lt;/p&gt;
+&lt;p&gt;Você pode escrever seu código no tradicional bloco de notas, mas existem diversas alternativas para escrever código Python e eu recomendo fortemente que não seja escrito no bloco de notas. Existem vários editores de texto e IDEs próprias pra se escrever código em Python. No Windows temos o Notepad++ que tem highlighting (destaca palavras especiais e seu código em cores) ou o próprio IDLE que também vem com highlighting, auto-identação e outros recursos que facilitam a criação do código. No Linux tem o Vim, que possui todos esses recursos citados anteriormente ou o Kate. Você pode ver outros editores na &lt;a href="http://wiki.python.org/moin/PythonEditors"&gt;lista de editores Python&lt;/a&gt; e também &lt;a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"&gt;IDEs que suportam Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Neste post vamos tratar do IDLE para Windows em outro post vou falar do Vim no Linux, se alguém tiver experiência com outros editores ou IDEs, por favor compartilhe conosco nos comentários.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IDLE&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O IDLE, além de ter uma linha de comando Python, também é usado como editor de arquivo fonte. Com a janela principal do IDLE aberta vá ao menu File-&amp;gt;New Window e será aberta uma janela em branco onde é possível escrever o código.&lt;/p&gt;
+&lt;p&gt;Vamos fazer um pequeno teste. Na nova janela aberta digite o código que está na imagem (print "Hello World"):&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/helloworldidle.png" title="Hello World no IDLE" alt="Hello World no IDLE"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello World no IDLE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Salve o arquivo com o nome: helloworld.py&lt;/p&gt;
+&lt;p&gt;Você já pode perceber a função highlighting nesse código.&lt;/p&gt;
+&lt;p&gt;Nesta mesma janela, vá ao menu Run-&amp;gt;Run Module ou aperte a tecla F5. Vai ser impresso o texto Hello World na tela do interpretador.&lt;/p&gt;
+&lt;p&gt;Vamos avançar um pouco mais. Escreva o seguinte trecho de código no IDLE:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#-- coding: latin1 --&lt;/span&gt;
+&lt;span class="err"&gt;x = 7*3        #Isto é um comentário&lt;/span&gt;
+&lt;span class="err"&gt;y = &amp;quot;Hello&amp;quot;     #Este é mais um comentário&lt;/span&gt;
+&lt;span class="err"&gt;if y == &amp;quot;Hello&amp;quot;:&lt;/span&gt;
+&lt;span class="err"&gt;x = x + 1&lt;/span&gt;
+&lt;span class="err"&gt;y = y + &amp;quot;World&amp;quot;    #Concatenação de strings&lt;/span&gt;
+&lt;span class="err"&gt;print x&lt;/span&gt;
+&lt;span class="err"&gt;print y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Aqui, mais uma função do IDLE: auto-identação, assim que você digita linha 4 e dá Enter, o IDLE identifica um novo bloco de código. O Python identifica blocos de código através da identação, diferente de outras linguagens como C e Java que identificam blocos entre chaves ({}).&lt;/p&gt;
+&lt;p&gt;Outras funções interessante estão no menu Format na janela de edição de código.&lt;/p&gt;
+&lt;p&gt;&lt;img class="align-center" src="/images/blog/idle_format.png" title="Menu Format no IDLE" alt="Menu Format no IDLE"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Menu Format no IDLE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Neste menu você pode identar ou tirar identação de um trecho selecionado, é possível comentar ou descomentar o código, transformar tab em espaços ou vice-versa.&lt;/p&gt;
+&lt;p&gt;Dúvidas, opiniões, sugestões e experiências, postem nos comentários!&lt;/p&gt;</content><category term="Iniciante"></category><category term="python"></category><category term="idle"></category></entry></feed>

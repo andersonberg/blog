@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anderson Berg - Tutorial, Programação</title><link href="https://andersonberg.github.io/blog/" rel="alternate"></link><link href="https://andersonberg.github.io/blog/feeds/tutorial-programacao.atom.xml" rel="self"></link><id>https://andersonberg.github.io/blog/</id><updated>2011-09-14T19:58:12-03:00</updated><entry><title>Transformando seu Código Python em Executável com o py2exe</title><link href="https://andersonberg.github.io/blog/seu-codigo-python-executavel-py2exe.html" rel="alternate"></link><published>2011-09-14T19:58:12-03:00</published><updated>2011-09-14T19:58:12-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-14:/blog/seu-codigo-python-executavel-py2exe.html</id><summary type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;
+&lt;p&gt;Às vezes é preciso entregar um programa a um cliente que não tem Python instalado ou não tem as diversas bibliotecas que você usou pra criar sua aplicação. Ou até mesmo no caso de você querer usar o seu programa em qualquer outra máquina Windows sem precisar da instalação do Python.&lt;span&gt;&lt;/p&gt;
+&lt;p&gt;Neste post vamos fazer um tutorial sobre como fazer isso utilizando o &lt;a href="http://www.py2exe.org"&gt;py2exe&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;INSTALAÇÃO DO PY2EXE&lt;/h3&gt;
+&lt;p&gt;O primeiro passo é instalar o py2exe. Pra isso basta ir ao &lt;a href="http://sourceforge.net/projects/py2exe/files/"&gt;site&lt;/a&gt; e baixar a última versão. Baixe a versão para o seu Windows (32 ou 64 bits) e de acordo com a versão do python (2.5, 2.6, 2.7...).  &lt;/p&gt;
+&lt;p&gt;A instalação é simples e padrão. Após a instalação adicione a pasta de scripts ao PATH do sistema, geralmente C:\Python27\Scripts.&lt;/p&gt;
+&lt;h3&gt;TUTORIAL&lt;/h3&gt;
+&lt;p&gt;Primeiro vamos escrever um código qualquer em Python. Você pode escrever um código importando qualquer pacote, desde que este esteja instalado no seu sistema.&lt;/p&gt;
+&lt;p&gt;Para este exemplo você pode escrever seu próprio código, eu vou dar um simples exemplo utilizando a biblioteca matemática do Python, crie um arquivo em qualquer pasta chamado calc.py e escreva o seguinte código:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;modelo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Digite 1 para seno e 2 para cosseno: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Entre com um número: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;choice&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;modelo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Teste o seu código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;C:\Pythonize&amp;gt; python calc.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;O segundo passo é criar um script de setup. Crie um arquivo chamado setup_calc.py na mesma pasta que você salvou o código anterior e escreva este código:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;distutils.core&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;py2exe&lt;/span&gt;
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;calc.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Pronto, para criar seu arquivo executável, rode seu script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;C:\Pythonize&amp;gt;python setup_calc.py py2exe&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Serão criadas duas pastas: build e dist.&lt;/p&gt;
+&lt;p&gt;A pasta build é usada somente para compilar o código e criar o executável e pode ser excluída após o término do processo. A pasta dist contém os arquivos necessários para rodar sua aplicação.&lt;/p&gt;
+&lt;p&gt;Agora você pode testar seu executável:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Pythonize&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;dist&lt;/span&gt;
+&lt;span class="k"&gt;C&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Pythonize&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;calc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt;
+&lt;span class="n"&gt;Digite&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;para&lt;/span&gt; &lt;span class="n"&gt;seno&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="n"&gt;para&lt;/span&gt; &lt;span class="n"&gt;cosseno&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;Entre&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="n"&gt;um&lt;/span&gt; &lt;span class="n"&gt;número&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;756802495308&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Funcionando muito bem!&lt;/p&gt;
+&lt;p&gt;Se você quer distribuir seu programa e levar para outro computador Windows, é preciso levar toda a pasta dist para que sua aplicação funcione corretamente. Para outras informações, veja o &lt;a href="http://www.py2exe.org/index.cgi/Tutorial"&gt;tutorial do py2exe&lt;/a&gt;.
+Para utilizar o py2exe com outros pacotes e módulos, veja o link: &lt;a href="http://www.py2exe.org/index.cgi/WorkingWithVariousPackagesAndModules"&gt;Working with Various Packages and Modules&lt;/a&gt;.&lt;/p&gt;</content><category term="Tutorial, Programação"></category><category term="executavel"></category><category term="py2exe"></category></entry></feed>
