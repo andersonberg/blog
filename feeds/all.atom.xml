@@ -720,90 +720,7 @@ $ pydoc twitter.DirectMessage
 
 &lt;p&gt;O que você achou de usar a API do Twitter com Python?
 Já tentou outras formas de acessar a API?
-Deixe seu comentário logo abaixo!&lt;/p&gt;</content><category term="Tutorial, Programação, Web"></category><category term="python"></category><category term="twitter"></category></entry><entry><title>Python - Dividindo uma Lista em N Partes</title><link href="https://andersonberg.github.io/blog/python-dividindo-lista-n-partes.html" rel="alternate"></link><published>2012-01-18T01:52:26-03:00</published><updated>2012-01-18T01:52:26-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-18:/blog/python-dividindo-lista-n-partes.html</id><summary type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;</summary><content type="html">&lt;p&gt;frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.&lt;/p&gt;
-&lt;p&gt;Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico&lt;/p&gt;
-&lt;p&gt;Suponha a lista [1,2,3,4,5,6,7,8,9,10] quero dividir a lista em 5 partes.
-A divisão da lista resultaria em [1,2], [3,4], [5,6], [7,8], [9,10]
-Ok, isso é chato de fazer...
-Mas vamos ao código.&lt;/p&gt;
-&lt;h2&gt;A lista&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;lista = [1,2,3,4,5,6,7,8,9,10]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;quebrando tudo:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;quebrador&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;partes&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;parte&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;partes&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;parte&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;partes&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;parte&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partes&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;quebrador&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;quebrador&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;quebrador&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;quebrador&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;É possível que ocorrram variações para o tipo de lista.
-original: &lt;a href="http://romulojales.com/python-dividindo-uma-lista-em-n-partes"&gt;http://romulojales.com/python-dividindo-uma-lista-em-n-partes&lt;/a&gt;&lt;/p&gt;</content><category term="Iniciante, Programação"></category><category term="listas"></category></entry><entry><title>Python e lambda</title><link href="https://andersonberg.github.io/blog/python-lambda.html" rel="alternate"></link><published>2012-01-16T02:12:27-03:00</published><updated>2012-01-16T02:12:27-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-16:/blog/python-lambda.html</id><summary type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;
-&lt;p&gt;Vejamos algo bonito com lambda. Suponha a função fatorial.&lt;/p&gt;
-&lt;p&gt;A função fatorial é definida tal que dado um número x o fatorial deste número é:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;x\*(x-n) com n variando de (x-1) até 1.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Logo podemos traduzir num código python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;def fatorial(x):&lt;/span&gt;
-&lt;span class="err"&gt;    if x&amp;lt;=1:&lt;/span&gt;
-&lt;span class="err"&gt;        return 1&lt;/span&gt;
-&lt;span class="err"&gt;    else:&lt;/span&gt;
-&lt;span class="err"&gt;        return x*fatorial(x-1)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Esse código usa recursão, espero que você saiba o que é recursão... ;)&lt;/p&gt;
-&lt;p&gt;Bom, com lambda esse mesmo código pode ter apenas uma linha, duvida?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;fatorial = lambda x: 1 if x &amp;lt;=1 else x*fatorial(x-1)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Definimos em fatorial uma função que executa o calculo de um fatorial de um dado número x.&lt;/p&gt;
-&lt;p&gt;Agora abra o seu interpratador python copie e cole o código para testar. Né lindo?&lt;/p&gt;
-&lt;p&gt;Python tanto na versão 2 quanto na versão 3 define lambda com um atalho para criação de funções. A sintaxe é definida assim:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;lambda_form&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n"&gt;old_lambda_form&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;old_expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Vou ler para você: uma expressão lambda é formada pela palavra reservada lambda seguida por uma lista (não o objeto lista) de parametros seperada por ":" e a expressão.&lt;/p&gt;
-&lt;p&gt;No nosso código a cima, fatorial é o nome da expressão lambda. O python sabe que a função é um lambda porque você disse isso usando a string lambda logo no inicio da expressão.&lt;/p&gt;
-&lt;p&gt;O x é o parametro. Se você quisesse passar mais parametros, bastava separa-lo por virgulas. Assim:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;funcao = lambda x,y,z: x+y+z&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;pergunta, qual o retorno de funcao(1,2,3) ?&lt;/p&gt;
-&lt;p&gt;Agora a parte mais difícil, a expressão.&lt;/p&gt;
-&lt;p&gt;A expressão é como você vai manipular os parametros para ter um retorno. Com lambda não é necessário por a palavra reservada return.&lt;/p&gt;
-&lt;p&gt;Essa expressão só pode ser de três formas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Uma comando de uma linha (x+1)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;outra expressão lambda.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ou uma expressão condicional. (incluem testes de lógica [or, and, not])&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;No fatorial eu usei uma expressão condicional. Na funcao eu usei uma expressão de uma linha. E poderia usar outra expressão lambda.&lt;/p&gt;
-&lt;p&gt;Mas para memorizar, você deve escrever a sua expressão sempre com uma linha.&lt;/p&gt;
-&lt;p&gt;Você pode fazer uso de recursão e uso avançados de exepressão.&lt;/p&gt;
-&lt;p&gt;original : &lt;a href="http://romulojales.com/python-e-lambda/"&gt;http://romulojales.com/python-e-lambda/&lt;/a&gt;&lt;/p&gt;</content><category term="Iniciante"></category><category term="lambda"></category><category term="iniciante"></category></entry><entry><title>6 dicas simples para o Vim ser uma IDE perfeita pra Python</title><link href="https://andersonberg.github.io/blog/dicas-simples-vim-ide-python.html" rel="alternate"></link><published>2012-01-10T13:43:24-03:00</published><updated>2012-01-10T13:43:24-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-10:/blog/dicas-simples-vim-ide-python.html</id><summary type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja &lt;strong&gt;simples&lt;/strong&gt;, &lt;strong&gt;amigável&lt;/strong&gt; e &lt;strong&gt;funcional&lt;/strong&gt;?&lt;/p&gt;
+Deixe seu comentário logo abaixo!&lt;/p&gt;</content><category term="Tutorial, Programação, Web"></category><category term="python"></category><category term="twitter"></category></entry><entry><title>6 dicas simples para o Vim ser uma IDE perfeita pra Python</title><link href="https://andersonberg.github.io/blog/dicas-simples-vim-ide-python.html" rel="alternate"></link><published>2012-01-10T13:43:24-03:00</published><updated>2012-01-10T13:43:24-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-10:/blog/dicas-simples-vim-ide-python.html</id><summary type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja simples, amigável e funcional?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Qual programador não procura um ambiente de desenvolvimento que seja &lt;strong&gt;simples&lt;/strong&gt;, &lt;strong&gt;amigável&lt;/strong&gt; e &lt;strong&gt;funcional&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Muitos acabam voltando ao bloco de notas por sua &lt;strong&gt;simplicidade&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Neste post você vai explorar o Vim, um editor de texto que roda na linha de comando e é a paixão de muitos desenvolvedores.&lt;/p&gt;
 &lt;p&gt;Em um &lt;a href="http://www.pythonize.org/programando-em-python-no-vim/" title="Programando em Python no Vim"&gt;post anterior&lt;/a&gt; eu falei sobre como habilitar o auto-complete no vim pra código em python. Neste post vamos um pouco mais além nessas configurações&lt;/p&gt;
@@ -1132,40 +1049,7 @@ poderosos aliados na recuperação de informação na web.&lt;/p&gt;</content><c
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Existem ainda outras diversas funções que podemos explorar em outro post.&lt;/p&gt;</content><category term="Computação Científica"></category><category term="numpy"></category><category term="matriz"></category><category term="matrizes"></category></entry><entry><title>Entendendo Decorators de forma simples</title><link href="https://andersonberg.github.io/blog/entendendo-decorators-de-forma-simples.html" rel="alternate"></link><published>2011-10-24T00:58:57-03:00</published><updated>2011-10-24T00:58:57-03:00</updated><author><name>Rômulo Jales</name></author><id>tag:andersonberg.github.io,2011-10-24:/blog/entendendo-decorators-de-forma-simples.html</id><summary type="html">&lt;p&gt;O que é quando usar um decorator:&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sabe aquele trecho de código que vive se repetindo no seu código e você acha um saco ter repetir? Imagine que esse trecho repetido necessite uma refatoração e imagine que seu projeto é grande você já começa a vislumbrar um cenário caótico.&lt;/p&gt;
-&lt;p&gt;Sabe aquele trecho de código que vive se repetindo no seu código e você acha um saco ter repetir? Imagine que esse trecho repetido necessite uma refatoração e imagine que seu projeto é grande você já começa a vislumbrar um cenário caótico.&lt;/p&gt;
-&lt;p&gt;As boas práticas de programação tentam prevenir este tipo de problema. Mas tem horas que nem o seu mega modelo resolve. Um caso simples é quando o trecho de código que se repete necessita de parametrização ou muda de acordo com o contexto.&lt;/p&gt;
-&lt;p&gt;Decorators são uma tentativa de "economizar" código, manter a sanidade e as boas práticas de programação. Ok, eu sei que a razão principal de um decorator não é essa. Dá uma passada na
-&lt;a href="http://www.python.org/dev/peps/pep-0318/" title="PEP 318 - Decorators for Functions and Methods"&gt;PEP&lt;/a&gt; para descobrir mais. O lance é meio inception. Então eu curto a minha explicação... ;)&lt;/p&gt;
-&lt;p&gt;Então, se você viu um @ em cima de um método no código. Parabéns, você já sabe o que é um decorator e provavelmente já utiliza.&lt;/p&gt;
-&lt;h1&gt;&lt;strong&gt;Criando um decorator:&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;"mas eu quero criar um decorator"&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ok. Para fazer isso é simples:&lt;/p&gt;
-&lt;p&gt;Defina um método cujo o parametro será a assinatura de uma função decorada.&lt;/p&gt;
-&lt;p&gt;Então brinque com a função e retorne a função ou outra função. Lindo não? (se lembra que eu disse que era meio inception?)&lt;/p&gt;
-&lt;p&gt;Mas o decorator é isso mesmo. É um cara que vai pegar sua função bonitinha é modifica-la. Ou mesmo desfigura-la. Vou mostrar como cria um decorator brincando.&lt;/p&gt;
-&lt;p&gt;Suponha que você criou uma função de somar:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;def sum(a,b)&lt;/span&gt;
-&lt;span class="err"&gt;    return a+b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Função linda! Bom agora vou bagunçar a vida do cidadão que usa essa função e fazer que a soma seja a - b. Mas eu não quero perder o código original. Isto é um trabalho para o decorador:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bagunca&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;funcao&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;subtrai&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;subtrai&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="nv"&gt;@bagunca&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Bom, agora deixo com vocês executarem o código no terminal e compreende que aconteceu com a função sum. Acredito que desta forma você compreenderá o uso do decorator.&lt;/p&gt;
-&lt;p&gt;Até a próxima&lt;/p&gt;</content><category term="Programação"></category><category term="decorators"></category></entry><entry><title>Transformando seu Código Python em Executável com o py2exe</title><link href="https://andersonberg.github.io/blog/seu-codigo-python-executavel-py2exe.html" rel="alternate"></link><published>2011-09-14T19:58:12-03:00</published><updated>2011-09-14T19:58:12-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-14:/blog/seu-codigo-python-executavel-py2exe.html</id><summary type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;
+&lt;p&gt;Existem ainda outras diversas funções que podemos explorar em outro post.&lt;/p&gt;</content><category term="Computação Científica"></category><category term="numpy"></category><category term="matriz"></category><category term="matrizes"></category></entry><entry><title>Transformando seu Código Python em Executável com o py2exe</title><link href="https://andersonberg.github.io/blog/seu-codigo-python-executavel-py2exe.html" rel="alternate"></link><published>2011-09-14T19:58:12-03:00</published><updated>2011-09-14T19:58:12-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-14:/blog/seu-codigo-python-executavel-py2exe.html</id><summary type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Em diversas situações é necessário criar um arquivo executável a partir do seu código.&lt;/p&gt;
 &lt;p&gt;Às vezes é preciso entregar um programa a um cliente que não tem Python instalado ou não tem as diversas bibliotecas que você usou pra criar sua aplicação. Ou até mesmo no caso de você querer usar o seu programa em qualquer outra máquina Windows sem precisar da instalação do Python.&lt;span&gt;&lt;/p&gt;
 &lt;p&gt;Neste post vamos fazer um tutorial sobre como fazer isso utilizando o &lt;a href="http://www.py2exe.org"&gt;py2exe&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;INSTALAÇÃO DO PY2EXE&lt;/h3&gt;

@@ -781,157 +781,6 @@ Deixe seu comentário logo abaixo!</p
 </article>
 <article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
         <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-              <meta itemprop="url" content="The og:image url">
-        </div>
-    <span itemprop="mainEntityOfPage">
-        <header>
-            <h1 class="Article-title" itemprop="headline name">
-                    <a
-                        class="Article-titleLink"
-                        href="https://andersonberg.github.io/blog/python-dividindo-lista-n-partes.html"
-                        title="Leia mais">
-                Python - Dividindo uma Lista em N Partes
-                    </a>
-            </h1>
-
-        </header>
-
-        <div class="Article-content" itemprop="articleBody">
-
-                
-    <p>frequentemente eu uso esse código, então ao invés de ir no código antigo vou neste post.</p>
-<p>Basicamente o que eu quero é o seguinte: Tenho uma lista e quero dividir em n partes quase-iguais. Explico</p>
-<p>Suponha a lista [1,2,3,4,5,6,7,8,9,10] quero dividir a lista em 5 partes.
-A divisão da lista resultaria em [1,2], [3,4], [5,6], [7,8], [9,10]
-Ok, isso é chato de fazer...
-Mas vamos ao código.</p>
-<h2>A lista</h2>
-<div class="highlight"><pre><span></span><code><span class="err">lista = [1,2,3,4,5,6,7,8,9,10]</span>
-</code></pre></div>
-
-
-<p>quebrando tudo:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">quebrador</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="n">partes</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span> <span class="n">parte</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span><span class="o">/</span><span class="n">partes</span><span class="p">:(</span><span class="n">parte</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span><span class="o">/</span><span class="n">partes</span> <span class="p">]</span> <span class="k">for</span> <span class="n">parte</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">partes</span><span class="p">))</span>
-<span class="nb">print</span> <span class="n">quebrador</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">quebrador</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">quebrador</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">quebrador</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>É possível que ocorrram variações para o tipo de lista.
-original: <a href="http://romulojales.com/python-dividindo-uma-lista-em-n-partes">http://romulojales.com/python-dividindo-uma-lista-em-n-partes</a></p
-
-                <p class="Article-footer">
-                    Em <time datetime="2012-01-18T01:52:26-03:00" itemprop="datePublished">18 Jan, 2012</time>
-                    /
-                    <a
-                        class="Article-readmore"
-                        href="https://andersonberg.github.io/blog/python-dividindo-lista-n-partes.html"
-                        title="Leia o artigo completo">Leia mais &gt</a>
-                </p>
-        </div>
-    </span>
-
-</article>
-<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-              <meta itemprop="url" content="The og:image url">
-        </div>
-    <span itemprop="mainEntityOfPage">
-        <header>
-            <h1 class="Article-title" itemprop="headline name">
-                    <a
-                        class="Article-titleLink"
-                        href="https://andersonberg.github.io/blog/python-lambda.html"
-                        title="Leia mais">
-                Python e lambda
-                    </a>
-            </h1>
-
-        </header>
-
-        <div class="Article-content" itemprop="articleBody">
-
-                
-    <p>Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.</p>
-<p>Vejamos algo bonito com lambda. Suponha a função fatorial.</p>
-<p>A função fatorial é definida tal que dado um número x o fatorial deste número é:</p>
-<div class="highlight"><pre><span></span><code><span class="err">x\*(x-n) com n variando de (x-1) até 1.</span>
-</code></pre></div>
-
-
-<p>Logo podemos traduzir num código python:</p>
-<div class="highlight"><pre><span></span><code><span class="err">def fatorial(x):</span>
-<span class="err">    if x&lt;=1:</span>
-<span class="err">        return 1</span>
-<span class="err">    else:</span>
-<span class="err">        return x*fatorial(x-1)</span>
-</code></pre></div>
-
-
-<p>Esse código usa recursão, espero que você saiba o que é recursão... ;)</p>
-<p>Bom, com lambda esse mesmo código pode ter apenas uma linha, duvida?</p>
-<div class="highlight"><pre><span></span><code><span class="err">fatorial = lambda x: 1 if x &lt;=1 else x*fatorial(x-1)</span>
-</code></pre></div>
-
-
-<p>Definimos em fatorial uma função que executa o calculo de um fatorial de um dado número x.</p>
-<p>Agora abra o seu interpratador python copie e cole o código para testar. Né lindo?</p>
-<p>Python tanto na versão 2 quanto na versão 3 define lambda com um atalho para criação de funções. A sintaxe é definida assim:</p>
-<div class="highlight"><pre><span></span><code><span class="n">lambda_form</span><span class="w">  </span><span class="o">::=</span><span class="w"> </span><span class="ss">&quot;lambda&quot;</span><span class="w"> </span><span class="o">[</span><span class="n">parameter_list</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">expression</span><span class="w"></span>
-
-<span class="n">old_lambda_form</span><span class="w"> </span><span class="o">::=</span><span class="w">  </span><span class="ss">&quot;lambda&quot;</span><span class="w"> </span><span class="o">[</span><span class="n">parameter_list</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">old_expression</span><span class="w"></span>
-</code></pre></div>
-
-
-<p>Vou ler para você: uma expressão lambda é formada pela palavra reservada lambda seguida por uma lista (não o objeto lista) de parametros seperada por ":" e a expressão.</p>
-<p>No nosso código a cima, fatorial é o nome da expressão lambda. O python sabe que a função é um lambda porque você disse isso usando a string lambda logo no inicio da expressão.</p>
-<p>O x é o parametro. Se você quisesse passar mais parametros, bastava separa-lo por virgulas. Assim:</p>
-<div class="highlight"><pre><span></span><code><span class="err">funcao = lambda x,y,z: x+y+z</span>
-</code></pre></div>
-
-
-<p>pergunta, qual o retorno de funcao(1,2,3) ?</p>
-<p>Agora a parte mais difícil, a expressão.</p>
-<p>A expressão é como você vai manipular os parametros para ter um retorno. Com lambda não é necessário por a palavra reservada return.</p>
-<p>Essa expressão só pode ser de três formas:</p>
-<ul>
-<li>
-<p>Uma comando de uma linha (x+1)</p>
-</li>
-<li>
-<p>outra expressão lambda.</p>
-</li>
-<li>
-<p>Ou uma expressão condicional. (incluem testes de lógica [or, and, not])</p>
-</li>
-</ul>
-<p>No fatorial eu usei uma expressão condicional. Na funcao eu usei uma expressão de uma linha. E poderia usar outra expressão lambda.</p>
-<p>Mas para memorizar, você deve escrever a sua expressão sempre com uma linha.</p>
-<p>Você pode fazer uso de recursão e uso avançados de exepressão.</p>
-<p>original : <a href="http://romulojales.com/python-e-lambda/">http://romulojales.com/python-e-lambda/</a></p
-
-                <p class="Article-footer">
-                    Em <time datetime="2012-01-16T02:12:27-03:00" itemprop="datePublished">16 Jan, 2012</time>
-                    /
-                    <a
-                        class="Article-readmore"
-                        href="https://andersonberg.github.io/blog/python-lambda.html"
-                        title="Leia o artigo completo">Leia mais &gt</a>
-                </p>
-        </div>
-    </span>
-
-</article>
-<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
               <meta itemprop="url" content="https://andersonberg.github.io/blog//images/blog/vimpython.jpg">
         </div>
     <span itemprop="mainEntityOfPage">
@@ -1039,6 +888,154 @@ original: <a href="http://romulojales.com/python-dividindo-uma-lista-em-n-partes
                     <a
                         class="Article-readmore"
                         href="https://andersonberg.github.io/blog/dicas-simples-vim-ide-python.html"
+                        title="Leia o artigo completo">Leia mais &gt</a>
+                </p>
+        </div>
+    </span>
+
+</article>
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                    <a
+                        class="Article-titleLink"
+                        href="https://andersonberg.github.io/blog/criar-parsers-html-beautifulsoup.html"
+                        title="Leia mais">
+                Como criar parsers HTML poderosos com BeautifulSoup
+                    </a>
+            </h1>
+
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+                    <a
+                            href="https://andersonberg.github.io/blog/criar-parsers-html-beautifulsoup.html"
+                            title="Leia o artigo completo">
+<img
+        src="images/beautifulsoup.jpg"
+        alt="None"
+        class="representative-image"
+        width="180"
+        height="180" />                    </a>
+
+                
+    <p>Neste post você vai aprender como criar um parser pra recuperar
+informações de páginas HTML utilizando o BeautifulSoup. O BeautifulSoup
+pode ser usado para arquivos HTML ou XML, com ele fica muito simples
+navegar e buscar textos em páginas HTML. Uma grande vantagem da
+BeautifulSoup é que ela consegue criar uma estrutura mesmo com páginas
+html mal formatadas, facilitando o trabalho do programador.</p>
+<h2>Instalando o BeautifulSoup</h2>
+<p>Você pode fazer a instalação via <em>pip</em> ou <em>easy_install</em>. Também estão
+disponíveis pacotes em diferentes distribuições Linux.</p>
+<p>Inicie o interpretador Python para testar os códigos que vamos
+apresentar a seguir.</p>
+<p>Para processar páginas HTML, importe o BeautifulSoup da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</code></pre></div>
+
+
+<p>Se você for processar arquivos XML:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulStoneSoup</span>
+</code></pre></div>
+
+
+<p>Você pode também consultar a documentação do BeautifulSoup
+<a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" title="BeautifulSoup">aqui</a>.</p>
+<h2>Criando o parser</h2>
+<p>Por enquanto vamos processar apenas páginas html. Vamos usar a biblioteca urllib2 para recuperar uma página html.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="n">pagina</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;http://www.globo.com&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div>
+
+
+<p>Isso vai criar uma string com todo o código html da página. Então, para criar o parser basta:</p>
+<div class="highlight"><pre><span></span><code><span class="err">soup = BeautifulSoup(pagina)</span>
+</code></pre></div>
+
+
+<p>É possível transformar esse objeto BeautifulSoup em string com o método
+prettify, que manipula o código bruto adicionando quebra de linha e
+espaçamento recriando a estrutura do código html.</p>
+<div class="highlight"><pre><span></span><code><span class="err">soup.prettify()</span>
+</code></pre></div>
+
+
+<p>Para listar todos os links da página recuperada, usamos o método
+findAll:</p>
+<div class="highlight"><pre><span></span><code><span class="err">links = soup.findAll(&#39;a&#39;)</span>
+</code></pre></div>
+
+
+<p>Neste código, '<em>links</em>' é uma lista contendo objetos do tipo Tag da
+biblioteca BeautifulSoup (class BeautifulSoup.Tag). Vamos agora, listar
+somente os links (tirando qualquer texto ou marcação) que estão nesses
+objetos Tag:</p>
+<div class="highlight"><pre><span></span><code><span class="err">for link in links:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
+
+
+<p>Para recuperar somente uma área da página, é possível usar o método find
+com o parâmetro id, por exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="err">colunas = soup.find(id=&quot;glb-area-colunas&quot;)</span>
+<span class="err">linkscol = colunas.findAll(&#39;a&#39;)</span>
+<span class="err">for link in linkscol:</span>
+<span class="err">    print link[&#39;href&#39;]</span>
+</code></pre></div>
+
+
+<p>A biblioteca BeautifulSoup facilita muito na hora de criar parsers e
+crawlers para páginas html ou xml. Usada junto com o urllib2 são
+poderosos aliados na recuperação de informação na web.</p
+
+                <p class="Article-footer">
+                    Em <time datetime="2011-12-31T15:45:19-03:00" itemprop="datePublished">31 Dec, 2011</time>
+                    /
+                    <a
+                        class="Article-readmore"
+                        href="https://andersonberg.github.io/blog/criar-parsers-html-beautifulsoup.html"
+                        title="Leia o artigo completo">Leia mais &gt</a>
+                </p>
+        </div>
+    </span>
+
+</article>
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                    <a
+                        class="Article-titleLink"
+                        href="https://andersonberg.github.io/blog/palestra-canivete-suico-python.html"
+                        title="Leia mais">
+                Palestra sobre canivete suíço de Python
+                    </a>
+            </h1>
+
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+
+                
+    <p>Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:</p>
+<iframe width="425" height="355" style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;margin-left:20%;" src="//www.slideshare.net/slideshow/embed_code/10451349" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""></iframe>
+
+<div style="margin-bottom: 5px;"><strong> <a href="//pt.slideshare.net/berg_pe/canivete-python" title="Canivete python" target="_blank">Canivete python</a> </strong> from <strong><a href="//www.slideshare.net/berg_pe" target="_blank">Anderson Dantas</a></strong></div
+
+                <p class="Article-footer">
+                    Em <time datetime="2011-12-04T03:32:34-03:00" itemprop="datePublished">04 Dec, 2011</time>
+                    /
+                    <a
+                        class="Article-readmore"
+                        href="https://andersonberg.github.io/blog/palestra-canivete-suico-python.html"
                         title="Leia o artigo completo">Leia mais &gt</a>
                 </p>
         </div>

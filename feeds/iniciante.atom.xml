@@ -114,63 +114,7 @@
 &lt;p&gt;É um evento que recomendo a qualquer um da área de tecnologia, não só quem programa em Python ou admira a linguagem, mas pra quem procura uma comunidade ativa e quer estar antenado com as novidades que surgem no meio.&lt;/p&gt;
 &lt;p&gt;Sem sombra de dúvida, ir a uma conferência é um investimento pessoal que traz grandes retornos. Além de conhecer as novidades, trocar ideias ou viajar, te traz novo ânimo pra buscar coisas novas, continuar inovando e trabalhando pela comunidade.&lt;/p&gt;
 &lt;p&gt;Com certeza estarei na PythonBrasil[11] e você? Deixe seu comentário!&lt;/p&gt;
-&lt;p&gt;Você participou da PythonBrasil[10]? Conte sua experiência nos comentários também!&lt;/p&gt;</content><category term="Iniciante"></category><category term="pythonbrasil"></category></entry><entry><title>Python e lambda</title><link href="https://andersonberg.github.io/blog/python-lambda.html" rel="alternate"></link><published>2012-01-16T02:12:27-03:00</published><updated>2012-01-16T02:12:27-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2012-01-16:/blog/python-lambda.html</id><summary type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sabe lambda? Lambda é algo muito legal. Com lambda você pode criar em tempo de execução funções e fazer algumas graças.&lt;/p&gt;
-&lt;p&gt;Vejamos algo bonito com lambda. Suponha a função fatorial.&lt;/p&gt;
-&lt;p&gt;A função fatorial é definida tal que dado um número x o fatorial deste número é:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;x\*(x-n) com n variando de (x-1) até 1.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Logo podemos traduzir num código python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;def fatorial(x):&lt;/span&gt;
-&lt;span class="err"&gt;    if x&amp;lt;=1:&lt;/span&gt;
-&lt;span class="err"&gt;        return 1&lt;/span&gt;
-&lt;span class="err"&gt;    else:&lt;/span&gt;
-&lt;span class="err"&gt;        return x*fatorial(x-1)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Esse código usa recursão, espero que você saiba o que é recursão... ;)&lt;/p&gt;
-&lt;p&gt;Bom, com lambda esse mesmo código pode ter apenas uma linha, duvida?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;fatorial = lambda x: 1 if x &amp;lt;=1 else x*fatorial(x-1)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Definimos em fatorial uma função que executa o calculo de um fatorial de um dado número x.&lt;/p&gt;
-&lt;p&gt;Agora abra o seu interpratador python copie e cole o código para testar. Né lindo?&lt;/p&gt;
-&lt;p&gt;Python tanto na versão 2 quanto na versão 3 define lambda com um atalho para criação de funções. A sintaxe é definida assim:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;lambda_form&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n"&gt;old_lambda_form&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;::=&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;lambda&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;parameter_list&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;old_expression&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Vou ler para você: uma expressão lambda é formada pela palavra reservada lambda seguida por uma lista (não o objeto lista) de parametros seperada por ":" e a expressão.&lt;/p&gt;
-&lt;p&gt;No nosso código a cima, fatorial é o nome da expressão lambda. O python sabe que a função é um lambda porque você disse isso usando a string lambda logo no inicio da expressão.&lt;/p&gt;
-&lt;p&gt;O x é o parametro. Se você quisesse passar mais parametros, bastava separa-lo por virgulas. Assim:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;funcao = lambda x,y,z: x+y+z&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;pergunta, qual o retorno de funcao(1,2,3) ?&lt;/p&gt;
-&lt;p&gt;Agora a parte mais difícil, a expressão.&lt;/p&gt;
-&lt;p&gt;A expressão é como você vai manipular os parametros para ter um retorno. Com lambda não é necessário por a palavra reservada return.&lt;/p&gt;
-&lt;p&gt;Essa expressão só pode ser de três formas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Uma comando de uma linha (x+1)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;outra expressão lambda.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ou uma expressão condicional. (incluem testes de lógica [or, and, not])&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;No fatorial eu usei uma expressão condicional. Na funcao eu usei uma expressão de uma linha. E poderia usar outra expressão lambda.&lt;/p&gt;
-&lt;p&gt;Mas para memorizar, você deve escrever a sua expressão sempre com uma linha.&lt;/p&gt;
-&lt;p&gt;Você pode fazer uso de recursão e uso avançados de exepressão.&lt;/p&gt;
-&lt;p&gt;original : &lt;a href="http://romulojales.com/python-e-lambda/"&gt;http://romulojales.com/python-e-lambda/&lt;/a&gt;&lt;/p&gt;</content><category term="Iniciante"></category><category term="lambda"></category><category term="iniciante"></category></entry><entry><title>Palestra sobre canivete suíço de Python</title><link href="https://andersonberg.github.io/blog/palestra-canivete-suico-python.html" rel="alternate"></link><published>2011-12-04T03:32:34-03:00</published><updated>2011-12-04T03:32:34-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-04:/blog/palestra-canivete-suico-python.html</id><summary type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;/p&gt;
+&lt;p&gt;Você participou da PythonBrasil[10]? Conte sua experiência nos comentários também!&lt;/p&gt;</content><category term="Iniciante"></category><category term="pythonbrasil"></category></entry><entry><title>Palestra sobre canivete suíço de Python</title><link href="https://andersonberg.github.io/blog/palestra-canivete-suico-python.html" rel="alternate"></link><published>2011-12-04T03:32:34-03:00</published><updated>2011-12-04T03:32:34-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-12-04:/blog/palestra-canivete-suico-python.html</id><summary type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Esta semana tive a oportunidade de ministrar uma palestra para os alunos da Farec (Faculdade do Recife) falando sobre o Python, incluindo biblioteca padrão, pacotes e frameworks úteis para todo tipo de projeto. Fiz um apanhado geral de Python para que os alunos se interessassem um pouco mais pela linguagem. A seguir estão os slides:&lt;/p&gt;
 &lt;iframe width="425" height="355" style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;margin-left:20%;" src="//www.slideshare.net/slideshow/embed_code/10451349" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""&gt;&lt;/iframe&gt;
 
 &lt;div style="margin-bottom: 5px;"&gt;&lt;strong&gt; &lt;a href="//pt.slideshare.net/berg_pe/canivete-python" title="Canivete python" target="_blank"&gt;Canivete python&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href="//www.slideshare.net/berg_pe" target="_blank"&gt;Anderson Dantas&lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;</content><category term="Iniciante"></category><category term="canivete"></category><category term="suíço"></category></entry><entry><title>Programando em Python no IDLE</title><link href="https://andersonberg.github.io/blog/programando-python-idle.html" rel="alternate"></link><published>2011-09-08T00:46:47-03:00</published><updated>2011-09-08T00:46:47-03:00</updated><author><name>Anderson Berg</name></author><id>tag:andersonberg.github.io,2011-09-08:/blog/programando-python-idle.html</id><summary type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depois da instalação do Python e alguns testes vamos pôr a mão na massa e trabalhar de verdade com arquivos de código. Todo código que você faz no interpretador é perdido quando você fecha o interpretador. Mas eu fiz muito código legal e vou simplesmente perder tudo? Python também trabalha com arquivos de código que você pode salvar em sua máquina para rodar depois.&lt;/p&gt;
