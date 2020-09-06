@@ -1,5 +1,5 @@
 Title: Como monitorar web-crawlers com Spidermon
-Date: 2020-09-01 13:00
+Date: 2020-09-06 00:00
 Tags: python, web-crawlers, web-spiders, spidermon, spider
 Category: python
 Slug: como-monitorar-spiders-spidermon
@@ -154,3 +154,21 @@ Para usar essa funcionalidade, você precisa de um (token de bot)[https://core.t
 
     SPIDERMON_TELEGRAM_SENDER_TOKEN = '<TELEGRAM_SENDER_TOKEN>'
     SPIDERMON_TELEGRAM_RECIPIENTS = ['chatid', '@channelname']
+
+
+A opção `SPIDERMON_TELEGRAM_RECIPIENTS` contém todos os destinatários que irão receber as notificações do Spidermon.
+
+Em seguida, no arquivo monitors.py, importe e adicione a classe que executa a ação de envio de mensagem ao Telegram:
+
+
+    from spidermon.contrib.actions.telegram.notifiers import SendTelegramMessageSpiderFinished
+    ...
+
+    class SpiderCloseMonitorSuite(MonitorSuite):
+
+        monitors = [
+            ItemCountMonitor,
+        ]
+        monitors_failed_actions = [SendTelegramMessageSpiderFinished]
+
+Pronto, se houver algum erro definido nos monitores, a notificação será enviada via Telegram para todos os destinatários.
