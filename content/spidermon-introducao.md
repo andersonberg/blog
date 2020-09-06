@@ -7,6 +7,7 @@ meta_description: Aprendendo a utilizar o Spidermon para monitorar web-crawlers
 summary:
 alias: /blog/aprendendo-a-aprender/
 image:
+Status: draft
 
 
 Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é muito complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas que vou apresentar neste artigo é o Spidermon.
