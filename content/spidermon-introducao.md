@@ -7,17 +7,17 @@ meta_description: Aprendendo a utilizar o Spidermon para monitorar web-crawlers
 summary:
 alias: /blog/aprendendo-a-aprender/
 image:
-Status: draft
 
 
-Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é muito complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas que vou apresentar neste artigo é o Spidermon.
+Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é bem complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas é o Spidermon, que vou apresentar neste artigo.
 
 
 <!-- PELICAN_END_SUMMARY -->
 
-Spidermon é uma extensão do Scrapy usado para monitorar spiders. É um framework bem robusto e indispensável nos projetos que eu desenvolvo. Com ele é possível validar a execução ou os resultados produzidos por spiders. Além disso, você pode criar relatórios ou enviar notificações via slack ou e-mail, por exemplo.
+Spidermon é uma extensão do Scrapy usado para monitorar spiders. É um framework bem robusto e, pra mim, indispensável nos projetos que trabalho. Com ele é possível validar a execução ou os resultados produzidos por spiders. Além disso, você pode criar relatórios e enviar notificações via slack ou e-mail, por exemplo.
 
-Vamos começar criando um spider bem simples. Vamos supor que queremos extrair título do livro e ranking da seguinte página: https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/
+Para poder ver o Spidermon em ação, vamos começar criando um spider bem simples. Vamos supor que queremos extrair título do livro e respectivo ranking da seguinte página: https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/
+
 Nosso spider seria assim:
 
     class BooksSpider(scrapy.Spider):
@@ -46,10 +46,8 @@ Nosso spider seria assim:
                 )
             )
 
-Simplesmente extrair as informações que desejamos e seguir a paginação para extrair todos os título dessa lista.
 
-Para começar a utilizar o Spidermon, é preciso habilitá-lo nas configurações do projeto.
-Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:
+Antes de criar o primeiro monitor, habilite o Spidermon nas configurações do projeto. É bem simples, adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:
 
     SPIDERMON_ENABLED = True
     EXTENSIONS = {
@@ -61,7 +59,7 @@ Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:
 
 Agora para que o Spidermon comece a monitorar os resultados, precisamos criar monitores. Monitores no Spidermon são baseados no unittest, portanto são basicamente casos de teste executados em determinado momento da execução do spider. Os monitores por sua vez, podem ser agrupados em um MonitorSuite. As classes MonitorSuite são importantes para definir quais monitores serão executados e quais ações terão lugar antes e depois que o grupo de monitores terminar seu trabalho.
 
-Vamos entender melhor com um exemplo:
+Vamos entender melhor com um exemplo: Queremos garantir que o spider vai extrair pelo menos 10 itens. Através dos stats finais do spider, temos acesso a um atributo chamado `item_scraped_count`, que mostra quantos itens o spider conseguiu extrair. E aí você pode usar o `assertTrue` para comparar os valores:
 
 
     from spidermon import Monitor, MonitorSuite, monitors
@@ -88,7 +86,7 @@ Vamos entender melhor com um exemplo:
         ]
 
 
-Este monitor vai verificar se o spider retorna pelo menos 10 items após finalizar. Crie um arquivo chamado monitors.py e salve esse código.
+Crie um arquivo chamado monitors.py e salve esse código.
 
 A ideia é que este MonitorSuite execute após o spider terminar a execução, então o próximo passo é incluir mais uma configuração no settings.py:
 
