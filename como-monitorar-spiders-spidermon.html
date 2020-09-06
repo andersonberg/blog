@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Como monitorar web-crawlers com Spidermon | Anderson Berg</title>
+
+  <meta name="author" content="Anderson Berg">
+  <meta name="description" content="Aprendendo a utilizar o Spidermon para monitorar web-crawlers">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:site_name" content="Anderson Berg">
+  <meta property="og:type" content="website">
+      <meta name="keywords" content="python, web-crawlers, web-spiders, spidermon, spider">
+      <meta property="og:title" content="Como monitorar web-crawlers com Spidermon">
+      <meta property="og:description" content="Aprendendo a utilizar o Spidermon para monitorar web-crawlers">
+      <meta property="og:url" content="/como-monitorar-spiders-spidermon.html">
+      <meta property="og:image" content="The og:image url">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="Anderson Berg &raquo; Feed" href="/">
+  <link rel="canonical" href="/como-monitorar-spiders-spidermon.html">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+      <link rel="stylesheet" href="./theme/css/styles.min.css?0830b1e2">
+</head>
+<body>
+  <div class="Page pure-g is-fullEntry">
+<div class="PageHeader pure-u-1">
+    <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+
+        <a
+			href="./index.html"
+            title="Home page"
+            class="PageHeader-link pure-menu-heading pure-menu-link">Anderson<span class="u-highlighted">Berg</a>
+
+			<ul class="PageHeader-menu pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="./pages/contato.html" class="PageHeader-menu-link pure-menu-link">Contato</a>
+                    </li>
+
+			</ul>
+    </nav>
+</div>
+    <div class="PageContent pure-u-1">
+
+
+<article class="Article u-box" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="The og:image url">
+        </div>
+    <span itemprop="mainEntityOfPage">
+        <header>
+            <h1 class="Article-title" itemprop="headline name">
+                Como monitorar web-crawlers com Spidermon
+            </h1>
+
+                <p class="Article-meta">
+                    Por <span class="Article-author" itemprop="author">Anderson Berg</span>.
+
+                    <span class="Article-pubDate">
+                        Publicado em
+                        <time datetime="2020-09-01T13:00:00-03:00" itemprop="datePublished">01 Sep, 2020</time>
+                    </span>
+                </p>
+        </header>
+
+        <div class="Article-content" itemprop="articleBody">
+
+                <p>Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é muito complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas que vou apresentar neste artigo é o Spidermon.</p>
+<!-- PELICAN_END_SUMMARY -->
+
+<p>Spidermon é uma extensão do Scrapy usado para monitorar spiders. É um framework bem robusto e indispensável nos projetos que eu desenvolvo. Com ele é possível validar a execução ou os resultados produzidos por spiders. Além disso, você pode criar relatórios ou enviar notificações via slack ou e-mail, por exemplo.</p>
+<p>Vamos começar criando um spider bem simples. Vamos supor que queremos extrair título do livro e ranking da seguinte página: https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/
+Nosso spider seria assim:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">BooksSpider</span>(<span class="n">scrapy</span>.<span class="n">Spider</span>):
+    <span class="nb">name</span> = <span class="s">&#39;books&#39;</span>
+    <span class="n">allowed_domains</span> = [<span class="s">&#39;goodreads.com&#39;</span>]
+    <span class="n">start_urls</span> = [
+        <span class="s">&#39;https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/&#39;</span>
+    ]
+
+    <span class="n">def</span> <span class="nb">parse</span>(<span class="nb">self</span>, <span class="n">response</span>):
+        <span class="n">books_list</span> = <span class="n">response</span>.<span class="n">css</span>(
+            <span class="s">&#39;tr[itemtype=&quot;http://schema.org/Book&quot;]&#39;</span>)
+        <span class="k">for</span> <span class="n">book</span> <span class="nb">in</span> <span class="n">books_list:</span>
+            <span class="nb">yield</span>{
+                <span class="s">&#39;title&#39;</span>: <span class="n">book</span>.<span class="n">css</span>(
+                    <span class="s">&#39;.bookTitle span[itemprop=&quot;name&quot;]::text&#39;</span>
+                    ).<span class="nb">get</span>(),
+                <span class="s">&#39;rating&#39;</span>: <span class="n">float</span>(
+                    <span class="n">book</span>.<span class="n">css</span>(<span class="s">&#39;.minirating::text&#39;</span>
+                    ).<span class="n">re_first</span>(<span class="n">r&#39;</span>\<span class="nb">d</span>[\<span class="nb">d</span>.]*<span class="s">&#39;))</span>
+<span class="s">            }</span>
+
+<span class="s">        yield scrapy.Request(</span>
+<span class="s">            response.urljoin(</span>
+<span class="s">                response.css(&#39;</span>.<span class="n">next_page::attr</span>(<span class="n">href</span>)&#39;).<span class="nb">get</span>()
+            )
+        )
+</code></pre></div>
+
+
+<p>Simplesmente extrair as informações que desejamos e seguir a paginação para extrair todos os título dessa lista.</p>
+<p>Para começar a utilizar o Spidermon, é preciso habilitá-lo nas configurações do projeto.
+Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
+<div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_ENABLED = True</span>
+<span class="err">EXTENSIONS = {</span>
+<span class="err">    &#39;spidermon.contrib.scrapy.extensions.Spidermon&#39;: 500,</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+<h2>Criando monitores</h2>
+<p>Agora para que o Spidermon comece a monitorar os resultados, precisamos criar monitores. Monitores no Spidermon são baseados no unittest, portanto são basicamente casos de teste executados em determinado momento da execução do spider. Os monitores por sua vez, podem ser agrupados em um MonitorSuite. As classes MonitorSuite são importantes para definir quais monitores serão executados e quais ações terão lugar antes e depois que o grupo de monitores terminar seu trabalho.</p>
+<p>Vamos entender melhor com um exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">spidermon</span> <span class="kn">import</span> <span class="n">Monitor</span><span class="p">,</span> <span class="n">MonitorSuite</span><span class="p">,</span> <span class="n">monitors</span>
+
+<span class="nd">@monitors.name</span><span class="p">(</span><span class="s1">&#39;Item count&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">ItemCountMonitor</span><span class="p">(</span><span class="n">Monitor</span><span class="p">):</span>
+
+    <span class="nd">@monitors.name</span><span class="p">(</span><span class="s1">&#39;Minimum number of items&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">test_minimum_number_of_items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">item_extracted</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">stats</span><span class="p">,</span> <span class="s1">&#39;item_scraped_count&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">minimum_threshold</span> <span class="o">=</span> <span class="mi">10</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Extracted less than {} items&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">minimum_threshold</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span>
+            <span class="n">item_extracted</span> <span class="o">&gt;=</span> <span class="n">minimum_threshold</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="n">msg</span>
+        <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">SpiderCloseMonitorSuite</span><span class="p">(</span><span class="n">MonitorSuite</span><span class="p">):</span>
+
+    <span class="n">monitors</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ItemCountMonitor</span><span class="p">,</span>
+    <span class="p">]</span>
+</code></pre></div>
+
+
+<p>Este monitor vai verificar se o spider retorna pelo menos 10 items após finalizar. Crie um arquivo chamado monitors.py e salve esse código.</p>
+<p>A ideia é que este MonitorSuite execute após o spider terminar a execução, então o próximo passo é incluir mais uma configuração no settings.py:</p>
+<div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_SPIDER_CLOSE_MONITORS = (</span>
+<span class="err">    &#39;tutorial.monitors.SpiderCloseMonitorSuite&#39;,</span>
+<span class="err">)</span>
+</code></pre></div>
+
+
+<p>Agora é só executar o spider normalmente para visualizar os monitores no log.</p>
+<h2>Validando itens</h2>
+<p>Uma das principais formas de garantir a qualidade dos dados extraídos é validá-los segundo um modelo. Este modelo pode ser definido em um (JSON schema)[https://json-schema.org/]. Entre outras coisas é possível definir os campos obrigatórios dos itens ou usar uma expressão regular para validar o conteúdo de um campo.</p>
+<p>Antes de utilizar a validação com o JSON schema, é preciso instalar o pacote <code>jsonschema</code>, se já não estiver instalado:</p>
+<div class="highlight"><pre><span></span><code>$ pip install jsonschema
+</code></pre></div>
+
+
+<p>Crie um arquivo chamado schema.json na raiz do projeto ou num diretório específico para esses arquivos (só a nível de organização). Nele insira o seguinte código:</p>
+<div class="highlight"><pre><span></span><code><span class="err">{</span>
+<span class="err">    &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,</span>
+<span class="err">    &quot;type&quot;: &quot;object&quot;,</span>
+<span class="err">    &quot;properties&quot;: {</span>
+<span class="err">        &quot;title&quot;:{</span>
+<span class="err">            &quot;type&quot;: &quot;string&quot;</span>
+<span class="err">        },</span>
+<span class="err">        &quot;rating&quot;:{</span>
+<span class="err">            &quot;type&quot;: &quot;number&quot;</span>
+<span class="err">        }</span>
+<span class="err">    },</span>
+<span class="err">    &quot;required&quot;:[</span>
+<span class="err">        &quot;title&quot;,</span>
+<span class="err">        &quot;rating&quot;</span>
+<span class="err">    ]</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+<p>Mais algumas configurações são necessárias serem adicionadas ao settings.py. Primeiro, habilite o <code>item pipeline</code> e depois adicione o caminho do arquivo criado anteriormente no <code>SPIDERMON_VALIDATION_SCHEMAS</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="err">ITEM_PIPELINES = {</span>
+<span class="err">    &#39;spidermon.contrib.scrapy.pipelines.ItemValidationPipeline&#39;: 800,</span>
+<span class="err">}</span>
+<span class="err">SPIDERMON_VALIDATION_SCHEMAS = [</span>
+<span class="err">    &#39;/home/anderson/code/crawler_test_spidermon/crawler_test_spidermon/schema.json&#39;</span>
+<span class="err">]</span>
+</code></pre></div>
+
+
+<p>O Spidermon vai exibir os erros de <code>schema</code> nos <code>stats</code> ao final da execução do spider. Se preferir, você pode adicionar os erros de validação nos próprios itens, isto pode facilitar na hora de encontrar o item que está fora do padrão definido. Para isso adicione o seguinte no settings.py:</p>
+<div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_VALIDATION_ADD_ERRORS_TO_ITEMS = True</span>
+</code></pre></div>
+
+
+<h2>Enviando notificações via Telegram</h2>
+<p>Esta é outra função bem interessante do Spidermon. Você não precisa ficar checando um spider toda vez que ele finaliza a execução para poder ver se houve algum erro. O Spidermon pode enviar notificações via Email, Slack, Telegram entre outros. Neste artigo vou cobrir o envio de mensagens pelo Telegram, mas a documentação do Spidermon é bem completa com relação aos outros.</p>
+<p>Para usar essa funcionalidade, você precisa de um (token de bot)[https://core.telegram.org/bots] do Telegram e adicionar as seguintes opções no settings.py:</p>
+<div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_TELEGRAM_SENDER_TOKEN = &#39;&lt;TELEGRAM_SENDER_TOKEN&gt;&#39;</span>
+<span class="err">SPIDERMON_TELEGRAM_RECIPIENTS = [&#39;chatid&#39;, &#39;@channelname&#39;]</span>
+</code></pre></div>
+        </div>
+    </span>
+
+
+            <div class="Article-tags">
+                <span class="Article-tagLabel">Tags:</span>
+                <span itemprop="keywords">
+                        <a
+                            href="./tag/python.html"
+                            title="Leia mais sobre"
+                            class="Article-tagLink">python</a>
+                        <a
+                            href="./tag/web-crawlers.html"
+                            title="Leia mais sobre"
+                            class="Article-tagLink">web-crawlers</a>
+                        <a
+                            href="./tag/web-spiders.html"
+                            title="Leia mais sobre"
+                            class="Article-tagLink">web-spiders</a>
+                        <a
+                            href="./tag/spidermon.html"
+                            title="Leia mais sobre"
+                            class="Article-tagLink">spidermon</a>
+                        <a
+                            href="./tag/spider.html"
+                            title="Leia mais sobre"
+                            class="Article-tagLink">spider</a>
+                </span>
+            </div>
+
+        <div class="Article-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = "pythonize.org";
+        var disqus_identifier = "como-monitorar-spiders-spidermon.html";
+
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+</article>
+    </div>
+
+<footer class="PageFooter pure-u-1">
+    <div class="u-box">
+        <p>O conteúdo deste blog está sob a licença
+          <a
+              class="PageFooter-link"
+              href=""
+              title=""
+              rel="nofollow"></a>.</p>
+
+        <p>O código está disponível em
+          <a
+              class="PageFooter-link"
+              href=""
+              title="Contribute!"
+              rel="nofollow"></a>.</p>
+    </div>
+</footer>  </div>
+
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-25538784-1');ga('send','pageview');
+    </script>
+</body>
+</html>
