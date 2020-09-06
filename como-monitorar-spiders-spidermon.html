@@ -64,19 +64,19 @@
 
                     <span class="Article-pubDate">
                         Publicado em
-                        <time datetime="2020-09-01T13:00:00-03:00" itemprop="datePublished">01 Sep, 2020</time>
+                        <time datetime="2020-09-06T00:00:00-03:00" itemprop="datePublished">06 Sep, 2020</time>
                     </span>
                 </p>
         </header>
 
         <div class="Article-content" itemprop="articleBody">
 
-                <p>Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é muito complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas que vou apresentar neste artigo é o Spidermon.</p>
+                <p>Uma das etapas mais importantes do web-scraping (ou raspagem de dados) é garantir a qualidade das informações extraídas. Devido ao grande volume de dados que podem ser coletados por um spider, é bem complicado analisar tudo manualmente. Porém existem ferramentas para auxiliar nesse processo que vão diminuir muito o trabalho de quem faz esse tipo de análise. Uma dessas ferramentas é o Spidermon, que vou apresentar neste artigo.</p>
 <!-- PELICAN_END_SUMMARY -->
 
-<p>Spidermon é uma extensão do Scrapy usado para monitorar spiders. É um framework bem robusto e indispensável nos projetos que eu desenvolvo. Com ele é possível validar a execução ou os resultados produzidos por spiders. Além disso, você pode criar relatórios ou enviar notificações via slack ou e-mail, por exemplo.</p>
-<p>Vamos começar criando um spider bem simples. Vamos supor que queremos extrair título do livro e ranking da seguinte página: https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/
-Nosso spider seria assim:</p>
+<p>Spidermon é uma extensão do Scrapy usado para monitorar spiders. É um framework bem robusto e, pra mim, indispensável nos projetos que trabalho. Com ele é possível validar a execução ou os resultados produzidos por spiders. Além disso, você pode criar relatórios e enviar notificações via slack ou e-mail, por exemplo.</p>
+<p>Para poder ver o Spidermon em ação, vamos começar criando um spider bem simples. Vamos supor que queremos extrair título do livro e respectivo ranking da seguinte página: https://www.goodreads.com/list/show/3.Best_Science_Fiction_Fantasy_Books/</p>
+<p>Nosso spider seria assim:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">BooksSpider</span>(<span class="n">scrapy</span>.<span class="n">Spider</span>):
     <span class="nb">name</span> = <span class="s">&#39;books&#39;</span>
     <span class="n">allowed_domains</span> = [<span class="s">&#39;goodreads.com&#39;</span>]
@@ -105,9 +105,7 @@ Nosso spider seria assim:</p>
 </code></pre></div>
 
 
-<p>Simplesmente extrair as informações que desejamos e seguir a paginação para extrair todos os título dessa lista.</p>
-<p>Para começar a utilizar o Spidermon, é preciso habilitá-lo nas configurações do projeto.
-Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
+<p>Antes de criar o primeiro monitor, habilite o Spidermon nas configurações do projeto. É bem simples, adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
 <div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_ENABLED = True</span>
 <span class="err">EXTENSIONS = {</span>
 <span class="err">    &#39;spidermon.contrib.scrapy.extensions.Spidermon&#39;: 500,</span>
@@ -117,7 +115,7 @@ Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
 
 <h2>Criando monitores</h2>
 <p>Agora para que o Spidermon comece a monitorar os resultados, precisamos criar monitores. Monitores no Spidermon são baseados no unittest, portanto são basicamente casos de teste executados em determinado momento da execução do spider. Os monitores por sua vez, podem ser agrupados em um MonitorSuite. As classes MonitorSuite são importantes para definir quais monitores serão executados e quais ações terão lugar antes e depois que o grupo de monitores terminar seu trabalho.</p>
-<p>Vamos entender melhor com um exemplo:</p>
+<p>Vamos entender melhor com um exemplo: Queremos garantir que o spider vai extrair pelo menos 10 itens. Através dos stats finais do spider, temos acesso a um atributo chamado <code>item_scraped_count</code>, que mostra quantos itens o spider conseguiu extrair. E aí você pode usar o <code>assertTrue</code> para comparar os valores:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">spidermon</span> <span class="kn">import</span> <span class="n">Monitor</span><span class="p">,</span> <span class="n">MonitorSuite</span><span class="p">,</span> <span class="n">monitors</span>
 
 <span class="nd">@monitors.name</span><span class="p">(</span><span class="s1">&#39;Item count&#39;</span><span class="p">)</span>
@@ -143,7 +141,7 @@ Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
 </code></pre></div>
 
 
-<p>Este monitor vai verificar se o spider retorna pelo menos 10 items após finalizar. Crie um arquivo chamado monitors.py e salve esse código.</p>
+<p>Crie um arquivo chamado monitors.py e salve esse código.</p>
 <p>A ideia é que este MonitorSuite execute após o spider terminar a execução, então o próximo passo é incluir mais uma configuração no settings.py:</p>
 <div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_SPIDER_CLOSE_MONITORS = (</span>
 <span class="err">    &#39;tutorial.monitors.SpiderCloseMonitorSuite&#39;,</span>
@@ -200,6 +198,23 @@ Adicione as seguintes linhas no arquivo settings.py do seu projeto scrapy:</p>
 <div class="highlight"><pre><span></span><code><span class="err">SPIDERMON_TELEGRAM_SENDER_TOKEN = &#39;&lt;TELEGRAM_SENDER_TOKEN&gt;&#39;</span>
 <span class="err">SPIDERMON_TELEGRAM_RECIPIENTS = [&#39;chatid&#39;, &#39;@channelname&#39;]</span>
 </code></pre></div>
+
+
+<p>A opção <code>SPIDERMON_TELEGRAM_RECIPIENTS</code> contém todos os destinatários que irão receber as notificações do Spidermon.</p>
+<p>Em seguida, no arquivo monitors.py, importe e adicione a classe que executa a ação de envio de mensagem ao Telegram:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">spidermon.contrib.actions.telegram.notifiers</span> <span class="kn">import</span> <span class="n">SendTelegramMessageSpiderFinished</span>
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">SpiderCloseMonitorSuite</span><span class="p">(</span><span class="n">MonitorSuite</span><span class="p">):</span>
+
+    <span class="n">monitors</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">ItemCountMonitor</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">monitors_failed_actions</span> <span class="o">=</span> <span class="p">[</span><span class="n">SendTelegramMessageSpiderFinished</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>Pronto, se houver algum erro definido nos monitores, a notificação será enviada via Telegram para todos os destinatários.</p>
         </div>
     </span>
 
