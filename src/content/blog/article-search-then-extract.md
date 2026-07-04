@@ -444,8 +444,4 @@ If you're building a targeted news collection pipeline, you probably don't need 
 
 ---
 
-*The project is available on GitHub. Phase 1 (collection) is nearly complete. Phase 2 (correlation analysis between media coverage and voter intent) is planned as a separate data science project — and probably a future article.*
-
----
-
 *If this was useful, you'll also enjoy [Scrapy in Production: What Nobody Tells You](/blog/scrapy-in-production/) — a breakdown of the patterns that actually keep Scrapy spiders alive in production.*
