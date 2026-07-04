@@ -1,0 +1,18 @@
+---
+const social = [
+  { name: 'twitter', url: 'https://twitter.com/berg_pe' },
+  { name: 'github', url: 'https://github.com/andersonberg' },
+];
+---
+
+<div class="bio">
+  <img src="/images/avatar/avatar.jpg" alt="Anderson Berg" width="56" height="56" />
+  <p>
+    Desenvolvedor Python.
+    {social.map((s, i) => (
+      <>
+        {' '}<a href={s.url} target="_blank" rel="me noopener noreferrer">{s.name}</a>{i < social.length - 1 ? ' ·' : ''}
+      </>
+    ))}
+  </p>
+</div>

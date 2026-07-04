@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const sorted = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+  return sorted.map((post, i) => ({
+    params: { slug: post.data.slug },
+    props: {
+      post,
+      prev: sorted[i + 1], // older post
+      next: sorted[i - 1], // newer post
+    },
+  }));
+}
+
+const { post, prev, next } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image} article>
+  <article class="post">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta">{post.data.date.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    {post.data.image && <img src={post.data.image} alt="" />}
+
+    <Content />
+
+    {post.data.tags.length > 0 && (
+      <ul class="tag-list">
+        {post.data.tags.map((tag) => (
+          <li><a class="tag-pill" href={`/tags/${tag}/`}>{tag}</a></li>
+        ))}
+      </ul>
+    )}
+
+    <nav class="post-nav">
+      <div>{prev && <a href={`/blog/${prev.data.slug}/`}>&larr; {prev.data.title}</a>}</div>
+      <div>{next && <a href={`/blog/${next.data.slug}/`}>{next.data.title} &rarr;</a>}</div>
+    </nav>
+  </article>
+</BaseLayout>
