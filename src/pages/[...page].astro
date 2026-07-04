@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection('blog');
+  const sorted = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return paginate(sorted, { pageSize: 6 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Anderson Berg">
+  <ul class="post-list">
+    {page.data.map((post) => (
+      <li class="post-list-item">
+        <h2><a href={`/blog/${post.data.slug}/`}>{post.data.title}</a></h2>
+        <p class="post-meta">{post.data.date.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        {post.data.description && <p class="post-description">{post.data.description}</p>}
+        {post.data.tags.length > 0 && (
+          <ul class="tag-list">
+            {post.data.tags.map((tag) => (
+              <li><a class="tag-pill" href={`/tags/${tag}/`}>{tag}</a></li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+
+  <nav class="pagination">
+    <div>{page.url.prev && <a href={page.url.prev}>&larr; Mais recentes</a>}</div>
+    <div>{page.url.next && <a href={page.url.next}>Mais antigos &rarr;</a>}</div>
+  </nav>
+</BaseLayout>

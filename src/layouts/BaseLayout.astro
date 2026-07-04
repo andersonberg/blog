@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+import Bio from '../components/Bio.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+}
+
+const { title, description = 'Anderson Berg Blog', image, article = false } = Astro.props;
+
+const siteName = 'Anderson Berg';
+const pageTitle = title === siteName ? siteName : `${title} · ${siteName}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = image ? new URL(image, Astro.site) : undefined;
+---
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/jpeg" href="/images/avatar/avatar.jpg" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    {ogImageURL && <meta property="og:image" content={ogImageURL} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImageURL && <meta name="twitter:image" content={ogImageURL} />}
+
+    <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="site-title" href="/">{siteName}</a>
+        <nav class="site-nav">
+          <a href="/">Posts</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <Bio />
+        &copy; {new Date().getFullYear()} {siteName}
+      </div>
+    </footer>
+  </body>
+</html>
