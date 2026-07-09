@@ -23,7 +23,7 @@ A political scientist came to me with a clear but complex request: collect all n
 
 Here's what "clear but complex" looked like in practice:
 
-- **9 candidates**: Bolsonaro, Lula, Haddad (federal); Raquel Lyra, Marília Arraes, Danilo Cabral, Paulo Câmara (state of Pernambuco)
+- **7 candidates**: 3 for president of Brazil(federal); 4 for government of state of Pernambuco
 - **6 search term families**: ação, processo, judiciário, judicial, investigação, denúncia + justiça eleitoral
 - **8 news portals**: 3 regional (NE10, JC, Diário de Pernambuco) + 5 national (G1, Folha, UOL, Estadão, R7)
 - **Specific date windows** per candidate, tied to each election cycle
@@ -113,16 +113,15 @@ search_terms:
     extra_keywords: [justiça eleitoral]
 
 candidates:
-  - id: lula_2022
-    name: Luiz Inácio Lula da Silva
+  - id: candidato_1_2022
+    name: Candidato 1
     office: presidente
     election_year: 2022
     query_window:
       start: "2022-08-05"
       end: "2022-10-30"
     search_name_variants:
-      - Luiz Inácio Lula da Silva
-      - Lula
+      - Candidato 1
 
 portals:
   - id: g1
@@ -160,9 +159,9 @@ Each job is a line in a JSONL file:
 
 ```json
 {
-  "job_id": "lula_2022__processo__g1",
-  "candidate_id": "lula_2022",
-  "search_query": "\"Luiz Inácio Lula da Silva\" processo",
+  "job_id": "candidato_1_2022__processo__g1",
+  "candidate_id": "candidato_1_2022",
+  "search_query": "\"Candidato 1\" processo",
   "portal_id": "g1",
   "site_domain": "g1.globo.com",
   "query_window_start": "2022-08-05",
@@ -209,10 +208,10 @@ def build_serpapi_params(job: Mapping[str, Any]) -> dict[str, str]:
 
 The `tbs` parameter is the non-obvious part. It restricts Google News results to a custom date range. Combine that with `site:g1.globo.com` in the query string, and you get articles about a specific candidate, from a specific outlet, during a specific window.
 
-For the Lula/processo/G1 job, Google News receives:
+For the Candidato 1/processo/G1 job, Google News receives:
 
 ```
-"Luiz Inácio Lula da Silva" processo site:g1.globo.com
+"Candidato 1" processo site:g1.globo.com
 ```
 
 ...with date filtering applied. SerpAPI returns structured JSON with `news_results` and `organic_results`. The pipeline extracts URLs from both:
@@ -233,11 +232,11 @@ def extract_urls_from_response(payload: Mapping[str, Any]) -> list[str]:
 ```bash
 # Test a single job (1 credit)
 uv run news-scraping-pe -v discover-serpapi \
-  --job-id lula_2022__processo__g1
+  --job-id candidato_1_2022__processo__g1
 
 # Test 5 jobs for one candidate
 uv run news-scraping-pe discover-serpapi \
-  --candidate-id lula_2022 --limit 5
+  --candidate-id candidato_1_2022 --limit 5
 ```
 
 URLs are stored with full provenance:
@@ -245,7 +244,7 @@ URLs are stored with full provenance:
 ```json
 {
   "url": "https://g1.globo.com/politica/...",
-  "job_id": "lula_2022__processo__g1",
+  "job_id": "candidato_1_2022__processo__g1",
   "discovered_via": "serpapi"
 }
 ```
@@ -258,7 +257,7 @@ The `discovered_via` field is there for a future expansion. If at some point, we
 
 ## Step 4: URL Deduplication
 
-SerpAPI often returns the same article URL for multiple jobs. The same piece may match "Lula processo" on G1 and "Lula judicial" on G1 — two different jobs, one article. Deduplication happens before writing to `urls_pending.jsonl`.
+SerpAPI often returns the same article URL for multiple jobs. The same piece may match "Candidato 1 processo" on G1 and "Candidato 1 judicial" on G1 — two different jobs, one article. Deduplication happens before writing to `urls_pending.jsonl`.
 
 The dedup goes beyond naive string comparison — it normalizes URLs first:
 
@@ -334,10 +333,10 @@ Each successfully extracted article is stored with its full research context:
   "article_id": "a1b2c3d4e5f6",
   "url": "https://g1.globo.com/politica/...",
   "portal_id": "g1",
-  "title": "Lula responde a processo na Justiça Eleitoral",
+  "title": "Candidato 1 responde a processo na Justiça Eleitoral",
   "published_at": "2022-09-15",
   "raw_text": "...",
-  "candidate_id": "lula_2022",
+  "candidate_id": "candidato_1_2022",
   "election_year": 2022,
   "office": "presidente",
   "search_term_id": "processo",
@@ -374,11 +373,11 @@ uv run news-scraping-pe expand-queries
 
 # Discover URLs for one job (costs 1 SerpAPI credit)
 uv run news-scraping-pe -v discover-serpapi \
-  --job-id lula_2022__processo__g1
+  --job-id candidato_1_2022__processo__g1
 
 # Extract text from first 5 articles
 uv run news-scraping-pe -v fetch-articles \
-  --job-id lula_2022__processo__g1 \
+  --job-id candidato_1_2022__processo__g1 \
   --limit 5
 
 # Inspect results
